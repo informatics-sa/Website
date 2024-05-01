@@ -1,33 +1,29 @@
 ---
 layout: base
 ---
-<nav id="main-navbar" class="navbar bg-body-tertiary mb-3">
-    <a class="navbar-brand" href="#">فريق المعلوماتية السعودي</a>
-    <ul class="nav nav-pills">
-        <li class="nav-item"><a class="nav-link {% if page.id == 'olympiads' %} active {% endif %}" href="/olympiads">الأولمبيادات</a></li>
-        <li class="nav-item"><a class="nav-link {% if page.id == 'halloffame' %} active {% endif %}" href="/hall-of-fame">لائحة الشرف</a></li>
-    <!--<li class="nav-item"><a class="nav-link {% if page.id == 'members' %} active {% endif %}" href="/members">الأعضاء</a></li> -->
-        <li class="nav-item"><a class="nav-link {% if page.id == 'contact' %} active {% endif %}" href="/contact">تواصل معنا</a></li>
-    </ul>
+<nav class="navbar navbar-expand-md navbar-dark bg-success shadow-sm" style="">
+    <div class="container">
+        <a class="navbar-brand" href="/"><b>فريق المعلوماتية السعودي</b></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Left Side Of Navbar -->
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a class="nav-link {% if page.id == 'olympiads' %} active {% endif %}" href="/olympiads">الأولمبيادات</a></li>
+                <li class="nav-item"><a class="nav-link {% if page.id == 'halloffame' %} active {% endif %}" href="/hall-of-fame">لائحة الشرف</a></li>
+                <li class="nav-item"><a class="nav-link {% if page.id == 'members' %} active {% endif %}" href="/members">الأعضاء</a></li>
+                <li class="nav-item"><a class="nav-link {% if page.id == 'members' %} active {% endif %}" href="/images">معرض الصور</a></li>
+                <li class="nav-item"><a class="nav-link {% if page.id == 'contact' %} active {% endif %}" href="/contact">تواصل معنا</a></li>
+            </ul>
+
+            <!-- Right Side Of Navbar -->
+            <ul class="navbar-nav ms-auto">
+            </ul>
+        </div>
+    </div>
 </nav>
-<style>
-    @media (min-width: 1000px)
-    {
-        nav, main
-        {
-            padding-left: 280px !important;
-            padding-right: 280px !important;
-            scrollbar-width: none;
-        }
-    }
-    @media (max-width: 1000px)
-    {
-        nav, main
-        {
-            padding-left: 50px !important;
-            padding-right: 50px !important;
-            scrollbar-width: none;
-        }
-    }
-</style>
-{{ content }}
+<div class="container">
+    {{ content }}
+</div>
