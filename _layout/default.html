@@ -1,0 +1,33 @@
+---
+layout: base
+---
+<nav id="main-navbar" class="navbar bg-body-tertiary mb-3">
+    <a class="navbar-brand" href="#">معاذ القرني</a>
+    <ul class="nav nav-pills">
+        <li class="nav-item"><a class="nav-link {% if page.id == 'olympiads' %} active {% endif %}" href="/olympiads">الأولمبيادات</a></li>
+        <li class="nav-item"><a class="nav-link {% if page.id == 'halloffame' %} active {% endif %}" href="/hall-of-fame">لائحة الشرف</a></li>
+    <!--<li class="nav-item"><a class="nav-link {% if page.id == 'members' %} active {% endif %}" href="/members">الأعضاء</a></li> -->
+        <li class="nav-item"><a class="nav-link {% if page.id == 'contact' %} active {% endif %}" href="/contact">تواصل معنا</a></li>
+    </ul>
+</nav>
+<style>
+    @media (min-width: 1000px)
+    {
+        nav, main
+        {
+            padding-left: 280px !important;
+            padding-right: 280px !important;
+            scrollbar-width: none;
+        }
+    }
+    @media (max-width: 1000px)
+    {
+        nav, main
+        {
+            padding-left: 50px !important;
+            padding-right: 50px !important;
+            scrollbar-width: none;
+        }
+    }
+</style>
+{{ content }}
