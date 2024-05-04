@@ -1,14 +1,14 @@
 # Saudi Informatics Team Website
 
 ## Pages
-- [ ] Home (shows latest blogs)
-- [ ] Camps (Schedule of camps sorted by date and filtered by year)
+- [x] Home (introduce informatics)
+- [ ] Calender (Schedule of camps sorted by date and filtered by year)
 - [x] Hall of Fame (People with)
-- [ ] Participations (shows all SIT participations)
+- [x] Participations (shows all SIT participations)
 - [x] Members (From Level 1 to Level 4)
-- [ ] Images (maintainers only)
+- [x] Images (maintainers only)
 - [ ] Blogging (maintainers only)
-- [x] Contact
+- [x] Contact (contact)
 
 ## Maintainers
 - Muaath Alqarni
