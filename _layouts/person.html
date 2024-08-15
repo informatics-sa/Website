@@ -1,11 +1,11 @@
 ---
-layout: base
+layout: default
 ---
 
 <div class="row">
     <ul>
-        <li>Name: {{ page.full_name }}</li>
-        <li>Graduation: {{ page.graduation_year }}</li>
-        <li>Codeforces: {{ page.codeforces_account }}</li>
+        <li>{% if page.lang == "en" %}Name{% else %}الاسم{% endif %}: {{ page.full_name }}</li>
+        <li>{% if page.lang == "en" %}Graduation year{% else %}سنة التخرج{% endif %}: {{ page.graduation }}</li>
+        <li>{% if page.lang == "en" %}Codeforces{% else %}كودفورسيس{% endif %}: <a href="https://codeforce.com/profile/{{ page.codeforces }}">@{{ page.codeforces }}</a></li>
     </ul>
 </div>
