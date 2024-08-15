@@ -58,9 +58,9 @@ def build_olympiads():
             enparts[idx] = {'id': mem_id, 'name': members[mem_id]['enname'], 'award': award}
             idx += 1
         write_file(f'olympiads/{filename}.html', {
-            'layout': 'olympaid',
+            'layout': 'olympiad',
             'lang': 'ar',
-            'olympaid': oly['name'],
+            'olympiad': oly['name'],
             'country': oly['country'],
             'start_date': oly['start'],
             'end_date': oly['end'],
@@ -68,7 +68,7 @@ def build_olympiads():
             'participants': parts
         })
         write_file(f'en/olympiads/{filename}.html', {
-            'layout': 'olympaid',
+            'layout': 'olympiad',
             'lang': 'en',
             'olympiad': oly['name'],
             'country': oly['country'],
