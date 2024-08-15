@@ -1,0 +1,42 @@
+[
+    {
+        "id": "muaath_alqarni",
+        "arname": "معاذ القرني",
+        "enname": "Muaath Alqarni",
+        "graduation": 2025,
+        "codeforces": "Muaath_5",
+        "level": 3
+    },
+    {
+        "id": "essa_almousa",
+        "arname": "عيسى الموسى",
+        "enname": "Essa Almousa",
+        "graduation": 2024,
+        "codeforces": "Essa2006",
+        "level": 3
+    },
+    {
+        "id": "ahmad_alhashim",
+        "arname": "أحمد الهاشم",
+        "enname": "Ahmad Alhashim",
+        "graduation": 2024,
+        "codeforces": "vahmad",
+        "level": 3
+    },
+    {
+        "id": "adeeb_alshehri",
+        "arname": "أديب الشهري",
+        "enname": "Adeeb Alshehri",
+        "graduation": 2024,
+        "codeforces": "MrDeboo",
+        "level": 4
+    },
+    {
+        "id": "emad_alharbi",
+        "arname": "عماد الحربي",
+        "enname": "Emad Alharbi",
+        "graduation": 2025,
+        "codeforces": "Emad234",
+        "level": 3
+    }
+]

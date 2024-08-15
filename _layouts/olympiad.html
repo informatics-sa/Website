@@ -1,0 +1,56 @@
+---
+layout: base
+---
+
+<div class="row">
+    <h1>
+        {% if page.lang == "en" %}  
+            {% if page.olympiad == "ioi" %}
+                International Olympiad in Informatics
+            {% elif page.olympiad == "boi" %}
+                Balkan Olympiad in Informatics
+            {% elif page.olympiad == "egoi" %}
+                European Girls Olympiad of Informatics
+            {% elif page.olympiad == "apio" %}
+                Asian-Pasific Olympiad Informatics Olympiad
+            {% elif page.olympiad == "jboi" %}
+                Junior Balkan Olympiad in Informatics
+            {% endif %}
+        {% else %}
+            {% if page.olympiad == "ioi" %}
+                الأولمبياد الدولي للمعلوماتية
+            {% elif page.olympiad == "boi" %}
+                أولمبياد البلقان الدولي
+            {% elif page.olympiad == "egoi" %}
+                أولمبياد الأوربي
+            {% elif page.olympiad == "apio" %}
+                أولمبياد آسيا والباسفك للمعلوماتية
+            {% elif page.olympiad == "jboi" %}
+                أولمبياد البلقان للمعلوماتية للناشئين
+            {% endif %}
+        {% endif %}
+
+        ({{ page.olympiad | upcase }})
+    </h1>
+    <ul>
+        <li>Start: {% page.start_date %}</li>
+        <li>End: {% page.end_date %}</li>
+        {% if page.website %}
+        <li>Website: <a href="{% page.website %}">{% page.website %}</a></li>
+        {% endif %}
+    </ul>
+    <table>
+        <thead>
+            <th>{% if page.lang == "en" %} Rank {% else %} الترتيب {% endif %}</th>
+            <th>{% if page.lang == "en" %} Name {% else %} الاسم {% endif %}</th>
+            <th>{% if page.lang == "en" %} Award {% else %} الجائزة {% endif %}</th>
+        </thead>
+        <tbody>
+
+            {% for i in (1..page.participants_count) %}
+            <a href="">{{ part.i.name }}</a>
+            {% endfor %}
+        </tbody>
+    </table>
+    </ul>
+</div>
