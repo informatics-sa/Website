@@ -58,12 +58,18 @@ layout: default
                     </td>
                     <td>
                         {% if page[year][idx].start == page[year][idx].end %}
-                            {{ page[year][idx].start }} - {{ page[year][idx].end }}
-                        {% else %}
                             {{ page[year][idx].start }}
+                        {% else %}
+                            {{ page[year][idx].start }} - {{ page[year][idx].end }}
                         {% endif %}
                     </td>
-                    <td>{{ page[year][idx].country }}</td>
+                    <td>
+                        {% if page.lang == 'ar' %}
+                            {{ page[year][idx].country_arname }}
+                        {% else %}
+                            {{ page[year][idx].country_enname }}
+                        {% endif %}
+                    </td>
                     <td>{{ page[year][idx].awards }}</td>
                 </tr>
             {% endfor %}
