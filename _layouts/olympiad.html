@@ -7,25 +7,25 @@ layout: default
         {% if page.lang == "en" %}  
             {% if page.olympiad == "ioi" %}
                 International Olympiad in Informatics
-            {% elif page.olympiad == "boi" %}
+            {% elseif page.olympiad == "boi" %}
                 Balkan Olympiad in Informatics
-            {% elif page.olympiad == "egoi" %}
+            {% elseif page.olympiad == "egoi" %}
                 European Girls Olympiad of Informatics
-            {% elif page.olympiad == "apio" %}
+            {% elseif page.olympiad == "apio" %}
                 Asian-Pasific Olympiad Informatics Olympiad
-            {% elif page.olympiad == "jboi" %}
+            {% elseif page.olympiad == "jboi" %}
                 Junior Balkan Olympiad in Informatics
             {% endif %}
         {% else %}
             {% if page.olympiad == "ioi" %}
                 الأولمبياد الدولي للمعلوماتية
-            {% elif page.olympiad == "boi" %}
+            {% elseif page.olympiad == "boi" %}
                 أولمبياد البلقان الدولي
-            {% elif page.olympiad == "egoi" %}
+            {% elseif page.olympiad == "egoi" %}
                 أولمبياد الأوربي
-            {% elif page.olympiad == "apio" %}
+            {% elseif page.olympiad == "apio" %}
                 أولمبياد آسيا والباسفك للمعلوماتية
-            {% elif page.olympiad == "jboi" %}
+            {% elseif page.olympiad == "jboi" %}
                 أولمبياد البلقان للمعلوماتية للناشئين
             {% endif %}
         {% endif %}

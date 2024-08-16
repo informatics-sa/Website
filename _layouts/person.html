@@ -3,18 +3,21 @@ layout: default
 ---
 
 <div class="row">
+    {% if page.lang == "en" %}
     <div class="col-md-6 col-sm-12">
         <ul>
-            <li>{% if page.lang == "en" %}Name{% else %}الاسم{% endif %}: {{ page.full_name }}</li>
-            <li>{% if page.lang == "en" %}Graduation year{% else %}سنة التخرج{% endif %}: {{ page.graduation }}</li>
-            <li>{% if page.lang == "en" %}Codeforces{% else %}كودفورسيس{% endif %}: <a href="https://codeforce.com/profile/{{ page.codeforces }}">@{{ page.codeforces }}</a></li>
+            <li>Name: {{ page.full_name }}</li>
+            <li>Graduation year: {{ page.graduation }}</li>
+            <li>Codeforces account: <a href="https://codeforce.com/profile/{{ page.codeforces }}">@{{ page.codeforces }}</a></li>
         </ul>
     </div>
+    {% else %}
     <div class="col-md-6 col-sm-12">
         <ul>
-            <li>{% if page.lang == "en" %}Name{% else %}الاسم{% endif %}: {{ page.full_name }}</li>
-            <li>{% if page.lang == "en" %}Graduation year{% else %}سنة التخرج{% endif %}: {{ page.graduation }}</li>
-            <li>{% if page.lang == "en" %}Codeforces{% else %}كودفورسيس{% endif %}: <a href="https://codeforce.com/profile/{{ page.codeforces }}">@{{ page.codeforces }}</a></li>
+            <li>الاسم: {{ page.full_name }}</li>
+            <li>سنة التخرج: {{ page.graduation }}</li>
+            <li>كودفورسيس: <a href="https://codeforce.com/profile/{{ page.codeforces }}">@{{ page.codeforces }}</a></li>
         </ul>
     </div>
+    {% endif %}
 </div>
