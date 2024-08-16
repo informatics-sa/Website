@@ -125,7 +125,7 @@ def build_olympiads_index():
         yearidx[year] += 1
     
     for year in range(min_year, max_year+1):
-        olympiads[year]['count'] = yearidx[year]
+        olympiads[str(year)]['count'] = yearidx[str(year)]
 
     written = {
         'layout': 'participations',
