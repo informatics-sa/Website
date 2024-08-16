@@ -22,6 +22,13 @@ layout: base
                 <li class="nav-item"><a class="nav-link {% if page.id == 'members' %} active {% endif %}" href="/members/">الأعضاء</a></li>
                 <li class="nav-item"><a class="nav-link {% if page.id == 'images' %} active {% endif %}" href="/images">معرض الصور</a></li>
                 <li class="nav-item"><a class="nav-link {% if page.id == 'contact' %} active {% endif %}" href="/contact">تواصل معنا</a></li>
+                <li class="nav-item">
+                    {% if page.lang == "ar" %}
+                    <button class="btn btn-primary">EN</button>
+                    {% else %}
+                    <button class="btn btn-primary">AR</button>
+                    {% endif %}
+                </li>
             </ul>
         </div>
     </div>
