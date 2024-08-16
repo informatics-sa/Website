@@ -47,17 +47,19 @@ layout: default
         </thead>
         <tbody>
             {% for i in (1..page.participants_count) %}
-            <td>{{ i }}</td>
-            <td>
-                {% if page.lang == "en" %}
-                <a href="/en/members/{{ page.participants.i.id }}">{{ page.participants.i.name }}</a>
-                {% else %}
-                <a href="/members/{{ page.participants.i.id }}">{{ page.participants.i.name }}</a>
-                {% endif %}
-            </td>
-            <td>
-                {{ page.participants.i.award }}
-            </td>
+            <tr>
+                <td>{{ i }}</td>
+                <td>
+                    {% if page.lang == "en" %}
+                    <a href="/en/members/{{ page.participants.{{i}}.id }}">{{ page.participants.{{i}}.name }}</a>
+                    {% else %}
+                    <a href="/members/{{ page.participants.{{i}}.id }}">{{ page.participants.{{i}}.name }}</a>
+                    {% endif %}
+                </td>
+                <td>
+                    {{ page.participants.i.award }}
+                </td>
+            </tr>
             {% endfor %}
         </tbody>
     </table>
