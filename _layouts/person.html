@@ -3,21 +3,43 @@ layout: default
 ---
 
 <div class="row">
-    {% if page.lang == "en" %}
-    <div class="col-md-6 col-sm-12">
+    <div class="col-md-6 col-sm-12 p-1">
+        {% if page.lang == "en" %}
         <ul>
             <li>Name: {{ page.full_name }}</li>
             <li>Graduation year: {{ page.graduation }}</li>
             <li>Codeforces account: <a href="https://codeforce.com/profile/{{ page.codeforces }}">@{{ page.codeforces }}</a></li>
         </ul>
-    </div>
-    {% else %}
-    <div class="col-md-6 col-sm-12">
+        {% else %}
         <ul>
             <li>الاسم: {{ page.full_name }}</li>
             <li>سنة التخرج: {{ page.graduation }}</li>
             <li>كودفورسيس: <a href="https://codeforce.com/profile/{{ page.codeforces }}">@{{ page.codeforces }}</a></li>
         </ul>
+        {% endif %}
     </div>
-    {% endif %}
+    <div class="col-md-6 col-sm-12 p-1">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <th>{% if page.lang == "en" %} Name {% else %} الاسم {% endif %}</th>
+                <th>{% if page.lang == "en" %} Award {% else %} الجائزة {% endif %}</th>
+            </thead>
+            <tbody>
+                {% for i in (1..page.participations_count) %}
+                <tr>
+                    <td>
+                        {% if page.lang == "en" %}
+                        <a href="/en/olympiads/{{ page.participants[i].olympiad }}">{{ page.participants[i].olympiad }}</a>
+                        {% else %}
+                        <a href="/olympiads/ page.participants[i].olympiad }}">{{ page.participants[i].olympiad }}</a>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {{ page.participants[i].award }}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 </div>

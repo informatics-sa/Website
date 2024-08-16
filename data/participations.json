@@ -26,7 +26,7 @@
             "ahmad_alhashim": "none",
             "muaath_alqarni": "none",
             "munther_alzayer": "none",
-            "essa_almosa": "none",
+            "essa_almousa": "none",
             "mohammad_alyousef": "none",
             "emad_alharbi": "none",
             "saad_alarifi": "none"
@@ -48,7 +48,7 @@
             "humaid_alhuthali": "hounarablemention",
             "emad_alharbi": "hounarablemention",
             "ahmad_alhashim": "hounarablemention",
-            "essa_almosa": "hounarablemention",
+            "essa_almousa": "hounarablemention",
             "rifal_alhazmi": "hounarablemention"
         }
     },
@@ -57,7 +57,7 @@
         "participants": {
             "humaid_alhuthali": "bronze",
             "adeeb_alshehri": "hounarablemention",
-            "essa_almosa": "hounarablemention",
+            "essa_almousa": "hounarablemention",
             "asdf": "none"
         }
     },
@@ -95,8 +95,8 @@
         "participants": {
             "abdulaziz_alshibli": "bronze",
             "adeeb_alshehri": "hounarablemention",
-            "essa_almosa": "hounarablemention",
-            "asdf": "none"
+            "essa_almousa": "hounarablemention",
+            "juri_aljohani": "none"
         }
     },
     {
@@ -114,9 +114,9 @@
         "name": "ioi", "start": "2021/6/19", "end": "2021/6/25", "country": "online",
         "participants": {
             "abdulaziz_alshibli": "bronze",
-            "adeeb_alshehri": "hounarablemention",
-            "essa_almosa": "hounarablemention",
-            "asdf": "none"
+            "almothana_alzahrani": "none",
+            "adeeb_alshehri": "none",
+            "abdulmohsen_mohammedsaleh": "none"
         }
     },
     {
@@ -143,9 +143,9 @@
         "name": "ioi", "start": "2019/6/19", "end": "2019/6/25", "country": "az",
         "participants": {
             "fares_basuni": "bronze",
-            "adsf": "hounarablemention",
-            "asdfa": "hounarablemention",
-            "asdfd": "none"
+            "abdullah_aljohani": "hounarablemention",
+            "mohammed_alrefaei": "hounarablemention",
+            "raya_abualjamal": "none"
         }
     }
 ]

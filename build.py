@@ -60,6 +60,7 @@ def build_olympiads():
         write_file(f'olympiads/{filename}.html', {
             'layout': 'olympiad',
             'lang': 'ar',
+            'title': oly['name'].upper() + ' ' + oly['start'].split('/')[0],
             'olympiad': oly['name'],
             'country': oly['country'],
             'start_date': oly['start'],
@@ -70,6 +71,7 @@ def build_olympiads():
         write_file(f'en/olympiads/{filename}.html', {
             'layout': 'olympiad',
             'lang': 'en',
+            'title': oly['name'].upper() + ' ' + oly['start'].split('/')[0]
             'olympiad': oly['name'],
             'country': oly['country'],
             'start_date': oly['start'],
@@ -80,19 +82,29 @@ def build_olympiads():
 
 def build_members():
     for memid, mem in members.items():
+        participations = {}
+        idx = 1
+        for oly, award in mem['participations'].items():
+            participations[idx] = {}
+            participations[idx]['olympiad'] = oly
+            participations[idx]['award'] = award
         write_file(f'members/{memid}.html', {
             'layout': 'person',
             'lang': 'ar',
             'full_name': mem['arname'],
             'graduation': mem['graduation'],
-            'codeforces': mem['codeforces']
+            'codeforces': mem['codeforces'],
+            'participations_count': len(participations),
+            'participations': participations
         })
         write_file(f'en/members/{memid}.html', {
             'layout': 'person',
             'lang': 'en',
             'full_name': mem['enname'],
             'graduation': mem['graduation'],
-            'codeforces': mem['codeforces']
+            'codeforces': mem['codeforces'],
+            'participations_count': len(participations),
+            'participations': participations
         })
 
 build_members()

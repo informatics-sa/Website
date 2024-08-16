@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="row">
-    <div class="col">
+    <div class="col p-1">
         <h1>
             {% if page.lang == "en" %}  
                 {% if page.olympiad == "ioi" %}
@@ -41,7 +41,7 @@ layout: default
             {% endif %}
         </ul>
     </div>
-    <div class="col">
+    <div class="col p-1">
         <table class="table table-bordered table-striped">
             <thead>
                 <th>{% if page.lang == "en" %} Rank {% else %} الترتيب {% endif %}</th>
@@ -60,7 +60,7 @@ layout: default
                         {% endif %}
                     </td>
                     <td>
-                        {{ page.participants.i.award }}
+                        {{ page.participants[i].award }}
                     </td>
                 </tr>
                 {% endfor %}
