@@ -19,9 +19,9 @@ layout: default
         {% endif %}
     </thead>
     <tbody>
-        {% for year in (page.start_year..page.last_year) %}
+        {% for year in (page.last_year..page.start_year) %}
             <tr>
-                <td class="text-center" style="vertical-align: middle;" rowspan="{{ page[year].count }}">{{ year }}</td>
+                <td class="text-center" style="vertical-align: middle;" rowspan="{{ page[year].count - 1 }}">{{ year }}</td>
                 <td>
                     <a href="{% if page.lang == "en" %}/en{% endif %}/olympiads/{{ page[year].1.name }}_{{year}}">{{ page[year].1.name }}</a>
                 </td>
