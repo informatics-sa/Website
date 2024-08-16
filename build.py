@@ -18,7 +18,7 @@ def init_countries():
 def flag_emoji(country_code):
     if country_code == 'online':
         return '🌐'
-    if country_code in ['sw']: # Blocked flags list
+    if country_code in ['se']: # Blocked flags list
         return ''
     country_code = country_code.upper()
     flag = chr(ord(country_code[0]) + 127397) + chr(ord(country_code[1]) + 127397)
@@ -129,6 +129,7 @@ def build_members():
             idx += 1
         write_file(f'members/{memid}.html', {
             'layout': 'person',
+            'title': mem['arname'],
             'lang': 'ar',
             'full_name': mem['arname'],
             'graduation': mem['graduation'],
@@ -138,6 +139,7 @@ def build_members():
         })
         write_file(f'en/members/{memid}.html', {
             'layout': 'person',
+            'title': mem['enname'],
             'lang': 'en',
             'full_name': mem['enname'],
             'graduation': mem['graduation'],
@@ -177,12 +179,34 @@ def build_olympiads_index():
     for year, list in olympiads.items():
         written[year] = list
     
-    write_file("olympiads/idx.html", written)
+    write_file("olympiads/index.html", written)
 
     written['lang'] = 'en'
     written['title'] = 'Olympiads'
 
-    write_file("en/olympiads/idx.html", written)
+    write_file("en/olympiads/index.html", written)
+
+# Generate a medals count list only in official olympiads 
+# Sort it by gold/silver/bronze/hounarablemention
+# Print the list in a table
+def build_hall_of_fame():
+    official_olympiads = ['ioi', 'apio']
+    fame = {}
+    for memid, data in members.items():
+        fame[memid] = {
+            'gold': 0,
+            'silver': 0,
+            'bronze': 0,
+            'hounarablemention': 0,
+            'none': 0,
+        }
+        for oly, award in data['participations'].items():
+            oly = oly.split('_')[0]
+            if oly in official_olympiads:
+                fame[memid][award] += 1
+    
+    # TODO: should be printed to a file
+    
 
 def main():
     init_countries()
@@ -190,5 +214,6 @@ def main():
     build_members()
     build_olympiads()
     build_olympiads_index()
+    build_hall_of_fame()
 
 main()
