@@ -111,12 +111,12 @@ def build_members():
 def build_olympiads_index():
     olympiads = {}
     yearidx = {}
-    min_year = 2000
-    max_year = 3000
+    min_year = 3000
+    max_year = 2000
     for oly in participations:
         year = oly['start'].split('/')[0]
-        min_year = min(year, min_year)
-        max_year = max(year, max_year)
+        min_year = min(int(year), min_year)
+        max_year = max(int(year), max_year)
         if year not in olympiads:
             olympiads[year] = {}
             yearidx[year] = 1
