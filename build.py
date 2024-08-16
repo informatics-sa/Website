@@ -124,6 +124,9 @@ def build_olympiads_index():
         del olympiads[year][yearidx[year]]['participants']
         yearidx[year] += 1
     
+    for year in range(min_year, max_year+1):
+        olympiads[year]['count'] = yearidx[year]
+
     written = {
         'layout': 'participations',
         'lang': 'ar',    
