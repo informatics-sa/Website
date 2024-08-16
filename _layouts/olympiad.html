@@ -33,12 +33,28 @@ layout: default
 
             ({{ page.olympiad | upcase }})
         </h1>
+        <div class="card" style="width: 18rem;">
+            <ul class="list-group list-group-flush">
+                {% if page.lang == "en" %}
+                    <li class="list-group-item">Start: {{ page.start_date }}</li>
+                    <li class="list-group-item">End: {{ page.end_date }}</li>
+                    <li class="list-group-item">Host: {{ page.country_enname }}</li>
+                    {% if page.website %}
+                    <li class="list-group-item">Website: <a href="{{ page.website }}">{{ page.website }}</a></li>
+                    {% endif %}
+                {% else %}
+                    <li class="list-group-item">البداية: {{ page.start_date }}</li>
+                    <li class="list-group-item">النهاية: {{ page.end_date }}</li>
+                    <li class="list-group-item">الاستضافة: {{ page.country_enname }}</li>
+                    {% if page.website %}
+                    <li class="list-group-item">الموقع: <a href="{{ page.website }}">{{ page.website }}</a></li>
+                    {% endif %}
+                {% endif %}
+            </ul>
+        </div>
         <ul>
-            <li>Start: {{ page.start_date }}</li>
-            <li>End: {{ page.end_date }}</li>
-            {% if page.website %}
-            <li>Website: <a href="{{ page.website }}">{{ page.website }}</a></li>
-            {% endif %}
+
+            
         </ul>
     </div>
     <div class="col p-1">
@@ -60,7 +76,17 @@ layout: default
                         {% endif %}
                     </td>
                     <td>
-                        {{ page.participants[i].award }}
+                        {% if page.participants[i].award == 'gold' %}
+                        🥇
+                        {% elsif page.participants[i].award == 'silver' %}
+                        🥈
+                        {% elsif page.participants[i].award == 'bronze' %}
+                        🥉
+                        {% elsif page.participants[i].award == 'hounarablemention' %}
+                        📜
+                        {% elsif page.participants[i].award == 'none' %}
+                        -
+                        {% endif %}
                     </td>
                 </tr>
                 {% endfor %}
