@@ -24,9 +24,9 @@ layout: base
                 <li class="nav-item"><a class="nav-link {% if page.id == 'contact' %} active {% endif %}" href="/contact">تواصل معنا</a></li>
                 <li class="nav-item">
                     {% if page.lang == "ar" %}
-                    <button class="btn btn-primary">EN</button>
+                    <a href="/en/{{ page.url | remove_first: site.baseurl }}" class="btn btn-outline-success">EN</button>
                     {% else %}
-                    <button class="btn btn-primary">AR</button>
+                    <a href="{{ page.url | remove_first: site.baseurl | remove_first: '/en' }} }}" class="btn btn-outline-success">عربي</button>
                     {% endif %}
                 </li>
             </ul>
