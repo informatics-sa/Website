@@ -7,25 +7,25 @@ layout: default
         {% if page.lang == "en" %}  
             {% if page.olympiad == "ioi" %}
                 International Olympiad in Informatics
-            {% elseif page.olympiad == "boi" %}
+            {% elsif page.olympiad == "boi" %}
                 Balkan Olympiad in Informatics
-            {% elseif page.olympiad == "egoi" %}
+            {% elsif page.olympiad == "egoi" %}
                 European Girls Olympiad of Informatics
-            {% elseif page.olympiad == "apio" %}
+            {% elsif page.olympiad == "apio" %}
                 Asian-Pasific Olympiad Informatics Olympiad
-            {% elseif page.olympiad == "jboi" %}
+            {% elsif page.olympiad == "jboi" %}
                 Junior Balkan Olympiad in Informatics
             {% endif %}
         {% else %}
             {% if page.olympiad == "ioi" %}
                 الأولمبياد الدولي للمعلوماتية
-            {% elseif page.olympiad == "boi" %}
+            {% elsif page.olympiad == "boi" %}
                 أولمبياد البلقان الدولي
-            {% elseif page.olympiad == "egoi" %}
+            {% elsif page.olympiad == "egoi" %}
                 أولمبياد الأوربي
-            {% elseif page.olympiad == "apio" %}
+            {% elsif page.olympiad == "apio" %}
                 أولمبياد آسيا والباسفك للمعلوماتية
-            {% elseif page.olympiad == "jboi" %}
+            {% elsif page.olympiad == "jboi" %}
                 أولمبياد البلقان للمعلوماتية للناشئين
             {% endif %}
         {% endif %}
@@ -49,7 +49,11 @@ layout: default
             {% for i in (1..page.participants_count) %}
             <td>{{ i }}</td>
             <td>
+                {% if page.lang == "en" %}
+                <a href="/en/members/{{ page.participants.i.id }}">{{ page.participants.i.name }}</a>
+                {% else %}
                 <a href="/members/{{ page.participants.i.id }}">{{ page.participants.i.name }}</a>
+                {% endif %}
             </td>
             <td>
                 {{ page.participants.i.award }}
