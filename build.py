@@ -1,5 +1,6 @@
 import os
 import json
+import countryinfo
 
 def load_json(filename):
     with open(f'data/{filename}.json', 'r', encoding='utf-8') as f:
@@ -120,6 +121,9 @@ def build_olympiads_index():
         if year not in olympiads:
             olympiads[year] = {}
             yearidx[year] = 1
+        ci = countryinfo.CountryInfo(oly['country'])
+        print(ci.translations())
+        oly['country_arname'] = ci.name()
         olympiads[year][yearidx[year]] = oly
         del olympiads[year][yearidx[year]]['participants']
         yearidx[year] += 1
@@ -139,6 +143,9 @@ def build_olympiads_index():
     
     write_file("olympiads/idx.html", written)
 
-build_members()
-build_olympiads()
-build_olympiads_index()
+def main():
+    build_members()
+    build_olympiads()
+    build_olympiads_index()
+
+main()

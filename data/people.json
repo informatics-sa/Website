@@ -94,5 +94,93 @@
         "graduation": 2027,
         "codeforces": "Erering",
         "level": 2
+    },
+    {
+        "id": "sultan_alaiban",
+        "arname": "سلطان العيبان",
+        "enname": "Sultan Alaiban",
+        "graduation": 2026,
+        "codeforces": "Sul_A.",
+        "level": 2
+    },
+    {
+        "id": "mohammed_bashkail",
+        "arname": "محمد باشكيل",
+        "enname": "Mohammed Bashkail",
+        "graduation": 2027,
+        "codeforces": "mohammedyay",
+        "level": 2
+    },
+    {
+        "id": "mohammed_alasmari",
+        "arname": "محمد الأسمري",
+        "enname": "Mohammed Alasmari",
+        "graduation": 2027,
+        "codeforces": "m5588ohammed",
+        "level": 2
+    },
+    {
+        "id": "rifal_alhazmi",
+        "arname": "ريفال الحازمي",
+        "enname": "Rifal Alhazmi",
+        "graduation": 2025,
+        "codeforces": "rifal",
+        "level": 4
+    },
+    {
+        "id": "munther_alzayer",
+        "arname": "منذر الزاير",
+        "enname": "Munther Alzayer",
+        "graduation": 2024,
+        "codeforces": "MuntherCarrot",
+        "level": 3
+    },
+    {
+        "id": "mohammad_alyousef",
+        "arname": "محمد اليوسف",
+        "enname": "Mohammad Alyousef",
+        "graduation": 2024,
+        "codeforces": "MrM7mD",
+        "level": 3
+    },
+    {
+        "id": "abdulrahman_alghamdi",
+        "arname": "عبد الرحمن الغامدي",
+        "enname": "Abdulrahman Alghamdi",
+        "graduation": 2026,
+        "codeforces": "ibsha",
+        "level": 2
+    },
+    {
+        "id": "abdullah_alodaibi",
+        "arname": "عبد الله العضيبي",
+        "enname": "Abdullah Alodaibi",
+        "graduation": 2026,
+        "codeforces": "Abdullah_Alodaibi",
+        "level": 2
+    },
+    {
+        "id": "basma_mansour",
+        "arname": "بسمة منصور",
+        "enname": "Basma Mansour",
+        "graduation": 2026,
+        "codeforces": "undefined",
+        "level": 2
+    },
+    {
+        "id": "juri_aljohani",
+        "arname": "جوري الجهني",
+        "enname": "Juri Aljohani",
+        "graduation": 2026,
+        "codeforces": "undefined",
+        "level": 2
+    },
+    {
+        "id": "abdolmohsen_mohammedsaleh",
+        "arname": "عبدالمحسن محمدصالح",
+        "enname": "Abdolmohsen Mohammedsaleh",
+        "graduation": 2023,
+        "codeforces": "Abdolmohsen",
+        "level": -2
     }
 ]
