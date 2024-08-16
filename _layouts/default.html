@@ -24,9 +24,9 @@ layout: base
                 <li class="nav-item"><a class="nav-link {% if page.id == 'contact' %} active {% endif %}" href="/contact">تواصل معنا</a></li>
                 <li class="nav-item">
                     {% if page.lang == "ar" %}
-                    <a href="/en/{{ page.url | remove_first: site.baseurl }}" class="btn btn-outline-success">EN</button>
+                    <a class="nav-link" href="/en/{{ page.url | remove_first: site.baseurl }}" class="btn btn-outline-success">EN</a>
                     {% else %}
-                    <a href="{{ page.url | remove_first: site.baseurl | remove_first: '/en' }}" class="btn btn-outline-success">عربي</button>
+                    <a class="nav-link" href="{{ page.url | remove_first: site.baseurl | remove_first: '/en' }}" class="btn btn-outline-success">عربي</a>
                     {% endif %}
                 </li>
             </ul>
