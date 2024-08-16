@@ -71,7 +71,7 @@ def build_olympiads():
         write_file(f'en/olympiads/{filename}.html', {
             'layout': 'olympiad',
             'lang': 'en',
-            'title': oly['name'].upper() + ' ' + oly['start'].split('/')[0]
+            'title': oly['name'].upper() + ' ' + oly['start'].split('/')[0],
             'olympiad': oly['name'],
             'country': oly['country'],
             'start_date': oly['start'],
@@ -88,6 +88,7 @@ def build_members():
             participations[idx] = {}
             participations[idx]['olympiad'] = oly
             participations[idx]['award'] = award
+            idx += 1
         write_file(f'members/{memid}.html', {
             'layout': 'person',
             'lang': 'ar',
