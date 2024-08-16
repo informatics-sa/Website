@@ -26,7 +26,7 @@ layout: base
                     {% if page.lang == "ar" %}
                     <a href="/en/{{ page.url | remove_first: site.baseurl }}" class="btn btn-outline-success">EN</button>
                     {% else %}
-                    <a href="{{ page.url | remove_first: site.baseurl | remove_first: '/en' }} }}" class="btn btn-outline-success">عربي</button>
+                    <a href="{{ page.url | remove_first: site.baseurl | remove_first: '/en' }}" class="btn btn-outline-success">عربي</button>
                     {% endif %}
                 </li>
             </ul>

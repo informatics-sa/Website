@@ -1,13 +1,18 @@
+---
+lang: en
+title: Public Data API
+---
 # Public Data API
-## `/data/members.json`
+
+## [`/data/people.json`](/data/people.json)
 An array of people, each person has the following:
 - `id`: which will be usually in `firstname_lastname` format
 - `arname`: Name in Arabic
-- `enname`: Name in English
+- `enname`: Name in English 
 - `graduation`: Integer, graduation year
 - `codeforces`: Codeforces username
 
-## `/data/participations.json`
+## [`/data/participations.json`](`/data/participations.json`)
 An array of people, each person has the following:
 - `id`: Eitehr `ioi`/`boi`/`apio`/`jboi`/`egoi`
 - `year`: Integer, year
