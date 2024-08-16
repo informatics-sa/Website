@@ -23,17 +23,17 @@ layout: default
             <tr>
                 <td class="text-center" style="vertical-align: middle;" rowspan="{{ page[year].count - 1 }}">{{ year }}</td>
                 <td>
-                    <a href="{% if page.lang == "en" %}/en{% endif %}/olympiads/{{ page[year].1.name }}_{{year}}">{{ page[year].1.name }}</a>
+                    <a href="{% if page.lang == "en" %}/en{% endif %}/olympiads/{{ page[year].1.name }}_{{year}}">{{ page[year][1].name }}</a>
                 </td>
                 <td>
-                    {% if page[year].1.start == page[year].1.end %}
-                        {{ page[year].1.start }} - {{ page[year].1.end }}
+                    {% if page[year][1].start == page[year][1].end %}
+                        {{ page[year][1].start }} - {{ page[year][1].end }}
                     {% else %}
-                        {{ page[year].1.start }}
+                        {{ page[year][1].start }}
                     {% endif %}
                 </td>
-                <td>{{ page[year].1.country }}</td>
-                <td>{{ page[year].1.awards }}</td>
+                <td>{{ page[year][1].country }}</td>
+                <td>{{ page[year][1].awards }}</td>
             </tr>
             {% for idx in (2..page[year].count) %}
                 <tr>
