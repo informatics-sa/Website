@@ -1,0 +1,56 @@
+---
+id: olympiads
+layout: default
+---
+<table class="table table-bordered table-striped">
+    <thead>
+        {% if page.lang == "ar" %}
+        <th width="5%">السنة</th>
+        <th>الأولمبياد</th>
+        <th>تاريخ المشاركة</th>
+        <th>المكان</th>
+        <th>الجوائز</th>
+        {% else %}
+        <th width="5%">Year</th>
+        <th>Olympiad</th>
+        <th>Date</th>
+        <th>Country</th>
+        <th>Awards</th>
+        {% endif %}
+    </thead>
+    <tbody>
+        {% for year in (page.start_year..page.last_year) %}
+            <tr>
+                <td class="text-center" style="vertical-align: middle;" rowspan="{{ page[year].count }}">{{ year }}</td>
+                <td>
+                    <a href="{% if page.lang == "en" %}/en{% endif %}/olympiads/{{ page[year].1.name }}_{{year}}">{{ page[year].1.name }}</a>
+                </td>
+                <td>
+                    {% if page[year].1.start == page[year].1.end %}
+                        {{ page[year].1.start }} - {{ page[year].1.end }}
+                    {% else %}
+                        {{ page[year].1.start }}
+                    {% endif %}
+                </td>
+                <td>{{ page[year].1.country }}</td>
+                <td>{{ page[year].1.awards }}</td>
+            </tr>
+            {% for idx in (2..page[year].count) %}
+                <tr>
+                    <td>
+                        <a href="{% if page.lang == "en" %}/en{% endif %}/olympiads/{{page[year][idx].name}}_{{year}}">{{ page[year][idx].name }}</a>
+                    </td>
+                    <td>
+                        {% if page[year][idx].start == page[year][idx].end %}
+                            {{ page[year][idx].start }} - {{ page[year][idx].end }}
+                        {% else %}
+                            {{ page[year][idx].start }}
+                        {% endif %}
+                    </td>
+                    <td>{{ page[year][idx].country }}</td>
+                    <td>{{ page[year][idx].awards }}</td>
+                </tr>
+            {% endfor %}
+        {% endfor %}
+    </tbody>
+</table>

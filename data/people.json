@@ -86,5 +86,13 @@
         "graduation": 2021,
         "codeforces": "undefined",
         "level": -2
+    },
+    {
+        "id": "saad_alarifi",
+        "arname": "سعد العريفي",
+        "enname": "Saad Alarifi",
+        "graduation": 2027,
+        "codeforces": "Erering",
+        "level": 2
     }
 ]

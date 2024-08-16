@@ -40,13 +40,13 @@ layout: base
                 <li class="nav-item"><a class="nav-link {% if page.id == 'contact' %} active {% endif %}" href="/contact">Contact</a></li>
                 {% endif %}
 
-                <div class="d-flex">
+                <li class="nav-item">
                     {% if page.lang == "ar" %}
-                    <a class="btn btn-outline-success bg-" href="en/{{ page.url | remove_first: site.baseurl }}" class="btn btn-outline-success">EN</a>
+                    <a class="nav-link" href="en{{ page.url | remove_first: site.baseurl }}" class="btn btn-outline-success">EN</a>
                     {% else %}
-                    <a class="btn btn-outline-success" href="{{ page.url | remove_first: site.baseurl | remove_first: '/en' }}" class="btn btn-outline-success">عربي</a>
+                    <a class="nav-link" href="{{ page.url | remove_first: site.baseurl | remove_first: '/en' }}" class="btn btn-outline-success">عربي</a>
                     {% endif %}
-                </div>
+                </li>
             </ul>
         </div>
     </div>

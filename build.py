@@ -108,5 +108,28 @@ def build_members():
             'participations': participations
         })
 
+def build_olympiads_index():
+    olympiads = {}
+    yearidx = {}
+    for oly in participations:
+        year = oly['start'].split('/')[0]
+        if year not in olympiads:
+            olympiads[year] = {}
+            yearidx[year] = 1
+        olympiads[year][yearidx[year]] = oly
+        del olympiads[year][yearidx[year]]['participants']
+        yearidx[year] += 1
+    
+    written = {
+        'layout': 'participations',
+        'lang': 'ar',    
+    }
+
+    for year, list in olympiads.items():
+        written[year] = list
+    
+    write_file("olympiads/idx.html", written)
+
 build_members()
 build_olympiads()
+build_olympiads_index()
