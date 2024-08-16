@@ -33,10 +33,10 @@ layout: default
         ({{ page.olympiad | upcase }})
     </h1>
     <ul>
-        <li>Start: {% page.start_date %}</li>
-        <li>End: {% page.end_date %}</li>
+        <li>Start: {{ page.start_date }}</li>
+        <li>End: {{ page.end_date }}</li>
         {% if page.website %}
-        <li>Website: <a href="{% page.website %}">{% page.website %}</a></li>
+        <li>Website: <a href="{{ page.website }}">{{ page.website }}</a></li>
         {% endif %}
     </ul>
     <table class="table table-bordered table-striped">
