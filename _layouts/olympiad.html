@@ -39,18 +39,22 @@ layout: default
         <li>Website: <a href="{% page.website %}">{% page.website %}</a></li>
         {% endif %}
     </ul>
-    <table>
+    <table class="table table-bordered table-striped">
         <thead>
             <th>{% if page.lang == "en" %} Rank {% else %} الترتيب {% endif %}</th>
             <th>{% if page.lang == "en" %} Name {% else %} الاسم {% endif %}</th>
             <th>{% if page.lang == "en" %} Award {% else %} الجائزة {% endif %}</th>
         </thead>
         <tbody>
-
             {% for i in (1..page.participants_count) %}
-            <a href="">{{ part.i.name }}</a>
+            <td>{{ i }}</td>
+            <td>
+                <a href="/members/{{ page.participants.i.id }}">{{ page.participants.i.name }}</a>
+            </td>
+            <td>
+                {{ page.participants.i.award }}
+            </td>
             {% endfor %}
         </tbody>
     </table>
-    </ul>
 </div>
