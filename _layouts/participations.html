@@ -19,7 +19,7 @@ layout: default
         {% endif %}
     </thead>
     <tbody>
-        {% for year in (page.last_year..page.start_year) %}
+        {% for year in (page.start_year..page.last_year) reversed %}
             <tr>
                 <td class="text-center" style="vertical-align: middle;" rowspan="{{ page[year].count - 1 }}">{{ year }}</td>
                 <td>
