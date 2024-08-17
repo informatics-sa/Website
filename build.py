@@ -57,23 +57,28 @@ def init_members():
                 members[mem_id]['codeforces'] = "undefined"
             members[mem_id]['participations'][oly['name'] + '_' + oly['start'].split('/')[0]] = oly['participants'][mem_id]
 
+def write_yml(data: dict, indent: int = 0) -> str:
+    res = ""
+    for key, val in data.items():
+        if type(val) is dict:
+            res += " " * indent + str(key) + ":\n"
+            res += write_yml(val, indent + 2)
+        elif type(val) is list:
+            res += " " * indent + str(key) + ":\n"
+            res += " " * (indent+2) + f"count: {len(val)}\n"
+            for i in range(len(val)):
+                mp = {str(i+1): val[i]}
+                res += write_yml(mp, indent + 2)
+        else:
+            res += " " * indent + str(key) + ": " + str(val) + "\n"
+    return res
+
 
 def write_file(filename: str, vals: dict):
     os.makedirs(os.path.dirname(filename), exist_ok=True)
     with open(filename, 'w', encoding='utf-8') as f:
         f.write("---\n")
-        for key, value in vals.items():
-            if type(value) is dict:
-                f.write(f"{key}:\n")
-                for key2, value2 in value.items():
-                    if type(value2) is dict:
-                        f.write(f"  {key2}:\n")
-                        for key3, value3 in value2.items():
-                            f.write("    " + key3 + ": " + str(value3) + "\n")
-                    else:
-                        f.write("  " + key2 + ": " + str(value2) + "\n")
-            else:
-                f.write(key + ": " + str(value) + "\n")
+        f.write(write_yml(vals))
         f.write("---\n")
 
 def build_olympiads():
@@ -217,6 +222,8 @@ def build_hall_of_fame():
         count += 1
         written[count] = {
             'id': mem,
+            'arname': members[mem]['arname'],
+            'enname': members[mem]['enname'],
             'gold': dic['gold'],
             'silver': dic['silver'],
             'bronze': dic['bronze'],
@@ -245,24 +252,73 @@ def build_images():
     written = {
         'layout': 'images',
         'title': "مكتبة الصور",
+        'lang': 'ar',
         'count': count
     }
     idx = 1
     for img in imgs:
         written[idx] = img
         idx += 1
-    write_file('./images2.html', written)
+    write_file('./images.html', written)
     written['lang'] = 'en'
     written['title'] = 'Image library'
-    write_file('en/images2.html', written)
+    write_file('en/images.html', written)
+
+def build_contact():
+    contact = load_json('contact')
+    for mem in contact['maintainers']:
+        mem['arname'] = members[mem['id']]['arname']
+        mem['enname'] = members[mem['id']]['enname']
+    for mem in contact['developers']:
+        mem['arname'] = members[mem['id']]['arname']
+        mem['enname'] = members[mem['id']]['enname']
+    for mem in contact['admins']:
+        mem['arname'] = members[mem['id']]['arname']
+        mem['enname'] = members[mem['id']]['enname']
+    written = {
+        'layout': 'contact',
+        'lang': 'ar',
+        'title': 'تواصل',
+        'maintainers': contact['maintainers'],
+        'admins': contact['admins'],
+        'developers': contact['developers']
+    }
+    write_file('./contact.html', written)
+    written['lang'] = 'en'
+    written['title'] = 'Contact'
+    write_file('en/contact.html', written)
+
+
+def test_utils():
+    assert flag_emoji('sa') == '🇸🇦'
+    assert countries['sa']['english_name'] == 'Saudi Arabia'
+    assert write_yml({
+        'Hi': 'Hello',
+        'list': ['Hi', 'Hello'],
+        'dict': {
+            'sub1': 'sub2'
+        }
+    }) == """Hi: Hello
+list:
+  count: 2
+  1: Hi
+  2: Hello
+dict:
+  sub1: sub2
+"""
 
 def main():
     init_countries()
     init_members()
+
+    test_utils()
+
     build_members()
+    #build_members_index()
     build_olympiads()
     build_olympiads_index()
     build_hall_of_fame()
     build_images()
+    build_contact()
 
 main()

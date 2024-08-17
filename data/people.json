@@ -238,5 +238,21 @@
         "graduation": 0,
         "codeforces": "undefined",
         "level": -2
+    },
+    {
+        "id": "esraa_almajhad",
+        "arname": "إسراء المجحد",
+        "enname": "Esraa Almajhad",
+        "graduation": 0,
+        "codeforces": "undefined",
+        "level": -3
+    },
+    {
+        "id": "ali_alsalman",
+        "arname": "علي السلمان",
+        "enname": "Ali Alsalman",
+        "graduation": 2026,
+        "codeforces": "AliMark71",
+        "level": 2
     }
 ]

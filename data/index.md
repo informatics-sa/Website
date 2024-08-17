@@ -21,3 +21,8 @@ An array of people, each person has the following:
 - `end`: End date
 - `participants`: Dictionary of people IDs : Award name (`gold`/`silver`/`bronze`/`hounarablemention`/`none`)
 - `website`: Olympiad website of that year **(Optional)**
+- 
+## [`/data/contact.json`](/data/contact.json)
+An array of people, each person has the following:
+- `id`: Member ID
+- `email`: Contact email

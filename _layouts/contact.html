@@ -1,0 +1,60 @@
+---
+id: contact
+layout: default
+---
+<div class="row">
+    <div class="col">
+        <h2>
+            {% if page.lang == 'ar' %}
+            مطوري الموقع
+            {% else %}
+            Website developers
+            {% endif %}
+        </h2>
+        {% for i in (1..page.developers.count) %}
+        <a href="mailto:{{ page.developers[i].email }}">
+            {% if page.lang == 'ar' %}
+            {{ page.developers[i].arname }}
+            {% else %}
+            {{ page.developers[i].enname }}
+            {% endif %}
+        </a>
+        {% endfor %}
+    </div>
+    <div class="col">
+        <h2>
+            {% if page.lang == 'ar' %}
+            محرري المحتوى
+            {% else %}
+            Maintainers
+            {% endif %}
+        </h2>
+        {% for i in (1..page.maintainers.count) %}
+        <a href="mailto:{{ page.developers[i].email }}">
+            {% if page.lang == 'ar' %}
+            {{ page.maintainers[i].arname }}
+            {% else %}
+            {{ page.maintainers[i].enname }}
+            {% endif %}
+        </a>
+        {% endfor %}
+    </div>
+    <div class="col">
+        <h2>
+            {% if page.lang == 'ar' %}
+            المشرفين
+            {% else %}
+            Admins
+            {% endif %}
+        </h2>
+        {% for i in (1..page.admins.count) %}
+        <a href="mailto:{{ page.admins[i].email }}">
+            {% if page.lang == 'ar' %}
+            {{ page.admins[i].arname }}
+            {% else %}
+            {{ page.admins[i].enname }}
+            {% endif %}
+        </a>
+        {% endfor %}
+    </div>
+</div>
