@@ -227,14 +227,16 @@ def build_hall_of_fame():
         'layout': 'halloffame',
         'lang': 'ar',
         'title': 'لائحة الشرف',
-        'list': written
+        'list': written,
+        'count': count
     })
 
     write_file('en/fame.html', {
         'layout': 'halloffame',
         'lang': 'en',
         'title': 'Fame',
-        'list': written
+        'list': written,
+        'count': count
     })
 
 def build_images():

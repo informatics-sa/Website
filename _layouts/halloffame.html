@@ -27,15 +27,15 @@ layout: default
                 <td>{{ i }}</td>
                 <td>
                     {% if page.lang == "en" %}
-                    <a href="/en/members/{{ page[i].id }}">{{ page[i].enname }}</a>
+                    <a href="/en/members/{{ page[i].id }}">{{ page.list[i].enname }}</a>
                     {% else %}
-                    <a href="/members/{{ page[i].id }}">{{ page[i].arname }}</a>
+                    <a href="/members/{{ page[i].id }}">{{ page.list[i].arname }}</a>
                     {% endif %}
                 </td>
-                <td>{{ page[i].gold }}</td>
-                <td>{{ page[i].silver }}</td>
-                <td>{{ page[i].bronze }}</td>
-                <td>{{ page[i].hounarablemention }}</td>
+                <td>{{ page.list[i].gold }}</td>
+                <td>{{ page.list[i].silver }}</td>
+                <td>{{ page.list[i].bronze }}</td>
+                <td>{{ page.list[i].hounarablemention }}</td>
             </tr>
             {% endfor %}
         </tbody>
