@@ -230,7 +230,7 @@ def build_hall_of_fame():
             'hounarablemention': dic['hounarablemention'],
         }
     
-    write_file('./fame.html', {
+    write_file('./hall-of-fame.html', {
         'layout': 'halloffame',
         'lang': 'ar',
         'title': 'لائحة الشرف',
@@ -238,7 +238,7 @@ def build_hall_of_fame():
         'count': count
     })
 
-    write_file('en/fame.html', {
+    write_file('en/hall-of-fame.html', {
         'layout': 'halloffame',
         'lang': 'en',
         'title': 'Fame',

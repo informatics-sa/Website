@@ -27,9 +27,9 @@ layout: default
                 <td>{{ i }}</td>
                 <td>
                     {% if page.lang == "en" %}
-                    <a href="/en/members/{{ page[i].id }}">{{ page.list[i].enname }}</a>
+                    <a href="/en/members/{{ page.list[i].id }}">{{ page.list[i].enname }}</a>
                     {% else %}
-                    <a href="/members/{{ page[i].id }}">{{ page.list[i].arname }}</a>
+                    <a href="/members/{{ page.list[i].id }}">{{ page.list[i].arname }}</a>
                     {% endif %}
                 </td>
                 <td>{{ page.list[i].gold }}</td>
