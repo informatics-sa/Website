@@ -5,11 +5,19 @@ layout: default
 <div class="row p-3">
     {% for i in (1..page.count) %}
         <div class="col-sm-12 col-md-4">
-            {% if page.lang == "en" %}
-                {% include imgbox.html src=page[i].src title=page[i].entitle description=page[i].endescription date=page[i].date %}
-            {% else %}
-                {% include imgbox.html src=page[i].src title=page[i].artitle description=page[i].ardescription date=page[i].date %}
-            {% endif %}
+            <div class="card mb-3">
+                <img src="/img/{{ page[i].src }}" class="card-img-top" alt="{{ page[i].alt | default: "" }}"> <!-- TODO: Add width/height as parameter -->
+                <div class="card-body">
+                    {% if page.lang == "en" %}
+                    <h5 class="card-title">{{ include.entitle | default: "" }}</h5>
+                    <p class="card-text">{{ include.endescription | default: "" }}</p>
+                    {% else %}
+                    <h5 class="card-title">{{ include.artitle | default: "" }}</h5>
+                    <p class="card-text">{{ include.ardescription | default: "" }}</p>
+                    {% endif %}
+                    <p class="card-text"><small class="text-body-secondary">{{ include.date | default: "" }}</small></p>
+                </div>
+            </div>
         </div>
     {% endfor %}
 </div>
