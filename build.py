@@ -205,8 +205,54 @@ def build_hall_of_fame():
             if oly in official_olympiads:
                 fame[memid][award] += 1
     
+    sortedfame = sorted(fame.items(), key=lambda x: (-x[1]['gold'], -x[1]['silver'], -x[1]['bronze'], -x[1]['hounarablemention']))
     # TODO: should be printed to a file
+    count = 0
+    written = {}
+    for it in sortedfame:
+        mem = it[0]
+        dic = it[1]
+        if dic['gold'] + dic['silver'] + dic['bronze'] == 0:
+            break
+        count += 1
+        written[count] = {
+            'id': mem,
+            'gold': dic['gold'],
+            'silver': dic['silver'],
+            'bronze': dic['bronze'],
+            'hounarablemention': dic['hounarablemention'],
+        }
     
+    write_file('./fame.html', {
+        'layout': 'halloffame',
+        'lang': 'ar',
+        'title': 'لائحة الشرف',
+        'list': written
+    })
+
+    write_file('en/fame.html', {
+        'layout': 'halloffame',
+        'lang': 'en',
+        'title': 'Fame',
+        'list': written
+    })
+
+def build_images():
+    imgs = load_json('images')
+    count = len(imgs)
+    written = {
+        'layout': 'images',
+        'title': "مكتبة الصور",
+        'count': count
+    }
+    idx = 1
+    for img in imgs:
+        written[idx] = img
+        idx += 1
+    write_file('./images2.html', written)
+    written['lang'] = 'en'
+    written['title'] = 'Image library'
+    write_file('en/images2.html', written)
 
 def main():
     init_countries()
@@ -215,5 +261,6 @@ def main():
     build_olympiads()
     build_olympiads_index()
     build_hall_of_fame()
+    build_images()
 
 main()

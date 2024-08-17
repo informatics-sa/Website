@@ -29,13 +29,25 @@ layout: default
                 <tr>
                     <td>
                         {% if page.lang == "en" %}
-                        <a href="/en/olympiads/{{ page.participations[i].olympiad }}">{{ page.participations[i].olympiad }}</a>
+                        <a href="/en/olympiads/{{ page.participations[i].olympiad }}">
+                            {{ page.participations[i].olympiad }}
+                        </a>
                         {% else %}
                         <a href="/olympiads/ page.participations[i].olympiad }}">{{ page.participations[i].olympiad }}</a>
                         {% endif %}
                     </td>
                     <td>
-                        {{ page.participations[i].award }}
+                        {% if page.participations[i].award == 'gold' %}
+                        🥇
+                        {% elsif page.participations[i].award == 'silver' %}
+                        🥈
+                        {% elsif page.participations[i].award == 'bronze' %}
+                        🥉
+                        {% elsif page.participations[i].award == 'hounarablemention' %}
+                        📜
+                        {% elsif page.participations[i].award == 'none' %}
+                        -
+                        {% endif %}
                     </td>
                 </tr>
                 {% endfor %}

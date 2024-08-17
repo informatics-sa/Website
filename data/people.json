@@ -176,11 +176,67 @@
         "level": 2
     },
     {
-        "id": "abdolmohsen_mohammedsaleh",
+        "id": "abdulmohsen_mohammedsaleh",
         "arname": "عبدالمحسن محمدصالح",
-        "enname": "Abdolmohsen Mohammedsaleh",
+        "enname": "Abdulmohsen Mohammedsaleh",
         "graduation": 2023,
-        "codeforces": "Abdolmohsen",
+        "codeforces": "Abdulmohsen",
+        "level": -2
+    },
+    {
+        "id": "zaid_alshinqiti",
+        "arname": "زيد الشنقيطي",
+        "enname": "Zaid Alshinqiti",
+        "graduation": 2023,
+        "codeforces": "1zaid1",
+        "level": -2
+    },
+    {
+        "id": "naser_almasoud",
+        "arname": "ناصر آل مسعود",
+        "enname": "Naser Almasoud",
+        "graduation": 2024,
+        "codeforces": "Naser_md",
+        "level": 3
+    },
+    {
+        "id": "abdullah_aljohani",
+        "arname": "عبد الله الجهني",
+        "enname": "Adullah Aljohani",
+        "graduation": 0,
+        "codeforces": "AbdullahTurtle",
+        "level": -2
+    },
+    {
+        "id": "yaser_balamash",
+        "arname": "ياسر بلمش",
+        "enname": "Yaser Balamash",
+        "graduation": 0,
+        "codeforces": "AbdullahTurtle",
+        "level": -2
+    },
+    {
+        "id": "mohammed_alrefaei",
+        "arname": "محمد الرفاعي",
+        "enname": "Mohammed Alrefaei",
+        "graduation": 0,
+        "codeforces": "DEDA",
+        "level": -2
+    },
+    {
+        "id": "raya_abualjamal",
+        "arname": "رايا أبوالجمال",
+        "enname": "Raya Abualjamal",
+        "graduation": 0,
+        "codeforces": "undefined",
+        "level": -2
+    },
+    {
+        "id": "ziyad_alomari",
+        "arname": "زياد العمري",
+        "enname": "Ziyad Alomari",
+        "graduation": 0,
+        "codeforces": "undefined",
         "level": -2
     }
 ]

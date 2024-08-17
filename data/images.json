@@ -1,3 +1,26 @@
 [
-    
+    {
+        "src": "ioi_2023.jpeg",
+        "artitle": "", 
+        "ardescription": "",
+        "entitle": "", 
+        "endescription": "",
+        "date": "2023/8/14"
+    },
+    {
+        "src": "winning_jboi_2023.jpg",
+        "artitle": "", 
+        "ardescription": "",
+        "entitle": "", 
+        "endescription": "",
+        "date": "2023/11/3"
+    },
+    {
+        "src": "boi_2023.png",
+        "artitle": "", 
+        "ardescription": "",
+        "entitle": "", 
+        "endescription": "",
+        "date": "2023/11/3"
+    }
 ]

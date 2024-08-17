@@ -1,0 +1,15 @@
+---
+id: images
+layout: default
+---
+<div class="row p-3">
+    {% for i in (1..page.count) %}
+        <div class="col-sm-12 col-md-4">
+            {% if page.lang == "en" %}
+                {% include imgbox.html src=page[i].src title=page[i].entitle description=page[i].endescription date=page[i].date %}
+            {% else %}
+                {% include imgbox.html src=page[i].src title=page[i].artitle description=page[i].ardescription date=page[i].date %}
+            {% endif %}
+        </div>
+    {% endfor %}
+</div>
