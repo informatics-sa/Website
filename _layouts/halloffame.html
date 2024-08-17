@@ -1,0 +1,43 @@
+---
+id: halloffame
+layout: default
+---
+<div class="row p-3">
+    <table class="table table-striped table-bordered">
+        <thead>
+            {% if page.lang == "ar" %}
+            <th>الترتيب</th>
+            <th>الاسم</th>
+            <th width="5%" style="background-color: gold;">ذهبي</th>
+            <th width="5%" style="background-color: silver;">فضي</th>
+            <th width="5%" style="background-color: rgb(198, 151, 91);">بروزني</th>
+            <th width="5%" style="background-color: rgb(196, 91, 198);">شهادة</th>
+            {% else %}
+            <th>Rank</th>
+            <th>Name</th>
+            <th width="5%" style="background-color: gold;">G</th>
+            <th width="5%" style="background-color: silver;">S</th>
+            <th width="5%" style="background-color: rgb(198, 151, 91);">B</th>
+            <th width="5%" style="background-color: rgb(196, 91, 198);">C</th>
+            {% endif %}
+        </thead>
+        <tbody>
+            {% for i in (1..page.count) %}
+            <tr>
+                <td>{{ i }}</td>
+                <td>
+                    {% if page.lang == "en" %}
+                    <a href="/en/members/{{ page[i].id }}">{{ page[i].enname }}</a>
+                    {% else %}
+                    <a href="/members/{{ page[i].id }}">{{ page[i].arname }}</a>
+                    {% endif %}
+                </td>
+                <td>{{ page[i].gold }}</td>
+                <td>{{ page[i].silver }}</td>
+                <td>{{ page[i].bronze }}</td>
+                <td>{{ page[i].hounarablemention }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
