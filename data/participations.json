@@ -153,7 +153,7 @@
         }
     },
     {
-        "name": "ioi", "start": "2020/6/19", "end": "2021/6/25", "country": "online",
+        "name": "ioi", "start": "2020/6/19", "end": "2020/6/25", "country": "online",
         "participants": {
             "fares_basuni": "none",
             "mohammed_alrefaei": "none",
