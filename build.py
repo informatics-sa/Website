@@ -216,7 +216,7 @@ def build_hall_of_fame():
     for it in sortedfame:
         mem = it[0]
         dic = it[1]
-        if dic['gold'] + dic['silver'] + dic['bronze'] == 0:
+        if dic['gold'] + dic['silver'] + dic['bronze'] + dic['hounarablemention'] == 0:
             break
         count += 1
         written[count] = {
