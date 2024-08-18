@@ -107,7 +107,8 @@ def build_olympiads():
             'country_arname': oly['country_arname'],
             'country_enname': oly['country_enname'],
             'participants_count': len(enparts),
-            'participants': parts
+            'participants': parts,
+            'website': oly['website'] if 'website' in oly else None
         })
         write_file(f'en/olympiads/{filename}.html', {
             'layout': 'olympiad',
@@ -119,7 +120,8 @@ def build_olympiads():
             'start_date': oly['start'],
             'end_date': oly['end'],
             'participants_count': len(enparts),
-            'participants': enparts
+            'participants': enparts,
+            'website': oly['website'] if 'website' in oly else None
         })
 
 def build_members():

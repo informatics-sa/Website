@@ -39,14 +39,14 @@ layout: default
                     <li class="list-group-item">Start: {{ page.start_date }}</li>
                     <li class="list-group-item">End: {{ page.end_date }}</li>
                     <li class="list-group-item">Host: {{ page.country_enname }}</li>
-                    {% if page.website %}
+                    {% if page.website != "None" %}
                     <li class="list-group-item">Website: <a href="{{ page.website }}">{{ page.website }}</a></li>
                     {% endif %}
                 {% else %}
                     <li class="list-group-item">البداية: {{ page.start_date }}</li>
                     <li class="list-group-item">النهاية: {{ page.end_date }}</li>
                     <li class="list-group-item">الاستضافة: {{ page.country_arname }}</li>
-                    {% if page.website %}
+                    {% if page.website != "None" %}
                     <li class="list-group-item">الموقع: <a href="{{ page.website }}">{{ page.website }}</a></li>
                     {% endif %}
                 {% endif %}
