@@ -1,6 +1,7 @@
 [
     {
         "name": "boi", "start": "2024/9/20", "end": "2024/9/26", "country": "mk",
+        "website": "https://boi2024.cs.org.mk/",
         "participants": {
             "emad_alharbi": "none",
             "muaath_alqarni": "none",
@@ -21,6 +22,7 @@
     },
     {
         "name": "egoi", "start": "2024/7/21", "end": "2024/7/27", "country": "nl",
+        "website": "https://stats.egoi.org/editions/2024/results/",
         "participants": {
             "rifal_alhazmi": "hounarablemention",
             "basma_mansour": "hounarablemention",
