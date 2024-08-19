@@ -24,10 +24,10 @@
         "name": "egoi", "start": "2024/7/21", "end": "2024/7/27", "country": "nl",
         "website": "https://stats.egoi.org/editions/2024/results/",
         "participants": {
-            "rifal_alhazmi": "hounarablemention",
-            "basma_mansour": "hounarablemention",
-            "mariah_alramadhan": "hounarablemention",
-            "lamar_alhebshi": "hounarablemention"
+            "rifal_alhazmi": "none",
+            "basma_mansour": "none",
+            "mariah_alramadhan": "none",
+            "lamar_alhebshi": "none"
         }
     },
     {

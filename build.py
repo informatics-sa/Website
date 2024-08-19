@@ -50,8 +50,8 @@ def init_members():
             if mem_id not in members:
                 members[mem_id] = {}
                 members[mem_id]['participations'] = {}
-                members[mem_id]['arname'] = "UNKNOWN"
-                members[mem_id]['enname'] = "UNKNOWN"
+                members[mem_id]['arname'] = mem_id
+                members[mem_id]['enname'] = mem_id
                 members[mem_id]['graduation'] = 0
                 members[mem_id]['codeforces'] = "undefined"
             members[mem_id]['participations'][oly['name'] + '_' + oly['start'].split('/')[0]] = oly['participants'][mem_id]
