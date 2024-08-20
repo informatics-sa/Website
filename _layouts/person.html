@@ -29,11 +29,9 @@ layout: default
                 <tr>
                     <td>
                         {% if page.lang == "en" %}
-                        <a href="/en/olympiads/{{ page.participations[i].olympiad }}">
-                            {{ page.participations[i].olympiad }}
-                        </a>
+                        <a href="/en/olympiads/{{ page.participations[i].olympiad }}">{{ page.participations[i].olympiad }}</a>
                         {% else %}
-                        <a href="/olympiads/ page.participations[i].olympiad }}">{{ page.participations[i].olympiad }}</a>
+                        <a href="/olympiads/{{ page.participations[i].olympiad }}">{{ page.participations[i].olympiad }}</a>
                         {% endif %}
                     </td>
                     <td>
