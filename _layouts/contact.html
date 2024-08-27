@@ -36,7 +36,7 @@ layout: default
         <ul>
             {% for i in (1..page.maintainers.count) %}
             <li>
-                <a href="mailto:{{ page.developers[i].email }}">
+                <a href="mailto:{{ page.maintainers[i].email }}">
                     {% if page.lang == 'ar' %}
                     {{ page.maintainers[i].arname }}
                     {% else %}
