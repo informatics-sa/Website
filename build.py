@@ -130,7 +130,8 @@ def build_members():
         idx = 1
         for oly, award in mem['participations'].items():
             participations[idx] = {}
-            participations[idx]['olympiad'] = oly
+            participations[idx]['olympiad'] = oly.split("_")[0]
+            participations[idx]['year'] = oly.split("_")[1]
             participations[idx]['award'] = award
             idx += 1
         write_file(f'members/{memid}.html', {
@@ -315,7 +316,7 @@ def main():
     test_utils()
 
     build_members()
-    #build_members_index()
+    # build_members_index()
     build_olympiads()
     build_olympiads_index()
     build_hall_of_fame()

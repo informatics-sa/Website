@@ -13,6 +13,7 @@
     },
     {
         "name": "ioi", "start": "2024/9/1", "end": "2024/9/8", "country": "eg",
+        "website": "https://ioi2024.eg/",
         "participants": {
             "adeeb_alshehri": "none",
             "ahmad_alhashim": "none",
@@ -22,16 +23,17 @@
     },
     {
         "name": "egoi", "start": "2024/7/21", "end": "2024/7/27", "country": "nl",
-        "website": "https://stats.egoi.org/editions/2024/results/",
+        "website": "https://egoi2024.nl/",
         "participants": {
             "rifal_alhazmi": "none",
             "basma_mansour": "none",
-            "mariah_alramadhan": "none",
+            "maria_alramadan": "none",
             "lamar_alhebshi": "none"
         }
     },
     {
         "name": "apio", "start": "2024/5/18", "end": "2024/5/19", "country": "online",
+        "website": "https://apio2024.org/",
         "participants": {
             "adeeb_alshehri": "silver",
             "ahmad_alhashim": "none",
@@ -45,6 +47,7 @@
     },
     {
         "name": "jboi", "start": "2023/11/25", "end": "2023/11/28", "country": "online",
+        "website": "https://jboi2023.cs.org.mk",
         "participants": {
             "abdulrahman_alghamdi": "bronze",
             "saad_alarifi": "hounarablemention",
@@ -54,6 +57,7 @@
     },
     {
         "name": "boi", "start": "2023/10/29", "end": "2023/11/3", "country": "si",
+        "website": "https://boi2023.zotks.si/",
         "participants": {
             "adeeb_alshehri": "bronze",
             "humaid_alhuthali": "hounarablemention",
@@ -65,6 +69,7 @@
     },
     {
         "name": "ioi", "start": "2023/8/7", "end": "2023/8/15", "country": "hu",
+        "website": "https://ioi2023.hu/",
         "participants": {
             "humaid_alhuthali": "bronze",
             "essa_almousa": "hounarablemention",
@@ -74,6 +79,7 @@
     },
     {
         "name": "egoi", "start": "2023/7/15", "end": "2023/7/21", "country": "se",
+        "website": "https://egoi23.se/",
         "participants": {
             "leen_qanash": "silver",
             "juri_aljohani": "bronze",
@@ -94,6 +100,7 @@
     },
     {
         "name": "egoi", "start": "2022/10/16", "end": "2022/10/23", "country": "tr",
+        "website": "https://egoi2022.tubitak.gov.tr/",
         "participants": {
             "leen_qanash": "silver",
             "juri_aljohani": "bronze",
@@ -103,6 +110,7 @@
     },
     {
         "name": "ioi", "start": "2022/8/7", "end": "2022/8/15", "country": "id",
+        "website": "https://ioi2022.id/",
         "participants": {
             "abdulaziz_alshibli": "bronze",
             "adeeb_alshehri": "none",
@@ -123,6 +131,7 @@
     },
     {
         "name": "ioi", "start": "2021/6/19", "end": "2021/6/25", "country": "online",
+        "website": "https://ioi2021.sg/",
         "participants": {
             "fares_basuni": "bronze",
             "mohammed_alsaad": "none",
@@ -132,6 +141,7 @@
     },
     {
         "name": "apio", "start": "2021/5/26", "end": "2021/5/26", "country": "online",
+        "website":"https://apio2021.toki.id/",
         "participants": {
             "fares_basuni": "bronze",
             "abdulmohsen_mohammedsaleh": "none",
@@ -143,6 +153,7 @@
     },
     {
         "name": "apio", "start": "2020/8/15", "end": "2020/8/16", "country": "online",
+        "website": "https://apio2020.toki.id/",
         "participants": {
             "fares_basuni": "bronze",
             "mohammed_alrefaei": "bronze",
@@ -156,6 +167,7 @@
     },
     {
         "name": "ioi", "start": "2020/6/19", "end": "2020/6/25", "country": "online",
+        "website": "https://ioi2020.sg/",
         "participants": {
             "fares_basuni": "none",
             "mohammed_alrefaei": "none",
@@ -165,6 +177,7 @@
     },
     {
         "name": "ioi", "start": "2019/6/19", "end": "2019/6/25", "country": "az",
+        "website": "https://stats.ioinformatics.org/olympiads/2019",
         "participants": {
             "fares_basuni": "bronze",
             "abdullah_aljohani": "none",

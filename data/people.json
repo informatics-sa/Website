@@ -254,5 +254,45 @@
         "graduation": 2026,
         "codeforces": "AliMark71",
         "level": 2
+    },
+    {
+        "id": "maria_alramadan",
+        "arname": "ماريا الرمضان",
+        "enname": "Maria Alramadan",
+        "graduation": 2025,
+        "codeforces": "Aria_lix19",
+        "level": 2
+    },
+    {
+        "id": "lamar_alhebshi",
+        "arname": "لمار الحبشي",
+        "enname": "Lamar Alhebshi",
+        "graduation": 2026,
+        "codeforces": "Lamar_Alhebshi",
+        "level": 2
+    },
+    {
+        "id": "leen_qanash",
+        "arname": "لين قنش",
+        "enname": "Leen Qanash",
+        "graduation": 0,
+        "codeforces": "RealSnake",
+        "level": -2
+    },
+    {
+        "id": "uzouf_baagil",
+        "arname": "عزوف باعقيل",
+        "enname": "Uzouf Baagil",
+        "graduation": 0,
+        "codeforces": "Uzouf",
+        "level": -2
+    },
+    {
+        "id": "jana_alzahrani",
+        "arname": "جنا الزهراني",
+        "enname": "Jana Alzahrani",
+        "graduation": 0,
+        "codeforces": "undefined",
+        "level": -2
     }
 ]

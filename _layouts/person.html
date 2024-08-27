@@ -8,13 +8,13 @@ layout: default
         <ul>
             <li>Name: {{ page.full_name }}</li>
             <li>Graduation year: {{ page.graduation }}</li>
-            <li>Codeforces account: <a href="https://codeforce.com/profile/{{ page.codeforces }}">@{{ page.codeforces }}</a></li>
+            <li>Codeforces account: <a href="https://codeforces.com/profile/{{ page.codeforces }}">@{{ page.codeforces }}</a></li>
         </ul>
         {% else %}
         <ul>
             <li>الاسم: {{ page.full_name }}</li>
             <li>سنة التخرج: {{ page.graduation }}</li>
-            <li>كودفورسيس: <a href="https://codeforce.com/profile/{{ page.codeforces }}">@{{ page.codeforces }}</a></li>
+            <li>كودفورسيس: <a href="https://codeforces.com/profile/{{ page.codeforces }}">@{{ page.codeforces }}</a></li>
         </ul>
         {% endif %}
     </div>
@@ -28,11 +28,36 @@ layout: default
                 {% for i in (1..page.participations_count) %}
                 <tr>
                     <td>
-                        {% if page.lang == "en" %}
-                        <a href="/en/olympiads/{{ page.participations[i].olympiad }}">{{ page.participations[i].olympiad }}</a>
-                        {% else %}
-                        <a href="/olympiads/{{ page.participations[i].olympiad }}">{{ page.participations[i].olympiad }}</a>
-                        {% endif %}
+                        <a href="{% if page.lang == 'en' %}/en{% endif %}/olympiads/{{ page.participations[i].olympiad }}_{{ page.participations[i].year }}">
+                            {% if page.lang == "en" %}  
+                                {% if page.participations[i].olympiad == "ioi" %}
+                                    International Olympiad in Informatics
+                                {% elsif page.participations[i].olympiad == "boi" %}
+                                    Balkan Olympiad in Informatics
+                                {% elsif page.participations[i].olympiad == "egoi" %}
+                                    European Girls' Olympiad of Informatics
+                                {% elsif page.participations[i].olympiad == "apio" %}
+                                    Asian-Pasific Olympiad Informatics Olympiad
+                                {% elsif page.participations[i].olympiad == "jboi" %}
+                                    Junior Balkan Olympiad in Informatics
+                                {% endif %}
+                            {% else %}
+                                {% if page.participations[i].olympiad == "ioi" %}
+                                    الأولمبياد الدولي للمعلوماتية
+                                {% elsif page.participations[i].olympiad == "boi" %}
+                                    أولمبياد البلقان الدولي
+                                {% elsif page.participations[i].olympiad == "egoi" %}
+                                    أولمبياد الأوربي للبنات
+                                {% elsif page.participations[i].olympiad == "apio" %}
+                                    أولمبياد آسيا والباسفك للمعلوماتية
+                                {% elsif page.participations[i].olympiad == "jboi" %}
+                                    أولمبياد البلقان للمعلوماتية للناشئين
+                                {% endif %}
+                            {% endif %}
+
+                            ({{ page.participations[i].olympiad | upcase }}{{ page.participations[i].year }})
+                        </a>
+
                     </td>
                     <td>
                         {% if page.participations[i].award == 'gold' %}
