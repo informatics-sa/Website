@@ -13,8 +13,12 @@ layout: default
         {% else %}
         <ul>
             <li>الاسم: {{ page.full_name }}</li>
+            {% if page.graduation != null %}
             <li>سنة التخرج: {{ page.graduation }}</li>
+            {% endif %}
+            {% if page.codeforce != null %}
             <li>كودفورسيس: <a href="https://codeforces.com/profile/{{ page.codeforces }}">@{{ page.codeforces }}</a></li>
+            {% endif %}
         </ul>
         {% endif %}
     </div>
@@ -25,7 +29,7 @@ layout: default
                 <th>{% if page.lang == "en" %} Award {% else %} الجائزة {% endif %}</th>
             </thead>
             <tbody>
-                {% for i in (1..page.participations_count) %}
+                {% for i in (1..page.participations.count) %}
                 <tr>
                     <td>
                         <a href="{% if page.lang == 'en' %}/en{% endif %}/olympiads/{{ page.participations[i].olympiad }}_{{ page.participations[i].year }}">

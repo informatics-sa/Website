@@ -3,32 +3,32 @@
         "name": "boi", "start": "2024/9/20", "end": "2024/9/26", "country": "mk",
         "website": "https://boi2024.cs.org.mk/",
         "participants": {
-            "emad_alharbi": "none",
-            "muaath_alqarni": "none",
-            "saad_alarifi": "none",
-            "mohammed_bashkail": "none",
-            "sultan_alaiban": "none",
-            "mohammed_alasmari": "none"
+            "emad_alharbi": null,
+            "muaath_alqarni": null,
+            "saad_alarifi": null,
+            "mohammed_bashkail": null,
+            "sultan_alaiban": null,
+            "mohammed_alasmari": null
         }
     },
     {
         "name": "ioi", "start": "2024/9/1", "end": "2024/9/8", "country": "eg",
         "website": "https://ioi2024.eg/",
         "participants": {
-            "adeeb_alshehri": "none",
-            "ahmad_alhashim": "none",
-            "saad_alarifi": "none",
-            "essa_almousa": "none"
+            "adeeb_alshehri": null,
+            "ahmad_alhashim": null,
+            "saad_alarifi": null,
+            "essa_almousa": null
         }
     },
     {
         "name": "egoi", "start": "2024/7/21", "end": "2024/7/27", "country": "nl",
         "website": "https://egoi2024.nl/",
         "participants": {
-            "rifal_alhazmi": "none",
-            "basma_mansour": "none",
-            "maria_alramadan": "none",
-            "lamar_alhebshi": "none"
+            "rifal_alhazmi": null,
+            "bassmah_mansour": null,
+            "maria_alramadan": null,
+            "lamar_alhebshi": null
         }
     },
     {
@@ -36,13 +36,13 @@
         "website": "https://apio2024.org/",
         "participants": {
             "adeeb_alshehri": "silver",
-            "ahmad_alhashim": "none",
-            "muaath_alqarni": "none",
-            "munther_alzayer": "none",
-            "essa_almousa": "none",
-            "mohammad_alyousef": "none",
-            "emad_alharbi": "none",
-            "saad_alarifi": "none"
+            "ahmad_alhashim": null,
+            "muaath_alqarni": null,
+            "munther_alzayer": null,
+            "essa_almousa": null,
+            "mohammad_alyousef": null,
+            "emad_alharbi": null,
+            "saad_alarifi": null
         }
     },
     {
@@ -51,8 +51,8 @@
         "participants": {
             "abdulrahman_alghamdi": "bronze",
             "saad_alarifi": "hounarablemention",
-            "abdullah_alodaibi": "none",
-            "basma_mansour": "none"
+            "abdullah_alodaibi": null,
+            "bassmah_mansour": null
         }
     },
     {
@@ -74,7 +74,7 @@
             "humaid_alhuthali": "bronze",
             "essa_almousa": "hounarablemention",
             "adeeb_alshehri": "hounarablemention",
-            "juri_aljohani": "none"
+            "juri_aljohani": null
         }
     },
     {
@@ -84,18 +84,19 @@
             "leen_qanash": "silver",
             "juri_aljohani": "bronze",
             "rifal_alhazmi": "bronze",
-            "uzouf_baagil": "none"
+            "uzouf_baagil": null
         }
     },
     {
         "name": "apio", "start": "2023/5/20", "end": "2023/5/20", "country": "online",
+        "website": null,
         "participants": {
-            "adeeb_alshehri": "none",
-            "humaid_alhuthali": "none",
-            "emad_alharbi": "none",
-            "essa_almousa": "none",
-            "rifal_alhazmi": "none",
-            "zaid_alshinqiti": "none"
+            "adeeb_alshehri": null,
+            "humaid_alhuthali": null,
+            "emad_alharbi": null,
+            "essa_almousa": null,
+            "rifal_alhazmi": null,
+            "zaid_alshinqiti": null
         }
     },
     {
@@ -105,7 +106,7 @@
             "leen_qanash": "silver",
             "juri_aljohani": "bronze",
             "uzouf_baagil": "bronze",
-            "jana_alzahrani": "none"
+            "jana_alzahrani": null
         }
     },
     {
@@ -113,20 +114,21 @@
         "website": "https://ioi2022.id/",
         "participants": {
             "abdulaziz_alshibli": "bronze",
-            "adeeb_alshehri": "none",
-            "almothana_alzahrani": "none",
-            "abdulmohsen_mohammedsaleh": "none"
+            "adeeb_alshehri": null,
+            "almothana_alzahrani": null,
+            "abdulmohsen_mohammedsaleh": null
         }
     },
     {
         "name": "apio", "start": "2022/5/30", "end": "2022/5/30", "country": "online",
+        "website": null,
         "participants": {
             "adeeb_alshehri": "bronze",
             "abdulmohsen_mohammedsaleh": "bronze",
-            "almothana_alzahrani": "none",
-            "yaser_balamash": "none",
-            "abdulaziz_alshibli": "none",
-            "leen_qanash": "none"
+            "almothana_alzahrani": null,
+            "yaser_balamash": null,
+            "abdulaziz_alshibli": null,
+            "leen_qanash": null
         }
     },
     {
@@ -134,9 +136,9 @@
         "website": "https://ioi2021.sg/",
         "participants": {
             "fares_basuni": "bronze",
-            "mohammed_alsaad": "none",
-            "abdulmohsen_mohammedsaleh": "none",
-            "humaid_alhuthali": "none"
+            "mohammed_alsaad": null,
+            "abdulmohsen_mohammedsaleh": null,
+            "humaid_alhuthali": null
         }
     },
     {
@@ -144,11 +146,11 @@
         "website":"https://apio2021.toki.id/",
         "participants": {
             "fares_basuni": "bronze",
-            "abdulmohsen_mohammedsaleh": "none",
-            "humaid_alhuthali": "none",
-            "abdulaziz_alshibli": "none",
-            "mohammed_alsaad": "none",
-            "almothana_alzahrani": "none"
+            "abdulmohsen_mohammedsaleh": null,
+            "humaid_alhuthali": null,
+            "abdulaziz_alshibli": null,
+            "mohammed_alsaad": null,
+            "almothana_alzahrani": null
         }
     },
     {
@@ -157,22 +159,22 @@
         "participants": {
             "fares_basuni": "bronze",
             "mohammed_alrefaei": "bronze",
-            "raya_abualjamal": "none",
-            "abdullah_aljohani": "none",
-            "mohammed_alsaad": "none",
-            "almothana_alzahrani": "none",
-            "abdulmohsen_mohammedsaleh": "none",
-            "yaser_balamash": "none"
+            "raya_abualjamal": null,
+            "abdullah_aljohani": null,
+            "mohammed_alsaad": null,
+            "almothana_alzahrani": null,
+            "abdulmohsen_mohammedsaleh": null,
+            "yaser_balamash": null
         }
     },
     {
         "name": "ioi", "start": "2020/6/19", "end": "2020/6/25", "country": "online",
         "website": "https://ioi2020.sg/",
         "participants": {
-            "fares_basuni": "none",
-            "mohammed_alrefaei": "none",
-            "mohammed_alsaad": "none",
-            "raya_abualjamal": "none"
+            "fares_basuni": null,
+            "mohammed_alrefaei": null,
+            "mohammed_alsaad": null,
+            "raya_abualjamal": null
         }
     },
     {
@@ -180,9 +182,9 @@
         "website": "https://stats.ioinformatics.org/olympiads/2019",
         "participants": {
             "fares_basuni": "bronze",
-            "abdullah_aljohani": "none",
-            "mohammed_alrefaei": "none",
-            "ziyad_alomari": "none"
+            "abdullah_aljohani": null,
+            "mohammed_alrefaei": null,
+            "ziyad_alomari": null
         }
     }
 ]

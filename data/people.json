@@ -84,7 +84,7 @@
         "arname": "محمد السعد",
         "enname": "Mohammed Alsaad",
         "graduation": 2021,
-        "codeforces": "undefined",
+        "codeforces": null,
         "level": -2
     },
     {
@@ -160,11 +160,11 @@
         "level": 2
     },
     {
-        "id": "basma_mansour",
+        "id": "bassmah_mansour",
         "arname": "بسمة منصور",
-        "enname": "Basma Mansour",
+        "enname": "Bassmah Mansour",
         "graduation": 2026,
-        "codeforces": "undefined",
+        "codeforces": "B.M._.74",
         "level": 2
     },
     {
@@ -172,8 +172,8 @@
         "arname": "جوري الجهني",
         "enname": "Juri Aljohani",
         "graduation": 2026,
-        "codeforces": "undefined",
-        "level": 2
+        "codeforces": "MonstrousKookie",
+        "level": -2
     },
     {
         "id": "abdulmohsen_mohammedsaleh",
@@ -203,7 +203,7 @@
         "id": "abdullah_aljohani",
         "arname": "عبد الله الجهني",
         "enname": "Adullah Aljohani",
-        "graduation": 0,
+        "graduation": null,
         "codeforces": "AbdullahTurtle",
         "level": -2
     },
@@ -211,7 +211,7 @@
         "id": "yaser_balamash",
         "arname": "ياسر بلمش",
         "enname": "Yaser Balamash",
-        "graduation": 0,
+        "graduation": null,
         "codeforces": "AbdullahTurtle",
         "level": -2
     },
@@ -219,7 +219,7 @@
         "id": "mohammed_alrefaei",
         "arname": "محمد الرفاعي",
         "enname": "Mohammed Alrefaei",
-        "graduation": 0,
+        "graduation": null,
         "codeforces": "DEDA",
         "level": -2
     },
@@ -227,24 +227,24 @@
         "id": "raya_abualjamal",
         "arname": "رايا أبوالجمال",
         "enname": "Raya Abualjamal",
-        "graduation": 0,
-        "codeforces": "undefined",
+        "graduation": null,
+        "codeforces": null,
         "level": -2
     },
     {
         "id": "ziyad_alomari",
         "arname": "زياد العمري",
         "enname": "Ziyad Alomari",
-        "graduation": 0,
-        "codeforces": "undefined",
+        "graduation": null,
+        "codeforces": null,
         "level": -2
     },
     {
         "id": "esraa_almajhad",
         "arname": "إسراء المجحد",
         "enname": "Esraa Almajhad",
-        "graduation": 0,
-        "codeforces": "undefined",
+        "graduation": null,
+        "codeforces": null,
         "level": -3
     },
     {
@@ -275,7 +275,7 @@
         "id": "leen_qanash",
         "arname": "لين قنش",
         "enname": "Leen Qanash",
-        "graduation": 0,
+        "graduation": null,
         "codeforces": "RealSnake",
         "level": -2
     },
@@ -283,7 +283,7 @@
         "id": "uzouf_baagil",
         "arname": "عزوف باعقيل",
         "enname": "Uzouf Baagil",
-        "graduation": 0,
+        "graduation": null,
         "codeforces": "Uzouf",
         "level": -2
     },
@@ -291,8 +291,8 @@
         "id": "jana_alzahrani",
         "arname": "جنا الزهراني",
         "enname": "Jana Alzahrani",
-        "graduation": 0,
-        "codeforces": "undefined",
+        "graduation": null,
+        "codeforces": null,
         "level": -2
     }
 ]

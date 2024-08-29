@@ -68,8 +68,10 @@ def write_yml(data: dict, indent: int = 0) -> str:
             for i in range(len(val)):
                 mp = {str(i+1): val[i]}
                 res += write_yml(mp, indent + 2)
+        elif val is None:
+            res += " " * indent + str(key) + ": null\n"
         else:
-            res += " " * indent + str(key) + ": " + str(val) + "\n"
+            res += " " * indent + str(key) + ": \"" + str(val) + "\"\n"
     return res
 
 
@@ -108,7 +110,7 @@ def build_olympiads():
             'country_enname': oly['country_enname'],
             'participants_count': len(enparts),
             'participants': parts,
-            'website': oly['website'] if 'website' in oly else None
+            'website': oly['website']
         })
         write_file(f'en/olympiads/{filename}.html', {
             'layout': 'olympiad',
@@ -121,19 +123,20 @@ def build_olympiads():
             'end_date': oly['end'],
             'participants_count': len(enparts),
             'participants': enparts,
-            'website': oly['website'] if 'website' in oly else None
+            'website': oly['website']
         })
 
 def build_members():
     for memid, mem in members.items():
-        participations = {}
-        idx = 1
+        participations = []
         for oly, award in mem['participations'].items():
-            participations[idx] = {}
-            participations[idx]['olympiad'] = oly.split("_")[0]
-            participations[idx]['year'] = oly.split("_")[1]
-            participations[idx]['award'] = award
-            idx += 1
+            olymp = {}
+            olymp['olympiad'] = oly.split("_")[0]
+            olymp['year'] = oly.split("_")[1]
+            olymp['award'] = award
+            
+            participations.append(olymp)
+
         write_file(f'members/{memid}.html', {
             'layout': 'person',
             'title': mem['arname'],
@@ -141,7 +144,6 @@ def build_members():
             'full_name': mem['arname'],
             'graduation': mem['graduation'],
             'codeforces': mem['codeforces'],
-            'participations_count': len(participations),
             'participations': participations
         })
         write_file(f'en/members/{memid}.html', {
@@ -151,13 +153,11 @@ def build_members():
             'full_name': mem['enname'],
             'graduation': mem['graduation'],
             'codeforces': mem['codeforces'],
-            'participations_count': len(participations),
             'participations': participations
         })
 
 def build_olympiads_index():
     olympiads = {}
-    yearidx = {}
     min_year = 3000
     max_year = 2000
     for oly in participations:
@@ -165,15 +165,10 @@ def build_olympiads_index():
         min_year = min(int(year), min_year)
         max_year = max(int(year), max_year)
         if year not in olympiads:
-            olympiads[year] = {}
-            yearidx[year] = 1
+            olympiads[year] = []
 
-        olympiads[year][yearidx[year]] = oly
-        del olympiads[year][yearidx[year]]['participants']
-        yearidx[year] += 1
-    
-    for year in range(min_year, max_year+1):
-        olympiads[str(year)]['count'] = yearidx[str(year)]-1
+        del oly["participants"]
+        olympiads[year].append(oly)
 
     written = {
         'layout': 'participations',
@@ -205,24 +200,22 @@ def build_hall_of_fame():
             'silver': 0,
             'bronze': 0,
             'hounarablemention': 0,
-            'none': 0,
+            None: 0,
         }
         for oly, award in data['participations'].items():
             oly = oly.split('_')[0]
             if oly in official_olympiads:
                 fame[memid][award] += 1
     
-    sortedfame = sorted(fame.items(), key=lambda x: (-x[1]['gold'], -x[1]['silver'], -x[1]['bronze'], -x[1]['hounarablemention']))
+    filtered_fame = filter(lambda dic: dic[1]['gold'] + dic[1]['silver'] + dic[1]['bronze'] + dic[1]['hounarablemention'] == 0, fame.items())
+    sorted_fame = sorted(filtered_fame, key=lambda x: (-x[1]['gold'], -x[1]['silver'], -x[1]['bronze'], -x[1]['hounarablemention']))
     # TODO: should be printed to a file
-    count = 0
-    written = {}
-    for it in sortedfame:
+
+    written = []
+    for it in sorted_fame:
         mem = it[0]
         dic = it[1]
-        if dic['gold'] + dic['silver'] + dic['bronze'] + dic['hounarablemention'] == 0:
-            break
-        count += 1
-        written[count] = {
+        written.append({
             'id': mem,
             'arname': members[mem]['arname'],
             'enname': members[mem]['enname'],
@@ -230,14 +223,13 @@ def build_hall_of_fame():
             'silver': dic['silver'],
             'bronze': dic['bronze'],
             'hounarablemention': dic['hounarablemention'],
-        }
+        })
     
     write_file('./hall-of-fame.html', {
         'layout': 'halloffame',
         'lang': 'ar',
         'title': 'لائحة الشرف',
         'list': written,
-        'count': count
     })
 
     write_file('en/hall-of-fame.html', {
@@ -245,7 +237,6 @@ def build_hall_of_fame():
         'lang': 'en',
         'title': 'Fame',
         'list': written,
-        'count': count
     })
 
 def build_images():
@@ -299,14 +290,16 @@ def test_utils():
         'list': ['Hi', 'Hello'],
         'dict': {
             'sub1': 'sub2'
-        }
-    }) == """Hi: Hello
+        },
+        'nullval': None
+    }) == """Hi: "Hello"
 list:
   count: 2
-  1: Hi
-  2: Hello
+  1: "Hi"
+  2: "Hello"
 dict:
-  sub1: sub2
+  sub1: "sub2"
+nullval: null
 """
 
 def main():

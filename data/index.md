@@ -20,7 +20,7 @@ An array of people, each person has the following:
 - `country`: Either the 2-letters country code or "`online`"
 - `start`: Start date
 - `end`: End date
-- `participants`: Dictionary of people IDs : Award name (`gold`/`silver`/`bronze`/`hounarablemention`/`none`)
+- `participants`: Dictionary of `<person ID> : Award name` (`gold`/`silver`/`bronze`/`hounarablemention`/`none`)
 - `website`: Olympiad website of that year **(Optional)**
 
 ## [`/data/contact.json`](/data/contact.json)
