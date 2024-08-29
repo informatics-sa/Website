@@ -204,7 +204,7 @@ def build_hall_of_fame():
             if oly in official_olympiads:
                 fame[memid][award] += 1
     
-    filtered_fame = filter(lambda dic: dic[1]['gold'] + dic[1]['silver'] + dic[1]['bronze'] + dic[1]['hounarablemention'] == 0, fame.items())
+    filtered_fame = filter(lambda dic: dic[1]['gold'] + dic[1]['silver'] + dic[1]['bronze'] + dic[1]['hounarablemention'] > 0, fame.items())
     sorted_fame = sorted(filtered_fame, key=lambda x: (-x[1]['gold'], -x[1]['silver'], -x[1]['bronze'], -x[1]['hounarablemention']))
     # TODO: should be printed to a file
 
