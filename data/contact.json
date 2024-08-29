@@ -1,6 +1,7 @@
 {
     "developers": [
-        {"id": "muaath_alqarni", "email": "informatics@muaath.dev"}
+        {"id": "muaath_alqarni", "email": "informatics@muaath.dev"},
+        {"id": "ali_alsalman", "email": "informatics@alimark71.com"}
     ],
     "maintainers": [
         {"id": "muaath_alqarni", "email": "informatics@muaath.dev"},
