@@ -23,7 +23,7 @@ def flag_emoji(country_code):
     flag = chr(ord(country_code[0]) + 127397) + chr(ord(country_code[1]) + 127397)
     return flag
 
-def award_emoji(award):
+def award_emoji(award, dashing_none=False):
     if award == 'gold':
         return '🥇'
     if award == 'silver':
@@ -32,7 +32,7 @@ def award_emoji(award):
         return '🥉'
     if award == 'hounarablemention':
         return '📜'
-    return ''
+    return '-' if dashing_none else ''
 
 members = {}
 members_j = load_json('people')
@@ -89,15 +89,14 @@ def build_olympiads():
 
 
         filename = oly['name'] + '_' + oly['start'].split('/')[0]
-        parts = {}
-        enparts = {}
-        idx = 1
+        parts = []
+        enparts = []
         awards = ''
         for mem_id, award in oly['participants'].items():
-            parts[idx] = {'id': mem_id, 'name': members[mem_id]['arname'], 'award': award}
-            enparts[idx] = {'id': mem_id, 'name': members[mem_id]['enname'], 'award': award}
+            parts.append({'id': mem_id, 'name': members[mem_id]['arname'], 'award': award_emoji(award, dashing_none=True)})
+            enparts.append({'id': mem_id, 'name': members[mem_id]['enname'], 'award': award_emoji(award, dashing_none=True)})
             awards += award_emoji(award)
-            idx += 1
+
         oly['awards'] = awards
         write_file(f'olympiads/{filename}.html', {
             'layout': 'olympiad',
@@ -108,7 +107,6 @@ def build_olympiads():
             'end_date': oly['end'],
             'country_arname': oly['country_arname'],
             'country_enname': oly['country_enname'],
-            'participants_count': len(enparts),
             'participants': parts,
             'website': oly['website']
         })
@@ -121,7 +119,6 @@ def build_olympiads():
             'country_enname': oly['country_enname'],
             'start_date': oly['start'],
             'end_date': oly['end'],
-            'participants_count': len(enparts),
             'participants': enparts,
             'website': oly['website']
         })

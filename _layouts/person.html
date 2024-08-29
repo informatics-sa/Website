@@ -7,16 +7,20 @@ layout: default
         {% if page.lang == "en" %}
         <ul>
             <li>Name: {{ page.full_name }}</li>
+            {% if page.graduation %}
             <li>Graduation year: {{ page.graduation }}</li>
+            {% endif %}
+            {% if page.codeforce %}
             <li>Codeforces account: <a href="https://codeforces.com/profile/{{ page.codeforces }}">@{{ page.codeforces }}</a></li>
+            {% endif %}
         </ul>
         {% else %}
         <ul>
             <li>الاسم: {{ page.full_name }}</li>
-            {% if page.graduation != null %}
+            {% if page.graduation %}
             <li>سنة التخرج: {{ page.graduation }}</li>
             {% endif %}
-            {% if page.codeforce != null %}
+            {% if page.codeforce %}
             <li>كودفورسيس: <a href="https://codeforces.com/profile/{{ page.codeforces }}">@{{ page.codeforces }}</a></li>
             {% endif %}
         </ul>

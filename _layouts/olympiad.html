@@ -39,14 +39,14 @@ layout: default
                     <li class="list-group-item">Start: {{ page.start_date }}</li>
                     <li class="list-group-item">End: {{ page.end_date }}</li>
                     <li class="list-group-item">Host: {{ page.country_enname }}</li>
-                    {% if page.website != "None" %}
+                    {% if page.website %}
                     <li class="list-group-item">Website: <a href="{{ page.website }}">{{ page.website }}</a></li>
                     {% endif %}
                 {% else %}
                     <li class="list-group-item">البداية: {{ page.start_date }}</li>
                     <li class="list-group-item">النهاية: {{ page.end_date }}</li>
                     <li class="list-group-item">الاستضافة: {{ page.country_arname }}</li>
-                    {% if page.website != "None" %}
+                    {% if page.website %}
                     <li class="list-group-item">الموقع: <a href="{{ page.website }}">{{ page.website }}</a></li>
                     {% endif %}
                 {% endif %}
@@ -65,7 +65,7 @@ layout: default
                 <th>{% if page.lang == "en" %} Award {% else %} الجائزة {% endif %}</th>
             </thead>
             <tbody>
-                {% for i in (1..page.participants_count) %}
+                {% for i in (1..page.participants.count) %}
                 <tr>
                     <td>{{ i }}</td>
                     <td>
@@ -76,17 +76,7 @@ layout: default
                         {% endif %}
                     </td>
                     <td>
-                        {% if page.participants[i].award == 'gold' %}
-                        🥇
-                        {% elsif page.participants[i].award == 'silver' %}
-                        🥈
-                        {% elsif page.participants[i].award == 'bronze' %}
-                        🥉
-                        {% elsif page.participants[i].award == 'hounarablemention' %}
-                        📜
-                        {% elsif page.participants[i].award == 'none' %}
-                        -
-                        {% endif %}
+                        {{ page.participants[i].award }}
                     </td>
                 </tr>
                 {% endfor %}
