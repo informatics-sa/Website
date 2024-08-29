@@ -9,21 +9,25 @@ An array of people, each person has the following:
 - `id`: which will be usually in `firstname_lastname` format
 - `arname`: Name in Arabic
 - `enname`: Name in English 
-- `graduation`: Integer, graduation year
-- `codeforces`: Codeforces username
+- `graduation`: Integer, graduation year **(nullable)**
+- `codeforces`: Codeforces username **(nullable)**
 - `level`: Integer, current SIT Level ("`-2`" if graduated)
 
 ## [`/data/participations.json`](/data/participations.json)
-An array of people, each person has the following:
+An array of olympiads SIT participated in, each olympiad has the following:
 - `id`: Either `ioi`/`boi`/`apio`/`jboi`/`egoi`
 - `year`: Integer, year
 - `country`: Either the 2-letters country code or "`online`"
 - `start`: Start date
 - `end`: End date
-- `participants`: Dictionary of `<person ID> : Award name` (`gold`/`silver`/`bronze`/`hounarablemention`/`none`)
-- `website`: Olympiad website of that year **(Optional)**
+- `participants`: Dictionary of `<member ID>: <award name>`
+    - `<award name>`: (`gold`/`silver`/`bronze`/`hounarablemention`) **(nullable)** (null in case of no award)
+- `website`: Olympiad website of that year **(nullable)**
 
 ## [`/data/contact.json`](/data/contact.json)
-An array of people, each person has the following:
+A dictionary of (`developers`/`maintainers`/`admin`), each having an array of people which is a dictionary of:
 - `id`: Member ID
 - `email`: Contact email
+
+> [!NOTE]
+> check the files for examples of formating.
