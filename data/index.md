@@ -29,5 +29,5 @@ A dictionary of (`developers`/`maintainers`/`admin`), each having an array of pe
 - `id`: Member ID
 - `email`: Contact email
 
-> [!NOTE]
+> *Note*:
 > check the files for examples of formating.
