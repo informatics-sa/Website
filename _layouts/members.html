@@ -9,10 +9,11 @@ layout: default
             <button class="nav-link active" id="nav-{{lvl}}-tab" data-bs-toggle="tab" data-bs-target="#nav-{{lvl}}" type="button" role="tab" aria-controls="nav-{{lvl}}" aria-selected="true">
                 {% if page.lang == "en" %}Level{% else %}المستوى{% endif %} {{ lvl }}
             </button>
-            {% endif %}
+            {% else %}
             <button class="nav-link" id="nav-{{lvl}}-tab" data-bs-toggle="tab" data-bs-target="#nav-{{lvl}}" type="button" role="tab" aria-controls="nav-{{lvl}}" aria-selected="false">
                 {% if page.lang == "en" %}Level{% else %}المستوى{% endif %} {{ lvl }}
             </button>
+            {% endif %}
         {% endfor %}
     </div>
 </nav>
