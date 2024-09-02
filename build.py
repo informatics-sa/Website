@@ -299,18 +299,43 @@ dict:
 nullval: null
 """
 
+def build_members_index():
+    members_list = members.values()
+    for mem in members_list:
+        mem['participations_count'] = len(mem['participations'])
+        del mem['participations']
+    level1 = [member for member in members_list if member['level'] == 1]
+    level2 = [member for member in members_list if member['level'] == 2]
+    level3 = [member for member in members_list if member['level'] == 3]
+    level4 = [member for member in members_list if member['level'] == 4]
+
+    data = {
+        'lang': 'ar',
+        'title': 'قائمة الأعضاء',
+        'layout': 'default',
+        'level4': level4,
+        'level3': level3,
+        'level2': level2,
+        'level1': level1,
+    }
+    write_file("./members/index.html", data)
+    data['lang'] = 'en'
+    data['title'] = 'Members list'
+    write_file("en/members/index.html", data)
+
 def main():
     init_countries()
     init_members()
 
     test_utils()
 
+    # Pls don't change the order
     build_members()
-    # build_members_index()
     build_olympiads()
     build_olympiads_index()
     build_hall_of_fame()
     build_images()
     build_contact()
+    build_members_index() 
 
 main()
