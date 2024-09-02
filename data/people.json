@@ -117,7 +117,7 @@
         "enname": "Mohammed Alasmari",
         "graduation": 2027,
         "codeforces": "m5588ohammed",
-        "level": 2
+        "level": 1
     },
     {
         "id": "rifal_alhazmi",
@@ -294,5 +294,93 @@
         "graduation": null,
         "codeforces": null,
         "level": -2
+    },
+    {
+        "id": "almonther_alghamdi",
+        "arname": "المنذر الغامدي",
+        "enname": "Almonther Alghamdi",
+        "graduation": 2027,
+        "codeforces": "Almonther",
+        "level": 1
+    },
+    {
+        "id": "ziyad_alharbi",
+        "arname": "زياد الحربي",
+        "enname": "Ziyad Alharbi",
+        "graduation": null,
+        "codeforces": "ziyad_alharbi09",
+        "level": 1
+    },
+    {
+        "id": "ali_al_yousef",
+        "arname": "علي آل يوسف",
+        "enname": "Ali Al Yousef",
+        "graduation": 2026,
+        "codeforces": "Ali.m.yousef",
+        "level": 1
+    },
+    {
+        "id": "sami_basubrain",
+        "arname": "سامي باصبرين",
+        "enname": "Sami Basubrain",
+        "graduation": 2026,
+        "codeforces": "SamiBasubrain",
+        "level": 1
+    },
+    {
+        "id": "abdulmjeed_albrgash",
+        "arname": "عبدالمجيد البرغش",
+        "enname": "Abdulmjeed Albrgash",
+        "graduation": 2026,
+        "codeforces": null,
+        "level": 1
+    },
+    {
+        "id": "mishari_alhussain",
+        "arname": "مشاري الحسين",
+        "enname": "Mishari Alhussain",
+        "graduation": 2026,
+        "codeforces": "Guymmk",
+        "level": 1
+    },
+    {
+        "id": "yousef_basuni",
+        "arname": "يوسف بسيوني",
+        "enname": "Yousef Basuni",
+        "graduation": 2027,
+        "codeforces": "yousef.basuni",
+        "level": 1
+    },
+    {
+        "id": "hisham_alshehri",
+        "arname": "هشام الشهري",
+        "enname": "Hisham Alshehri",
+        "graduation": 2027,
+        "codeforces": "HishamAlshehri1",
+        "level": 1
+    },
+    {
+        "id": "raed_tayyib",
+        "arname": "رائد طيب",
+        "enname": "Raed Tayyib",
+        "graduation": 2026,
+        "codeforces": "otesunki",
+        "level": 2
+    },
+    {
+        "id": "eyad_alkhalifa",
+        "arname": "إياد الخليفة",
+        "enname": "Eyad Alkhalida",
+        "graduation": null,
+        "codeforces": "Eyadooz1",
+        "level": 1
+    }, 
+    {
+        "id": "ziyad_alhadyan",
+        "arname": "زياد الهديان",
+        "enname": "Ziyad Alhadyan",
+        "graduation": 2026,
+        "codeforces": "ZyadH1",
+        "level": 1
     }
 ]
