@@ -301,22 +301,18 @@ nullval: null
 
 def build_members_index():
     members_list = members.values()
+    levels = {1: [], 2: [], 3: [], 4: []}
     for mem in members_list:
         mem['participations_count'] = len(mem['participations'])
         del mem['participations']
-    level1 = [member for member in members_list if member['level'] == 1]
-    level2 = [member for member in members_list if member['level'] == 2]
-    level3 = [member for member in members_list if member['level'] == 3]
-    level4 = [member for member in members_list if member['level'] == 4]
+        if 1 <= mem['level'] <= 4:
+            levels[mem['level']].append(mem)
 
     data = {
         'lang': 'ar',
         'title': 'قائمة الأعضاء',
         'layout': 'members',
-        'level4': level4,
-        'level3': level3,
-        'level2': level2,
-        'level1': level1,
+        'levels': levels
     }
     write_file("./members/index.html", data)
     data['lang'] = 'en'
