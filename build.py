@@ -312,7 +312,7 @@ def build_members_index():
     data = {
         'lang': 'ar',
         'title': 'قائمة الأعضاء',
-        'layout': 'default',
+        'layout': 'members',
         'level4': level4,
         'level3': level3,
         'level2': level2,
