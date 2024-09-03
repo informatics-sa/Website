@@ -37,6 +37,8 @@ def award_emoji(award, dashing_none=False):
 members = {}
 members_j = load_json('people')
 participations = load_json('participations')
+olympiads_j = load_json('olympiads')
+olympiads = {}
 
 def init_members():
     global members
@@ -55,6 +57,10 @@ def init_members():
                 members[mem_id]['graduation'] = None
                 members[mem_id]['codeforces'] = None
             members[mem_id]['participations'][oly['name'] + '_' + oly['start'].split('/')[0]] = oly['participants'][mem_id]
+
+def init_olympiads():
+    for oly in olympiads_j:
+        olympiads[oly['id']] = oly
 
 def write_yml(data: dict, indent: int = 0) -> str:
     res = ""
@@ -87,6 +93,8 @@ def build_olympiads():
         oly['country_arname'] = countries[oly['country']]['arabic_name'] + ' ' + flag_emoji(oly['country'])
         oly['country_enname'] = countries[oly['country']]['english_name'] + ' ' + flag_emoji(oly['country'])
 
+        oly['arname'] = olympiads[oly['name']]['arname']
+        oly['enname'] = olympiads[oly['name']]['enname']
 
         filename = oly['name'] + '_' + oly['start'].split('/')[0]
         parts = []
@@ -103,6 +111,7 @@ def build_olympiads():
             'lang': 'ar',
             'title': oly['name'].upper() + ' ' + oly['start'].split('/')[0],
             'olympiad': oly['name'],
+            'olympiad_arname': oly['arname'],
             'start_date': oly['start'],
             'end_date': oly['end'],
             'country_arname': oly['country_arname'],
@@ -115,6 +124,7 @@ def build_olympiads():
             'lang': 'en',
             'title': oly['name'].upper() + ' ' + oly['start'].split('/')[0],
             'olympiad': oly['name'],
+            'olympiad_enname': oly['enname'],
             'country_arname': oly['country_arname'],
             'country_enname': oly['country_enname'],
             'start_date': oly['start'],
@@ -381,6 +391,7 @@ def build_members_index():
 def main():
     init_countries()
     init_members()
+    init_olympiads()
 
     test_utils()
 

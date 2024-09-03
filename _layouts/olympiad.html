@@ -6,29 +6,9 @@ layout: default
     <div class="col p-1">
         <h1>
             {% if page.lang == "en" %}  
-                {% if page.olympiad == "ioi" %}
-                    International Olympiad in Informatics
-                {% elsif page.olympiad == "boi" %}
-                    Balkan Olympiad in Informatics
-                {% elsif page.olympiad == "egoi" %}
-                    European Girls Olympiad of Informatics
-                {% elsif page.olympiad == "apio" %}
-                    Asian-Pasific Olympiad Informatics Olympiad
-                {% elsif page.olympiad == "jboi" %}
-                    Junior Balkan Olympiad in Informatics
-                {% endif %}
+                {{ page.enname }} 
             {% else %}
-                {% if page.olympiad == "ioi" %}
-                    الأولمبياد الدولي للمعلوماتية
-                {% elsif page.olympiad == "boi" %}
-                    أولمبياد البلقان الدولي
-                {% elsif page.olympiad == "egoi" %}
-                    أولمبياد الأوربي للبنات
-                {% elsif page.olympiad == "apio" %}
-                    أولمبياد آسيا والباسفك للمعلوماتية
-                {% elsif page.olympiad == "jboi" %}
-                    أولمبياد البلقان للمعلوماتية للناشئين
-                {% endif %}
+                {{ page.arname }}
             {% endif %}
 
             ({{ page.olympiad | upcase }})

@@ -28,29 +28,9 @@ layout: default
                     <td>
                         <a href="{% if page.lang == "en" %}/en{% endif %}/olympiads/{{page[year][idx].name}}_{{year}}">
                             {% if page.lang == "en" %}  
-                                {% if page[year][idx].name == "ioi" %}
-                                    International Olympiad in Informatics
-                                {% elsif page[year][idx].name == "boi" %}
-                                    Balkan Olympiad in Informatics
-                                {% elsif page[year][idx].name == "egoi" %}
-                                    European Girls Olympiad of Informatics
-                                {% elsif page[year][idx].name == "apio" %}
-                                    Asian-Pasific Olympiad Informatics Olympiad
-                                {% elsif page[year][idx].name == "jboi" %}
-                                    Junior Balkan Olympiad in Informatics
-                                {% endif %}
+                                page[year][idx].enname
                             {% else %}
-                                {% if page[year][idx].name == "ioi" %}
-                                    الأولمبياد الدولي للمعلوماتية
-                                {% elsif page[year][idx].name == "boi" %}
-                                    أولمبياد البلقان الدولي
-                                {% elsif page[year][idx].name == "egoi" %}
-                                    أولمبياد الأوربي للبنات
-                                {% elsif page[year][idx].name == "apio" %}
-                                    أولمبياد آسيا والباسفك للمعلوماتية
-                                {% elsif page[year][idx].name == "jboi" %}
-                                    أولمبياد البلقان للمعلوماتية للناشئين
-                                {% endif %}
+                                page[year][idx].arname
                             {% endif %}
 
                             ({{ page[year][idx].name | upcase }})
