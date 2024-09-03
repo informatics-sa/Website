@@ -1,8 +1,9 @@
 # TODO List
 
 ## Development
-- [ ] Implement members index page
+- [x] Implement members index page
 - [ ] Complete the data of current students
+- [ ] Add photos of IOI 2024
 - [ ] Find a solution for Calendars
 
 ## Routines

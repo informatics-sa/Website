@@ -1,13 +1,5 @@
 {
-    "developers": [
-        {"id": "muaath_alqarni", "email": "informatics@muaath.dev"},
-        {"id": "ali_alsalman", "email": "informatics@alimark71.com"}
-    ],
-    "maintainers": [
-        {"id": "muaath_alqarni", "email": "informatics@muaath.dev"},
-        {"id": "ali_alsalman", "email": "informatics@alimark71.com"}
-    ],
-    "admins": [
-        {"id": "esraa_almajhad", "email": "emajhad@mawhiba.org.sa"}
-    ]
+    "developers": ["ali_alsalman", "muaath_alqarni"],
+    "maintainers": ["ali_alsalman", "muaath_alqarni"],
+    "admins": ["esraa_almajhad"]
 }

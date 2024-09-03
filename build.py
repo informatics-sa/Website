@@ -52,8 +52,8 @@ def init_members():
                 members[mem_id]['participations'] = {}
                 members[mem_id]['arname'] = mem_id
                 members[mem_id]['enname'] = mem_id
-                members[mem_id]['graduation'] = 0
-                members[mem_id]['codeforces'] = "undefined"
+                members[mem_id]['graduation'] = None
+                members[mem_id]['codeforces'] = None
             members[mem_id]['participations'][oly['name'] + '_' + oly['start'].split('/')[0]] = oly['participants'][mem_id]
 
 def write_yml(data: dict, indent: int = 0) -> str:
@@ -256,22 +256,81 @@ def build_images():
 
 def build_contact():
     contact = load_json('contact')
+    realcontact = {
+        'maintainers': [],
+        'developers': [],
+        'admins': [],
+    }
     for mem in contact['maintainers']:
-        mem['arname'] = members[mem['id']]['arname']
-        mem['enname'] = members[mem['id']]['enname']
+        try:
+            del members[mem]['participations_count']
+        except:
+            ...
+        try:
+            del members[mem]['graduation']
+        except:
+            ...
+        try:
+            del members[mem]['codeforces']
+        except:
+            ...
+        try:
+            del members[mem]['level']
+        except:
+            ...
+        realcontact['maintainers'].append(members[mem])
+        if members[mem]['email'] == None:
+            exit(1)
+
     for mem in contact['developers']:
-        mem['arname'] = members[mem['id']]['arname']
-        mem['enname'] = members[mem['id']]['enname']
+        try:
+            del members[mem]['participations_count']
+        except:
+            ...
+        try:
+            del members[mem]['graduation']
+        except:
+            ...
+        try:
+            del members[mem]['codeforces']
+        except:
+            ...
+        try:
+            del members[mem]['level']
+        except:
+            ...
+        realcontact['developers'].append(members[mem])
+        if members[mem]['email'] == None:
+            exit(1)
+
     for mem in contact['admins']:
-        mem['arname'] = members[mem['id']]['arname']
-        mem['enname'] = members[mem['id']]['enname']
+        try:
+            del members[mem]['participations_count']
+        except:
+            ...
+        try:
+            del members[mem]['graduation']
+        except:
+            ...
+        try:
+            del members[mem]['codeforces']
+        except:
+            ...
+        try:
+            del members[mem]['level']
+        except:
+            ...
+        realcontact['admins'].append(members[mem])
+        if members[mem]['email'] == None:
+            exit(1)
+
     written = {
         'layout': 'contact',
         'lang': 'ar',
         'title': 'تواصل',
-        'maintainers': contact['maintainers'],
-        'admins': contact['admins'],
-        'developers': contact['developers']
+        'maintainers': realcontact['maintainers'],
+        'admins': realcontact['admins'],
+        'developers': realcontact['developers']
     }
     write_file('./contact.html', written)
     written['lang'] = 'en'
@@ -331,7 +390,8 @@ def main():
     build_olympiads_index()
     build_hall_of_fame()
     build_images()
-    build_contact()
+    # build_calendar()
     build_members_index() 
+    build_contact()
 
 main()

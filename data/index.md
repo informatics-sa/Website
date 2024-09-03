@@ -25,9 +25,7 @@ An array of olympiads SIT participated in, each olympiad has the following:
 - `website`: Olympiad website of that year **(nullable)**
 
 ## [`/data/contact.json`](/data/contact.json)
-A dictionary of (`developers`/`maintainers`/`admin`), each having an array of people which is a dictionary of:
-- `id`: Member ID
-- `email`: Contact email
+A dictionary of (`developers`/`maintainers`/`admin`), each having an array of person ID
 
 > *Note*:
 > check the files for examples of formating.

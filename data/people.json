@@ -5,7 +5,8 @@
         "enname": "Muaath Alqarni",
         "graduation": 2025,
         "codeforces": "Muaath_5",
-        "level": 3
+        "level": 3,
+        "email": "muaath@sainformatics.org"
     },
     {
         "id": "essa_almousa",
@@ -245,7 +246,8 @@
         "enname": "Esraa Almajhad",
         "graduation": null,
         "codeforces": null,
-        "level": -3
+        "level": -3,
+        "email": "emajhad@mawhiba.org.sa"
     },
     {
         "id": "ali_alsalman",
@@ -253,7 +255,8 @@
         "enname": "Ali Alsalman",
         "graduation": 2026,
         "codeforces": "AliMark71",
-        "level": 2
+        "level": 2,
+        "email": "ali@sainformatics.org"
     },
     {
         "id": "maria_alramadan",
