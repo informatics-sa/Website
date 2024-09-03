@@ -28,9 +28,9 @@ layout: default
                     <td>
                         <a href="{% if page.lang == "en" %}/en{% endif %}/olympiads/{{page[year][idx].name}}_{{year}}">
                             {% if page.lang == "en" %}  
-                                page[year][idx].enname
+                                {{ page[year][idx].enname }}
                             {% else %}
-                                page[year][idx].arname
+                                {{ page[year][idx].arname }}
                             {% endif %}
 
                             ({{ page[year][idx].name | upcase }})

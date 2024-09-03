@@ -1,3 +1,5 @@
+#!/bin/python
+
 import os
 import json
 
@@ -140,6 +142,8 @@ def build_members():
             olymp = {}
             olymp['olympiad'] = oly.split("_")[0]
             olymp['year'] = oly.split("_")[1]
+            olymp['arname'] = olympiads[olymp['olympiad']]['arname']
+            olymp['enname'] = olympiads[olymp['olympiad']]['enname']
             olymp['award'] = award
             
             participations.append(olymp)
@@ -347,6 +351,25 @@ def build_contact():
     written['title'] = 'Contact'
     write_file('en/contact.html', written)
 
+def build_members_index():
+    members_list = members.values()
+    levels = {1: [], 2: [], 3: [], 4: []}
+    for mem in members_list:
+        mem['participations_count'] = len(mem['participations'])
+        del mem['participations']
+        if 1 <= mem['level'] <= 4:
+            levels[mem['level']].append(mem)
+
+    data = {
+        'lang': 'ar',
+        'title': 'قائمة الأعضاء',
+        'layout': 'members',
+        'levels': levels
+    }
+    write_file("./members/index.html", data)
+    data['lang'] = 'en'
+    data['title'] = 'Members list'
+    write_file("en/members/index.html", data)
 
 def test_utils():
     assert flag_emoji('sa') == '🇸🇦'
@@ -367,26 +390,6 @@ dict:
   sub1: "sub2"
 nullval: null
 """
-
-def build_members_index():
-    members_list = members.values()
-    levels = {1: [], 2: [], 3: [], 4: []}
-    for mem in members_list:
-        mem['participations_count'] = len(mem['participations'])
-        del mem['participations']
-        if 1 <= mem['level'] <= 4:
-            levels[mem['level']].append(mem)
-
-    data = {
-        'lang': 'ar',
-        'title': 'قائمة الأعضاء',
-        'layout': 'members',
-        'levels': levels
-    }
-    write_file("./members/index.html", data)
-    data['lang'] = 'en'
-    data['title'] = 'Members list'
-    write_file("en/members/index.html", data)
 
 def main():
     init_countries()

@@ -37,30 +37,10 @@ layout: default
                 <tr>
                     <td>
                         <a href="{% if page.lang == 'en' %}/en{% endif %}/olympiads/{{ page.participations[i].olympiad }}_{{ page.participations[i].year }}">
-                            {% if page.lang == "en" %}  
-                                {% if page.participations[i].olympiad == "ioi" %}
-                                    International Olympiad in Informatics
-                                {% elsif page.participations[i].olympiad == "boi" %}
-                                    Balkan Olympiad in Informatics
-                                {% elsif page.participations[i].olympiad == "egoi" %}
-                                    European Girls' Olympiad of Informatics
-                                {% elsif page.participations[i].olympiad == "apio" %}
-                                    Asian-Pasific Olympiad Informatics Olympiad
-                                {% elsif page.participations[i].olympiad == "jboi" %}
-                                    Junior Balkan Olympiad in Informatics
-                                {% endif %}
+                            {% if page.lang == "en" %} 
+                                {{ page.participants[i].enname }} 
                             {% else %}
-                                {% if page.participations[i].olympiad == "ioi" %}
-                                    الأولمبياد الدولي للمعلوماتية
-                                {% elsif page.participations[i].olympiad == "boi" %}
-                                    أولمبياد البلقان الدولي
-                                {% elsif page.participations[i].olympiad == "egoi" %}
-                                    أولمبياد الأوربي للبنات
-                                {% elsif page.participations[i].olympiad == "apio" %}
-                                    أولمبياد آسيا والباسفك للمعلوماتية
-                                {% elsif page.participations[i].olympiad == "jboi" %}
-                                    أولمبياد البلقان للمعلوماتية للناشئين
-                                {% endif %}
+                                {{ page.participants[i].arname }}
                             {% endif %}
 
                             ({{ page.participations[i].olympiad | upcase }}{{ page.participations[i].year }})
