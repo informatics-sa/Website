@@ -385,5 +385,85 @@
         "graduation": 2026,
         "codeforces": "ZyadH1",
         "level": 1
+    },
+    {
+        "id": "fares_alraddadi",
+        "arname": "فارس الردادي",
+        "enname": "Fares Alraddadi",
+        "graduation": 2028,
+        "codeforces": "Fares_alraddadi",
+        "level": 1
+    },
+    {
+        "id": "hussain_shaiban",
+        "arname": "حسين شيبان",
+        "enname": "Hussain Shaiban",
+        "graduation": 2026,
+        "codeforces": "Has2008",
+        "level": 1
+    },
+    {
+        "id": "roaa_alakhdhar",
+        "arname": "رؤى الاخضر",
+        "enname": "Roaa Alakhdhar",
+        "graduation": 2026,
+        "codeforces": "em4ma2",
+        "level": 1
+    },
+    {
+        "id": "jood_sindi",
+        "arname": "جود سندي",
+        "enname": "Jood Sindi",
+        "graduation": 2027,
+        "codeforces": "joodsindi",
+        "level": -2
+    },
+    {
+        "id": "kawther_al_nasser",
+        "arname": "كوثر آل ناصر",
+        "enname": "Kawther Al Nasser",
+        "graduation": 2026,
+        "codeforces": "Hakuna_Matata93",
+        "level": 2
+    },
+    {
+        "id": "hoor_alsadah",
+        "arname": "حور السادة",
+        "enname": "Hoor Alsadah",
+        "graduation": 2026,
+        "codeforces": "hooralsadah919",
+        "level": 2
+    },
+    {
+        "id": "malek_almusaylihi",
+        "arname": "مالك المصيلحي",
+        "enname": "Malek Almusaylihi",
+        "graduation": 2027,
+        "codeforces": "malekloky",
+        "level": -2
+    },
+    {
+        "id": "mirza_al_qassim",
+        "arname": "ميرزا آل قاسم",
+        "enname": "Mirza Al Qassim",
+        "graduation": 2026,
+        "codeforces": "Mirza_Al_Qassim",
+        "level": 2
+    },
+    {
+        "id": "ali_alkhabbaz",
+        "arname": "علي الخباز",
+        "enname": "Ali Alkhabbaz",
+        "graduation": 2027,
+        "codeforces": "LyricClamp",
+        "level": 2
+    },
+    {
+        "id": "qusai_jadallah",
+        "arname": "قصي جادالله",
+        "enname": "Qusai Jadallah",
+        "graduation": 2027,
+        "codeforces": "qusay1",
+        "level": 2
     }
 ]
