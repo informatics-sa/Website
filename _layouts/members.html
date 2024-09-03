@@ -38,9 +38,9 @@ layout: default
                     <tr>
                         <td>
                             {% if page.lang == "en" %}
-                            {{ page.levels[lvl][i].enname }}
+                            <a href="/en/members/{{ page.levels[lvl][i].id }}">{{ page.levels[lvl][i].enname }}</a>
                             {% else %}
-                            {{ page.levels[lvl][i].arname }}
+                            <a href="/members/{{ page.levels[lvl][i].id }}">{{ page.levels[lvl][i].arname }}</a>
                             {% endif %}
                         </td>
                         <td><a href="https://codeforces.com/profile/{{ page.levels[lvl][i].codeforces }}">@{{ page.levels[lvl][i].codeforces }}</a></td>
