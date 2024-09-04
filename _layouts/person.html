@@ -38,9 +38,9 @@ layout: default
                     <td>
                         <a href="{% if page.lang == 'en' %}/en{% endif %}/olympiads/{{ page.participations[i].olympiad }}_{{ page.participations[i].year }}">
                             {% if page.lang == "en" %} 
-                                {{ page.participants[i].enname }} 
+                                {{ page.participations[i].enname }} 
                             {% else %}
-                                {{ page.participants[i].arname }}
+                                {{ page.participations[i].arname }}
                             {% endif %}
 
                             ({{ page.participations[i].olympiad | upcase }}{{ page.participations[i].year }})
@@ -56,7 +56,7 @@ layout: default
                         🥉
                         {% elsif page.participations[i].award == 'hounarablemention' %}
                         📜
-                        {% elsif page.participations[i].award == 'none' %}
+                        {% else %}
                         -
                         {% endif %}
                     </td>
