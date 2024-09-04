@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 import os
 import json
 
@@ -78,6 +76,8 @@ def write_yml(data: dict, indent: int = 0) -> str:
                 res += write_yml(mp, indent + 2)
         elif val is None:
             res += " " * indent + str(key) + ": null\n"
+        elif type(val) is bool:
+            res += " " * indent + str(key) + ": " + str(val).lower() + "\n"
         else:
             res += " " * indent + str(key) + ": \"" + str(val) + "\"\n"
     return res
@@ -90,7 +90,7 @@ def write_file(filename: str, vals: dict):
         f.write(write_yml(vals))
         f.write("---\n")
 
-def build_olympiads():
+def build_participations():
     for oly in participations:
         oly['country_arname'] = countries[oly['country']]['arabic_name'] + ' ' + flag_emoji(oly['country'])
         oly['country_enname'] = countries[oly['country']]['english_name'] + ' ' + flag_emoji(oly['country'])
@@ -108,8 +108,8 @@ def build_olympiads():
             awards += award_emoji(award)
 
         oly['awards'] = awards
-        write_file(f'olympiads/{filename}.html', {
-            'layout': 'olympiad',
+        write_file(f'participations/{filename}.html', {
+            'layout': 'participation',
             'lang': 'ar',
             'title': oly['name'].upper() + ' ' + oly['start'].split('/')[0],
             'olympiad': oly['name'],
@@ -121,8 +121,8 @@ def build_olympiads():
             'participants': parts,
             'website': oly['website']
         })
-        write_file(f'en/olympiads/{filename}.html', {
-            'layout': 'olympiad',
+        write_file(f'en/participations/{filename}.html', {
+            'layout': 'participation',
             'lang': 'en',
             'title': oly['name'].upper() + ' ' + oly['start'].split('/')[0],
             'olympiad': oly['name'],
@@ -142,8 +142,6 @@ def build_members():
             olymp = {}
             olymp['olympiad'] = oly.split("_")[0]
             olymp['year'] = oly.split("_")[1]
-            olymp['arname'] = olympiads[olymp['olympiad']]['arname']
-            olymp['enname'] = olympiads[olymp['olympiad']]['enname']
             olymp['award'] = award
             
             participations.append(olymp)
@@ -167,7 +165,7 @@ def build_members():
             'participations': participations
         })
 
-def build_olympiads_index():
+def build_participations_index():
     olympiads = {}
     min_year = 3000
     max_year = 2000
@@ -184,7 +182,7 @@ def build_olympiads_index():
     written = {
         'layout': 'participations',
         'lang': 'ar',
-        'title': 'الأولمبيادات',
+        'title': 'المشاركات',
         'start_year': min_year,
         'last_year': max_year
     }
@@ -192,18 +190,21 @@ def build_olympiads_index():
     for year, list in olympiads.items():
         written[year] = list
     
-    write_file("olympiads/index.html", written)
+    write_file("participations/index.html", written)
 
     written['lang'] = 'en'
-    written['title'] = 'Olympiads'
+    written['title'] = 'Participations'
 
-    write_file("en/olympiads/index.html", written)
+    write_file("en/participations/index.html", written)
 
 # Generate a medals count list only in official olympiads 
 # Sort it by gold/silver/bronze/hounarablemention
 # Print the list in a table
 def build_hall_of_fame():
-    official_olympiads = ['ioi', 'apio']
+    official_olympiads = []
+    for oly in olympiads_j:
+        if oly['official']:
+            official_olympiads.append(oly['id'])
     fame = {}
     for memid, data in members.items():
         fame[memid] = {
@@ -351,25 +352,6 @@ def build_contact():
     written['title'] = 'Contact'
     write_file('en/contact.html', written)
 
-def build_members_index():
-    members_list = members.values()
-    levels = {1: [], 2: [], 3: [], 4: []}
-    for mem in members_list:
-        mem['participations_count'] = len(mem['participations'])
-        del mem['participations']
-        if 1 <= mem['level'] <= 4:
-            levels[mem['level']].append(mem)
-
-    data = {
-        'lang': 'ar',
-        'title': 'قائمة الأعضاء',
-        'layout': 'members',
-        'levels': levels
-    }
-    write_file("./members/index.html", data)
-    data['lang'] = 'en'
-    data['title'] = 'Members list'
-    write_file("en/members/index.html", data)
 
 def test_utils():
     assert flag_emoji('sa') == '🇸🇦'
@@ -391,6 +373,38 @@ dict:
 nullval: null
 """
 
+def build_members_index():
+    members_list = members.values()
+    levels = {1: [], 2: [], 3: [], 4: []}
+    for mem in members_list:
+        mem['participations_count'] = len(mem['participations'])
+        del mem['participations']
+        if 1 <= mem['level'] <= 4:
+            levels[mem['level']].append(mem)
+
+    data = {
+        'lang': 'ar',
+        'title': 'قائمة الأعضاء',
+        'layout': 'members',
+        'levels': levels
+    }
+    write_file("./members/index.html", data)
+    data['lang'] = 'en'
+    data['title'] = 'Members list'
+    write_file("en/members/index.html", data)
+
+def build_olympiads():
+    write_file('./olympiads.html', {
+        'layout': 'olympiads',
+        'lang': 'ar',
+        'olympiads': olympiads_j
+    })
+    write_file('en/olympiads.html', {
+        'layout': 'olympiads',
+        'lang': 'en',
+        'olympiads': olympiads_j
+    })
+
 def main():
     init_countries()
     init_members()
@@ -400,10 +414,11 @@ def main():
 
     # Pls don't change the order
     build_members()
-    build_olympiads()
-    build_olympiads_index()
+    build_participations()
+    build_participations_index()
     build_hall_of_fame()
     build_images()
+    build_olympiads()
     # build_calendar()
     build_members_index() 
     build_contact()

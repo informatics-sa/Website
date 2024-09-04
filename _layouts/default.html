@@ -25,15 +25,17 @@ layout: base
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ms-auto">
                 {% if page.lang == "ar" %}
+                <li class="nav-item"><a class="nav-link {% if page.id == 'participations' %} active {% endif %}" href="/participations">المشاركات</a></li>
                 <li class="nav-item"><a class="nav-link {% if page.id == 'olympiads' %} active {% endif %}" href="/olympiads">الأولمبيادات</a></li>
-                <!-- <li class="nav-item"><a class="nav-link {% if page.id == 'calender' %} active {% endif %}" href="/calender">التقويم</a></li> -->
+                <!-- <li class="nav-item"><a class="nav-link {% if page.id == 'calendar' %} active {% endif %}" href="/calendar">التقويم</a></li> -->
                 <li class="nav-item"><a class="nav-link {% if page.id == 'halloffame' %} active {% endif %}" href="/hall-of-fame">لائحة الشرف</a></li>
                 <li class="nav-item"><a class="nav-link {% if page.id == 'members' %} active {% endif %}" href="/members/">الأعضاء</a></li>
                 <li class="nav-item"><a class="nav-link {% if page.id == 'images' %} active {% endif %}" href="/images">معرض الصور</a></li>
                 <li class="nav-item"><a class="nav-link {% if page.id == 'contact' %} active {% endif %}" href="/contact">تواصل</a></li>
                 {% else %}
                 <li class="nav-item"><a class="nav-link {% if page.id == 'olympiads' %} active {% endif %}" href="/en/olympiads">Olympiads</a></li>
-                <!-- <li class="nav-item"><a class="nav-link {% if page.id == 'calender' %} active {% endif %}" href="/en/calender">Calender</a></li> -->
+                <li class="nav-item"><a class="nav-link {% if page.id == 'participations' %} active {% endif %}" href="/en/participations">Participations</a></li>
+                <!-- <li class="nav-item"><a class="nav-link {% if page.id == 'calendar' %} active {% endif %}" href="/en/calendar">Calendar</a></li> -->
                 <li class="nav-item"><a class="nav-link {% if page.id == 'halloffame' %} active {% endif %}" href="/en/hall-of-fame">Hall of fame</a></li>
                 <li class="nav-item"><a class="nav-link {% if page.id == 'members' %} active {% endif %}" href="/en/members/">Members</a></li>
                 <li class="nav-item"><a class="nav-link {% if page.id == 'images' %} active {% endif %}" href="/en/images">Image library</a></li>
