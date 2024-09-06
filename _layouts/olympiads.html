@@ -9,11 +9,8 @@ id: olympiads
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">
-                    {% if page.lang == "en" %}
-                    {{ page.olympiads[i].enname }}
-                    {% else %}
-                    {{ page.olympiads[i].arname }}
-                    {% endif %}
+                    {% if page.lang == "en" %} {{ page.olympiads[i].enname }} {% else %} {{ page.olympiads[i].arname }} {% endif %}
+                    ({{ page.olympiads[i].id | upcase }})
                 </h5>
                 {% if page.olympiads[i].website != null %}
                 <p class="card-text">
@@ -31,7 +28,7 @@ id: olympiads
                     {% endif %}
                 </p>
                 <div class="card-footer">
-                    <table>
+                    <table class="table table-bordered">
                         <thead>
                             <th>🥇</th>
                             <th>🥈</th>
@@ -40,10 +37,10 @@ id: olympiads
                         </thead>
                         <tbody>
                             <tr>
-                                <td>{{ page.olympaids[i].gold }}</td>
-                                <td>{{ page.olympaids[i].silver }}</td>
-                                <td>{{ page.olympaids[i].bronze }}</td>
-                                <td>{{ page.olympaids[i].hm }}</td>
+                                <td>{{ page.olympiads[i].gold }}</td>
+                                <td>{{ page.olympiads[i].silver }}</td>
+                                <td>{{ page.olympiads[i].bronze }}</td>
+                                <td>{{ page.olympiads[i].hm }}</td>
                             </tr>
                         </tbody>
                     </table>
