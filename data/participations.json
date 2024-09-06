@@ -15,10 +15,10 @@
         "name": "ioi", "start": "2024/9/1", "end": "2024/9/8", "country": "eg",
         "website": "https://ioi2024.eg/",
         "participants": {
-            "adeeb_alshehri": "bronze",
             "ahmad_alhashim": "bronze",
-            "saad_alarifi": null,
-            "essa_almousa": null
+            "adeeb_alshehri": "bronze",
+            "essa_almousa": null,
+            "saad_alarifi": null
         }
     },
     {

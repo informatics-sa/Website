@@ -1,6 +1,6 @@
 [
     {
-        "id": "ioi",
+        "id": "ioi", "website": "",
         "arname": "أولمبياد المعلوماتية الدولي",
         "enname": "International Olympiad in Informatics",
         "ardescription": "",
@@ -8,7 +8,7 @@
         "official": true
     },
     {
-        "id": "apio",
+        "id": "apio", "website": "",
         "arname": "أولمبياد آسيا والباسفيك للمعلوماتية",
         "enname": "Asia-Pasific Informatics Olympiad",
         "ardescription": "",
@@ -16,7 +16,7 @@
         "official": true
     },
     {
-        "id": "egoi",
+        "id": "egoi", "website": "",
         "arname": "أولمبياد البنات الأوربي للمعلوماتية",
         "enname": "European girls Olympiad in Informatics",
         "ardescription": "",
@@ -24,7 +24,7 @@
         "official": false
     },
     {
-        "id": "boi",
+        "id": "boi", "website": "",
         "arname": "أولمبياد البلقان للمعلوماتية",
         "enname": "Balkan Olympiad in Informatics",
         "ardescription": "",
@@ -32,7 +32,7 @@
         "official": false
     },
     {
-        "id": "jboi",
+        "id": "jboi", "website": "",
         "arname": "أولمبياد البلقان للمعلوماتية للناشئين",
         "enname": "Junior Balkan Olympiad in Informatics",
         "ardescription": "",
