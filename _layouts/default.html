@@ -3,7 +3,7 @@ layout: base
 ---
 <nav class="navbar navbar-expand-md navbar-dark bg-success shadow-sm">
     <div class="container">
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand" href="/{% if page.lang == 'en' %}en{% endif %}">
             <b>
                 {% if page.lang == "ar" %}
                 فريق المعلوماتية السعودي
