@@ -409,11 +409,13 @@ def build_olympiads():
         oly['hm'] = olympiads[oly['id']]['hm']
         oly['participations'] = olympiads[oly['id']]['participations']
     write_file('./olympiads.html', {
+        'title': 'الأولمبيادات',
         'layout': 'olympiads',
         'lang': 'ar',
         'olympiads': olympiads_j
     })
     write_file('en/olympiads.html', {
+        'title': 'Olympiads',
         'layout': 'olympiads',
         'lang': 'en',
         'olympiads': olympiads_j
