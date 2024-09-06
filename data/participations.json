@@ -50,36 +50,36 @@
         "website": "https://jboi2023.cs.org.mk",
         "participants": {
             "abdulrahman_alghamdi": "bronze",
-            "saad_alarifi": "hounarablemention",
+            "saad_alarifi": "hm",
             "abdullah_alodaibi": null,
             "bassmah_mansour": null
         }
     },
     {
         "name": "boi", "start": "2023/10/29", "end": "2023/11/3", "country": "si",
-        "website": "https://boi2023.zotks.si/",
+        "website": "https://boi2023.zotks.si",
         "participants": {
             "adeeb_alshehri": "bronze",
-            "humaid_alhuthali": "hounarablemention",
-            "emad_alharbi": "hounarablemention",
-            "ahmad_alhashim": "hounarablemention",
-            "essa_almousa": "hounarablemention",
-            "rifal_alhazmi": "hounarablemention"
+            "humaid_alhuthali": "hm",
+            "emad_alharbi": "hm",
+            "ahmad_alhashim": "hm",
+            "essa_almousa": "hm",
+            "rifal_alhazmi": "hm"
         }
     },
     {
         "name": "ioi", "start": "2023/8/7", "end": "2023/8/15", "country": "hu",
-        "website": "https://ioi2023.hu/",
+        "website": "https://ioi2023.hu",
         "participants": {
             "humaid_alhuthali": "bronze",
-            "essa_almousa": "hounarablemention",
-            "adeeb_alshehri": "hounarablemention",
+            "essa_almousa": "hm",
+            "adeeb_alshehri": "hm",
             "juri_aljohani": null
         }
     },
     {
         "name": "egoi", "start": "2023/7/15", "end": "2023/7/21", "country": "se",
-        "website": "https://egoi23.se/",
+        "website": "https://egoi23.se",
         "participants": {
             "leen_qanash": "silver",
             "juri_aljohani": "bronze",
@@ -101,7 +101,7 @@
     },
     {
         "name": "egoi", "start": "2022/10/16", "end": "2022/10/23", "country": "tr",
-        "website": "https://egoi2022.tubitak.gov.tr/",
+        "website": "https://egoi2022.tubitak.gov.tr",
         "participants": {
             "leen_qanash": "silver",
             "juri_aljohani": "bronze",
@@ -111,7 +111,7 @@
     },
     {
         "name": "ioi", "start": "2022/8/7", "end": "2022/8/15", "country": "id",
-        "website": "https://ioi2022.id/",
+        "website": "https://ioi2022.id",
         "participants": {
             "abdulaziz_alshibli": "bronze",
             "adeeb_alshehri": null,

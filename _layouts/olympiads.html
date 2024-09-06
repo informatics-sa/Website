@@ -7,7 +7,6 @@ id: olympiads
 <div class="row">
     <div class="col">
         <div class="card">
-            <img src="..." class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">
                     {% if page.lang == "en" %}
@@ -31,6 +30,24 @@ id: olympiads
                     {{ page.olympiads[i].ardescription }}
                     {% endif %}
                 </p>
+                <div class="card-footer">
+                    <table>
+                        <thead>
+                            <th>🥇</th>
+                            <th>🥈</th>
+                            <th>🥉</th>
+                            <th>📜</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{ page.olympaids[i].gold }}</td>
+                                <td>{{ page.olympaids[i].silver }}</td>
+                                <td>{{ page.olympaids[i].bronze }}</td>
+                                <td>{{ page.olympaids[i].hm }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>            
             </div>
         </div>        
     </div>

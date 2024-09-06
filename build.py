@@ -30,7 +30,7 @@ def award_emoji(award, dashing_none=False):
         return '🥈'
     if award == 'bronze':
         return '🥉'
-    if award == 'hounarablemention':
+    if award == 'hm' or award == 'hm':
         return '📜'
     return '-' if dashing_none else ''
 
@@ -47,8 +47,8 @@ def init_members():
         members[mem['id']]['participations'] = {}
 
     for oly in participations:
-        #print(oly['participants'])
         for mem_id in oly['participants']:
+            # Should give a fatal error or just create a new person with default data
             if mem_id not in members:
                 members[mem_id] = {}
                 members[mem_id]['participations'] = {}
@@ -61,6 +61,11 @@ def init_members():
 def init_olympiads():
     for oly in olympiads_j:
         olympiads[oly['id']] = oly
+        olympiads[oly['id']]['gold'] = 0
+        olympiads[oly['id']]['silver'] = 0
+        olympiads[oly['id']]['bronze'] = 0
+        olympiads[oly['id']]['hm'] = 0
+        olympiads[oly['id']]['participations'] = 0
 
 def write_yml(data: dict, indent: int = 0) -> str:
     res = ""
@@ -94,6 +99,7 @@ def build_participations():
     for oly in participations:
         oly['country_arname'] = countries[oly['country']]['arabic_name'] + ' ' + flag_emoji(oly['country'])
         oly['country_enname'] = countries[oly['country']]['english_name'] + ' ' + flag_emoji(oly['country'])
+        olympiads[oly['name']]['participations'] += 1
 
         oly['arname'] = olympiads[oly['name']]['arname']
         oly['enname'] = olympiads[oly['name']]['enname']
@@ -103,6 +109,8 @@ def build_participations():
         enparts = []
         awards = ''
         for mem_id, award in oly['participants'].items():
+            if award != None:
+                olympiads[oly['name']][award] += 1
             parts.append({'id': mem_id, 'name': members[mem_id]['arname'], 'award': award_emoji(award, dashing_none=True)})
             enparts.append({'id': mem_id, 'name': members[mem_id]['enname'], 'award': award_emoji(award, dashing_none=True)})
             awards += award_emoji(award)
@@ -198,7 +206,7 @@ def build_participations_index():
     write_file("en/participations/index.html", written)
 
 # Generate a medals count list only in official olympiads 
-# Sort it by gold/silver/bronze/hounarablemention
+# Sort it by gold/silver/bronze/hm
 # Print the list in a table
 def build_hall_of_fame():
     official_olympiads = []
@@ -211,7 +219,7 @@ def build_hall_of_fame():
             'gold': 0,
             'silver': 0,
             'bronze': 0,
-            'hounarablemention': 0,
+            'hm': 0,
             None: 0,
         }
         for oly, award in data['participations'].items():
@@ -219,8 +227,8 @@ def build_hall_of_fame():
             if oly in official_olympiads:
                 fame[memid][award] += 1
     
-    filtered_fame = filter(lambda dic: dic[1]['gold'] + dic[1]['silver'] + dic[1]['bronze'] + dic[1]['hounarablemention'] > 0, fame.items())
-    sorted_fame = sorted(filtered_fame, key=lambda x: (-x[1]['gold'], -x[1]['silver'], -x[1]['bronze'], -x[1]['hounarablemention']))
+    filtered_fame = filter(lambda dic: dic[1]['gold'] + dic[1]['silver'] + dic[1]['bronze'] + dic[1]['hm'] > 0, fame.items())
+    sorted_fame = sorted(filtered_fame, key=lambda x: (-x[1]['gold'], -x[1]['silver'], -x[1]['bronze'], -x[1]['hm']))
     # TODO: should be printed to a file
 
     written = []
@@ -234,7 +242,7 @@ def build_hall_of_fame():
             'gold': dic['gold'],
             'silver': dic['silver'],
             'bronze': dic['bronze'],
-            'hounarablemention': dic['hounarablemention'],
+            'hm': dic['hm'],
         })
     
     write_file('./hall-of-fame.html', {
@@ -394,6 +402,12 @@ def build_members_index():
     write_file("en/members/index.html", data)
 
 def build_olympiads():
+    for oly in olympiads_j:
+        oly['gold'] = olympiads[oly['id']]['gold']
+        oly['silver'] = olympiads[oly['id']]['silver']
+        oly['bronze'] = olympiads[oly['id']]['bronze']
+        oly['hm'] = olympiads[oly['id']]['hm']
+        oly['participations'] = olympiads[oly['id']]['participations']
     write_file('./olympiads.html', {
         'layout': 'olympiads',
         'lang': 'ar',

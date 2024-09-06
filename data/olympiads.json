@@ -1,10 +1,10 @@
 [
     {
-        "id": "ioi", "website": "",
+        "id": "ioi", "website": "https://ioinformatics.org",
         "arname": "أولمبياد المعلوماتية الدولي",
         "enname": "International Olympiad in Informatics",
-        "ardescription": "",
-        "endescription": "",
+        "ardescription": "مسابقة يشارك فيها أكثر من 90 دولة حول العالم",
+        "endescription": "More than 90 countries around the world participates in this Olympiad",
         "official": true
     },
     {
