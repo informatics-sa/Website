@@ -2,6 +2,7 @@ import os, json
 
 ROOT_DIR = './root/'
 LANGS = ['ar', 'en']
+BLOCKED_FLAGS = ['se']
 
 def load_json(filename):
     with open(f'{ROOT_DIR}data/{filename}.json', 'r', encoding='utf-8') as f:
@@ -21,7 +22,7 @@ def award_emoji(award, dashing_none=False):
 def flag_emoji(country_code):
     if country_code == 'online':
         return '🌐'
-    if country_code in ['se']: # Blocked flags list
+    if country_code in BLOCKED_FLAGS:
         return ''
     country_code = country_code.upper()
     flag = chr(ord(country_code[0]) + 127397) + chr(ord(country_code[1]) + 127397)
@@ -43,6 +44,8 @@ def write_yml(data: dict, indent: int = 0) -> str:
             res += " " * indent + str(key) + ": null\n"
         elif type(val) is bool:
             res += " " * indent + str(key) + ": " + str(val).lower() + "\n"
+        elif type(val) is int:
+            res += " " * indent + str(key) + ": " + str(val) + "\n"
         else:
             res += " " * indent + str(key) + ": \"" + str(val) + "\"\n"
     return res
