@@ -1,6 +1,6 @@
 ---
 lang: en
-layout: default
+layout: documentation
 title: 'Maintainers guide'
 ---
 
