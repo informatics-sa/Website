@@ -1,17 +1,11 @@
 # Saudi Informatics Team Website
 
-## Contents
-- Participations
-- Members list with profile for everyone
-- Hall of fame
-- Photo gallary
-- Contact page
+## Usage
+1. Edit `/root/data/*.json` files, and keep them updated
+2. Commit to the repository
 
-## Maintainers
-Here is a [guide for maintainers](https://sainformatics.org/MAINTAINERS)
-
-- Muaath Alqarni
-- Ali Alsalman
+## How does it work?
+It's 100% automated using `build.py` and Github workflows
 
 ## Developers
 - Muaath Alqarni
