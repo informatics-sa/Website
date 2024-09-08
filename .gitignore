@@ -1,2 +1,4 @@
 .ruby-version
+.jekyll-cache
 __pycache__
+_site

@@ -152,9 +152,6 @@ def build_participations_index():
 
     write_file("en/participations/index.html", written)
 
-# Generate a medals count list only in official olympiads 
-# Sort it by gold/silver/bronze/hm
-# Print the list in a table
 def build_hall_of_fame():
     official_olympiads = []
     for oly in olympiads_j:
