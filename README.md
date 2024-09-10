@@ -17,10 +17,12 @@ This website needs people who maintain the data up-to-date.
 
 The main goal is to have at any time **at least 3 active maintainers**.
 
-Current maintainers:
+### Current maintainers:
 
 - Muaath Alqarni
 - Ali Alsalman
 
 ## License
-Selected soon...
+This project is licensed under the GNU General Public License v3.0.
+
+Check [LICENSE](https://github.com/informatics-sa/informatics-sa.github.io/blob/main/LICENSE)
