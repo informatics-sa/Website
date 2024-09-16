@@ -1,5 +1,13 @@
 [
     {
+        "src": "ioi_2024.jpeg",
+        "artitle": "صورة الفائزين في IOI 2024",
+        "ardescription": "فاز الطالبان أحمد الهاشم وأديب الشهري بميداليتين برونزية في مصر.",
+        "entitle": "IOI 2024 medalists",
+        "endescription": "Ahmad Alhashim and Adeeb Alshehri were awarded 2 bronze medals in Egypt.",
+        "date": "2024/09/06"
+    },
+    {
         "src": "ioi_2023.jpeg",
         "artitle": "صورة المشاركين في IOI 2023", 
         "ardescription": "",
@@ -18,9 +26,9 @@
     {
         "src": "boi_2023.jpeg",
         "artitle": "BOI 2023", 
-        "ardescription": "أحمد الهاشم يرفع علم المملكة في سلوفينيا",
+        "ardescription": "أحمد الهاشم يرفع علم المملكة في سلوفينيا.",
         "entitle": "BOI 2023", 
-        "endescription": "Ahmad Alhashim raising the kingdom flag in Slovenia",
+        "endescription": "Ahmad Alhashim raising the kingdom flag in Slovenia.",
         "date": "2023/11/3"
     }
 ]
