@@ -7,6 +7,16 @@ This website includes: olympiads, participations, members, contact, and image li
 Read [Website public data files](https://sainformatics.org/data/) documentation.
 
 ## Local Build
+### Prerequisites
+You need:
+- [Python Interpreter](https://python.org)
+- [Rupy Interpreter](https://www.ruby-lang.org)
+- Install Ruby dependencies using [Bundler](https://bundler.io):
+```sh
+bundle install
+```
+
+### Building & Local Serving
 ```sh
 python build.py
 jekyll serve -s ./root
