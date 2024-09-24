@@ -3,12 +3,12 @@
         "name": "boi", "start": "2024/9/20", "end": "2024/9/26", "country": "mk",
         "website": "https://boi2024.cs.org.mk/",
         "participants": {
-            "emad_alharbi": null,
-            "muaath_alqarni": null,
-            "saad_alarifi": null,
-            "mohammed_bashkail": null,
+            "emad_alharbi": "bronze",
+            "muaath_alqarni": "hm",
+            "mohammed_alasmari": null,
             "sultan_alaiban": null,
-            "mohammed_alasmari": null
+            "saad_alarifi": null,
+            "mohammed_bashkail": null
         }
     },
     {
