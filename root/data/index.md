@@ -34,6 +34,14 @@ An array of olympiads SIT participated in, each olympiad has the following:
 - `official`: Boolean, is Saudi Arabia an official country or not
 - `website`: Olympiad website of that year, with `https://` in prefix without `/` in the end **(nullable)**
 
+## [`/data/images.json`](/data/images.json)
+An array of images, each image consist of these labels:
+- `src`: Filename of the image in `/img` directory
+- `artitle`: Arabic title
+- `entitle`: English title
+- `ardescription`: Arabic description
+- `endescription`: English description
+- `date`: String, usually Gregorian date in format `YYYY/MM/DD` or `YYYY/M/D`
 
 ## [`/data/contact.json`](/data/contact.json)
 A dictionary of (`developers`/`maintainers`/`admin`), each having an array of person ID
