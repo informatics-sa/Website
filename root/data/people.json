@@ -465,5 +465,13 @@
         "graduation": 2027,
         "codeforces": "qusay1",
         "level": 2
+    },
+    {
+        "id": "khalid_alabdullatif",
+        "arname": "خالد العبداللطيف",
+        "enname": "Khalid Alabdullatif",
+        "graduation": 2026,
+        "codeforces": "khalid_alabdullatif",
+        "level": 3
     }
 ]
