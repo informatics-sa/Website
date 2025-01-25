@@ -5,7 +5,7 @@
         "enname": "Muaath Alqarni",
         "graduation": 2025,
         "codeforces": "Muaath_5",
-        "level": 3,
+        "level": 4,
         "email": "muaath@sainformatics.org"
     },
     {
@@ -14,7 +14,7 @@
         "enname": "Essa Almousa",
         "graduation": 2024,
         "codeforces": "Essa2006",
-        "level": 3
+        "level": -2
     },
     {
         "id": "ahmad_alhashim",
@@ -22,7 +22,7 @@
         "enname": "Ahmad Alhashim",
         "graduation": 2024,
         "codeforces": "vahmad",
-        "level": 3
+        "level": -2
     },
     {
         "id": "adeeb_alshehri",
@@ -30,7 +30,7 @@
         "enname": "Adeeb Alshehri",
         "graduation": 2024,
         "codeforces": "MrDeboo",
-        "level": 4
+        "level": -2
     },
     {
         "id": "emad_alharbi",
@@ -38,7 +38,7 @@
         "enname": "Emad Alharbi",
         "graduation": 2025,
         "codeforces": "Emad234",
-        "level": 3
+        "level": 4
     },
     {
         "id": "fares_basuni",
@@ -54,7 +54,7 @@
         "enname": "Yazan Ashy",
         "graduation": 2025,
         "codeforces": "ayazashy",
-        "level": 3
+        "level": -3
     },
     {
         "id": "abdulaziz_alshibli",
@@ -70,7 +70,7 @@
         "enname": "Humaid Alhuthali",
         "graduation": 2024,
         "codeforces": "heqr",
-        "level": 4
+        "level": -2
     },
     {
         "id": "almothana_alzahrani",
@@ -94,7 +94,7 @@
         "enname": "Saad Alarifi",
         "graduation": 2027,
         "codeforces": "Erering",
-        "level": 2
+        "level": 3
     },
     {
         "id": "sultan_alaiban",
@@ -102,7 +102,7 @@
         "enname": "Sultan Alaiban",
         "graduation": 2026,
         "codeforces": "Sul_A.",
-        "level": 2
+        "level": 3
     },
     {
         "id": "mohammed_bashkail",
@@ -110,7 +110,7 @@
         "enname": "Mohammed Bashkail",
         "graduation": 2027,
         "codeforces": "mohammedyay",
-        "level": 2
+        "level": 3
     },
     {
         "id": "mohammed_alasmari",
@@ -118,7 +118,7 @@
         "enname": "Mohammed Alasmari",
         "graduation": 2026,
         "codeforces": "m5588ohammed",
-        "level": 1
+        "level": 2
     },
     {
         "id": "rifal_alhazmi",
@@ -134,7 +134,7 @@
         "enname": "Munther Alzayer",
         "graduation": 2024,
         "codeforces": "MuntherCarrot",
-        "level": 3
+        "level": -2
     },
     {
         "id": "mohammad_alyousef",
@@ -142,7 +142,7 @@
         "enname": "Mohammad Alyousef",
         "graduation": 2024,
         "codeforces": "MrM7mD",
-        "level": 3
+        "level": -2
     },
     {
         "id": "abdulrahman_alghamdi",
@@ -150,7 +150,7 @@
         "enname": "Abdulrahman Alghamdi",
         "graduation": 2026,
         "codeforces": "ibsha",
-        "level": 2
+        "level": 3
     },
     {
         "id": "abdullah_alodaibi",
@@ -158,7 +158,7 @@
         "enname": "Abdullah Alodaibi",
         "graduation": 2026,
         "codeforces": "Abdullah_Alodaibi",
-        "level": 2
+        "level": 3
     },
     {
         "id": "bassmah_mansour",
@@ -166,7 +166,7 @@
         "enname": "Bassmah Mansour",
         "graduation": 2025,
         "codeforces": "B.M._.74",
-        "level": 2
+        "level": 3
     },
     {
         "id": "juri_aljohani",
@@ -198,7 +198,7 @@
         "enname": "Naser Almasoud",
         "graduation": 2024,
         "codeforces": "Naser_md",
-        "level": 3
+        "level": -2
     },
     {
         "id": "abdullah_aljohani",
@@ -264,7 +264,7 @@
         "enname": "Maria Alramadan",
         "graduation": 2025,
         "codeforces": "Aria_lix19",
-        "level": 2
+        "level": 3
     },
     {
         "id": "lamar_alhebshi",
@@ -272,7 +272,7 @@
         "enname": "Lamar Alhebshi",
         "graduation": 2026,
         "codeforces": "Lamar_Alhebshi",
-        "level": 2
+        "level": -3
     },
     {
         "id": "leen_qanash",
@@ -304,7 +304,7 @@
         "enname": "Almonther Alghamdi",
         "graduation": 2027,
         "codeforces": "Almonther",
-        "level": 1
+        "level": 2
     },
     {
         "id": "ziyad_alharbi",
@@ -312,7 +312,7 @@
         "enname": "Ziyad Alharbi",
         "graduation": null,
         "codeforces": "ziyad_alharbi09",
-        "level": 1
+        "level": 2
     },
     {
         "id": "ali_al_yousef",
@@ -320,7 +320,7 @@
         "enname": "Ali Al Yousef",
         "graduation": 2026,
         "codeforces": "Ali.m.yousef",
-        "level": 1
+        "level": 2
     },
     {
         "id": "sami_basubrain",
@@ -328,7 +328,7 @@
         "enname": "Sami Basubrain",
         "graduation": 2026,
         "codeforces": "SamiBasubrain",
-        "level": 1
+        "level": 2
     },
     {
         "id": "abdulmjeed_albrgash",
@@ -336,7 +336,7 @@
         "enname": "Abdulmjeed Albrgash",
         "graduation": 2026,
         "codeforces": "idk__",
-        "level": 1
+        "level": -3
     },
     {
         "id": "mishari_alhussain",
@@ -344,7 +344,7 @@
         "enname": "Mishari Alhussain",
         "graduation": 2026,
         "codeforces": "Guymmk",
-        "level": 1
+        "level": 2
     },
     {
         "id": "yousef_basuni",
@@ -352,7 +352,7 @@
         "enname": "Yousef Basuni",
         "graduation": 2027,
         "codeforces": "yousef.basuni",
-        "level": 1
+        "level": 2
     },
     {
         "id": "hisham_alshehri",
@@ -360,7 +360,7 @@
         "enname": "Hisham Alshehri",
         "graduation": 2027,
         "codeforces": "HishamAlshehri1",
-        "level": 1
+        "level": 2
     },
     {
         "id": "raed_tayyib",
@@ -368,7 +368,7 @@
         "enname": "Raed Tayyib",
         "graduation": 2026,
         "codeforces": "otesunki",
-        "level": 2
+        "level": 3
     },
     {
         "id": "eyad_alkhalifa",
@@ -376,7 +376,7 @@
         "enname": "Eyad Alkhalifa",
         "graduation": null,
         "codeforces": "Eyadooz1",
-        "level": 1
+        "level": 2
     }, 
     {
         "id": "ziyad_alhadyan",
@@ -384,7 +384,7 @@
         "enname": "Ziyad Alhadyan",
         "graduation": 2026,
         "codeforces": "ZyadH1",
-        "level": 1
+        "level": 2
     },
     {
         "id": "fares_alraddadi",
@@ -392,7 +392,7 @@
         "enname": "Fares Alraddadi",
         "graduation": 2028,
         "codeforces": "Fares_alraddadi",
-        "level": 1
+        "level": 2
     },
     {
         "id": "hussain_shaiban",
@@ -400,7 +400,7 @@
         "enname": "Hussain Shaiban",
         "graduation": 2026,
         "codeforces": "Has2008",
-        "level": 1
+        "level": 2
     },
     {
         "id": "roaa_alakhdhar",
@@ -408,7 +408,7 @@
         "enname": "Roaa Alakhdhar",
         "graduation": 2026,
         "codeforces": "em4ma2",
-        "level": 1
+        "level": 2
     },
     {
         "id": "jood_sindi",
@@ -424,7 +424,7 @@
         "enname": "Kawther Al Nasser",
         "graduation": 2026,
         "codeforces": "Hakuna_Matata93",
-        "level": 2
+        "level": -3
     },
     {
         "id": "hoor_alsadah",
@@ -432,7 +432,7 @@
         "enname": "Hoor Alsadah",
         "graduation": 2026,
         "codeforces": "hooralsadah919",
-        "level": 2
+        "level": -3
     },
     {
         "id": "malek_almusaylihi",
@@ -448,7 +448,7 @@
         "enname": "Mirza Al Qassim",
         "graduation": 2026,
         "codeforces": "Mirza_Al_Qassim",
-        "level": 2
+        "level": 3
     },
     {
         "id": "ali_alkhabbaz",
@@ -456,7 +456,7 @@
         "enname": "Ali Alkhabbaz",
         "graduation": 2027,
         "codeforces": "LyricClamp",
-        "level": 2
+        "level": 3
     },
     {
         "id": "qusai_jadallah",
@@ -464,7 +464,7 @@
         "enname": "Qusai Jadallah",
         "graduation": 2027,
         "codeforces": "qusay1",
-        "level": 2
+        "level": 3
     },
     {
         "id": "khalid_alabdullatif",
@@ -472,6 +472,6 @@
         "enname": "Khalid Alabdullatif",
         "graduation": 2026,
         "codeforces": "khalid_alabdullatif",
-        "level": 3
+        "level": 4
     }
 ]
