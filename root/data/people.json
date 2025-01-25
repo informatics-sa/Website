@@ -14,7 +14,7 @@
         "enname": "Essa Almousa",
         "graduation": 2024,
         "codeforces": "Essa2006",
-        "level": -2
+        "level": -1
     },
     {
         "id": "ahmad_alhashim",
@@ -22,7 +22,7 @@
         "enname": "Ahmad Alhashim",
         "graduation": 2024,
         "codeforces": "vahmad",
-        "level": -2
+        "level": -1
     },
     {
         "id": "adeeb_alshehri",
@@ -30,7 +30,7 @@
         "enname": "Adeeb Alshehri",
         "graduation": 2024,
         "codeforces": "MrDeboo",
-        "level": -2
+        "level": -1
     },
     {
         "id": "emad_alharbi",
@@ -46,7 +46,7 @@
         "enname": "Fares Basuni",
         "graduation": 2021,
         "codeforces": "faresbasbas",
-        "level": -2
+        "level": -1
     },
     {
         "id": "yazan_ashy",
@@ -54,7 +54,7 @@
         "enname": "Yazan Ashy",
         "graduation": 2025,
         "codeforces": "ayazashy",
-        "level": -3
+        "level": -2
     },
     {
         "id": "abdulaziz_alshibli",
@@ -62,7 +62,7 @@
         "enname": "Abdulaziz Alshibli",
         "graduation": 2022,
         "codeforces": "Shrimb",
-        "level": -2
+        "level": -1
     },
     {
         "id": "humaid_alhuthali",
@@ -70,7 +70,7 @@
         "enname": "Humaid Alhuthali",
         "graduation": 2024,
         "codeforces": "heqr",
-        "level": -2
+        "level": -1
     },
     {
         "id": "almothana_alzahrani",
@@ -78,7 +78,7 @@
         "enname": "Almothan Alzahrani",
         "graduation": 2023,
         "codeforces": "almothana",
-        "level": -2
+        "level": -1
     },
     {
         "id": "mohammed_alsaad",
@@ -86,7 +86,7 @@
         "enname": "Mohammed Alsaad",
         "graduation": 2021,
         "codeforces": null,
-        "level": -2
+        "level": -1
     },
     {
         "id": "saad_alarifi",
@@ -134,7 +134,7 @@
         "enname": "Munther Alzayer",
         "graduation": 2024,
         "codeforces": "MuntherCarrot",
-        "level": -2
+        "level": -1
     },
     {
         "id": "mohammad_alyousef",
@@ -142,7 +142,7 @@
         "enname": "Mohammad Alyousef",
         "graduation": 2024,
         "codeforces": "MrM7mD",
-        "level": -2
+        "level": -1
     },
     {
         "id": "abdulrahman_alghamdi",
@@ -174,7 +174,7 @@
         "enname": "Juri Aljohani",
         "graduation": 2026,
         "codeforces": "MonstrousKookie",
-        "level": -2
+        "level": -1
     },
     {
         "id": "abdulmohsen_mohammedsaleh",
@@ -182,7 +182,7 @@
         "enname": "Abdulmohsen Mohammedsaleh",
         "graduation": 2023,
         "codeforces": "Abdulmohsen1284",
-        "level": -2
+        "level": -1
     },
     {
         "id": "zaid_alshinqiti",
@@ -190,7 +190,7 @@
         "enname": "Zaid Alshinqiti",
         "graduation": 2023,
         "codeforces": "1zaid1",
-        "level": -2
+        "level": -1
     },
     {
         "id": "naser_almasoud",
@@ -198,7 +198,7 @@
         "enname": "Naser Almasoud",
         "graduation": 2024,
         "codeforces": "Naser_md",
-        "level": -2
+        "level": -1
     },
     {
         "id": "abdullah_aljohani",
@@ -206,7 +206,7 @@
         "enname": "Adullah Aljohani",
         "graduation": null,
         "codeforces": "AbdullahTurtle",
-        "level": -2
+        "level": -1
     },
     {
         "id": "yaser_balamash",
@@ -214,7 +214,7 @@
         "enname": "Yaser Balamash",
         "graduation": null,
         "codeforces": "AbdullahTurtle",
-        "level": -2
+        "level": -1
     },
     {
         "id": "mohammed_alrefaei",
@@ -222,7 +222,7 @@
         "enname": "Mohammed Alrefaei",
         "graduation": null,
         "codeforces": "DEDA",
-        "level": -2
+        "level": -1
     },
     {
         "id": "raya_abualjamal",
@@ -230,7 +230,7 @@
         "enname": "Raya Abualjamal",
         "graduation": null,
         "codeforces": null,
-        "level": -2
+        "level": -1
     },
     {
         "id": "ziyad_alomari",
@@ -238,7 +238,7 @@
         "enname": "Ziyad Alomari",
         "graduation": null,
         "codeforces": null,
-        "level": -2
+        "level": -1
     },
     {
         "id": "esraa_almajhad",
@@ -272,7 +272,7 @@
         "enname": "Lamar Alhebshi",
         "graduation": 2026,
         "codeforces": "Lamar_Alhebshi",
-        "level": -3
+        "level": -2
     },
     {
         "id": "leen_qanash",
@@ -280,7 +280,7 @@
         "enname": "Leen Qanash",
         "graduation": null,
         "codeforces": "RealSnake",
-        "level": -2
+        "level": -1
     },
     {
         "id": "uzouf_baagil",
@@ -288,7 +288,7 @@
         "enname": "Uzouf Baagil",
         "graduation": null,
         "codeforces": "Uzouf",
-        "level": -2
+        "level": -1
     },
     {
         "id": "jana_alzahrani",
@@ -296,7 +296,7 @@
         "enname": "Jana Alzahrani",
         "graduation": null,
         "codeforces": null,
-        "level": -2
+        "level": -1
     },
     {
         "id": "almonther_alghamdi",
@@ -336,7 +336,7 @@
         "enname": "Abdulmjeed Albrgash",
         "graduation": 2026,
         "codeforces": "idk__",
-        "level": -3
+        "level": -2
     },
     {
         "id": "mishari_alhussain",
@@ -424,7 +424,7 @@
         "enname": "Kawther Al Nasser",
         "graduation": 2026,
         "codeforces": "Hakuna_Matata93",
-        "level": -3
+        "level": -2
     },
     {
         "id": "hoor_alsadah",
@@ -432,7 +432,7 @@
         "enname": "Hoor Alsadah",
         "graduation": 2026,
         "codeforces": "hooralsadah919",
-        "level": -3
+        "level": -2
     },
     {
         "id": "malek_almusaylihi",
