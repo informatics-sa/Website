@@ -1,5 +1,15 @@
 [
     {
+        "name": "ioi", "start": "2025/7/27", "end": "2025/8/3", "country": "bo",
+        "website": "https://ioi2025.bo/",
+        "participants": {}
+    },
+    {
+        "name": "apio", "start": "2025/5/17", "end": "2025/5/18", "country": "online",
+        "website": "https://apio2025.uz/",
+        "participants": {}
+    },
+    {
         "name": "boi", "start": "2024/9/20", "end": "2024/9/26", "country": "mk",
         "website": "https://boi2024.cs.org.mk/",
         "participants": {
