@@ -229,67 +229,31 @@ def build_contact():
         'admins': [],
     }
     for mem in contact['maintainers']:
-        try:
-            del members[mem]['participations_count']
-        except:
-            ...
-        try:
-            del members[mem]['graduation']
-        except:
-            ...
-        try:
-            del members[mem]['codeforces']
-        except:
-            ...
-        try:
-            del members[mem]['level']
-        except:
-            ...
-        realcontact['maintainers'].append(members[mem])
-        if members[mem]['email'] == None:
-            exit(1)
+        person = {
+            'id': members[mem]['id'],
+            'arname': members[mem]['arname'],
+            'enname': members[mem]['enname'],
+            'email': members[mem]['email']
+        }
+        realcontact['maintainers'].append(person)
 
     for mem in contact['developers']:
-        try:
-            del members[mem]['participations_count']
-        except:
-            ...
-        try:
-            del members[mem]['graduation']
-        except:
-            ...
-        try:
-            del members[mem]['codeforces']
-        except:
-            ...
-        try:
-            del members[mem]['level']
-        except:
-            ...
-        realcontact['developers'].append(members[mem])
-        if members[mem]['email'] == None:
-            exit(1)
+        person = {
+            'id': members[mem]['id'],
+            'arname': members[mem]['arname'],
+            'enname': members[mem]['enname'],
+            'email': members[mem]['email']
+        }
+        realcontact['developers'].append(person)
 
     for mem in contact['admins']:
-        try:
-            del members[mem]['participations_count']
-        except:
-            ...
-        try:
-            del members[mem]['graduation']
-        except:
-            ...
-        try:
-            del members[mem]['codeforces']
-        except:
-            ...
-        try:
-            del members[mem]['level']
-        except:
-            ...
-        realcontact['admins'].append(members[mem])
-        if members[mem]['email'] == None:
-            exit(1)
+        person = {
+            'id': members[mem]['id'],
+            'arname': members[mem]['arname'],
+            'enname': members[mem]['enname'],
+            'email': members[mem]['email']
+        }
+        realcontact['admins'].append(person)
 
     written = {
         'layout': 'contact',
