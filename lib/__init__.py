@@ -38,3 +38,20 @@ def get_members():
 
     return members
     
+def get_olympiads():
+    olympiads = {}
+    for oly in load_json('olympiads'):
+        olympiads[oly['id']] = oly
+        olympiads[oly['id']]['gold'] = 0
+        olympiads[oly['id']]['silver'] = 0
+        olympiads[oly['id']]['bronze'] = 0
+        olympiads[oly['id']]['hm'] = 0
+        olympiads[oly['id']]['participations'] = 0
+
+    for participation in load_json('participations'):
+        olympiads[participation['name']]['participations'] += 1
+        for award in participation['participants'].values():
+            if award != None:
+               olympiads[participation['name']][award] += 1
+                
+    return olympiads

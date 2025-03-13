@@ -3,25 +3,14 @@ from lib.utils import * # target to remove this.
 
 countries = get_countries()
 members = get_members()
+olympiads = get_olympiads();
 
 participations = load_json('participations')
-olympiads_j = load_json('olympiads')
-olympiads = {}
-
-def init_olympiads():
-    for oly in olympiads_j:
-        olympiads[oly['id']] = oly
-        olympiads[oly['id']]['gold'] = 0
-        olympiads[oly['id']]['silver'] = 0
-        olympiads[oly['id']]['bronze'] = 0
-        olympiads[oly['id']]['hm'] = 0
-        olympiads[oly['id']]['participations'] = 0
 
 def build_participations():
     for oly in participations:
         oly['country_arname'] = countries[oly['country']]['arabic_name'] + ' ' + flag_emoji(oly['country'])
         oly['country_enname'] = countries[oly['country']]['english_name'] + ' ' + flag_emoji(oly['country'])
-        olympiads[oly['name']]['participations'] += 1
 
         oly['arname'] = olympiads[oly['name']]['arname']
         oly['enname'] = olympiads[oly['name']]['enname']
@@ -31,8 +20,6 @@ def build_participations():
         enparts = []
         awards = ''
         for mem_id, award in oly['participants'].items():
-            if award != None:
-                olympiads[oly['name']][award] += 1
             parts.append({'id': mem_id, 'name': members[mem_id]['arname'], 'award': award_emoji(award, dashing_none=True)})
             enparts.append({'id': mem_id, 'name': members[mem_id]['enname'], 'award': award_emoji(award, dashing_none=True)})
             awards += award_emoji(award)
@@ -129,9 +116,9 @@ def build_participations_index():
 
 def build_hall_of_fame():
     official_olympiads = []
-    for oly in olympiads_j:
+    for id, oly in olympiads.items():
         if oly['official']:
-            official_olympiads.append(oly['id'])
+            official_olympiads.append(id)
     fame = {}
     for memid, data in members.items():
         fame[memid] = {
@@ -321,28 +308,20 @@ def build_members_index():
     write_file("en/members/index.html", data)
 
 def build_olympiads():
-    for oly in olympiads_j:
-        oly['gold'] = olympiads[oly['id']]['gold']
-        oly['silver'] = olympiads[oly['id']]['silver']
-        oly['bronze'] = olympiads[oly['id']]['bronze']
-        oly['hm'] = olympiads[oly['id']]['hm']
-        oly['participations'] = olympiads[oly['id']]['participations']
     write_file('./olympiads.html', {
         'title': 'الأولمبيادات',
         'layout': 'olympiads',
         'lang': 'ar',
-        'olympiads': olympiads_j
+        'olympiads': olympiads.values()
     })
     write_file('en/olympiads.html', {
         'title': 'Olympiads',
         'layout': 'olympiads',
         'lang': 'en',
-        'olympiads': olympiads_j
+        'olympiads': olympiads.values()
     })
 
 def main():
-    init_olympiads()
-    print("Init: OK")
     test_utils()
 
     # Pls don't change the order
