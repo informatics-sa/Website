@@ -1,37 +1,12 @@
 from lib import *
+from lib.utils import * # target to remove this.
 
-countries = {}
-def init_countries():
-    cj = load_json('countries')
-    for country in cj:
-        countries[country['alpha2_code'].lower()] = country
-    countries['online'] = {}
-    countries['online']['arabic_name'] = 'عن بعد'
-    countries['online']['english_name'] = 'Online'
+countries = get_countries()
+members = get_members()
 
-members = {}
-members_j = load_json('people')
 participations = load_json('participations')
 olympiads_j = load_json('olympiads')
 olympiads = {}
-
-def init_members():
-    global members
-    for mem in members_j:
-        members[mem['id']] = mem
-        members[mem['id']]['participations'] = {}
-
-    for oly in participations:
-        for mem_id in oly['participants']:
-            # Should give a fatal error or just create a new person with default data
-            if mem_id not in members:
-                members[mem_id] = {}
-                members[mem_id]['participations'] = {}
-                members[mem_id]['arname'] = mem_id
-                members[mem_id]['enname'] = mem_id
-                members[mem_id]['graduation'] = None
-                members[mem_id]['codeforces'] = None
-            members[mem_id]['participations'][oly['name'] + '_' + oly['start'].split('/')[0]] = oly['participants'][mem_id]
 
 def init_olympiads():
     for oly in olympiads_j:
@@ -366,8 +341,6 @@ def build_olympiads():
     })
 
 def main():
-    init_countries()
-    init_members()
     init_olympiads()
     print("Init: OK")
     test_utils()

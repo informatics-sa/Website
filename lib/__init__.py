@@ -1,60 +1,40 @@
-import os, json
+from .utils import *
 
-ROOT_DIR = './root/'
-LANGS = ['ar', 'en']
-BLOCKED_FLAGS = ['se']
+def default_person(id: str):
+    return {
+        'participations': {},
+        'arname': id,
+        'enname':  id,
+        'graduation': None,
+        'codeforces': None
+    }
 
-def load_json(filename):
-    with open(f'{ROOT_DIR}data/{filename}.json', 'r', encoding='utf-8') as f:
-        return json.load(f)
+def get_countries():
+    countries = {}
+    for country in load_json('countries'):
+        code = country['alpha2_code'].lower()
+        country['emoji'] = flag_emoji(code)
+        countries[code] = country
 
-def award_emoji(award, dashing_none=False):
-    if award == 'gold':
-        return '🥇'
-    if award == 'silver':
-        return '🥈'
-    if award == 'bronze':
-        return '🥉'
-    if award == 'hm':
-        return '📜'
-    return '-' if dashing_none else ''
+    countries['online'] = {}
+    countries['online']['arabic_name'] = 'عن بعد'
+    countries['online']['english_name'] = 'Online'
+    countries['online']['emoji'] = flag_emoji('online')
 
-def flag_emoji(country_code):
-    if country_code == 'online':
-        return '🌐'
-    if country_code in BLOCKED_FLAGS:
-        return ''
-    country_code = country_code.upper()
-    flag = chr(ord(country_code[0]) + 127397) + chr(ord(country_code[1]) + 127397)
-    return flag
+    return countries
 
-def write_yml(data: dict, indent: int = 0) -> str:
-    res = ""
-    for key, val in data.items():
-        if type(val) is dict:
-            res += " " * indent + str(key) + ":\n"
-            res += write_yml(val, indent + 2)
-        elif type(val) is list:
-            res += " " * indent + str(key) + ":\n"
-            res += " " * (indent+2) + f"count: {len(val)}\n"
-            for i in range(len(val)):
-                mp = {str(i+1): val[i]}
-                res += write_yml(mp, indent + 2)
-        elif val is None:
-            res += " " * indent + str(key) + ": null\n"
-        elif type(val) is bool:
-            res += " " * indent + str(key) + ": " + str(val).lower() + "\n"
-        elif type(val) is int:
-            res += " " * indent + str(key) + ": " + str(val) + "\n"
-        else:
-            res += " " * indent + str(key) + ": \"" + str(val) + "\"\n"
-    return res
+def get_members():
+    members = {}
+    for mem in load_json('people'):
+        members[mem['id']] = mem
+        members[mem['id']]['participations'] = {}
 
+    for oly in load_json('participations'):
+        for mem_id in oly['participants']:
+            if mem_id not in members:
+                print(f"[WARN ⚠️] {mem_id} participant of {oly['name']} ({oly['year']}), doesn't exist in people.json")
+                members[mem_id] = default_person(mem_id)
+            members[mem_id]['participations'][oly['name'] + '_' + str(oly['year'])] = oly['participants'][mem_id]
 
-def write_file(filename: str, vals: dict):
-    filename = ROOT_DIR + filename
-    os.makedirs(os.path.dirname(filename), exist_ok=True)
-    with open(filename, 'w', encoding='utf-8') as f:
-        f.write("---\n")
-        f.write(write_yml(vals))
-        f.write("---\n")
+    return members
+    
