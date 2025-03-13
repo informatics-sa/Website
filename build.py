@@ -312,13 +312,13 @@ def build_olympiads():
         'title': 'الأولمبيادات',
         'layout': 'olympiads',
         'lang': 'ar',
-        'olympiads': olympiads.values()
+        'olympiads': list(olympiads.values())
     })
     write_file('en/olympiads.html', {
         'title': 'Olympiads',
         'layout': 'olympiads',
         'lang': 'en',
-        'olympiads': olympiads.values()
+        'olympiads': list(olympiads.values())
     })
 
 def main():
