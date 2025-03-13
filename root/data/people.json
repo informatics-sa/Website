@@ -166,7 +166,7 @@
         "enname": "Bassmah Mansour",
         "graduation": 2025,
         "codeforces": "B.M._.74",
-        "level": 2
+        "level": -2
     },
     {
         "id": "juri_aljohani",
@@ -264,7 +264,7 @@
         "enname": "Maria Alramadan",
         "graduation": 2025,
         "codeforces": "Aria_lix19",
-        "level": 2
+        "level": -2
     },
     {
         "id": "lamar_alhebshi",
@@ -320,7 +320,7 @@
         "enname": "Ali Al Yousef",
         "graduation": 2026,
         "codeforces": "Ali.m.yousef",
-        "level": 2
+        "level": -2
     },
     {
         "id": "sami_basubrain",
@@ -344,7 +344,7 @@
         "enname": "Mishari Alhussain",
         "graduation": 2026,
         "codeforces": "Guymmk",
-        "level": 2
+        "level": -2
     },
     {
         "id": "yousef_basuni",
@@ -352,7 +352,7 @@
         "enname": "Yousef Basuni",
         "graduation": 2027,
         "codeforces": "yousef.basuni",
-        "level": 2
+        "level": -2
     },
     {
         "id": "hisham_alshehri",
@@ -384,7 +384,7 @@
         "enname": "Ziyad Alhadyan",
         "graduation": 2026,
         "codeforces": "ZyadH1",
-        "level": 2
+        "level": -2
     },
     {
         "id": "fares_alraddadi",
@@ -400,7 +400,7 @@
         "enname": "Hussain Shaiban",
         "graduation": 2026,
         "codeforces": "Has2008",
-        "level": 2
+        "level": -2
     },
     {
         "id": "roaa_alakhdhar",
@@ -456,7 +456,7 @@
         "enname": "Ali Alkhabbaz",
         "graduation": 2027,
         "codeforces": "LyricClamp",
-        "level": 2
+        "level": -2
     },
     {
         "id": "qusai_jadallah",
@@ -464,7 +464,7 @@
         "enname": "Qusai Jadallah",
         "graduation": 2027,
         "codeforces": "qusay1",
-        "level": 2
+        "level": -2
     },
     {
         "id": "khalid_alabdullatif",
