@@ -3,9 +3,10 @@ from lib.utils import * # target to remove this.
 
 countries = get_countries()
 members = get_members()
-olympiads = get_olympiads();
+olympiads = get_olympiads()
+participations = load_json('participations') # TODO: make get_participations function to resolve the mess in the function
+translations = load_json('translations')
 
-participations = load_json('participations')
 
 def build_participations():
     for oly in participations:
@@ -83,23 +84,25 @@ def build_members():
         })
 
 def build_participations_index():
+    global participations
     olympiads = {}
     min_year = 3000
     max_year = 2000
     for oly in participations:
-        year = oly['start'].split('/')[0]
+        cop_oly = oly
+        year = cop_oly['year']
         min_year = min(int(year), min_year)
         max_year = max(int(year), max_year)
-        if year not in olympiads:
+        if cop_oly['year'] not in olympiads:
             olympiads[year] = []
 
-        del oly["participants"]
-        olympiads[year].append(oly)
+        del cop_oly["participants"]
+        olympiads[year].append(cop_oly)
 
     written = {
         'layout': 'participations',
         'lang': 'ar',
-        'title': 'المشاركات',
+        'title': translations['ar']['participations'],
         'start_year': min_year,
         'last_year': max_year
     }
@@ -110,7 +113,7 @@ def build_participations_index():
     write_file("participations/index.html", written)
 
     written['lang'] = 'en'
-    written['title'] = 'Participations'
+    written['title'] = translations['en']['participations']
 
     write_file("en/participations/index.html", written)
 
@@ -154,14 +157,14 @@ def build_hall_of_fame():
     write_file('./hall-of-fame.html', {
         'layout': 'halloffame',
         'lang': 'ar',
-        'title': 'لائحة الشرف',
+        'title': translations['ar']['hall_of_fame'],
         'list': written,
     })
 
     write_file('en/hall-of-fame.html', {
         'layout': 'halloffame',
         'lang': 'en',
-        'title': 'Fame',
+        'title': translations['en']['hall_of_fame'],
         'list': written,
     })
 
@@ -170,7 +173,7 @@ def build_images():
     count = len(imgs)
     written = {
         'layout': 'images',
-        'title': "مكتبة الصور",
+        'title': translations['ar']['images'],
         'lang': 'ar',
         'count': count
     }
@@ -180,7 +183,7 @@ def build_images():
         idx += 1
     write_file('./images.html', written)
     written['lang'] = 'en'
-    written['title'] = 'Image library'
+    written['title'] = translations['en']['images']
     write_file('en/images.html', written)
 
 def build_contact():
@@ -220,14 +223,14 @@ def build_contact():
     written = {
         'layout': 'contact',
         'lang': 'ar',
-        'title': 'تواصل',
+        'title': translations['ar']['contact'],
         'maintainers': realcontact['maintainers'],
         'admins': realcontact['admins'],
         'developers': realcontact['developers']
     }
     write_file('./contact.html', written)
     written['lang'] = 'en'
-    written['title'] = 'Contact'
+    written['title'] = translations['en']['contact']
     write_file('en/contact.html', written)
 
 
@@ -313,6 +316,9 @@ def main():
 
     build_contact()
     print("Built contact")
+
+    #build_tst_index()
+    #
 
 if __name__ == '__main__':
     main()
