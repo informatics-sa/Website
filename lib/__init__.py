@@ -27,14 +27,18 @@ def get_members():
     members = {}
     for mem in load_json('people'):
         members[mem['id']] = mem
-        members[mem['id']]['participations'] = {}
+        members[mem['id']]['participations'] = []
 
     for oly in load_json('participations'):
         for mem_id in oly['participants']:
             if mem_id not in members:
                 print(f"[WARN ⚠️] {mem_id} participant of {oly['name']} ({oly['year']}), doesn't exist in people.json")
                 members[mem_id] = default_person(mem_id)
-            members[mem_id]['participations'][oly['name'] + '_' + str(oly['year'])] = oly['participants'][mem_id]
+            members[mem_id]['participations'].append({
+                'olympiad': oly['name'],
+                'year': str(oly['year']),
+                'award': oly['participants'][mem_id]
+            })
 
     return members
     
