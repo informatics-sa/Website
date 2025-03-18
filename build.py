@@ -111,7 +111,6 @@ def build_hall_of_fame():
     
     filtered_fame = filter(lambda dic: dic[1]['gold'] + dic[1]['silver'] + dic[1]['bronze'] + dic[1]['hm'] > 0, fame.items())
     sorted_fame = sorted(filtered_fame, key=lambda x: (-x[1]['gold'], -x[1]['silver'], -x[1]['bronze'], -x[1]['hm']))
-    # TODO: should be printed to a file
 
     written = []
     for it in sorted_fame:
@@ -228,11 +227,11 @@ nullval: null
 """
 
 def build_members_index():
+    #constants = load_json('constants')
     members_list = members.values()
     levels = {1: [], 2: [], 3: [], 4: []}
     for mem in members_list:
         mem['participations_count'] = len(mem['participations'])
-        del mem['participations']
         if 1 <= mem['level'] <= 4:
             levels[mem['level']].append(mem)
 
@@ -261,10 +260,25 @@ def build_olympiads():
         'olympiads': list(olympiads.values())
     })
 
+def build_home():
+    write_file('./index.html', {
+        'title': translations['ar']['website_name'],
+        'description': translations['ar']['website_description'],
+        'id': 'home',
+        'lang': 'ar',
+        'layout': 'home'
+    })
+    write_file('en/index.html', {
+        'title': translations['en']['website_name'],
+        'description': translations['en']['website_description'],
+        'id': 'home',
+        'lang': 'en',
+        'layout': 'home'
+    })
+
 def main():
     test_utils()
 
-    # Pls don't change the order
     build_members()
     print("Built members")
 
@@ -289,8 +303,8 @@ def main():
     build_contact()
     print("Built contact")
 
-    #build_home()
-    #print("Built home")
+    build_home()
+    print("Built home")
 
     #build_tst_index()
     #print("Built TST index")

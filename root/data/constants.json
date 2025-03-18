@@ -1,6 +1,5 @@
 {
-    "min_level": 1,
-    "max_level": 3,
+    "levels": ["1", "2", "3"],
     "ar": {
         "major": "معلوماتية"
     },
