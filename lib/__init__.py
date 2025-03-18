@@ -57,7 +57,7 @@ def get_olympiads():
     return olympiads
 
 def get_participations():
-    participations = {}
+    participations = load_json('participations')
     olympiads = get_olympiads()
     countries = get_countries()
     members = get_members()

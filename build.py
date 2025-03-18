@@ -65,15 +65,13 @@ def build_participations_index():
     min_year = 3000
     max_year = 2000
     for oly in participations:
-        cop_oly = oly
-        year = cop_oly['year']
+        year = oly['year']
         min_year = min(int(year), min_year)
         max_year = max(int(year), max_year)
-        if cop_oly['year'] not in olympiads:
+        if oly['year'] not in olympiads:
             olympiads[year] = []
 
-        del cop_oly["participants"]
-        olympiads[year].append(cop_oly)
+        olympiads[year].append(oly)
 
     written = {
         'layout': 'participations',
