@@ -261,19 +261,41 @@ def build_olympiads():
     })
 
 def build_home():
+    # Needs a discussion about official/nonofficial
+    stats = {
+        'gold': 0,
+        'silver': 0,
+        'bronze': 0,
+        'hm': 0,
+        'participations': 0,
+        #'distinct_participants': 0,
+        #'current_members': 0,
+        #'historic_members': 0,
+        #'trainers': 0,
+        #'historic_camps': 0,
+    }
+    for oly in olympiads:
+        stats['gold'] += oly['gold']
+        stats['silver'] += oly['silver']
+        stats['bronze'] += oly['bronze']
+        stats['hm'] += oly['hm']
+        stats['participations'] += oly['participations']
+
     write_file('./index.html', {
         'title': translations['ar']['website_name'],
         'description': translations['ar']['website_description'],
         'id': 'home',
         'lang': 'ar',
-        'layout': 'home'
+        'layout': 'home',
+        'stats': stats
     })
     write_file('en/index.html', {
         'title': translations['en']['website_name'],
         'description': translations['en']['website_description'],
         'id': 'home',
         'lang': 'en',
-        'layout': 'home'
+        'layout': 'home',
+        'stats': stats
     })
 
 def main():
