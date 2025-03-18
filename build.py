@@ -105,10 +105,9 @@ def build_hall_of_fame():
             'hm': 0,
             None: 0,
         }
-        for oly, award in data['participations'].items():
-            oly = oly.split('_')[0]
-            if oly in official_olympiads:
-                fame[memid][award] += 1
+        for part in data['participations']:
+            if part['olympiad'] in official_olympiads:
+                fame[memid][part['award']] += 1
     
     filtered_fame = filter(lambda dic: dic[1]['gold'] + dic[1]['silver'] + dic[1]['bronze'] + dic[1]['hm'] > 0, fame.items())
     sorted_fame = sorted(filtered_fame, key=lambda x: (-x[1]['gold'], -x[1]['silver'], -x[1]['bronze'], -x[1]['hm']))
