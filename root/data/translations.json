@@ -5,7 +5,9 @@
         "images": "مكتبة الصور",
         "contact": "تواصل",
         "olympiads": "الأولمبيادات",
-        "members_list": "قائمة الأعضاء"
+        "members_list": "قائمة الأعضاء",
+        "website_name": "فريق المعلوماتية السعودي",
+        "website_description": "موقع فيه المشاركات والأعضاء والصور وكل البيانات المتعلقة بالفريق"
     },
     "en": {
         "participations": "Participations",
@@ -13,6 +15,8 @@
         "images": "Images library",
         "contact": "Contact",
         "olympiads": "Olympiads",
-        "members_list": "Members list"
+        "members_list": "Members list",
+        "website_name": "Saudi Informatics Team",
+        "website_description": "Website contains participations, members, images, and all related data"
     }
 }

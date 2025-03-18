@@ -274,7 +274,7 @@ def build_home():
         #'trainers': 0,
         #'historic_camps': 0,
     }
-    for oly in olympiads:
+    for oly in olympiads.values():
         stats['gold'] += oly['gold']
         stats['silver'] += oly['silver']
         stats['bronze'] += oly['bronze']
