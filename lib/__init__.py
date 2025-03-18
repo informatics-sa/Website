@@ -55,3 +55,27 @@ def get_olympiads():
                olympiads[participation['name']][award] += 1
                 
     return olympiads
+
+def get_participations():
+    participations = {}
+    olympiads = get_olympiads()
+    countries = get_countries()
+    members = get_members()
+    for oly in participations:
+        oly['country_arname'] = countries[oly['country']]['arabic_name'] + ' ' + flag_emoji(oly['country'])
+        oly['country_enname'] = countries[oly['country']]['english_name'] + ' ' + flag_emoji(oly['country'])
+
+        oly['arname'] = olympiads[oly['name']]['arname']
+        oly['enname'] = olympiads[oly['name']]['enname']
+
+        parts = []
+        enparts = []
+        awards = ''
+        for mem_id, award in oly['participants'].items():
+            parts.append({'id': mem_id, 'name': members[mem_id]['arname'], 'award': award_emoji(award, dashing_none=True)})
+            enparts.append({'id': mem_id, 'name': members[mem_id]['enname'], 'award': award_emoji(award, dashing_none=True)})
+            awards += award_emoji(award)
+        oly['awards'] = awards
+        oly['ar_participants'] = parts
+        oly['en_participants'] = enparts
+    return participations

@@ -4,28 +4,13 @@ from lib.utils import * # target to remove this.
 countries = get_countries()
 members = get_members()
 olympiads = get_olympiads()
-participations = load_json('participations') # TODO: make get_participations function to resolve the mess in the function
+participations = get_participations() # TODO: make get_participations function to resolve the mess in the function
 translations = load_json('translations')
 
 
 def build_participations():
     for oly in participations:
-        oly['country_arname'] = countries[oly['country']]['arabic_name'] + ' ' + flag_emoji(oly['country'])
-        oly['country_enname'] = countries[oly['country']]['english_name'] + ' ' + flag_emoji(oly['country'])
-
-        oly['arname'] = olympiads[oly['name']]['arname']
-        oly['enname'] = olympiads[oly['name']]['enname']
-
         filename = oly['name'] + '_' + oly['start'].split('/')[0]
-        parts = []
-        enparts = []
-        awards = ''
-        for mem_id, award in oly['participants'].items():
-            parts.append({'id': mem_id, 'name': members[mem_id]['arname'], 'award': award_emoji(award, dashing_none=True)})
-            enparts.append({'id': mem_id, 'name': members[mem_id]['enname'], 'award': award_emoji(award, dashing_none=True)})
-            awards += award_emoji(award)
-
-        oly['awards'] = awards
         write_file(f'participations/{filename}.html', {
             'layout': 'participation',
             'lang': 'ar',
@@ -36,7 +21,7 @@ def build_participations():
             'end_date': oly['end'],
             'country_arname': oly['country_arname'],
             'country_enname': oly['country_enname'],
-            'participants': parts,
+            'participants': oly['ar_participants'],
             'website': oly['website']
         })
         write_file(f'en/participations/{filename}.html', {
@@ -49,38 +34,29 @@ def build_participations():
             'country_enname': oly['country_enname'],
             'start_date': oly['start'],
             'end_date': oly['end'],
-            'participants': enparts,
+            'participants': oly['en_participants'],
             'website': oly['website']
         })
 
 def build_members():
     for memid, mem in members.items():
-        participations = []
-        for oly, award in mem['participations'].items():
-            olymp = {}
-            olymp['olympiad'] = oly.split("_")[0]
-            olymp['year'] = oly.split("_")[1]
-            olymp['award'] = award
-            
-            participations.append(olymp)
-
         write_file(f'members/{memid}.html', {
             'layout': 'person',
-            'title': mem['arname'],
             'lang': 'ar',
+            'title': mem['arname'],
             'full_name': mem['arname'],
             'graduation': mem['graduation'],
             'codeforces': mem['codeforces'],
-            'participations': participations
+            'participations': mem['participations']
         })
         write_file(f'en/members/{memid}.html', {
             'layout': 'person',
-            'title': mem['enname'],
             'lang': 'en',
+            'title': mem['enname'],
             'full_name': mem['enname'],
             'graduation': mem['graduation'],
             'codeforces': mem['codeforces'],
-            'participations': participations
+            'participations': mem['participations']
         })
 
 def build_participations_index():
@@ -265,24 +241,24 @@ def build_members_index():
 
     data = {
         'lang': 'ar',
-        'title': 'قائمة الأعضاء',
+        'title': translations['ar']['members_list'],
         'layout': 'members',
         'levels': levels
     }
     write_file("./members/index.html", data)
     data['lang'] = 'en'
-    data['title'] = 'Members list'
+    data['title'] = translations['en']['members_list']
     write_file("en/members/index.html", data)
 
 def build_olympiads():
     write_file('./olympiads.html', {
-        'title': 'الأولمبيادات',
+        'title': translations['ar']['olympiads'],
         'layout': 'olympiads',
         'lang': 'ar',
         'olympiads': list(olympiads.values())
     })
     write_file('en/olympiads.html', {
-        'title': 'Olympiads',
+        'title': translations['en']['olympiads'],
         'layout': 'olympiads',
         'lang': 'en',
         'olympiads': list(olympiads.values())
@@ -310,15 +286,17 @@ def main():
     build_olympiads()
     print("Built olympiads")
 
-    # build_calendar()
     build_members_index()
     print("Built members index")
 
     build_contact()
     print("Built contact")
 
+    #build_home()
+    #print("Built home")
+
     #build_tst_index()
-    #
+    #print("Built TST index")
 
 if __name__ == '__main__':
     main()

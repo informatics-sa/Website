@@ -3,12 +3,16 @@
         "participations": "المشاركات",
         "hall_of_fame": "لائحة الشرف",
         "images": "مكتبة الصور",
-        "contact": "تواصل"
+        "contact": "تواصل",
+        "olympiads": "الأولمبيادات",
+        "members_list": "قائمة الأعضاء"
     },
     "en": {
         "participations": "Participations",
         "hall_of_fame": "Hall of fame",
         "images": "Images library",
-        "contact": "Contact"
+        "contact": "Contact",
+        "olympiads": "Olympiads",
+        "members_list": "Members list"
     }
 }
