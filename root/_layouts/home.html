@@ -5,7 +5,19 @@ title: "Saudi Informatics Team"
 description: "Official website"
 ---
 <div class="row p-3">
-
+    {% if page.lang == "en" %}
+    <h3>Gold: {{ page.stats.gold }}</h3>
+    <h3>Silver: {{ page.stats.silver }}</h3>
+    <h3>Bronze: {{ page.stats.bronze }}</h3>
+    <h3>HM: {{ page.stats.hm }}</h3>
+    <h3>Participations: {{ page.stats.participations }}</h3>
+    {% else %}
+    <h3>الذهبية: {{ page.stats.gold }}</h3>
+    <h3>الفضية: {{ page.stats.silver }}</h3>
+    <h3>البرونزية: {{ page.stats.bronze }}</h3>
+    <h3>شهادات التقدير: {{ page.stats.hm }}</h3>
+    <h3>المشاركات: {{ page.stats.participations }}</h3>
+    {% endif %}
 </div>
 {% if page.lang == "en" %}
 <div class="row p-3">
