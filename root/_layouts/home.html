@@ -4,6 +4,41 @@ id: home
 title: "Saudi Informatics Team"
 description: "Official website"
 ---
+<section class="hero-section text-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold mb-4">
+            {% if page.lang == "en" %}
+            Saudi Informatics Team
+            {% else %}
+            فريق المعلوماتية السعودي
+            {% endif %}
+        </h1>
+        <p class="lead mb-4">
+            {% if page.lang == "en" %}
+            We represent Saudi Arabia in International Olympiad in Informatics (IOI), and working on improving competitive programming skills
+            {% else %}
+            نمثل المملكة العربية السعودية في أولمبياد المعلوماتية الدولي ونعمل على تطوير مهارات البرمجة التنافسية
+            {% endif %}
+        </p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a href="#join" class="btn btn-light btn-lg px-4 gap-3">
+                {% if page.lang == "en" %}
+                How to join the team?
+                {% else %}
+                كيف أنضم للفريق؟
+                {% endif %}
+            </a>
+            <a href="https://sainformatics.org/participations" class="btn btn-outline-light btn-lg px-4">
+                {% if page.lang == "en" %}
+                Past participations
+                {% else %}
+                مشاركاتنا السابقة
+                {% endif %}
+                
+            </a>
+        </div>
+    </div>
+</section>
 <div class="row p-3">
     {% if page.lang == "en" %}
     <h3>Gold: {{ page.stats.gold }}</h3>
