@@ -476,6 +476,19 @@
         "level": 3
     },
     {
-        
+        "id": "omar_moharib",
+        "arname": "عمر المحارب",
+        "enname": "Omar Almoharib",
+        "graduation": 2027,
+        "codeforces": "omar1312",
+        "level": 1
+    },
+    {
+        "id": "hashim_basuni",
+        "arname": "هاشم بسيوني",
+        "enname": "Hashim Basuni",
+        "graduation": 2027,
+        "codeforces": "Hashim_Bas",
+        "level": 1
     }
 ]
