@@ -156,3 +156,19 @@ nocontainer: "1"
     </div>
 </div> 
 {% endif %}
+
+
+<script>
+    // Initialize AOS
+    AOS.init({
+        duration: 800,
+        once: true
+    });
+    
+    // Initialize code highlighting
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+        });
+    });
+</script>
