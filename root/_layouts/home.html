@@ -101,100 +101,95 @@ description: "Official website"
             </div>
         </div>
     </section>
+
+
+    <!-- Info Section -->
+    <section class="py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="info-card">
+                    <div class="text-center mb-4">
+                        <i class="bi bi-code-slash feature-icon"></i>
+                    </div>
+                    {% if page.lang == "en" %}
+                    <h3 class="text-center">What are informatics olympiads?</h3>
+                    <p>Informatics olympiads is an competitive programming competition for students under the age of 20. The competition consists of analytical, mathematical, and logical problems, where the contestant is required to write code to solve the presented problems.</p>
+                    <p>This e-sport relies on analytical, mathematical, and logical skills to deconstruct the problem and write its code efficiently and within a limited time.</p>
+                    {% else %}
+                    <h3 class="text-center">ما هي أولمبيادات المعلوماتية؟</h3>
+                    <p>أولمبياد المعلوماتية هي مسابقات للبرمجة التنافسية للطلاب دون سن 20 عامًا. تتألف المسابقة من مسائل تحليلية ورياضية ومنطقية، حيث يُطلب من المتسابق كتابة كود برمجي لحل المشكلات المطروحة.</p>
+                    <p>تعتمد هذه الرياضة الإلكترونية على المهارات التحليلية والرياضية والمنطقية، في تفكيك المسألة وكتابة كودها البرمجي بكفاءة عالية وفي وقت محدود.</p>
+                    {% endif %}
+                    <a href="https://sainformatics.org/olympiads" class="btn btn-outline-success">تعرف على الأولمبياد</a>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="info-card">
+                    <div class="text-center mb-4">
+                        <i class="bi bi-people-fill feature-icon"></i>
+                    </div>
+                    {% if page.lang == "en" %}
+                    <h3 class="text-center">Why informatics team?</h3>
+                    <p>The Saudi Informatics Team includes the strongest interests in competitive programming in the Kingdom of Saudi Arabia. Team members are selected through a rigorous selection process that includes competitions and intensive training.</p>
+                    <p>The team represents the Kingdom in the International Olympiad in Informatics (IOI) and the Regional Olympiad (APIO), and has achieved many accomplishments at the global level.</p>
+                    <a href="https://sainformatics.org/members" class="btn btn-outline-success">Take a look on the members</a>
+                    {% else %}
+                    <h3 class="text-center">لماذا فريق المعلوماتية؟</h3>
+                    <p>يضم فريق المعلوماتية السعودي أقوى المهتمين في البرمجة التنافسية في المملكة العربية السعودية. يتم اختيار أعضاء الفريق من خلال عملية انتقاء صارمة تشمل مسابقات وتدريبات مكثفة.</p>
+                    <p>يمثل الفريق المملكة في أولمبياد المعلوماتية الدولي (IOI) والإقليمي (APIO)، وقد حقق العديد من الإنجازات على المستوى العالمي.</p>
+                    <a href="https://sainformatics.org/members" class="btn btn-outline-success">تعرف على أعضاء الفريق</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Join Section -->
+    <!-- TODO: Translate into English -->
+    <section id="join" class="join-section" data-aos="fade-up">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-lg-end mb-4 mb-lg-0">
+                    <img src="/api/placeholder/400/320" alt="طلاب يشاركون في مسابقة برمجية" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    {% if page.lang == "en" %}
+                    <h2 class="fw-bold mb-4">كيف أنضم إلى الفريق؟</h2>
+                    <p class="lead">يمكنك الانضمام إلى فريق المعلوماتية السعودي من خلال:</p>
+                    {% else %}
+                    <h2 class="fw-bold mb-4">How to join the team?</h2>
+                    <p class="lead">You can join Saudi Informatics Team through:</p>
+                    {% endif %}
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            {% if page.lang == "en" %}
+                            Participating in <a href="https://bebrasksa.org/" class="link-success">Bebras competition</a> and getting a medal
+                            {% else %}
+                            المشاركة في <a href="https://bebrasksa.org/" class="link-success">مسابقة بيبراس</a> وتحقيق نتائج متميزة
+                            {% endif %}
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            {% if page.lang == "en" %}
+                            Qualification via <a href="https://aiolympics.mawhiba.org/" class="link-success">ATHKA</a> which is organized by mawhiba
+                            {% else %}
+                            التأهل عبر مسابقة <a href="https://aiolympics.mawhiba.org/" class="link-success">أذكى</a> التي تنظمها مؤسسة موهبة
+                            {% endif %}
+                        </li>
+                    </ul>
+                    {% if page.lang == "en" %}
+                    <a href="https://sainformatics.org/contact" class="btn btn-success mt-3">Contact us</a>
+                    {% else %}
+                    <a href="https://sainformatics.org/contact" class="btn btn-success mt-3">تواصل معنا للاستفسار</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
 </div>  
 
-<!-- Info Section -->
-<section class="py-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="info-card">
-                <div class="text-center mb-4">
-                    <i class="bi bi-code-slash feature-icon"></i>
-                </div>
-                {% if page.lang == "en" %}
-                <h3 class="text-center">What are informatics olympiads?</h3>
-                <p>Informatics olympiads is an competitive programming competition for students under the age of 20. The competition consists of analytical, mathematical, and logical problems, where the contestant is required to write code to solve the presented problems.</p>
-                <p>This e-sport relies on analytical, mathematical, and logical skills to deconstruct the problem and write its code efficiently and within a limited time.</p>
-                {% else %}
-                <h3 class="text-center">ما هي أولمبيادات المعلوماتية؟</h3>
-                <p>أولمبياد المعلوماتية هي مسابقات للبرمجة التنافسية للطلاب دون سن 20 عامًا. تتألف المسابقة من مسائل تحليلية ورياضية ومنطقية، حيث يُطلب من المتسابق كتابة كود برمجي لحل المشكلات المطروحة.</p>
-                <p>تعتمد هذه الرياضة الإلكترونية على المهارات التحليلية والرياضية والمنطقية، في تفكيك المسألة وكتابة كودها البرمجي بكفاءة عالية وفي وقت محدود.</p>
-                {% endif %}
-                <a href="https://sainformatics.org/olympiads" class="btn btn-outline-success">تعرف على الأولمبياد</a>
-            </div>
-        </div>
-        <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="info-card">
-                <div class="text-center mb-4">
-                    <i class="bi bi-people-fill feature-icon"></i>
-                </div>
-                {% if page.lang == "en" %}
-                <h3 class="text-center">Why informatics team?</h3>
-                <p>The Saudi Informatics Team includes the strongest interests in competitive programming in the Kingdom of Saudi Arabia. Team members are selected through a rigorous selection process that includes competitions and intensive training.</p>
-                <p>The team represents the Kingdom in the International Olympiad in Informatics (IOI) and the Regional Olympiad (APIO), and has achieved many accomplishments at the global level.</p>
-                <a href="https://sainformatics.org/members" class="btn btn-outline-success">Take a look on the members</a>
-                {% else %}
-                <h3 class="text-center">لماذا فريق المعلوماتية؟</h3>
-                <p>يضم فريق المعلوماتية السعودي أقوى المهتمين في البرمجة التنافسية في المملكة العربية السعودية. يتم اختيار أعضاء الفريق من خلال عملية انتقاء صارمة تشمل مسابقات وتدريبات مكثفة.</p>
-                <p>يمثل الفريق المملكة في أولمبياد المعلوماتية الدولي (IOI) والإقليمي (APIO)، وقد حقق العديد من الإنجازات على المستوى العالمي.</p>
-                <a href="https://sainformatics.org/members" class="btn btn-outline-success">تعرف على أعضاء الفريق</a>
-                {% endif %}
-            </div>
-        </div>
-    </div>
-</section>
-
-{% if page.lang == "en" %}
-<div class="row p-3">
-    <div class="col-md-6 col-sm-12">
-        <h1>Informatics Olympiad?</h1>
-        <p>
-            Informatics problems are in the form of problems or tasks, and the contestant is asked to write a program that implements the required..
-        </p>
-        <p>
-            This e-sport relies on analytical, mathematical and logical skills, in decomposing the problem and writing its programming code.
-        </p>
-    </div>
-    <div class="col-md-6 col-sm-12">
-        <h1>How to join the team?</h1>
-        <p>
-            Entering <a href="https://www.mawhiba.org/Ar/programs/competitions/Mawhiba-International-Olympiad/Pages/default.aspx">Mawhiba's International Olympiad Program - Informatics</a> is through <a href="https://bebrasksa.org/">Bebras</a> compitetion or <a href="https://aiolympics.mawhiba.org/">ATHKA</a> competition.
-        </p>
-    </div>
-
-    <div class="col-12 text-center">
-        <h1>Why the website?</h1>
-        <p>
-            Gathers best compititive programming enthusiasts in the kingdom.
-        </p>
-    </div>
-</div>
-{% else %}
-<div class="row p-3">
-    <div class="col-md-6 col-sm-12">
-        <h1>أولمبياد المعلوماتية؟</h1>
-        <p>
-            مسائل المعلوماتية تكون على صيغة مشاكل أو مهام ويطلب من المتسابق كتابة كود برمجي ينفذ المطلوب..
-        </p>
-        <p>
-            .تعتمد هذه الرياضة الإلكترونية على المهارات التحليلية والرياضية والمنطقية، في تفكيك المسألة وكتابة كودها البرمجي
-        </p>
-    </div>
-    <div class="col-md-6 col-sm-12">
-        <h1>كيف أنضم إلى الفريق؟</h1>
-        <p>
-             الدخول إلى <a href="https://former.mawhiba.org/Ar/programs/competitions/Mawhiba-International-Olympiad/Pages/default.aspx">برنامج موهبة للأولمبيادات الدولية - معلوماتية</a> يكون عن طريق <a href="https://bebrasksa.org/">بيبراس</a> أو مسابقة <a href="https://aiolympics.mawhiba.org/">أذكى</a>.
-        </p>
-    </div>
-
-    <div class="col-12 text-center">
-        <h1>لماذا الموقع؟</h1>
-        <p>
-            .يضم أقوى المهتمين في البرمجة التنافسية في المملكة
-        </p>
-    </div>
-</div> 
-{% endif %}
 
 
 <script>
