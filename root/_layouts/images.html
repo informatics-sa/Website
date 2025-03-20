@@ -6,16 +6,16 @@ layout: default
     {% for i in (1..page.images.count) %}
         <div class="col-sm-12 col-md-4">
             <div class="card mb-3">
-                <img src="/img/{{ images[i].src }}" class="card-img-top" alt="{{ images[i].alt | default: "" }}"> <!-- TODO: Add width/height as parameter -->
+                <img src="/img/{{ page.images[i].src }}" class="card-img-top" alt="{{ page.images[i].alt | default: "" }}"> <!-- TODO: Add width/height as parameter -->
                 <div class="card-body">
                     {% if page.lang == "en" %}
-                    <h5 class="card-title">{{ images[i].entitle | default: "" }}</h5>
-                    <p class="card-text">{{ images[i].endescription | default: "" }}</p>
+                    <h5 class="card-title">{{ page.images[i].entitle | default: "" }}</h5>
+                    <p class="card-text">{{ page.images[i].endescription | default: "" }}</p>
                     {% else %}
-                    <h5 class="card-title">{{ images[i].artitle | default: "" }}</h5>
-                    <p class="card-text">{{ images[i].ardescription | default: "" }}</p>
+                    <h5 class="card-title">{{ page.images[i].artitle | default: "" }}</h5>
+                    <p class="card-text">{{ page.images[i].ardescription | default: "" }}</p>
                     {% endif %}
-                    <p class="card-text"><small class="text-body-secondary">{{ images[i].date | default: "" }}</small></p>
+                    <p class="card-text"><small class="text-body-secondary">{{ page.images[i].date | default: "" }}</small></p>
                 </div>
             </div>
         </div>
