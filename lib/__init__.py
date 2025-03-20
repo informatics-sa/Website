@@ -9,9 +9,9 @@ def get_countries():
         countries[code] = country
 
     countries['online'] = {
-        'arabic_name' = 'عن بعد',
-        'english_name' = 'Online',
-        'emoji' = flag_emoji('online')
+        'arabic_name': 'عن بعد',
+        'english_name': 'Online',
+        'emoji': flag_emoji('online')
     }
 
     return countries

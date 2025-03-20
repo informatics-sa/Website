@@ -1,6 +1,5 @@
 import os, json
 
-
 ROOT_DIR = './root'
 LANGS = ['ar', 'en']
 BLOCKED_FLAGS = ['se']
@@ -47,7 +46,7 @@ def format_yml(data: dict, indent_level: int = 0) -> str:
             res += indent + f"{str(key)}:\n"
             res += indent + f"  count: {len(val)}\n"
             for i in range(len(val)):
-                res += write_yml({i + 1: val[i]}, indent_level + 2)
+                res += format_yml({i + 1: val[i]}, indent_level + 2)
         elif val is None:
             res += indent + f"{str(key)}: null\n"
         elif type(val) is bool or type(val) is int:
@@ -72,8 +71,8 @@ def write_file(filename: str, data: dict):
 
 def test_utils(log: bool = True):
     assert flag_emoji('sa') == '🇸🇦'
-    assert countries['sa']['english_name'] == 'Saudi Arabia'
-    assert write_yml({
+    assert award_emoji('gold') == '🥇'
+    assert format_yml({
         'Hi': 'Hello',
         'list': ['Hi', 'Hello'],
         'dict': {

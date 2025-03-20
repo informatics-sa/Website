@@ -60,7 +60,7 @@ def build_contact():
 def build_hall_of_fame():
     official_olympiads = list(
         filter(lambda x: x is not None,
-            map(lambda id, oly: id if oly['official'] else None, olympiads.items())
+            [id if oly['official'] else None for id, oly in olympiads.items()]
         )
     )
 
@@ -76,14 +76,14 @@ def build_hall_of_fame():
 
         for participation in data['participations']:
             if participation['olympiad'] in official_olympiads:
-                fame[memid][part['award']] += 1
+                fame[member_id][participation['award']] += 1
 
     # list of people who got an award in an official olympiad, sorted lexicographically on awards.
     fame = sorted(
-        filter(lambda _, stats: stats['gold'] + stats['silver'] + stats['bronze'] + stats['hm'] > 0,
+        filter(lambda person: person[1]['gold'] + person[1]['silver'] + person[1]['bronze'] + person[1]['hm'] > 0,
             fame.items()
-        )
-        key=lambda _, stats: (-stats['gold'], -stats['silver'], -stats['bronze'], -stats['hm'])
+        ),
+        key=lambda person: (-person[1]['gold'], -person[1]['silver'], -person[1]['bronze'], -person[1]['hm'])
     )
 
     hall_of_fame = []
@@ -157,13 +157,13 @@ def build_images():
     write_file('./images.html', {
         'layout': 'images',
         'lang': 'ar',
-        'title' translations['ar']['images'],
+        'title': translations['ar']['images'],
         'images': images
     })
     write_file('en/images.html', {
         'layout': 'images',
         'lang': 'en',
-        'title' translations['en']['images'],
+        'title': translations['en']['images'],
         'images': images
     })
 
@@ -192,7 +192,7 @@ def build_members():
 def build_members_index():
     #constants = load_json('constants')
     levels = {1: [], 2: [], 3: [], 4: []}
-    for member in members.value():
+    for member in members.values():
         if 1 <= member['level'] <= 4:
             levels[member['level']].append(member)
 
