@@ -28,14 +28,15 @@ description: "Official website"
                 كيف أنضم للفريق؟
                 {% endif %}
             </a>
-            <a href="https://sainformatics.org/participations" class="btn btn-outline-light btn-lg px-4">
-                {% if page.lang == "en" %}
-                Past participations
-                {% else %}
-                مشاركاتنا السابقة
-                {% endif %}
-                
+            {% if page.lang == "en" %}
+            <a href="https://sainformatics.org/en/participations" class="btn btn-outline-light btn-lg px-4">
+                Past participations 
             </a>
+            {% else %}
+            <a href="https://sainformatics.org/participations" class="btn btn-outline-light btn-lg px-4">
+                مشاركاتنا السابقة
+            </a>
+            {% endif %}
         </div>
     </div>
 </section>
@@ -147,7 +148,6 @@ description: "Official website"
 
 
     <!-- Join Section -->
-    <!-- TODO: Translate into English -->
     <section id="join" class="join-section" data-aos="fade-up">
         <div class="container">
             <div class="row align-items-center">
