@@ -1,162 +1,13 @@
 from lib import *
 from lib.utils import * # target to remove this.
 
+
 countries = get_countries()
 members = get_members()
 olympiads = get_olympiads()
 participations = get_participations() # TODO: make get_participations function to resolve the mess in the function
 translations = load_json('translations')
 
-
-def build_participations():
-    for oly in participations:
-        filename = oly['name'] + '_' + oly['start'].split('/')[0]
-        write_file(f'participations/{filename}.html', {
-            'layout': 'participation',
-            'lang': 'ar',
-            'title': oly['name'].upper() + ' ' + oly['start'].split('/')[0],
-            'olympiad': oly['name'],
-            'olympiad_arname': oly['arname'],
-            'start_date': oly['start'],
-            'end_date': oly['end'],
-            'country_arname': oly['country_arname'],
-            'country_enname': oly['country_enname'],
-            'participants': oly['ar_participants'],
-            'website': oly['website']
-        })
-        write_file(f'en/participations/{filename}.html', {
-            'layout': 'participation',
-            'lang': 'en',
-            'title': oly['name'].upper() + ' ' + oly['start'].split('/')[0],
-            'olympiad': oly['name'],
-            'olympiad_enname': oly['enname'],
-            'country_arname': oly['country_arname'],
-            'country_enname': oly['country_enname'],
-            'start_date': oly['start'],
-            'end_date': oly['end'],
-            'participants': oly['en_participants'],
-            'website': oly['website']
-        })
-
-def build_members():
-    for memid, mem in members.items():
-        write_file(f'members/{memid}.html', {
-            'layout': 'person',
-            'lang': 'ar',
-            'title': mem['arname'],
-            'full_name': mem['arname'],
-            'graduation': mem['graduation'],
-            'codeforces': mem['codeforces'],
-            'participations': mem['participations']
-        })
-        write_file(f'en/members/{memid}.html', {
-            'layout': 'person',
-            'lang': 'en',
-            'title': mem['enname'],
-            'full_name': mem['enname'],
-            'graduation': mem['graduation'],
-            'codeforces': mem['codeforces'],
-            'participations': mem['participations']
-        })
-
-def build_participations_index():
-    global participations
-    olympiads = {}
-    min_year = 3000
-    max_year = 2000
-    for oly in participations:
-        year = oly['year']
-        min_year = min(int(year), min_year)
-        max_year = max(int(year), max_year)
-        if oly['year'] not in olympiads:
-            olympiads[year] = []
-
-        olympiads[year].append(oly)
-
-    written = {
-        'layout': 'participations',
-        'lang': 'ar',
-        'title': translations['ar']['participations'],
-        'start_year': min_year,
-        'last_year': max_year
-    }
-
-    for year, list in olympiads.items():
-        written[year] = list
-    
-    write_file("participations/index.html", written)
-
-    written['lang'] = 'en'
-    written['title'] = translations['en']['participations']
-
-    write_file("en/participations/index.html", written)
-
-def build_hall_of_fame():
-    official_olympiads = []
-    for id, oly in olympiads.items():
-        if oly['official']:
-            official_olympiads.append(id)
-    fame = {}
-    for memid, data in members.items():
-        fame[memid] = {
-            'gold': 0,
-            'silver': 0,
-            'bronze': 0,
-            'hm': 0,
-            None: 0,
-        }
-        for part in data['participations']:
-            if part['olympiad'] in official_olympiads:
-                fame[memid][part['award']] += 1
-    
-    filtered_fame = filter(lambda dic: dic[1]['gold'] + dic[1]['silver'] + dic[1]['bronze'] + dic[1]['hm'] > 0, fame.items())
-    sorted_fame = sorted(filtered_fame, key=lambda x: (-x[1]['gold'], -x[1]['silver'], -x[1]['bronze'], -x[1]['hm']))
-
-    written = []
-    for it in sorted_fame:
-        mem = it[0]
-        dic = it[1]
-        written.append({
-            'id': mem,
-            'arname': members[mem]['arname'],
-            'enname': members[mem]['enname'],
-            'gold': dic['gold'],
-            'silver': dic['silver'],
-            'bronze': dic['bronze'],
-            'hm': dic['hm'],
-        })
-    
-    write_file('./hall-of-fame.html', {
-        'layout': 'halloffame',
-        'lang': 'ar',
-        'title': translations['ar']['hall_of_fame'],
-        'list': written,
-    })
-
-    write_file('en/hall-of-fame.html', {
-        'layout': 'halloffame',
-        'lang': 'en',
-        'title': translations['en']['hall_of_fame'],
-        'list': written,
-    })
-
-def build_images():
-    imgs = load_json('images')
-    count = len(imgs)
-    written = {
-        'layout': 'images',
-        'title': translations['ar']['images'],
-        'lang': 'ar',
-        'count': count
-    }
-    idx = 1
-    for img in imgs:
-        written[idx] = img
-        idx += 1
-    write_file('./images.html', written)
-    written['lang'] = 'en'
-    written['title'] = translations['en']['images']
-    write_file('en/images.html', written)
 
 def build_contact():
     contact = load_json('contact')
@@ -165,30 +16,31 @@ def build_contact():
         'developers': [],
         'admins': [],
     }
-    for mem in contact['maintainers']:
+
+    for member_id in contact['maintainers']:
         person = {
-            'id': members[mem]['id'],
-            'arname': members[mem]['arname'],
-            'enname': members[mem]['enname'],
-            'email': members[mem]['email']
+            'id': member_id,
+            'arname': members[member_id]['arname'],
+            'enname': members[member_id]['enname'],
+            'email': members[member_id]['email']
         }
         realcontact['maintainers'].append(person)
 
-    for mem in contact['developers']:
+    for member_id in contact['developers']:
         person = {
-            'id': members[mem]['id'],
-            'arname': members[mem]['arname'],
-            'enname': members[mem]['enname'],
-            'email': members[mem]['email']
+            'id': member_id,
+            'arname': members[member_id]['arname'],
+            'enname': members[member_id]['enname'],
+            'email': members[member_id]['email']
         }
         realcontact['developers'].append(person)
 
-    for mem in contact['admins']:
+    for member_id in contact['admins']:
         person = {
-            'id': members[mem]['id'],
-            'arname': members[mem]['arname'],
-            'enname': members[mem]['enname'],
-            'email': members[mem]['email']
+            'id': member_id,
+            'arname': members[member_id]['arname'],
+            'enname': members[member_id]['enname'],
+            'email': members[member_id]['email']
         }
         realcontact['admins'].append(person)
 
@@ -205,59 +57,59 @@ def build_contact():
     written['title'] = translations['en']['contact']
     write_file('en/contact.html', written)
 
+def build_hall_of_fame():
+    official_olympiads = list(
+        filter(lambda x: x is not None,
+            map(lambda id, oly: id if oly['official'] else None, olympiads.items())
+        )
+    )
 
-def test_utils():
-    assert flag_emoji('sa') == '🇸🇦'
-    assert countries['sa']['english_name'] == 'Saudi Arabia'
-    assert write_yml({
-        'Hi': 'Hello',
-        'list': ['Hi', 'Hello'],
-        'dict': {
-            'sub1': 'sub2'
-        },
-        'nullval': None
-    }) == """Hi: "Hello"
-list:
-  count: 2
-  1: "Hi"
-  2: "Hello"
-dict:
-  sub1: "sub2"
-nullval: null
-"""
+    fame = {}
+    for member_id, data in members.items():
+        fame[member_id] = {
+            'gold': 0,
+            'silver': 0,
+            'bronze': 0,
+            'hm': 0,
+            None: 0,
+        }
 
-def build_members_index():
-    #constants = load_json('constants')
-    members_list = members.values()
-    levels = {1: [], 2: [], 3: [], 4: []}
-    for mem in members_list:
-        mem['participations_count'] = len(mem['participations'])
-        if 1 <= mem['level'] <= 4:
-            levels[mem['level']].append(mem)
+        for participation in data['participations']:
+            if participation['olympiad'] in official_olympiads:
+                fame[memid][part['award']] += 1
 
-    data = {
+    # list of people who got an award in an official olympiad, sorted lexicographically on awards.
+    fame = sorted(
+        filter(lambda _, stats: stats['gold'] + stats['silver'] + stats['bronze'] + stats['hm'] > 0,
+            fame.items()
+        )
+        key=lambda _, stats: (-stats['gold'], -stats['silver'], -stats['bronze'], -stats['hm'])
+    )
+
+    hall_of_fame = []
+    for member_id, stats in fame:
+        hall_of_fame.append({
+            'id': member_id,
+            'arname': members[member_id]['arname'],
+            'enname': members[member_id]['enname'],
+            'gold': stats['gold'],
+            'silver': stats['silver'],
+            'bronze': stats['bronze'],
+            'hm': stats['hm'],
+        })
+
+    write_file('./hall-of-fame.html', {
+        'layout': 'halloffame',
         'lang': 'ar',
-        'title': translations['ar']['members_list'],
-        'layout': 'members',
-        'levels': levels
-    }
-    write_file("./members/index.html", data)
-    data['lang'] = 'en'
-    data['title'] = translations['en']['members_list']
-    write_file("en/members/index.html", data)
-
-def build_olympiads():
-    write_file('./olympiads.html', {
-        'title': translations['ar']['olympiads'],
-        'layout': 'olympiads',
-        'lang': 'ar',
-        'olympiads': list(olympiads.values())
+        'title': translations['ar']['hall_of_fame'],
+        'list': hall_of_fame,
     })
-    write_file('en/olympiads.html', {
-        'title': translations['en']['olympiads'],
-        'layout': 'olympiads',
+
+    write_file('en/hall-of-fame.html', {
+        'layout': 'halloffame',
         'lang': 'en',
-        'olympiads': list(olympiads.values())
+        'title': translations['en']['hall_of_fame'],
+        'list': hall_of_fame,
     })
 
 def build_home():
@@ -274,12 +126,13 @@ def build_home():
         #'trainers': 0,
         #'historic_camps': 0,
     }
-    for oly in olympiads.values():
-        stats['gold'] += oly['gold']
-        stats['silver'] += oly['silver']
-        stats['bronze'] += oly['bronze']
-        stats['hm'] += oly['hm']
-        stats['participations'] += oly['participations']
+
+    for olympiad in olympiads.values():
+        stats['gold'] += olympiad['gold']
+        stats['silver'] += olympiad['silver']
+        stats['bronze'] += olympiad['bronze']
+        stats['hm'] += olympiad['hm']
+        stats['participations'] += olympiad['participations']
 
     write_file('./index.html', {
         'title': translations['ar']['website_name'],
@@ -298,11 +151,161 @@ def build_home():
         'stats': stats
     })
 
+def build_images():
+    images = load_json('images')
+
+    write_file('./images.html', {
+        'layout': 'images',
+        'lang': 'ar',
+        'title' translations['ar']['images'],
+        'images': images
+    })
+    write_file('en/images.html', {
+        'layout': 'images',
+        'lang': 'en',
+        'title' translations['en']['images'],
+        'images': images
+    })
+
+def build_members():
+    for member_id, member in members.items():
+        write_file(f'members/{member_id}.html', {
+            'layout': 'person',
+            'lang': 'ar',
+            'title': member['arname'],
+            'full_name': member['arname'],
+            'graduation': member['graduation'],
+            'codeforces': member['codeforces'],
+            'participations': member['participations']
+        })
+
+        write_file(f'en/members/{member_id}.html', {
+            'layout': 'person',
+            'lang': 'en',
+            'title': member['enname'],
+            'full_name': member['enname'],
+            'graduation': member['graduation'],
+            'codeforces': member['codeforces'],
+            'participations': member['participations']
+        })
+
+def build_members_index():
+    #constants = load_json('constants')
+    levels = {1: [], 2: [], 3: [], 4: []}
+    for member in members.value():
+        if 1 <= member['level'] <= 4:
+            levels[member['level']].append(member)
+
+    write_file("./members/index.html", {
+        'layout': 'members',
+        'lang': 'ar',
+        'title': translations['ar']['members_list'],
+        'levels': levels
+    })
+    write_file("en/members/index.html", {
+        'layout': 'members',
+        'lang': 'en',
+        'title': translations['en']['members_list'],
+        'levels': levels
+    } )
+
+def build_olympiads():
+    write_file('./olympiads.html', {
+        'layout': 'olympiads',
+        'lang': 'ar',
+        'title': translations['ar']['olympiads'],
+        'olympiads': list(olympiads.values())
+    })
+    write_file('en/olympiads.html', {
+        'layout': 'olympiads',
+        'lang': 'en',
+        'title': translations['en']['olympiads'],
+        'olympiads': list(olympiads.values())
+    })
+
+def build_participations():
+    for participation in participations:
+        filename = f"{participation['name']}_{participation['year']}"
+        write_file(f'participations/{filename}.html', {
+            'layout': 'participation',
+            'lang': 'ar',
+            'title': f"{participation['name'].upper()} {participation['year']}",
+            'olympiad': participation['name'],
+            'olympiad_arname': participation['arname'],
+            'start_date': participation['start'],
+            'end_date': participation['end'],
+            'country_arname': participation['country_arname'],
+            'country_enname': participation['country_enname'],
+            'participants': participation['ar_participants'],
+            'website': participation['website']
+        })
+        write_file(f'en/participations/{filename}.html', {
+            'layout': 'participation',
+            'lang': 'en',
+            'title': f"{participation['name'].upper()} {participation['year']}",
+            'olympiad': participation['name'],
+            'olympiad_enname': participation['enname'],
+            'start_date': participation['start'],
+            'end_date': participation['end'],
+            'country_arname': participation['country_arname'],
+            'country_enname': participation['country_enname'],
+            'participants': participation['en_participants'],
+            'website': participation['website']
+        })
+
+def build_participations_index():
+    olympiads = {}
+    min_year = 3000
+    max_year = 2000
+    for participation in participations:
+        year = participation['year']
+        min_year = min(year, min_year)
+        max_year = max(year, max_year)
+        if year not in olympiads:
+            olympiads[year] = []
+
+        olympiads[year].append(participation)
+
+    written = {
+        'layout': 'participations',
+        'lang': 'ar',
+        'title': translations['ar']['participations'],
+        'start_year': min_year,
+        'last_year': max_year
+    }
+
+    for year, list in olympiads.items():
+        written[year] = list
+    
+    write_file("participations/index.html", written)
+    written['lang'] = 'en'
+    written['title'] = translations['en']['participations']
+    write_file("en/participations/index.html", written)
+
+
 def main():
     test_utils()
 
+    build_contact()
+    print("Built contact")
+
+    build_hall_of_fame()
+    print("Built hall of fame")
+
+    build_home()
+    print("Built home")
+
+    build_images()
+    print("Built participations index")
+
     build_members()
     print("Built members")
+
+    build_members_index()
+    print("Built members index")
+
+    build_olympiads()
+    print("Built olympiads")
 
     build_participations()
     print("Built participations")
@@ -310,23 +313,6 @@ def main():
     build_participations_index()
     print("Built participations index")
 
-    build_hall_of_fame()
-    print("Built hall of fame")
-
-    build_images()
-    print("Built participations index")
-
-    build_olympiads()
-    print("Built olympiads")
-
-    build_members_index()
-    print("Built members index")
-
-    build_contact()
-    print("Built contact")
-
-    build_home()
-    print("Built home")
 
     #build_tst_index()
     #print("Built TST index")

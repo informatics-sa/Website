@@ -44,7 +44,7 @@ layout: default
                             {% endif %}
                         </td>
                         <td><a href="https://codeforces.com/profile/{{ page.levels[lvl][i].codeforces }}">@{{ page.levels[lvl][i].codeforces }}</a></td>
-                        <td>{{ page.levels[lvl][i].participations_count }}</td>
+                        <td>{{ page.levels[lvl][i].participations.count }}</td>
                     </tr>
                     {% endfor %}
                 </tbody>

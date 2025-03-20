@@ -1,13 +1,5 @@
 from .utils import *
 
-def default_person(id: str):
-    return {
-        'participations': {},
-        'arname': id,
-        'enname':  id,
-        'graduation': None,
-        'codeforces': None
-    }
 
 def get_countries():
     countries = {}
@@ -16,41 +8,43 @@ def get_countries():
         country['emoji'] = flag_emoji(code)
         countries[code] = country
 
-    countries['online'] = {}
-    countries['online']['arabic_name'] = 'عن بعد'
-    countries['online']['english_name'] = 'Online'
-    countries['online']['emoji'] = flag_emoji('online')
+    countries['online'] = {
+        'arabic_name' = 'عن بعد',
+        'english_name' = 'Online',
+        'emoji' = flag_emoji('online')
+    }
 
     return countries
 
 def get_members():
     members = {}
-    for mem in load_json('people'):
-        members[mem['id']] = mem
-        members[mem['id']]['participations'] = []
+    for person in load_json('people'):
+        members[person['id']] = person
+        members[person['id']]['participations'] = []
 
-    for oly in load_json('participations'):
-        for mem_id in oly['participants']:
-            if mem_id not in members:
-                print(f"[WARN ⚠️] {mem_id} participant of {oly['name']} ({oly['year']}), doesn't exist in people.json")
-                members[mem_id] = default_person(mem_id)
-            members[mem_id]['participations'].append({
-                'olympiad': oly['name'],
-                'year': str(oly['year']),
-                'award': oly['participants'][mem_id]
+    for participation in load_json('participations'):
+        for member_id in participation['participants']:
+            if member_id not in members:
+                print(f"[WARN ⚠️] {member_id} participant of {participation['name']} ({participation['year']}), doesn't exist in people.json")
+                members[member_id] = default_person(mem_id)
+
+            members[member_id]['participations'].append({
+                'olympiad': participation['name'],
+                'year': str(participation['year']),
+                'award': participation['participants'][member_id]
             })
 
     return members
     
 def get_olympiads():
     olympiads = {}
-    for oly in load_json('olympiads'):
-        olympiads[oly['id']] = oly
-        olympiads[oly['id']]['gold'] = 0
-        olympiads[oly['id']]['silver'] = 0
-        olympiads[oly['id']]['bronze'] = 0
-        olympiads[oly['id']]['hm'] = 0
-        olympiads[oly['id']]['participations'] = 0
+    for olympiad in load_json('olympiads'):
+        olympiads[olympiad['id']] = olympiad
+        olympiads[olympiad['id']]['gold'] = 0
+        olympiads[olympiad['id']]['silver'] = 0
+        olympiads[olympiad['id']]['bronze'] = 0
+        olympiads[olympiad['id']]['hm'] = 0
+        olympiads[olympiad['id']]['participations'] = 0
 
     for participation in load_json('participations'):
         olympiads[participation['name']]['participations'] += 1
@@ -65,21 +59,21 @@ def get_participations():
     olympiads = get_olympiads()
     countries = get_countries()
     members = get_members()
-    for oly in participations:
-        oly['country_arname'] = countries[oly['country']]['arabic_name'] + ' ' + flag_emoji(oly['country'])
-        oly['country_enname'] = countries[oly['country']]['english_name'] + ' ' + flag_emoji(oly['country'])
+    for participation in participations:
+        participation['country_arname'] = f"{countries[participation['country']]['arabic_name']} {flag_emoji(participation['country'])}"
+        participation['country_enname'] = f"{countries[participation['country']]['english_name']} {flag_emoji(participation['country'])}"
 
-        oly['arname'] = olympiads[oly['name']]['arname']
-        oly['enname'] = olympiads[oly['name']]['enname']
+        participation['arname'] = olympiads[participation['name']]['arname']
+        participation['enname'] = olympiads[participation['name']]['enname']
 
         parts = []
         enparts = []
         awards = ''
-        for mem_id, award in oly['participants'].items():
+        for mem_id, award in participation['participants'].items():
             parts.append({'id': mem_id, 'name': members[mem_id]['arname'], 'award': award_emoji(award, dashing_none=True)})
             enparts.append({'id': mem_id, 'name': members[mem_id]['enname'], 'award': award_emoji(award, dashing_none=True)})
             awards += award_emoji(award)
-        oly['awards'] = awards
-        oly['ar_participants'] = parts
-        oly['en_participants'] = enparts
+        participation['awards'] = awards
+        participation['ar_participants'] = parts
+        participation['en_participants'] = enparts
     return participations
