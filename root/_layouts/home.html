@@ -40,21 +40,71 @@ nocontainer: "1"
         </div>
     </div>
 </section>
-<div class="row p-3">
-    {% if page.lang == "en" %}
-    <h3>Gold: {{ page.stats.gold }}</h3>
-    <h3>Silver: {{ page.stats.silver }}</h3>
-    <h3>Bronze: {{ page.stats.bronze }}</h3>
-    <h3>HM: {{ page.stats.hm }}</h3>
-    <h3>Participations: {{ page.stats.participations }}</h3>
-    {% else %}
-    <h3>الذهبية: {{ page.stats.gold }}</h3>
-    <h3>الفضية: {{ page.stats.silver }}</h3>
-    <h3>البرونزية: {{ page.stats.bronze }}</h3>
-    <h3>شهادات التقدير: {{ page.stats.hm }}</h3>
-    <h3>المشاركات: {{ page.stats.participations }}</h3>
-    {% endif %}
-</div>
+<div class="container">
+    <!-- Stats Section -->
+    <section class="py-5">
+        <div class="row text-center" data-aos="fade-up">
+            <h2 class="fw-bold mb-4">إنجازات الفريق</h2>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="stats-card">
+                    <i class="bi bi-trophy-fill medal-icon medal-gold"></i>
+                    <h3 class="fw-bold">{{ page.stats.gold }}</h3>
+                    {% if page.lang == "en" %}
+                    <p class="mb-0">Gold medals</p>
+                    {% else %}
+                    <p class="mb-0">ميداليات ذهبية</p>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="stats-card">
+                    <i class="bi bi-trophy-fill medal-icon medal-silver"></i>
+                    <h3 class="fw-bold">{{ page.stats.silver }}</h3>
+                    {% if page.lang == "en" %}
+                    <p class="mb-0">Silver medals</p>
+                    {% else %}
+                    <p class="mb-0">ميداليات فضية</p>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="stats-card">
+                    <i class="bi bi-trophy-fill medal-icon medal-bronze"></i>
+                    <h3 class="fw-bold">{{ page.stats.bronze }}</h3>
+                    {% if page.lang == "en" %}
+                    <p class="mb-0">Bronze medals</p>
+                    {% else %}
+                    <p class="mb-0">ميداليات برونزية</p>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 mb-4">
+                <div class="stats-card">
+                    <i class="bi bi-award-fill medal-icon medal-cert"></i>
+                    <h3 class="fw-bold">{{ page.stats.hm }}</h3>
+                    {% if page.lang == "en" %}
+                    <p class="mb-0">Honarable mention</p>
+                    {% else %}
+                    <p class="mb-0">شهادات تقدير</p>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 mb-4">
+                <div class="stats-card">
+                    <i class="bi bi-globe medal-icon"></i>
+                    <h3 class="fw-bold">{{ page.stats.participations }}</h3>
+                    {% if page.lang == "en" %}
+                    <p class="mb-0">International participation</p>
+                    {% else %}
+                    <p class="mb-0">مشاركة دولية</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+</div>  
+
+
 {% if page.lang == "en" %}
 <div class="row p-3">
     <div class="col-md-6 col-sm-12">
