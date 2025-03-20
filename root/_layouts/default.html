@@ -54,11 +54,5 @@ layout: base
         </div>
     </div>
 </nav>
-{% if page.nocontainer == "1" %}
-    {{ content }}
-{% else %}
-<div class="container p-1">
-    {{ content }}
-</div>
-{% endif %}
 
+{{ content }}
