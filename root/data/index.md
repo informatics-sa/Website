@@ -43,5 +43,11 @@ An array of images, each image consist of these labels:
 - `endescription`: English description
 - `date`: String, usually Gregorian date in format `YYYY/MM/DD` or `YYYY/M/D`
 
+
+# Constant files
+These files are needed, but they aren't database kind.
+## [`/data/countries.json`](/data/countries.json)
+## [`/data/translations.json`](/data/translations.json)
+
 ## [`/data/contact.json`](/data/contact.json)
 A dictionary of (`developers`/`maintainers`/`admin`), each having an array of person ID
