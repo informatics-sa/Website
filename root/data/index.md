@@ -20,8 +20,8 @@ An array of olympiads SIT participated in, each olympiad has the following:
 - `id`: An id of an olympiad that exists in `olympiads.json`
 - `year`: Integer, year
 - `country`: Either the 2-letters country code or "`online`"
-- `start`: Start date
-- `end`: End date
+- `start`: Start date, usually Gregorian date in format `YYYY/MM/DD` or `YYYY/M/D`
+- `end`: End date, usually Gregorian date in format `YYYY/MM/DD` or `YYYY/M/D`
 - `participants`: Dictionary of `<member ID>: <award name>`
     - `<award name>`: (`gold`/`silver`/`bronze`/`hounarablemention`) **(nullable)** (null in case of no award)
 - `website`: Olympiad website of that year, with `https://` in prefix without `/` in the end **(nullable)**
@@ -43,11 +43,11 @@ An array of images, each image consist of these labels:
 - `endescription`: English description
 - `date`: String, usually Gregorian date in format `YYYY/MM/DD` or `YYYY/M/D`
 
+## [`/data/contact.json`](/data/contact.json)
+A dictionary of (`developers`/`maintainers`/`admin`), each having an array of person ID
+
 
 # Constant files
 These files are needed, but they aren't database kind.
 ## [`/data/countries.json`](/data/countries.json)
 ## [`/data/translations.json`](/data/translations.json)
-
-## [`/data/contact.json`](/data/contact.json)
-A dictionary of (`developers`/`maintainers`/`admin`), each having an array of person ID
