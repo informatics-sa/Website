@@ -3,7 +3,7 @@ id: images
 layout: default
 ---
 <div class="row p-3">
-    {% for i in (1..images.count) %}
+    {% for i in (1..page.images.count) %}
         <div class="col-sm-12 col-md-4">
             <div class="card mb-3">
                 <img src="/img/{{ images[i].src }}" class="card-img-top" alt="{{ images[i].alt | default: "" }}"> <!-- TODO: Add width/height as parameter -->
