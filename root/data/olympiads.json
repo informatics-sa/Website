@@ -38,5 +38,13 @@
         "ardescription": "",
         "endescription": "",
         "official": false
+    },
+    {
+        "id": "naoi", "website": "https://naoi2025.algerianoi.com/",
+        "arname": "أولمبياد شمال أفريقيا للمعلوماتية",
+        "enname": "North African Olympiad in Informatics",
+        "ardescription": "أولمبياد بدأ سنة 2025 تشارك فيه: مصر، ليبيا، تونس، الجزائر، والمغرب",
+        "endescription": "Started at 2025, where Egypt, Libya, Tunisia, Algeria, and Morocco participate in",
+        "official": false
     }
 ]
