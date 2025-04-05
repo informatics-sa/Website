@@ -10,6 +10,18 @@
         "participants": {}
     },
     {
+        "name": "naoi", "year": 2025, "start": "2025/4/19", "end": "2025/4/19", "country": "dz",
+        "website": "https://naoi2025.algerianoi.com/",
+        "participants": {
+            "emad_alharbi": null,
+            "muaath_alqarni": null,
+            "mohammed_alasmari": null,
+            "sultan_alaiban": null,
+            "saad_alarifi": null,
+            "mohammed_bashkail": null
+        }
+    },
+    {
         "name": "boi", "year": 2024, "start": "2024/9/20", "end": "2024/9/26", "country": "mk",
         "website": "https://boi2024.cs.org.mk/",
         "participants": {
