@@ -490,5 +490,21 @@
         "graduation": 2027,
         "codeforces": "Hashim_Bas",
         "level": 1
-    }
+    },
+    {
+        "id": "fadak_al_marzooq",
+        "arname": "فدك آل مرزوق",
+        "enname": "Fadak Al Marzooq",
+        "graduation": 2029,
+        "codeforces": "Fadak-14",
+        "level": 1
+    },
+    {
+        "id": "al_reem_al_mutawa",
+        "arname": "الريم المطوع",
+        "enname": "Al-reem Al-mutawa",
+        "graduation": 2028,
+        "codeforces": "Al_reem_Al_mutawa",
+        "level": 1
+    },
 ]
