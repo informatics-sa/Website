@@ -5,6 +5,16 @@
         "participants": {}
     },
     {
+        "name": "egoi", "year": 2024, "start": "2025/7/14", "end": "2025/7/20", "country": "de",
+        "website": "https://www.egoi2025.de/",
+        "participants": {
+            "rifal_alhazmi": null,
+            "fadak_al_marzooq": null,
+            "roaa_alakhdhar": null,
+            "al_reem_al_mutawa": null
+        }
+    },
+    {
         "name": "apio", "year": 2025, "start": "2025/5/17", "end": "2025/5/18", "country": "online",
         "website": "https://apio2025.uz/",
         "participants": {}
