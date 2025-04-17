@@ -476,9 +476,9 @@
         "level": 3
     },
     {
-        "id": "omar_moharib",
+        "id": "omar_muharib",
         "arname": "عمر المحارب",
-        "enname": "Omar Almoharib",
+        "enname": "Omar Almuharib",
         "graduation": 2027,
         "codeforces": "omar1312",
         "level": 1
@@ -487,7 +487,7 @@
         "id": "hashim_basuni",
         "arname": "هاشم بسيوني",
         "enname": "Hashim Basuni",
-        "graduation": 2027,
+        "graduation": 2028,
         "codeforces": "Hashim_Bas",
         "level": 1
     },
@@ -505,6 +505,86 @@
         "enname": "Al-reem Al-mutawa",
         "graduation": 2028,
         "codeforces": "Al_reem_Al_mutawa",
+        "level": 1
+    },
+    {
+        "id": "dhia_alnufaili",
+        "arname": "ضياء النفيلي",
+        "enname": "Dhia Alnufaili",
+        "graduation": 2026,
+        "codeforces": "diyah2000d",
+        "level": 1
+    },
+    {
+        "id": "ahmad_alhussain",
+        "arname": "احمد الحسين",
+        "enname": "Ahmad Alhussain",
+        "graduation": 2028,
+        "codeforces": "AhmadAlhussain",
+        "level": 1
+    },
+    {
+        "id": "mohammed_albattat",
+        "arname": "محمد البطاط",
+        "enname": "Mohammed Albattat",
+        "graduation": 2028,
+        "codeforces": "moha1111",
+        "level": 1
+    },
+    {
+        "id": "abdulrahman_wahdain",
+        "arname": "عبدالرحمن واحدين",
+        "enname": "Abdulrahman Wahdain",
+        "graduation": 2027,
+        "codeforces": "amawahdain",
+        "level": 1
+    },
+    {
+        "id": "ayat_alkhalifah",
+        "arname": "آيات الخليفة",
+        "enname": "Ayat Alkhalifah",
+        "graduation": 2029,
+        "codeforces": "ayat.alkhalifah",
+        "level": 1
+    },
+    {
+        "id": "layth_alzahrani",
+        "arname": "ليث الزهراني",
+        "enname": "Layth Alzahrani",
+        "graduation": 2027,
+        "codeforces": "l.alzahrani04",
+        "level": 1
+    },
+    {
+        "id": "mohammad_aladaili",
+        "arname": "محمد العديلي",
+        "enname": "Mohammad Aladaili",
+        "graduation": 2029,
+        "codeforces": "Mohammad_Aladaili",
+        "level": 1
+    },
+    {
+        "id": "nawal_alamri",
+        "arname": "نوال العمري",
+        "enname": "Nawal Alamri",
+        "graduation": 2027,
+        "codeforces": "nawalturki",
+        "level": 1
+    },
+    {
+        "id": "altayeb_alakhdhari",
+        "arname": "الطيب الأخضري",
+        "enname": "Altayeb Alakhdhari",
+        "graduation": 2027,
+        "codeforces": "altayeb_alakhdhari",
+        "level": 1
+    },
+    {
+        "id": "ahmad_alturki",
+        "arname": "احمد التركي",
+        "enname": "Ahmad Alturki",
+        "graduation": 2028,
+        "codeforces": "A_turki",
         "level": 1
     }
 ]
