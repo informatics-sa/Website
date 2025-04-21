@@ -63,10 +63,22 @@ def build_hall_of_fame():
             [id if oly['official'] else None for id, oly in olympiads.items()]
         )
     )
+    all_olympiads = list(
+        filter(lambda x: x is not None,
+            [id for id, oly in olympiads.items()]
+        )
+    )
 
-    fame = {}
+    fame = {}, all_fame = {}
     for member_id, data in members.items():
         fame[member_id] = {
+            'gold': 0,
+            'silver': 0,
+            'bronze': 0,
+            'hm': 0,
+            None: 0,
+        }
+        all_fame[member_id] = {
             'gold': 0,
             'silver': 0,
             'bronze': 0,
@@ -77,6 +89,7 @@ def build_hall_of_fame():
         for participation in data['participations']:
             if participation['olympiad'] in official_olympiads:
                 fame[member_id][participation['award']] += 1
+            all_fame[member_id][participation['award']] += 1
 
     # list of people who got an award in an official olympiad, sorted lexicographically on awards.
     fame = sorted(
@@ -86,9 +99,27 @@ def build_hall_of_fame():
         key=lambda person: (-person[1]['gold'], -person[1]['silver'], -person[1]['bronze'], -person[1]['hm'])
     )
 
-    hall_of_fame = []
+    all_fame = sorted(
+        filter(lambda person: person[1]['gold'] + person[1]['silver'] + person[1]['bronze'] + person[1]['hm'] > 0,
+            all_fame.items()
+        ),
+        key=lambda person: (-person[1]['gold'], -person[1]['silver'], -person[1]['bronze'], -person[1]['hm'])
+    )
+
+    hof = []
+    all_hof = []
     for member_id, stats in fame:
-        hall_of_fame.append({
+        hof.append({
+            'id': member_id,
+            'arname': members[member_id]['arname'],
+            'enname': members[member_id]['enname'],
+            'gold': stats['gold'],
+            'silver': stats['silver'],
+            'bronze': stats['bronze'],
+            'hm': stats['hm'],
+        })
+    for member_id, stats in all_fame:
+        all_hof.append({
             'id': member_id,
             'arname': members[member_id]['arname'],
             'enname': members[member_id]['enname'],
@@ -102,14 +133,16 @@ def build_hall_of_fame():
         'layout': 'halloffame',
         'lang': 'ar',
         'title': translations['ar']['hall_of_fame'],
-        'list': hall_of_fame,
+        'hof': hof,
+        'all_hof': all_hof
     })
 
     write_file('en/hall-of-fame.html', {
         'layout': 'halloffame',
         'lang': 'en',
         'title': translations['en']['hall_of_fame'],
-        'list': hall_of_fame,
+        'hof': hof,
+        'all_hof': all_hof
     })
 
 def build_home():
