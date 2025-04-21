@@ -3,26 +3,27 @@ id: halloffame
 layout: default
 ---
 <div class="row p-3">
-    <div class="btn-group" role="group" aria-label="Official vs All">
-        <input type="radio" class="btn-check" name="btnradio" id="official_inp" autocomplete="off" onclick="toggleOfficial();" checked>
-        <label class="btn btn-outline-primary" for="official_inp">
-            {% if page.lang == "en" %}
-            Official Olympiads
-            {% else %}
-            الأولمبيادات الرسمية
-            {% endif %}
-        </label>
-        
-        <input type="radio" class="btn-check" name="btnradio" id="all_inp" autocomplete="off" onclick="toggleAll();">
-        <label class="btn btn-outline-primary" for="all_inp">
-             {% if page.lang == "en" %}
-            All Olympiads
-            {% else %}
-            كل الأولمبيادات
-            {% endif %}
-        </label>
+    <div class="col">
+        <div class="btn-group" role="group" aria-label="Official vs All">
+            <input type="radio" class="btn-check" name="btnradio" id="official_inp" autocomplete="off" onclick="toggleOfficial();" checked>
+            <label class="btn btn-outline-primary" for="official_inp">
+                {% if page.lang == "en" %}
+                Official Olympiads
+                {% else %}
+                الأولمبيادات الرسمية
+                {% endif %}
+            </label>
+            
+            <input type="radio" class="btn-check" name="btnradio" id="all_inp" autocomplete="off" onclick="toggleAll();">
+            <label class="btn btn-outline-primary" for="all_inp">
+                 {% if page.lang == "en" %}
+                All Olympiads
+                {% else %}
+                كل الأولمبيادات
+                {% endif %}
+            </label>
+        </div>
     </div>
-
         
     <table class="table table-striped table-bordered">
         <thead>
@@ -92,5 +93,6 @@ layout: default
             tbody_official.style.display = "none";
             tbody_all.style.display = "";
         }
+        toggleOfficial();
     </script>
 </div>
