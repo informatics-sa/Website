@@ -3,6 +3,27 @@ id: halloffame
 layout: default
 ---
 <div class="row p-3">
+    <div class="btn-group" role="group" aria-label="Official vs All">
+        <input type="radio" class="btn-check" name="btnradio" id="official_inp" autocomplete="off" onclick="toggleOfficial();" checked>
+        <label class="btn btn-outline-primary" for="official_inp">
+            {% if page.lang == "en" %}
+            Official Olympiads
+            {% else %}
+            الأولمبيادات الرسمية
+            {% endif %}
+        </label>
+        
+        <input type="radio" class="btn-check" name="btnradio" id="all_inp" autocomplete="off" onclick="toggleAll();">
+        <label class="btn btn-outline-primary" for="all_inp">
+             {% if page.lang == "en" %}
+            All Olympiads
+            {% else %}
+            كل الأولمبيادات
+            {% endif %}
+        </label>
+    </div>
+
+        
     <table class="table table-striped table-bordered">
         <thead>
             {% if page.lang == "ar" %}
@@ -21,23 +42,55 @@ layout: default
             <th width="5%" style="background-color: rgb(196, 91, 198);">C</th>
             {% endif %}
         </thead>
-        <tbody>
-            {% for i in (1..page.list.count) %}
+        <tbody id="official">
+            {% for i in (1..page.hof.count) %}
             <tr>
                 <td>{{ i }}</td>
                 <td>
                     {% if page.lang == "en" %}
-                    <a href="/en/members/{{ page.list[i].id }}">{{ page.list[i].enname }}</a>
+                    <a href="/en/members/{{ page.list[i].id }}">{{ page.hof[i].enname }}</a>
                     {% else %}
-                    <a href="/members/{{ page.list[i].id }}">{{ page.list[i].arname }}</a>
+                    <a href="/members/{{ page.list[i].id }}">{{ page.hof[i].arname }}</a>
                     {% endif %}
                 </td>
-                <td>{{ page.list[i].gold }}</td>
-                <td>{{ page.list[i].silver }}</td>
-                <td>{{ page.list[i].bronze }}</td>
-                <td>{{ page.list[i].hm }}</td>
+                <td>{{ page.hof[i].gold }}</td>
+                <td>{{ page.hof[i].silver }}</td>
+                <td>{{ page.hof[i].bronze }}</td>
+                <td>{{ page.hof[i].hm }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tbody id="all">
+            {% for i in (1..page.all_hof.count) %}
+            <tr>
+                <td>{{ i }}</td>
+                <td>
+                    {% if page.lang == "en" %}
+                    <a href="/en/members/{{ page.list[i].id }}">{{ page.all_hof[i].enname }}</a>
+                    {% else %}
+                    <a href="/members/{{ page.list[i].id }}">{{ page.all_hof[i].arname }}</a>
+                    {% endif %}
+                </td>
+                <td>{{ page.all_hof[i].gold }}</td>
+                <td>{{ page.all_hof[i].silver }}</td>
+                <td>{{ page.all_hof[i].bronze }}</td>
+                <td>{{ page.all_hof[i].hm }}</td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
+
+    <script>
+        const tbody_official = document.querySelector("#official");
+        const tbody_all = document.querySelector("#all");
+        function toggleOfficial() {
+            tbody_official.styles.display = "block";
+            tbody_all.styles.display = "none";
+        }
+
+        function toggleAll() {
+            tbody_official.styles.display = "none";
+            tbody_all.styles.display = "block";
+        }
+    </script>
 </div>
