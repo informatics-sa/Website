@@ -84,13 +84,13 @@ layout: default
         const tbody_official = document.querySelector("#official");
         const tbody_all = document.querySelector("#all");
         function toggleOfficial() {
-            tbody_official.styles.display = "block";
-            tbody_all.styles.display = "none";
+            tbody_official.style.display = "";
+            tbody_all.style.display = "none";
         }
 
         function toggleAll() {
-            tbody_official.styles.display = "none";
-            tbody_all.styles.display = "block";
+            tbody_official.style.display = "none";
+            tbody_all.style.display = "";
         }
     </script>
 </div>
