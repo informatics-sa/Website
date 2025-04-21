@@ -45,9 +45,9 @@ layout: base
 
                 <li class="nav-item">
                     {% if page.lang == "ar" %}
-                    <a class="nav-link" href="/en{{ page.url | remove_first: site.baseurl }}" class="btn btn-outline-success">EN</a>
+                    <button class="nav-link" onclick="switchLanguage('en')" class="btn btn-outline-success">EN</a>
                     {% else %}
-                    <a class="nav-link" href="{{ page.url | remove_first: site.baseurl | remove_first: '/en' }}" class="btn btn-outline-success">عربي</a>
+                    <button class="nav-link" onclick="switchLanguage('ar')" class="btn btn-outline-success">عربي</a>
                     {% endif %}
                 </li>
             </ul>
