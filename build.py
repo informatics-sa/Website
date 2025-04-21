@@ -69,7 +69,8 @@ def build_hall_of_fame():
         )
     )
 
-    fame = {}, all_fame = {}
+    fame = {}
+    all_fame = {}
     for member_id, data in members.items():
         fame[member_id] = {
             'gold': 0,
