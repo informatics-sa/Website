@@ -49,9 +49,9 @@ layout: default
                 <td>{{ i }}</td>
                 <td>
                     {% if page.lang == "en" %}
-                    <a href="/en/members/{{ page.list[i].id }}">{{ page.hof[i].enname }}</a>
+                    <a href="/en/members/{{ page.hof[i].id }}">{{ page.hof[i].enname }}</a>
                     {% else %}
-                    <a href="/members/{{ page.list[i].id }}">{{ page.hof[i].arname }}</a>
+                    <a href="/members/{{ page.hof[i].id }}">{{ page.hof[i].arname }}</a>
                     {% endif %}
                 </td>
                 <td>{{ page.hof[i].gold }}</td>
@@ -67,9 +67,9 @@ layout: default
                 <td>{{ i }}</td>
                 <td>
                     {% if page.lang == "en" %}
-                    <a href="/en/members/{{ page.list[i].id }}">{{ page.all_hof[i].enname }}</a>
+                    <a href="/en/members/{{ page.all_hof[i].id }}">{{ page.all_hof[i].enname }}</a>
                     {% else %}
-                    <a href="/members/{{ page.list[i].id }}">{{ page.all_hof[i].arname }}</a>
+                    <a href="/members/{{ page.all_hof[i].id }}">{{ page.all_hof[i].arname }}</a>
                     {% endif %}
                 </td>
                 <td>{{ page.all_hof[i].gold }}</td>
