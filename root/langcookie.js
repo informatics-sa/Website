@@ -62,7 +62,7 @@ function getCurLang() {
 
 // main
 if (!checkValidLangCookie(LANG_COOKIE_NAME)) {
-    setCookie(LANG_COOKIE_NAME) = getCurLang();
+    setCookie(LANG_COOKIE_NAME, getCurLang(), 71);
 }
 
 const cookieLang = getCookie(LANG_COOKIE_NAME);
