@@ -32,6 +32,7 @@ The main goal is to have at any time **at least 3 active maintainers**.
 - Muaath Alqarni
 - Ali Alsalman
 - Sultan Alaiban
+- Omar Muharib
 
 ## License
 This project is licensed under the GNU General Public License v3.0.
