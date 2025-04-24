@@ -106,11 +106,11 @@
         "email": "sultan@sainformatics.org"
     },
     {
-        "id": "mohammed_bashkail",
+        "id": "mohammad_bashkail",
         "arname": "محمد باشكيل",
-        "enname": "Mohammed Bashkail",
+        "enname": "Mohammad Bashkail",
         "graduation": 2027,
-        "codeforces": "mohammedyay",
+        "codeforces": "mohammadyay",
         "level": 3
     },
     {
@@ -534,7 +534,7 @@
     },
     {
         "id": "abdulrahman_wahdain",
-        "arname": "عبدالرحمن واحدين",
+        "arname": "عبدالرحمن وحدين",
         "enname": "Abdulrahman Wahdain",
         "graduation": 2027,
         "codeforces": "amawahdain",
