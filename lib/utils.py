@@ -18,9 +18,9 @@ def award_emoji(award, dashing_none=False):
 
 def default_person(id: str):
     return {
-        'participations': {},
+        'participations': [],
         'arname': id,
-        'enname':  id,
+        'enname': id.replace('_', ' '), # TODO: split undersc
         'graduation': None,
         'codeforces': None
     }
