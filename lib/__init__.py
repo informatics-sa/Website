@@ -26,7 +26,7 @@ def get_members():
         for member_id in participation['participants']:
             if member_id not in members:
                 print(f"[WARN ⚠️] {member_id} participant of {participation['name']} ({participation['year']}), doesn't exist in people.json")
-                members[member_id] = default_person(mem_id)
+                members[member_id] = default_person(member_id)
 
             members[member_id]['participations'].append({
                 'olympiad': participation['name'],
