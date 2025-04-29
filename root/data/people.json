@@ -587,5 +587,13 @@
         "graduation": 2028,
         "codeforces": "A_turki",
         "level": 1
+    },
+    {
+        "id": "hassan_sultan",
+        "arname": "حسن سلطان",
+        "enname": "Hassan Sultan",
+        "graduation": 2028,
+        "codeforces": "hmms127",
+        "level": 1
     }
 ]
