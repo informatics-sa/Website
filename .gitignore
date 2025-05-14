@@ -3,3 +3,20 @@
 __pycache__
 _site
 flake.nix
+
+# build artifacts
+root/*
+
+!root/_config.yml
+!root/_includes
+!root/_includes/*
+!root/_layouts
+!root/_layouts/*
+
+!root/img
+!root/img/*
+!root/data
+!root/data/*
+!root/resources
+!root/resources/*
+!root/404.html
