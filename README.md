@@ -10,7 +10,7 @@ Read [Website public data files](https://sainformatics.org/data/) documentation.
 ### Prerequisites
 You need:
 - [Python Interpreter](https://python.org)
-- [Rupy Interpreter](https://www.ruby-lang.org)
+- [Ruby Interpreter](https://www.ruby-lang.org)
 - Install Ruby dependencies using [Bundler](https://bundler.io):
 ```sh
 bundle install
