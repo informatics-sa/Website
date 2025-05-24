@@ -17,7 +17,15 @@
     {
         "name": "apio", "year": 2025, "start": "2025/5/17", "end": "2025/5/18", "country": "online",
         "website": "https://apio2025.uz/",
-        "participants": {}
+        "participants": {
+            "sultan_alaiban": null,
+            "mohammed_alasmari": null,
+            "ziyad_alharbi": null,
+            "abdulrahman_alghamdi": null,
+            "khalid_alabdullatif": null,
+            "omar_muharib": null,
+            "saad_alarifi": null
+        }
     },
     {
         "name": "naoi", "year": 2025, "start": "2025/4/19", "end": "2025/4/19", "country": "dz",
