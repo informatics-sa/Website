@@ -30,17 +30,17 @@ layout: default
             {% if page.lang == "ar" %}
             <th>الترتيب</th>
             <th>الاسم</th>
-            <th width="5%" style="background-color: gold;">ذهبي</th>
-            <th width="5%" style="background-color: silver;">فضي</th>
-            <th width="5%" style="background-color: rgb(198, 151, 91);">بروزني</th>
-            <th width="5%" style="background-color: rgb(176, 25, 250);">شهادة</th>
+            <th width="5%" style="background-color: var(--medal-gold);">ذهبي</th>
+            <th width="5%" style="background-color: var(--medal-silver);">فضي</th>
+            <th width="5%" style="background-color: var(--medal-bronze);">بروزني</th>
+            <th width="5%" style="background-color: var(--medal-hm);">شهادة</th>
             {% else %}
             <th>Rank</th>
             <th>Name</th>
-            <th width="5%" style="background-color: gold;">G</th>
-            <th width="5%" style="background-color: silver;">S</th>
-            <th width="5%" style="background-color: rgb(198, 151, 91);">B</th>
-            <th width="5%" style="background-color: rgb(176, 25, 250);">HM</th>
+            <th width="5%" style="background-color: var(--medal-gold);">G</th>
+            <th width="5%" style="background-color: var(--medal-silver);">S</th>
+            <th width="5%" style="background-color: var(--medal-bronze);">B</th>
+            <th width="5%" style="background-color: var(--medal-hm);">HM</th>
             {% endif %}
         </thead>
         <tbody id="official">
