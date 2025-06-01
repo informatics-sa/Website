@@ -92,7 +92,7 @@
     },
     {
         "iid": 0,
-        "id": "mohammed_alsaad",
+        "id": "mohammad_alsaad",
         "arname": "محمد السعد",
         "enname": "Mohammed Alsaad",
         "graduation": 2021,
@@ -129,7 +129,7 @@
     },
     {
         "iid": 501,
-        "id": "mohammed_alasmari",
+        "id": "mohammad_alasmari",
         "arname": "محمد الأسمري",
         "enname": "Mohammed Alasmari",
         "graduation": 2026,
@@ -201,7 +201,7 @@
     },
     {
         "iid": 0,
-        "id": "abdulmohsen_mohammedsaleh",
+        "id": "abdulmohsen_mohammadsaleh",
         "arname": "عبدالمحسن محمدصالح",
         "enname": "Abdulmohsen Mohammedsaleh",
         "graduation": 2023,
@@ -246,7 +246,7 @@
     },
     {
         "iid": 0,
-        "id": "mohammed_alrefaei",
+        "id": "mohammad_alrefaei",
         "arname": "محمد الرفاعي",
         "enname": "Mohammed Alrefaei",
         "graduation": null,
@@ -591,7 +591,7 @@
     },
     {
         "iid": 611,
-        "id": "mohammed_albattat",
+        "id": "mohammad_albattat",
         "arname": "محمد البطاط",
         "enname": "Mohammed Albattat",
         "graduation": 2028,
