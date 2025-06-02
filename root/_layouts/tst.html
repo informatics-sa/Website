@@ -1,0 +1,60 @@
+---
+layout: default
+---
+<nav class="mt-2">
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        {% for i in page.olympiads %}
+            {% if forloop.index == 1 %}
+            <button class="nav-link active" id="nav-{{i[0]}}-tab" data-bs-toggle="tab" data-bs-target="#nav-{{i[0]}}" type="button" role="tab" aria-controls="nav-{{i[0]}}" aria-selected="true">
+            {% else %}
+            <button class="nav-link" id="nav-{{i[0]}}-tab" data-bs-toggle="tab" data-bs-target="#nav-{{i[0]}}" type="button" role="tab" aria-controls="nav-{{i[0]}}" aria-selected="false">
+            {% endif %}
+                {{ i[0] | upcase }}
+            </button>
+        {% endfor %}
+    </div>
+</nav>
+
+<div class="tab-content" id="nav-tabContent">
+    {% for i in page.olympiads %}
+        {% assign oly = i[0] %}
+        <div class="tab-pane fade {% if forloop.index == 1 %} show active {% endif %}" id="nav-{{oly}}" role="tabpanel" aria-labelledby="nav-{{oly}}-tab" tabindex="0">
+            <!-- <div>
+                <ul></ul>
+            </div> -->
+            <table class="table table-bordered table-striped">
+                <thead>
+                    {% if page.lang == "en" %} 
+                    <th>Name</th>
+                    <th>Sum</th>
+                    {% else %}
+                    <th>الاسم</th>
+                    <th>المجموع</th>
+                    {% endif %}
+                </thead>
+                <tbody>
+                    {% for j in i[1] %}
+
+                    <tr>
+                        <td>                            
+                            {% if forloop.index <= page.olylimits[oly] %}
+                            <span class="badge bg-success">مرشح</span>  
+                            {% endif %}
+                            {% assign uid = j[0] %} 
+                            
+                            {% if page.lang == "en" %}
+                            <a href="/en/members/{{ j[0] }}">{{ page.names[uid] }}</a>
+                            {% else %}
+                            <a href="/members/{{ j[0] }}">{{ page.names[uid] }}</a>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {{ j[1] }}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% endfor %}
+</div>

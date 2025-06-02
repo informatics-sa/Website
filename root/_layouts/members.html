@@ -4,7 +4,7 @@ layout: default
 
 <nav>
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-        {% for lvl in (1..4) %}
+        {% for lvl in (1..3) %}
             {% if forloop.index == 1 %}
             <button class="nav-link active" id="nav-{{lvl}}-tab" data-bs-toggle="tab" data-bs-target="#nav-{{lvl}}" type="button" role="tab" aria-controls="nav-{{lvl}}" aria-selected="true">
                 {% if page.lang == "en" %}Level{% else %}المستوى{% endif %} {{ lvl }}
@@ -19,7 +19,7 @@ layout: default
 </nav>
 
 <div class="tab-content" id="nav-tabContent">
-    {% for lvl in (1..4) %}
+    {% for lvl in (1..3) %}
         <div class="tab-pane fade {% if forloop.index == 1 %} show active {% endif %}" id="nav-{{lvl}}" role="tabpanel" aria-labelledby="nav-{{lvl}}-tab" tabindex="0">
             <table class="table table-bordered table-striped">
                 <thead>

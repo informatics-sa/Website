@@ -316,6 +316,85 @@ def build_participations_index():
     written['title'] = translations['en']['participations']
     write_file("en/participations/index.html", written)
 
+def build_tst_index():
+    tsts = load_json('tsts')
+    exams = load_json('exams')
+
+    arname = {}
+    enname = {}
+    for year, tst in tsts.items():
+        lists = {}
+        olylimits = {}
+        for oly in list(tst.keys()):
+            if oly[0] == '_':
+                continue
+            olylimits[oly] = olympiads[oly]['participants_count']
+            lists[oly] = {}
+            for eid in tst[oly]['exams']:
+                if eid not in exams:
+                    continue
+                for uid, res in exams[eid]['participants'].items():
+                    if uid in members:
+                        # if members[uid]['level'] < 0:
+                        #     continue
+                        arname[uid] = members[uid]['arname']
+                        enname[uid] = members[uid]['enname']
+                    else:
+                        print(f"Warning: {uid} doesn't exist in the database, but exists in {eid}")
+                        continue
+                        # arname[uid] = uid
+                        # enname[uid] = uid
+                    if uid not in lists[oly]:
+                        lists[oly][uid] = 0
+                    lists[oly][uid] += sum(res)
+
+            if 'female_only' in tst[oly] and tst[oly]['female_only'] == True:
+                to_be_removed = []
+                for uid in lists[oly]:
+                    if uid not in members or 'female' not in members[uid] or members[uid]['female'] == False:
+                        to_be_removed.append(uid)
+                for uid in to_be_removed:
+                    del lists[oly][uid]
+
+            if 'min_graduation' in tst[oly]:
+                to_be_removed = []
+                for uid in lists[oly]:
+                    if uid not in members or 'graduation' not in members[uid]:
+                        to_be_removed.append(uid)
+                        continue
+                    if members[uid]['graduation'] == None:
+                        print(f"Warning: {uid} doesn't have graduation year")
+                        to_be_removed.append(uid)
+                        continue
+                    if members[uid]['graduation'] == None or members[uid]['graduation'] < tst[oly]['min_graduation']:
+                        to_be_removed.append(uid)
+                for uid in to_be_removed:
+                    del lists[oly][uid]
+
+            if 'execluded' in tst[oly]:
+                for uid in tst[oly]['execluded']:
+                    if uid in lists[oly]:
+                        del lists[oly][uid]
+            if '_general_execluded' in tst:
+                for uid in tst['_general_execluded']:
+                    if uid in lists[oly]:
+                        del lists[oly][uid]
+            lists[oly] = dict(sorted(lists[oly].items(), key=lambda person: (-person[1])))
+        
+        write_file(f'./tst/{year}.html', {
+            'lang': 'ar',
+            'layout': 'tst',
+            'olympiads': lists,
+            'names': arname,
+            'olylimits': olylimits
+        })
+        write_file(f'en/tst/{year}.html', {
+            'lang': 'en',
+            'layout': 'tst',
+            'olympiads': lists,
+            'names': enname,
+            'olylimits': olylimits
+        })
 
 def main():
     test_utils()
@@ -347,9 +426,8 @@ def main():
     build_participations_index()
     print("Built participations index")
 
-
-    #build_tst_index()
-    #print("Built TST index")
+    build_tst_index()
+    print("Built TST index")
 
 if __name__ == '__main__':
     main()

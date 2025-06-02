@@ -19,8 +19,9 @@ def get_countries():
 def get_members():
     members = {}
     for person in load_json('people'):
-        members[person['id']] = person
-        members[person['id']]['participations'] = []
+        person['iid'] = str(person['iid'])
+        members[str(person['iid'])] = person
+        members[str(person['iid'])]['participations'] = []
 
     for participation in load_json('participations'):
         for member_id in participation['participants']:

@@ -62,6 +62,11 @@ def load_json(filename):
     with open(f'{ROOT_DIR}/data/{filename}.json', 'r', encoding='utf-8') as f:
         return json.load(f)
 
+def write_text(filename: str, txt: str):
+    os.makedirs(os.path.dirname(filename), exist_ok=True)
+    with open(filename, 'w', encoding='utf-8') as f:
+        f.write(txt)
+
 def write_file(filename: str, data: dict):
     filename = f"{ROOT_DIR}/{filename}"
     os.makedirs(os.path.dirname(filename), exist_ok=True)
@@ -70,6 +75,15 @@ def write_file(filename: str, data: dict):
         f.write(format_yml(data))
         f.write("---\n")
 
+def write_page(lang: str, filename: str, data: dict):
+    if lang not in LANGS:
+        print(f"Invalid language '{lang}' for page: {filename}")
+        exit(1)
+    data['lang'] = lang
+    if lang == LANGS[0]:
+        write_file('./' + filename, data)
+    else:
+        write_file(lang + '/' + filename, data)
 
 def test_utils(log: bool = True):
     assert flag_emoji('sa') == '🇸🇦'
