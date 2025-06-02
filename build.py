@@ -384,14 +384,14 @@ def build_tst_index():
         write_file(f'./tst/{year}.html', {
             'lang': 'ar',
             'layout': 'tst',
-            'title': f'اختبارات ترشيح الفريق لسنة {year}'
+            'title': f'اختبارات ترشيح الفريق لسنة {year}',
             'olympiads': lists,
             'names': arname,
             'olylimits': olylimits
         })
         write_file(f'en/tst/{year}.html', {
             'lang': 'en',
-            'title': f'Team selection test for year {year}'
+            'title': f'Team selection test for year {year}',
             'layout': 'tst',
             'olympiads': lists,
             'names': enname,
