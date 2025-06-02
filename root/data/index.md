@@ -58,7 +58,7 @@ A dictionary of (`developers`/`maintainers`/`admin`), each having an array of pe
 A dictionary of exam IDs, where every exam has:
 - `name`: Name of exam in English
 - `date`: Date of exam in format `YYYY/M/D`
-- `problems`: A dictionary of problem ID and Max score
+- `problems`: An array of problem ID
 - `participants`: A dictionary of student ID and an array of integers which is score per task
 
 ## [`/data/tsts.json`](/data/tsts.json)
@@ -66,9 +66,10 @@ A dictionary of year and olympiad IDs, and every olympiad ID contains a set of e
 ```json
 {
     "2025": {
+        "_general_execluded": ["sultan_alaiban"],
         "ioi": {
             "exams": ["exam1", "exam2"],
-            "born_after": "2009/6/30",
+            "min_birthdate": "2009/6/30",
             "female_only": false,
             "execluded": ["muaath_alqarni", "ali_alsalman"]
         }
@@ -80,7 +81,7 @@ Additional rules (Optional):
 - `execluded`: An array of student ID (strings)
 - `min_graduation`: An integer, minimum graduation year to be eligable.
 - `female_only`: Boolean, true if the competition is female only.
-- `min_birthdate`: A date, not working currently, but will be used in the future.
+- `min_birthdate`: A date, **not working currently**, but will be used in the future.
 
 
 # Constant files

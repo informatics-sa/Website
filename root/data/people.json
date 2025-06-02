@@ -694,5 +694,23 @@
         "graduation": 2027,
         "codeforces": null,
         "level": 1
+    },
+    {
+        "iid": 351,
+        "id": "mohammad_alomar",
+        "arname": "محمد العمر",
+        "enname": "Mohammad Alomar",
+        "graduation": 2024,
+        "codeforces": "Monemo",
+        "level": -1
+    },
+    {
+        "iid": 306,
+        "id": "jassar_alqahtani",
+        "arname": "جسار القحطاني",
+        "enname": "Jassar Alqahtani",
+        "graduation": 2025,
+        "codeforces": "Jassar",
+        "level": -2
     }
 ]
