@@ -26,6 +26,7 @@ layout: default
         </ul>
         {% endif %}
     </div>
+    {% if page.participations.count > 0 %}
     <div class="col-md-6 col-sm-12 p-1">
         <table class="table table-bordered table-striped">
             <thead>
@@ -65,4 +66,5 @@ layout: default
             </tbody>
         </table>
     </div>
+    {% endif %}
 </div>

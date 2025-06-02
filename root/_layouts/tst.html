@@ -38,8 +38,13 @@ layout: default
                     <tr>
                         <td>                            
                             {% if forloop.index <= page.olylimits[oly] %}
-                            <span class="badge bg-success">مرشح</span>  
+                                {% if page.lang == "en"%}
+                                <span class="badge bg-success">Selected</span>
+                                {% else %}
+                                <span class="badge bg-success">مرشح</span>
+                                {% endif %}
                             {% endif %}
+                            
                             {% assign uid = j[0] %} 
                             
                             {% if page.lang == "en" %}

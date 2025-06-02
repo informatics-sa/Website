@@ -320,9 +320,16 @@ def build_tst_index():
     tsts = load_json('tsts')
     exams = load_json('exams')
 
+
+    
+
     arname = {}
     enname = {}
+
+    mn_year = 10000; mx_year = 0
     for year, tst in tsts.items():
+        mn_year = min(mn_year, int(year))
+        mx_year = max(mx_year, int(year))
         lists = {}
         olylimits = {}
         for oly in list(tst.keys()):
@@ -384,19 +391,34 @@ def build_tst_index():
         write_file(f'./tst/{year}.html', {
             'lang': 'ar',
             'layout': 'tst',
-            'title': f'اختبارات ترشيح الفريق لسنة {year}',
+            'title': translations['ar']['team_selection_tests'] + f' {year}',
             'olympiads': lists,
             'names': arname,
             'olylimits': olylimits
         })
         write_file(f'en/tst/{year}.html', {
             'lang': 'en',
-            'title': f'Team selection test for year {year}',
+            'title': translations['en']['team_selection_tests'] + f' {year}',
             'layout': 'tst',
             'olympiads': lists,
             'names': enname,
             'olylimits': olylimits
         })
+
+    write_file('tst/index.html', {
+        'lang': 'ar',
+        'title': translations['ar']['team_selection_tests'],
+        'layout': 'tstindex',
+        'min_year': mn_year,
+        'max_year': mx_year,
+    })
+    write_file('en/tst/index.html', {
+        'lang': 'en',
+        'title': translations['en']['team_selection_tests'],
+        'layout': 'tstindex',
+        'min_year': mn_year,
+        'max_year': mx_year,
+    })
 
 def main():
     test_utils()
