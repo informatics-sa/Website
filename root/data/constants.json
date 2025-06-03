@@ -1,9 +1,4 @@
 {
-    "levels": ["1", "2", "3"],
-    "ar": {
-        "major": "معلوماتية"
-    },
-    "en": {
-        "major": "Informatics"
-    }
+    "min_level": 1,
+    "max_level": 3
 }

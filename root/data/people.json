@@ -143,7 +143,8 @@
         "enname": "Rifal Alhazmi",
         "graduation": 2025,
         "codeforces": "rifal",
-        "level": 3
+        "level": 3,
+        "female": true
     },
     {
         "iid": 355,

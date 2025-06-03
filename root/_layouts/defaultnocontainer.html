@@ -25,6 +25,8 @@ layout: base
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ms-auto">
+                {% assign min_tst_year = 2024 %}
+                {% assign max_tst_year = 2025 %}
                 {% if page.lang == "ar" %}
                 <li class="nav-item"><a class="nav-link {% if page.id == 'participations' %} active {% endif %}" href="/participations">المشاركات</a></li>
                 <li class="nav-item"><a class="nav-link {% if page.id == 'olympiads' %} active {% endif %}" href="/olympiads">الأولمبيادات</a></li>
@@ -33,7 +35,7 @@ layout: base
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">الاختبارات</a>
                     <ul class="dropdown-menu">
-                        {% for i in (2025..2025) %}
+                        {% for i in (min_tst_year..max_tst_year) %}
                         <li><a class="dropdown-item" href="/tst/{{ i }}">{{ i }}</a></li>
                         {% endfor %}
                     </ul>
@@ -49,7 +51,7 @@ layout: base
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Exams</a>
                     <ul class="dropdown-menu">
-                        {% for i in (2025..2025) %}
+                        {% for i in (min_tst_year..max_tst_year) %}
                         <li><a class="dropdown-item" href="/en/tst/{{ i }}">{{ i }}</a></li>
                         {% endfor %}
                     </ul>

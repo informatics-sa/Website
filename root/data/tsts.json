@@ -1,4 +1,18 @@
 {
+    "2024": {
+        "ioi": {
+            "exams": ["2024_intensive_1b_tst_1", "apio_2024", "2024_intensive_2a_tst_2", "2024_intensive_2b_tst_3"]
+        },
+        "boi": {
+            "exams": ["2024_intensive_1b_tst_1", "apio_2024", "2024_intensive_2a_tst_2", "2024_intensive_2b_tst_3"],
+            "execluded": ["213"],
+            "min_graduation": 2025
+        },
+        "egoi": {
+            "exams": ["2024_intensive_1b_tst_1", "apio_2024", "2024_intensive_2a_tst_2", "2024_intensive_2b_tst_3"],
+            "female_only": true
+        }
+    },
     "2025": {
         "_general_execluded": ["201", "606", "505", "454", "509", "504", "514", "456", "512", "506", "460", "458", "461", "459", "603"],
         "ioi": {
