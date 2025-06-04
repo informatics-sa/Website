@@ -442,7 +442,7 @@ def build_data_vairables():
         'last_update': datetime.datetime.now().strftime('%Y/%-m/%-d %-H:%-M:%-S'),
         'commit_index': subprocess.getoutput('git rev-list --count main'),
         'commit_id': subprocess.getoutput('git log --format="%H" -n 1'),
-        'jekyll_version': subprocess.getoutput('jekyll --version')
+        'jekyll_version': subprocess.getoutput('bundle exec jekyll --version')
     }))
 
 def main():
