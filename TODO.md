@@ -6,10 +6,10 @@ Assigned: Muaath, Ali
 - [x] Implement members index page
 - [x] Split participations and olympiads
 - [x] Remember last used language
+- [x] Adding per exam score in TST view
 - [ ] Allow multilanguages from settings and adopting translations from JSON files (20% done)
 - [ ] Add all past members tab in members index
 - [ ] Adding a page for exams
-- [ ] Adding per exam score in TST view
 
 ## Analytics
 Assigned: Muaath, Ali

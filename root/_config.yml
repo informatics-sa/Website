@@ -1,6 +1,7 @@
 title: ""
-last_update: "2025/6/3"
-commit_id: 255
+csv_reader:
+    headers: false
+    encoding: utf-8
 theme_color: "#1A8754"
 plugins:
   - jekyll-seo-tag
