@@ -421,6 +421,10 @@ def build_tst_index():
             'exam_names': en_exam_names
         })
 
+    write_text('./root/_data/tst.yml', format_yml({
+        'min_year': mn_year,
+        'max_year': mx_year
+    }))
     write_file('tst/index.html', {
         'lang': 'ar',
         'title': translations['ar']['team_selection_tests'],
@@ -435,6 +439,34 @@ def build_tst_index():
         'min_year': mn_year,
         'max_year': mx_year,
     })
+
+def build_exams():
+    exams = load_json('exams')
+    for eid, exam in exams.items():
+        arnames = {}; ennames = {}; sums = {}
+        for uid, res in exam['participants'].items():
+            if uid in members:
+                arnames[uid] = members[uid]['arname']
+                ennames[uid] = members[uid]['enname']
+            else:
+                arnames[uid] = ennames[uid] = str(uid)
+                print(f"Warning: {uid} written on exams.json but doesn't exist in members.json")
+            sums[uid] = sum(res)
+        exam['participants'] = dict(sorted(exam['participants'].items(), key=lambda person: (-sum(person[1]))))
+        write_file(f'exams/{eid}.html', {
+            'lang': 'ar',
+            'layout': 'exam',
+            'exam': exam,
+            'names': arnames,
+            'sums': sums
+        })
+        write_file(f'en/exams/{eid}.html', {
+            'lang': 'en',
+            'layout': 'exam',
+            'exam': exam,
+            'names': ennames,
+            'sums': sums
+        })
 
 import subprocess
 def build_data_vairables():
@@ -480,6 +512,9 @@ def main():
 
     build_tst_index()
     print("Built TST index")
+
+    build_exams()
+    print("Built exams")
 
 if __name__ == '__main__':
     main()

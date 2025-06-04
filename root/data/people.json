@@ -713,5 +713,51 @@
         "graduation": 2025,
         "codeforces": "Jassar",
         "level": -2
+    },
+    {
+        "iid": 310,
+        "id": "mohmmed_fenais",
+        "arname": "محمد فنيس",
+        "enname": "Mohammed Fenais",
+        "graduation": 2023,
+        "codeforces": "MFenais",
+        "level": -1
+    },
+    {
+        "iid": 309,
+        "id": "mohammed_aldubaisi",
+        "arname": "محمد الدبيسي",
+        "enname": "Mohammed Aldubaisi",
+        "graduation": 2023,
+        "codeforces": "mdubaisi",
+        "level": -1
+    },
+    {
+        "iid": 352,
+        "id": "alhassan_almadkhali",
+        "arname": "الحسن المدخلي",
+        "enname": "Alhassan Almadkhali",
+        "graduation": 2024,
+        "codeforces": "7as__7",
+        "level": -2
+    },
+    {
+        "iid": 207,
+        "id": "dhay_shujaa",
+        "arname": "ضي شجاع",
+        "enname": "Dhay Shujaa",
+        "graduation": 2023,
+        "codeforces": null,
+        "level": -1,
+        "female": true
+    },
+    {
+        "iid": 359,
+        "id": "ammar_alharbi",
+        "arname": "عمار الحربي",
+        "enname": "Ammar Alharbi",
+        "graduation": 2024,
+        "codeforces": "ammar124",
+        "level": -2
     }
 ]

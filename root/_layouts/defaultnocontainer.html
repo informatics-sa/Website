@@ -21,13 +21,14 @@ layout: base
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ms-auto">
-                {% assign min_tst_year = 2024 %}
-                {% assign max_tst_year = 2025 %}
+                {% assign min_tst_year = site.data.tst.min_year %}
+                {% assign max_tst_year = site.data.tst.max_year %}
                 {% if page.lang == "ar" %}
                 <li class="nav-item"><a class="nav-link {% if page.id == 'participations' %} active {% endif %}" href="/participations">المشاركات</a></li>
                 <li class="nav-item"><a class="nav-link {% if page.id == 'olympiads' %} active {% endif %}" href="/olympiads">الأولمبيادات</a></li>
                 <!-- <li class="nav-item"><a class="nav-link {% if page.id == 'calendar' %} active {% endif %}" href="/calendar">التقويم</a></li> -->
                 <li class="nav-item"><a class="nav-link {% if page.id == 'halloffame' %} active {% endif %}" href="/hall-of-fame">لائحة الشرف</a></li>
+                {% comment %}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">الاختبارات</a>
                     <ul class="dropdown-menu">
@@ -36,6 +37,7 @@ layout: base
                         {% endfor %}
                     </ul>
                 </li>
+                {% endcomment %}
                 <li class="nav-item"><a class="nav-link {% if page.id == 'members' %} active {% endif %}" href="/members/">الأعضاء</a></li>
                 <li class="nav-item"><a class="nav-link {% if page.id == 'images' %} active {% endif %}" href="/images">معرض الصور</a></li>
                 <li class="nav-item"><a class="nav-link {% if page.id == 'contact' %} active {% endif %}" href="/contact">تواصل</a></li>
@@ -44,6 +46,7 @@ layout: base
                 <li class="nav-item"><a class="nav-link {% if page.id == 'olympiads' %} active {% endif %}" href="/en/olympiads">Olympiads</a></li>
                 <!-- <li class="nav-item"><a class="nav-link {% if page.id == 'calendar' %} active {% endif %}" href="/en/calendar">Calendar</a></li> -->
                 <li class="nav-item"><a class="nav-link {% if page.id == 'halloffame' %} active {% endif %}" href="/en/hall-of-fame">Hall of fame</a></li>
+                {% comment %}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Exams</a>
                     <ul class="dropdown-menu">
@@ -52,6 +55,7 @@ layout: base
                         {% endfor %}
                     </ul>
                 </li>
+                {% endcomment %}
                 <li class="nav-item"><a class="nav-link {% if page.id == 'members' %} active {% endif %}" href="/en/members/">Members</a></li>
                 <li class="nav-item"><a class="nav-link {% if page.id == 'images' %} active {% endif %}" href="/en/images">Image library</a></li>
                 <li class="nav-item"><a class="nav-link {% if page.id == 'contact' %} active {% endif %}" href="/en/contact">Contact</a></li>

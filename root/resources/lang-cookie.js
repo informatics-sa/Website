@@ -37,6 +37,11 @@ function checkValidLangCookie(name) {
 
 const LANG_COOKIE_NAME = 'lang';
 
+const notMultiLingualPrefixes = [
+    '/debug',
+    '/data',
+];
+
 function redirectToLang(lang) {
     var curpath = window.location.pathname;
     if (lang === 'ar') {
@@ -45,7 +50,11 @@ function redirectToLang(lang) {
         }
         window.location.href = curpath;
     } else if (lang === 'en') {
-        if (!curpath.startsWith('/en')) {
+        var noEnglish = false;
+        notMultiLingualPrefixes.forEach(pref => {
+            noEnglish |= curpath.startsWith(pref);
+        });
+        if (!noEnglish && !curpath.startsWith('/en')) {
             window.location.href = '/en' + curpath;
         }
     }

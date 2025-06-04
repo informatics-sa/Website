@@ -18,8 +18,7 @@ bundle install
 
 ### Building & Local Serving
 ```sh
-python build.py
-jekyll serve -s ./root
+python build.py && bundle exec jekyll serve -s ./root
 ```
 
 ## Maintainers

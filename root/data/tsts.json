@@ -1,4 +1,9 @@
 {
+    "2023": {
+        "ioi": {
+            "exams": ["tst_1_2023", "tst_2_2023", "apio_2023", "tst_3_2023"]
+        }
+    },
     "2024": {
         "ioi": {
             "exams": ["intensive_1b_tst_1_2024", "apio_2024", "intensive_2a_tst_2_2024", "intensive_2b_tst_3_2024"]

@@ -36,7 +36,7 @@ layout: default
                     {% for idx in (1..val.exams.count) %}
                     <th width="15%">
                         {% assign eid = val.exams[idx] %}
-                        {{ page.exam_names[eid] }}
+                        <a href="{%if page.lang=="en"%}/en{%endif%}/exams/{{ eid }}">{{ page.exam_names[eid] }}</a>
                     </th>
                     {% endfor %}
 
@@ -65,7 +65,7 @@ layout: default
                             {% endif %}
                         </td>
                         <td>
-                            {{ res[1] }}
+                            {{ res[1] | round: 2 }}
                         </td>
                         {% for k in (2..res.count) %}
                         <td>

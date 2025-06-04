@@ -1,6 +1,7 @@
 ---
 lang: en
 title: Public Data API
+layout: default
 ---
 # Public Data API
 
