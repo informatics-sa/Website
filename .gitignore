@@ -20,3 +20,4 @@ root/*
 !root/resources
 !root/resources/*
 !root/404.html
+!root/debug.html

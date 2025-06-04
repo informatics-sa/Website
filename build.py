@@ -436,10 +436,13 @@ def build_tst_index():
         'max_year': mx_year,
     })
 
+import subprocess
 def build_data_vairables():
     write_text('./root/_data/build.yml', format_yml({
-        'last_update': datetime.datetime.now().strftime("%Y/%m/%d"),
-        'commit_id': 1
+        'last_update': datetime.datetime.now().strftime('%Y/%-m/%-d %-H:%-M:%-S'),
+        'commit_index': subprocess.getoutput('git rev-list --count main'),
+        'commit_id': subprocess.getoutput('git log --format="%H" -n 1'),
+        'jekyll_version': subprocess.getoutput('jekyll --version')
     }))
 
 def main():
