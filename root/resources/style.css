@@ -3,6 +3,8 @@
     --medal-silver: #C0C0C0;
     --medal-bronze: #CD7F32;
     --medal-hm: #B197FA;
+    --theme-color: #1A8754;
+    --theme-color-dark: #115740;
 }
 
 body {
@@ -10,7 +12,7 @@ body {
 }
 
 .hero-section {
-    background: linear-gradient(135deg, #1A8754 0%, #115740 100%);
+    background: linear-gradient(135deg, var(--theme-color) 0%, var(--theme-color-dark) 100%);
     padding: 6rem 0;
     color: white;
     margin-bottom: 2rem;
@@ -40,7 +42,7 @@ body {
 }
 
 .info-card h3 {
-    color: #1A8754;
+    color: var(--theme-color);
     margin-bottom: 1rem;
 }
 
@@ -72,7 +74,7 @@ body {
 } 
 
 footer {
-    margin: auto auto 0 auto;
+    text-align: center;
     padding: 2rem 0;
     background-color: #f8f9fa;
 }
@@ -90,7 +92,7 @@ footer {
 
 .feature-icon {
     font-size: 2.5rem;
-    color: #1A8754;
+    color: var(--theme-color);
     margin-bottom: 1rem;
 }
 

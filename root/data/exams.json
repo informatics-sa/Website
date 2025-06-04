@@ -1,7 +1,29 @@
 {
-    "2025_intensive_2a_tst_3": {
-        "id": "2025_intensive_2a_tst_3",
+    "intensive_2b_tst_5_2025": {
+        "id": "intensive_2a_tst_3_2025",
         "name": "Intensive 2A TST 3",
+        "enname": "TST 5",
+        "arname": "TST 5",
+        "date": "2025-05-26",
+        "url": "https://arena.petlja.org/en/competition/2025-05-26-tst-upsolve",
+        "participants": {},
+        "problems": []
+    },
+    "intensive_2b_tst_4_2025": {
+        "id": "intensive_2b_tst_4_2025",
+        "name": "Intensive 2A TST 3",
+        "enname": "TST 4",
+        "arname": "TST 4",
+        "date": "2025-05-26",
+        "url": "https://arena.petlja.org/en/competition/2025-05-26-tst-upsolve",
+        "participants": {},
+        "problems": []
+    },
+    "intensive_2a_tst_3_2025": {
+        "id": "intensive_2a_tst_3_2025",
+        "name": "Intensive 2A TST 3",
+        "enname": "TST 3",
+        "arname": "TST 3",
         "date": "2025-05-26",
         "url": "https://arena.petlja.org/en/competition/2025-05-26-tst-upsolve",
         "participants": {
@@ -60,6 +82,8 @@
     "apio_2025": {
         "id": "apio_2025",
         "name": "APIO 2025",
+        "enname": "APIO 2025",
+        "arname": "APIO 2025",
         "date": "2025-05-18",
         "url": "https://oj.uz/problems/source/apio2025",
         "participants": {
@@ -115,9 +139,11 @@
         },
         "problems": ["apio_hack", "apio_permgame", "apio_rotate"]
     },
-    "2025_intensive_1b_tst_2": {
-        "id": "2025_intensive_1b_tst_2",
+    "intensive_1b_tst_2_2025": {
+        "id": "intensive_1b_tst_2_2025",
         "name": "Intensive 1B TST 2",
+        "enname": "TST 2",
+        "arname": "TST 2",
         "date": "2025-02-26",
         "url": "https://arena.petlja.org/en/competition/2025-02-26-tst-upsolve",
         "participants": {
@@ -173,9 +199,11 @@
         },
         "problems": ["clique", "food_trucks", "knowledge_quest", "relays"]
     },
-    "2025_intensive_1b_tst_1": {
-        "id": "2025_intensive_1b_tst_1",
+    "intensive_1b_tst_1_2025": {
+        "id": "intensive_1b_tst_1_2025",
         "name": "Intensive 1B TST 1",
+        "enname": "TST 1",
+        "arname": "TST 1",
         "date": "2025-02-23",
         "url": "https://arena.petlja.org/sr-Latn-RS/competition/2025-02-23-tst-upsolve",
         "participants": {
@@ -231,9 +259,11 @@
         },
         "problems": ["backpack_dilemma", "ancient_manuscript", "desert_mission", "diverse_monuments"]
     },
-    "2025_intensive_1a_exam_2": {
-        "id": "2025_intensive_1a_exam_2",
+    "intensive_1a_exam_2_2025": {
+        "id": "intensive_1a_exam_2_2025",
         "name": "Intensive 1A Exam 2",
+        "enname": "Exam 4",
+        "arname": "Exam 4",
         "date": "2025-02-06",
         "url": "https://arena.petlja.org/sr-Latn-RS/competition/2025-02-06-exam-upsolve",
         "participants": {
@@ -272,9 +302,11 @@
         },
         "problems": ["keylogger", "the_rizzler", "chocolate_milk", "guy"]
     },
-    "2025_intensive_1a_exam_1": {
-        "id": "2025_intensive_1a_exam_1",
+    "intensive_1a_exam_1_2025": {
+        "id": "intensive_1a_exam_1_2025",
         "name": "Intensive 1A Exam 1",
+        "enname": "Exam 3",
+        "arname": "Exam 3",
         "date": "2025-01-30",
         "url": "https://arena.petlja.org/sr-Latn-RS/competition/2025-01-30-exam-upsolve",
         "participants": {
@@ -313,9 +345,11 @@
         },
         "problems": ["x_sultan", "stock_market", "magic_grid_challenge", "golf_cart"]
     },
-    "2024_elite_exam_2": {
-        "id": "2024_elite_exam_2",
+    "elite_exam_2_2024": {
+        "id": "elite_exam_2_2024",
         "name": "Elite Exam 2",
+        "enname": "Exam 2",
+        "arname": "Exam 2",
         "date": "2024-11-17",
         "url": "https://arena.petlja.org/sr-Latn-RS/competition/2024-11-17-exam-upsolve",
         "participants": {
@@ -351,9 +385,11 @@
         },
         "problems": ["extortion", "walkways", "andxor", "its_a_trap"]
     },
-    "2024_elite_exam_1": {
-        "id": "2024_elite_exam_1",
+    "elite_exam_1_2024": {
+        "id": "elite_exam_1_2024",
         "name": "Elite Exam 1",
+        "enname": "Exam 1",
+        "arname": "Exam 1",
         "date": "2024-11-12",
         "url": "https://arena.petlja.org/sr-Latn-RS/competition/2024-11-12-exam-upsolve",
         "participants": {
@@ -389,9 +425,11 @@
         },
         "problems": ["chessboard", "nonsubsequence", "andor", "candles"]
     },
-    "2024_intensive_2b_tst_3": {
-        "id": "2024_intensive_2b_tst_3",
+    "intensive_2b_tst_3_2024": {
+        "id": "intensive_2b_tst_3_2024",
         "name": "Intensive 2B TST 3",
+        "enname": "TST 3",
+        "arname": "TST 3",
         "date": "2024-06-08",
         "url": "https://arena.petlja.org/competition/2024-06-08-tst-3-upsolve",
         "participants": {
@@ -441,9 +479,11 @@
         },
         "problems": ["watermelon_olympiad", "dragon", "broken_chessboard", "paragliding"]
     },
-    "2024_intensive_2a_tst_2": {
-        "id": "2024_intensive_2a_tst_2",
+    "intensive_2a_tst_2_2024": {
+        "id": "intensive_2a_tst_2_2024",
         "name": "Intensive 2A TST 2",
+        "enname": "TST 2",
+        "arname": "TST 2",
         "date": "2024-05-27",
         "url": "https://arena.petlja.org/sr-Latn-RS/competition/2024-05-27-tst2-upsolve",
         "participants": {
@@ -496,6 +536,8 @@
     "apio_2024": {
         "id": "apio_2024",
         "name": "APIO 2024",
+        "enname": "APIO 2024",
+        "arname": "APIO 2024",
         "date": "2024-05-18",
         "url": "https://oj.uz/problems/source/652",
         "participants": {
@@ -545,9 +587,11 @@
         },
         "problems": ["apio_september", "apio_train", "apio_magic"]
     },
-    "2024_intensive_1b_tst_1": {
-        "id": "2024_intensive_1b_tst_1",
+    "intensive_1b_tst_1_2024": {
+        "id": "intensive_1b_tst_1_2024",
         "name": "Intensive 1B TST 1",
+        "enname": "TST 1",
+        "arname": "TST 1",
         "date": "2024-03-05",
         "url": "https://arena.petlja.org/competition/2024-03-05-l3-l4-upsolve",
         "participants": {

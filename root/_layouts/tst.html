@@ -18,6 +18,7 @@ layout: default
 <div class="tab-content" id="nav-tabContent">
     {% for i in page.olympiads %}
         {% assign oly = i[0] %}
+        {% assign val = i[1] %}
         <div class="tab-pane fade {% if forloop.index == 1 %} show active {% endif %}" id="nav-{{oly}}" role="tabpanel" aria-labelledby="nav-{{oly}}-tab" tabindex="0">
             <!-- <div>
                 <ul></ul>
@@ -31,13 +32,24 @@ layout: default
                     <th>الاسم</th>
                     <th>المجموع</th>
                     {% endif %}
+                    
+                    {% for idx in (1..val.exams.count) %}
+                    <th width="15%">
+                        {% assign eid = val.exams[idx] %}
+                        {{ page.exam_names[eid] }}
+                    </th>
+                    {% endfor %}
+
                 </thead>
                 <tbody>
-                    {% for j in i[1] %}
+                    {% for j in val.lists %}
+                    {% assign uid = j[0] %} 
+                    {% assign res = j[1] %}
 
                     <tr>
-                        <td>                            
-                            {% if forloop.index <= page.olylimits[oly] %}
+                        <td>
+                            <!-- TODO: Better design for this -->
+                            {% if forloop.index <= val.participants_count %}
                                 {% if page.lang == "en"%}
                                 <span class="badge bg-success">Selected</span>
                                 {% else %}
@@ -45,7 +57,6 @@ layout: default
                                 {% endif %}
                             {% endif %}
                             
-                            {% assign uid = j[0] %} 
                             
                             {% if page.lang == "en" %}
                             <a href="/en/members/{{ j[0] }}">{{ page.names[uid] }}</a>
@@ -54,8 +65,13 @@ layout: default
                             {% endif %}
                         </td>
                         <td>
-                            {{ j[1] }}
+                            {{ res[1] }}
                         </td>
+                        {% for k in (2..res.count) %}
+                        <td>
+                            {{ res[k] }}
+                        </td>
+                        {% endfor %}
                     </tr>
                     {% endfor %}
                 </tbody>

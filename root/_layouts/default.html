@@ -4,3 +4,8 @@ layout: defaultnocontainer
 <div class="container">
     {{ content }}
 </div>
+<footer class="w-100 mt-auto p-4">    
+    <b>
+        {{ site.data[page.lang].last_update }}: {{ site.data.build.last_update }}
+    </b>
+</footer>

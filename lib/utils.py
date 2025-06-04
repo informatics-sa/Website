@@ -80,6 +80,7 @@ def write_page(lang: str, filename: str, data: dict):
         print(f"Invalid language '{lang}' for page: {filename}")
         exit(1)
     data['lang'] = lang
+    
     if lang == LANGS[0]:
         write_file('./' + filename, data)
     else:

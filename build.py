@@ -1,5 +1,6 @@
 from lib import *
 from lib.utils import * # target to remove this.
+import datetime
 
 
 countries = get_countries()
@@ -330,16 +331,28 @@ def build_tst_index():
     for year, tst in tsts.items():
         mn_year = min(mn_year, int(year))
         mx_year = max(mx_year, int(year))
-        lists = {}
-        olylimits = {}
+        ar_exam_names = {}
+        en_exam_names = {}
+        tsts = {}
         for oly in list(tst.keys()):
             if oly[0] == '_':
                 continue
-            olylimits[oly] = olympiads[oly]['participants_count']
-            lists[oly] = {}
+            
+            lists = {}
+
+            tsts[oly] = {
+                'exams': tst[oly]['exams'],
+                'participants_count': olympiads[oly]['participants_count'],
+                'lists': None,
+            }
+
+            exam_index = 0
             for eid in tst[oly]['exams']:
+                exam_index += 1
                 if eid not in exams:
                     continue
+                ar_exam_names[eid] = exams[eid]['arname']
+                en_exam_names[eid] = exams[eid]['enname']
                 for uid, res in exams[eid]['participants'].items():
                     if uid in members:
                         # if members[uid]['level'] < 0:
@@ -351,21 +364,22 @@ def build_tst_index():
                         continue
                         # arname[uid] = uid
                         # enname[uid] = uid
-                    if uid not in lists[oly]:
-                        lists[oly][uid] = 0
-                    lists[oly][uid] += sum(res)
+                    if uid not in lists:
+                        lists[uid] = [0]*(len(tst[oly]['exams'])+1)
+                    lists[uid][0] += sum(res)
+                    lists[uid][exam_index] = sum(res)
 
             if 'female_only' in tst[oly] and tst[oly]['female_only'] == True:
                 to_be_removed = []
-                for uid in lists[oly]:
+                for uid in lists:
                     if uid not in members or 'female' not in members[uid] or members[uid]['female'] == False:
                         to_be_removed.append(uid)
                 for uid in to_be_removed:
-                    del lists[oly][uid]
+                    del lists[uid]
 
             if 'min_graduation' in tst[oly]:
                 to_be_removed = []
-                for uid in lists[oly]:
+                for uid in lists:
                     if uid not in members or 'graduation' not in members[uid]:
                         to_be_removed.append(uid)
                         continue
@@ -376,33 +390,35 @@ def build_tst_index():
                     if members[uid]['graduation'] == None or members[uid]['graduation'] < tst[oly]['min_graduation']:
                         to_be_removed.append(uid)
                 for uid in to_be_removed:
-                    del lists[oly][uid]
+                    del lists[uid]
 
             if 'execluded' in tst[oly]:
                 for uid in tst[oly]['execluded']:
-                    if uid in lists[oly]:
-                        del lists[oly][uid]
+                    if uid in lists:
+                        del lists[uid]
             if '_general_execluded' in tst:
                 for uid in tst['_general_execluded']:
-                    if uid in lists[oly]:
-                        del lists[oly][uid]
-            lists[oly] = dict(sorted(lists[oly].items(), key=lambda person: (-person[1])))
+                    if uid in lists:
+                        del lists[uid]
+            lists = dict(sorted(lists.items(), key=lambda person: (-person[1][0])))
+
+            tsts[oly]['lists'] = lists
         
         write_file(f'./tst/{year}.html', {
             'lang': 'ar',
             'layout': 'tst',
             'title': translations['ar']['team_selection_tests'] + f' {year}',
-            'olympiads': lists,
+            'olympiads': tsts,
             'names': arname,
-            'olylimits': olylimits
+            'exam_names': ar_exam_names
         })
         write_file(f'en/tst/{year}.html', {
             'lang': 'en',
             'title': translations['en']['team_selection_tests'] + f' {year}',
             'layout': 'tst',
-            'olympiads': lists,
+            'olympiads': tsts,
             'names': enname,
-            'olylimits': olylimits
+            'exam_names': en_exam_names
         })
 
     write_file('tst/index.html', {
@@ -420,8 +436,17 @@ def build_tst_index():
         'max_year': mx_year,
     })
 
+def build_data_vairables():
+    write_text('./root/_data/build.yml', format_yml({
+        'last_update': datetime.datetime.now().strftime("%Y/%m/%d"),
+        'commit_id': 1
+    }))
+
 def main():
     test_utils()
+
+    build_data_vairables()
+    print("Built _data/build.yml")
 
     build_contact()
     print("Built contact")

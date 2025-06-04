@@ -1,3 +1,6 @@
 title: ""
+last_update: "2025/6/3"
+commit_id: 255
+theme_color: "#1A8754"
 plugins:
   - jekyll-seo-tag
