@@ -8,7 +8,11 @@ layout: default
 
         <div class="btn-group" role="group" aria-label="Basic outlined example">
             {% for y in (site.data.tst.min_year..site.data.tst.max_year) %}
+                {% if y == page.year %}
+                <a href="{% if page.lang=="en" %}/en{% endif %}/tst/{{ y }}" class="btn btn-primary">{{ y }}</a>
+                {% else %}
                 <a href="{% if page.lang=="en" %}/en{% endif %}/tst/{{ y }}" class="btn btn-outline-primary">{{ y }}</a>
+                {% endif %}
             {% endfor %}
         </div>
 

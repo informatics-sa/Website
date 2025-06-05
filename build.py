@@ -407,6 +407,7 @@ def build_tst_index():
         write_file(f'./tst/{year}.html', {
             'lang': 'ar',
             'layout': 'tst',
+            'year': year,
             'title': translations['ar']['team_selection_tests'] + f' {year}',
             'olympiads': tsts,
             'names': arname,
@@ -414,8 +415,9 @@ def build_tst_index():
         })
         write_file(f'en/tst/{year}.html', {
             'lang': 'en',
-            'title': translations['en']['team_selection_tests'] + f' {year}',
             'layout': 'tst',
+            'year': year,
+            'title': translations['en']['team_selection_tests'] + f' {year}',
             'olympiads': tsts,
             'names': enname,
             'exam_names': en_exam_names
