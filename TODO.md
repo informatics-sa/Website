@@ -7,16 +7,24 @@ Assigned: Muaath, Ali
 - [x] Split participations and olympiads
 - [x] Remember last used language
 - [x] Adding per exam score in TST view
+- [x] Adding a page for exams
 - [ ] Allow multilanguages from settings and adopting translations from JSON files (20% done)
 - [ ] Add all past members tab in members index
-- [ ] Adding a page for exams
+- [ ] Adding statistics for each person performance on exams (shown only if you add a cookie)
 
-## Analytics
+## Organization
 Assigned: Muaath, Ali
 - [x] Linking it with Google Search Console
 - [x] Linking it with Google Analytics
 - [x] Improve SEO (Custom `<head>` metadata)
 - [x] Email system based on Cloudflare
+- [ ] Aiming for 100k views per year
+- [ ] Monetizing it by adding Ads
+- [ ] Managing permissions in Github organization
+- [ ] Documenting how to work
+- [ ] Organizing insider data
+- [ ] Rechecking licensing
+- [ ] A clear list of organization
 
 ## UI
 Assigned: Muaath, Ali
@@ -31,7 +39,7 @@ Assigned: Muaath, Ali
 ## Data
 Assigned: Omar, Sultan, Ali
 - [x] Add `tsts.json`, and a page for displaying it
-- [ ] Add `exams.json`, and a page for displaying it
+- [x] Add `exams.json`, and a page for displaying it
 - [ ] Add `news.json` and page for it, and displayed in home page
 - [ ] Add `camps.json`, and a page for viewing the upcoming camps
      

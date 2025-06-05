@@ -2,7 +2,12 @@
     {
         "name": "ioi", "year": 2025, "start": "2025/7/27", "end": "2025/8/3", "country": "bo",
         "website": "https://ioi2025.bo/",
-        "participants": {}
+        "participants": {
+            "501": null,
+            "455": null,
+            "304": null,
+            "404": null
+        }
     },
     {
         "name": "egoi", "year": 2025, "start": "2025/7/14", "end": "2025/7/20", "country": "de",

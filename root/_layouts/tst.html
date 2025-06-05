@@ -65,11 +65,11 @@ layout: default
                             {% endif %}
                         </td>
                         <td>
-                            {{ res[1] | round: 2 }}
+                            {{ res[1] | round: 3 }}
                         </td>
                         {% for k in (2..res.count) %}
                         <td>
-                            {{ res[k] }}
+                            {{ res[k] | round: 3 }}
                         </td>
                         {% endfor %}
                     </tr>

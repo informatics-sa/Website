@@ -455,6 +455,7 @@ def build_exams():
         exam['participants'] = dict(sorted(exam['participants'].items(), key=lambda person: (-sum(person[1]))))
         write_file(f'exams/{eid}.html', {
             'lang': 'ar',
+            'title': exam['name'],
             'layout': 'exam',
             'exam': exam,
             'names': arnames,
@@ -462,6 +463,7 @@ def build_exams():
         })
         write_file(f'en/exams/{eid}.html', {
             'lang': 'en',
+            'title': exam['name'],
             'layout': 'exam',
             'exam': exam,
             'names': ennames,

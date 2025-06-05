@@ -759,5 +759,32 @@
         "graduation": 2024,
         "codeforces": "ammar124",
         "level": -2
+    },
+    {
+        "iid": 202,
+        "id": "majid_alburaiky",
+        "arname": "ماجد البريكي",
+        "enname": "Majid Alburaiky",
+        "graduation": 2023,
+        "codeforces": null,
+        "level": -1
+    },
+    {
+        "iid": 305,
+        "id": "fahad_aldossari",
+        "arname": "فهد الدوسري",
+        "enname": "Fahad Aldossari",
+        "graduation": 2023,
+        "codeforces": null,
+        "level": -1
+    },
+    {
+        "iid": 203,
+        "id": "abdullah_al_wazzan",
+        "arname": "عبدالله الوزان",
+        "enname": "ِAbdullah Al Wazzan",
+        "graduation": 2023,
+        "codeforces": null,
+        "level": -1
     }
 ]
