@@ -1,6 +1,21 @@
 ---
 layout: default
 ---
+
+<div class="row m-3">
+    <div class="col">
+        
+
+        <div class="btn-group" role="group" aria-label="Basic outlined example">
+            {% for y in (site.data.tst.min_year..site.data.tst.max_year) %}
+                <a href="{% if page.lang=="en" %}/en{% endif %}/tst/{{ y }}" class="btn btn-outline-primary">{{ y }}</a>
+            {% endfor %}
+        </div>
+
+
+    </div>
+</div>
+
 <nav class="mt-2">
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
         {% for i in page.olympiads %}
