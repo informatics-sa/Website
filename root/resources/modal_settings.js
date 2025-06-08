@@ -307,8 +307,3 @@ window.examStats = {
     get_current_settings
 };
 
-if (getCookie('debugger') == 'iReadTheSource') {
-    document.querySelectorAll('.debug-only').forEach(div => {
-        div.classList.remove('d-none');
-    });
-}
