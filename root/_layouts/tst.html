@@ -4,19 +4,49 @@ layout: default
 
 <div class="row m-3">
     <div class="col">
-        
-
-        <div class="btn-group" role="group" aria-label="Basic outlined example">
+        <div class="btn-group" role="group" aria-label="TST Years">
+            {% assign yr = page.year | to_integer %}
             {% for y in (site.data.tst.min_year..site.data.tst.max_year) %}
-                {% if y == page.year %}
+                {% if y == yr %}
                 <a href="{% if page.lang=="en" %}/en{% endif %}/tst/{{ y }}" class="btn btn-primary">{{ y }}</a>
                 {% else %}
                 <a href="{% if page.lang=="en" %}/en{% endif %}/tst/{{ y }}" class="btn btn-outline-primary">{{ y }}</a>
                 {% endif %}
             {% endfor %}
         </div>
+    </div>
 
-
+    <div class="col d-none debug-only">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="show_averages">
+            <label class="form-check-label" for="show_averages">
+                {{ site.data[page.lang].show_averages }}
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="show_maximums">
+            <label class="form-check-label" for="show_maximums">
+                {{ site.data[page.lang].show_maximums }}
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="show_medians">
+            <label class="form-check-label" for="show_medians">
+                {{ site.data[page.lang].show_medians }}
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="show_distincts">
+            <label class="form-check-label" for="show_distincts">
+                {{ site.data[page.lang].show_distincts }}
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="show_stddevs">
+            <label class="form-check-label" for="show_stddevs">
+                {{ site.data[page.lang].show_stddevs }}
+            </label>
+        </div>
     </div>
 </div>
 
@@ -34,16 +64,16 @@ layout: default
     </div>
 </nav>
 
+
+
 <div class="tab-content" id="nav-tabContent">
     {% for i in page.olympiads %}
         {% assign oly = i[0] %}
         {% assign val = i[1] %}
         <div class="tab-pane fade {% if forloop.index == 1 %} show active {% endif %}" id="nav-{{oly}}" role="tabpanel" aria-labelledby="nav-{{oly}}-tab" tabindex="0">
-            <!-- <div>
-                <ul></ul>
-            </div> -->
             <table class="table table-bordered table-striped">
                 <thead>
+                    <th>#</th>
                     {% if page.lang == "en" %} 
                     <th>Name</th>
                     <th>Sum</th>
@@ -66,6 +96,7 @@ layout: default
                     {% assign res = j[1] %}
 
                     <tr>
+                        <td>{{ forloop.index }}</td>
                         <td>
                             <!-- TODO: Better design for this -->
                             {% if forloop.index <= val.participants_count %}
@@ -98,3 +129,6 @@ layout: default
         </div>
     {% endfor %}
 </div>
+
+
+<script src="/resources/modal_settings.js"></script>
