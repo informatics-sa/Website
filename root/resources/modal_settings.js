@@ -25,19 +25,26 @@ const SETTING_IDS = ['show_maximums', 'show_stddevs', 'show_medians', 'show_aver
 
 function load_settings() {
     const settingsJson = getCookie(COOKIE_NAME);
-    if (settingsJson) {
-        try {
-            const settings = JSON.parse(settingsJson);
-            // Apply settings to form elements
-            Object.keys(settings).forEach(key => {
-                const element = document.getElementById(key);
-                if (element) {
-                    element.checked = settings[key];
-                }
-            });
-        } catch (e) {
-            console.error('Error loading settings:', e);
-        }
+    if (settingsJson == null) {
+        save_settings();
+        load_settings();
+        return;
+    }
+
+    try {
+        const settings = JSON.parse(settingsJson);
+        // Apply settings to form elements
+        Object.keys(settings).forEach(key => {
+            const element = document.getElementById(key);
+            if (element) {
+                element.checked = settings[key];
+            }
+        });
+    } catch (e) {
+        console.error('Error loading settings (invalid json):', e);
+
+        save_settings();
+        load_settings();
     }
 }
 
