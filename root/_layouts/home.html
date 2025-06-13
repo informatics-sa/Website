@@ -85,7 +85,7 @@ description: "Official website"
                 </div>
             </div>
             <div class="col-md-6 col-sm-6 mb-4">
-                <div class="stats-card">
+                <div class="stats-card enable-debugger">
                     <i class="bi bi-award-fill medal-icon medal-hm"></i>
                     <h3 class="fw-bold">{{ page.stats.hm }}</h3>
                     {% if page.lang == "en" %}
@@ -197,7 +197,16 @@ description: "Official website"
     </section>
 </div>  
 
-
+<script>
+    var clicks_count = 0;
+    document.querySelector('.enable-debugger').addEventListener('click', () => {
+        clicks_count++;
+        if (clicks_count == 10) {
+            setCookie('debugger', 'iReadTheSource', 71);
+            alert("Enabled debugger successfully")
+        }
+    });
+</script>
 
 <script>
     // Initialize AOS
