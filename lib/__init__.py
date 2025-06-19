@@ -16,12 +16,17 @@ def get_countries():
 
     return countries
 
+def get_exams():
+    exams = load_json('exams')
+    return exams
+
 def get_members():
     members = {}
     for person in load_json('people'):
         person['iid'] = str(person['iid'])
         members[str(person['iid'])] = person
         members[str(person['iid'])]['participations'] = []
+        members[str(person['iid'])]['exams'] = []
 
     for participation in load_json('participations'):
         for member_id in participation['participants']:
@@ -35,6 +40,10 @@ def get_members():
                 'award': participation['participants'][member_id]
             })
 
+    for exam in get_exams():
+        for member_id, scores in exam['participants'].items():
+            members[member_id]['exams'].append(scores)
+    
     return members
     
 def get_olympiads():
@@ -78,3 +87,4 @@ def get_participations():
         participation['ar_participants'] = parts
         participation['en_participants'] = enparts
     return participations
+

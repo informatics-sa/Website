@@ -221,7 +221,8 @@ def build_members():
             'full_name': member['enname'],
             'graduation': member['graduation'],
             'codeforces': member['codeforces'],
-            'participations': member['participations']
+            'participations': member['participations'],
+            'exams': member['exams']
         })
 
 def build_members_index():
