@@ -40,7 +40,7 @@ def get_members():
                 'award': participation['participants'][member_id]
             })
 
-    for exam in get_exams():
+    for eid, exam in get_exams().items():
         for member_id, scores in exam['participants'].items():
             members[member_id]['exams'].append(scores)
     
