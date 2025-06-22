@@ -1,7 +1,7 @@
 # TODO List
 
 ## Development
-Assigned: Muaath, Ali
+Assigned: Muaath, Ali 
 - [x] Cleaning repository root
 - [x] Implement members index page
 - [x] Split participations and olympiads
