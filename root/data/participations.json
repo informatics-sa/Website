@@ -1,15 +1,5 @@
 [
     {
-        "name": "ejoi", "year": 2025, "start": "2025/8/29", "end": "2025/9/4", "country": "bg",
-        "website": "https://2025.ejoi.org",
-        "participants": {
-            "508": null,
-            "602": null,
-            "510": null,
-            "604": null
-        }
-    },
-    {
         "name": "boi", "year": 2025, "start": "2025/9/25", "end": "2025/10/1", "country": "it",
         "website": "https://boi2025.anpc.it",
         "participants": {
@@ -19,6 +9,16 @@
             "503": null,
             "502": null,
             "508": null
+        }
+    },
+    {
+        "name": "ejoi", "year": 2025, "start": "2025/8/29", "end": "2025/9/4", "country": "bg",
+        "website": "https://2025.ejoi.org",
+        "participants": {
+            "508": null,
+            "602": null,
+            "510": null,
+            "604": null
         }
     },
     {
