@@ -1,5 +1,17 @@
 [
     {
+        "name": "boi", "year": 2025, "start": "2025/9/25", "end": "2025/10/1", "country": "it",
+        "website": "https://boi2025.anpc.it",
+        "participants": {
+            "501": null,
+            "455": null,
+            "404": null,
+            "503": null,
+            "502": null,
+            "508": null
+        }
+    },
+    {
         "name": "ioi", "year": 2025, "start": "2025/7/27", "end": "2025/8/3", "country": "bo",
         "website": "https://ioi2025.bo/",
         "participants": {
