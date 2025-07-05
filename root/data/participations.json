@@ -188,7 +188,7 @@
         }
     },
     {
-        "name": "apio", "year": 2022, "start": "2022/5/30", "end": "2022/5/30", "country": "online",
+        "name": "apio", "year": 2022, "start": "2022/5/30", "end": "2022/5/30", "country": "eg", "online": true,
         "website": null,
         "participants": {
             "201": "bronze",
