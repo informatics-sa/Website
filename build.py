@@ -274,7 +274,7 @@ def build_participations():
             'country_enname': participation['country_enname'],
             'participants': participation['ar_participants'],
             'website': participation['website'],
-            'online': participation['online']
+            'online': participation['online'] if 'online' in participation else False
         })
         write_file(f'en/participations/{filename}.html', {
             'layout': 'participation',
@@ -288,7 +288,7 @@ def build_participations():
             'country_enname': participation['country_enname'],
             'participants': participation['en_participants'],
             'website': participation['website'],
-            'online': participation['online']
+            'online': participation['online'] if 'online' in participation else False
         })
 
 def build_participations_index():
