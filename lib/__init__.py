@@ -7,13 +7,6 @@ def get_countries():
         code = country['alpha2_code'].lower()
         country['emoji'] = flag_emoji(code)
         countries[code] = country
-
-    countries['online'] = {
-        'arabic_name': 'عن بعد',
-        'english_name': 'Online',
-        'emoji': flag_emoji('online')
-    }
-
     return countries
 
 def get_exams():
