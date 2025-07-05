@@ -1,7 +1,6 @@
 # TODO List
 
 ## Development
-Assigned: Muaath, Ali 
 - [x] Cleaning repository root
 - [x] Implement members index page
 - [x] Split participations and olympiads
@@ -13,7 +12,6 @@ Assigned: Muaath, Ali
 - [ ] Adding statistics for each person performance on exams (shown only if you add a cookie)
 
 ## Organization
-Assigned: Muaath, Ali
 - [x] Linking it with Google Search Console
 - [x] Linking it with Google Analytics
 - [x] Improve SEO (Custom `<head>` metadata)
@@ -27,7 +25,6 @@ Assigned: Muaath, Ali
 - [ ] A clear list of organization
 
 ## UI
-Assigned: Muaath, Ali
 - [x] Add dark mode based on system
 - [x] Select font
 - [x] Allow custom styles by one CSS file
@@ -37,7 +34,6 @@ Assigned: Muaath, Ali
 - [ ] Btter responsive design in all pages
 
 ## Data
-Assigned: Omar, Sultan, Ali
 - [x] Add `tsts.json`, and a page for displaying it
 - [x] Add `exams.json`, and a page for displaying it
 - [ ] Add `news.json` and page for it, and displayed in home page

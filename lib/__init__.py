@@ -20,6 +20,8 @@ def get_members():
         members[str(person['iid'])] = person
         members[str(person['iid'])]['participations'] = []
         members[str(person['iid'])]['exams'] = []
+        members[str(person['iid'])]['codeforces'] = None
+        members[str(person['iid'])]['graduation'] = None
 
     for participation in load_json('participations'):
         for member_id in participation['participants']:

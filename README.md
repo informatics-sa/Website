@@ -6,6 +6,8 @@ This website includes: olympiads, participations, members, contact, and image li
 ## Documentation
 Read [Website public data files](https://sainformatics.org/data/) documentation.
 
+You might also refer to [Developer documentation](https://sainformatics.org/data/dev).
+
 ## Local Build
 ### Prerequisites
 You need:
@@ -15,6 +17,12 @@ You need:
 ```sh
 bundle install
 ```
+
+<details>
+    <summary>How does it work?</summary>
+    `bundle` is a package manager, `Gemfile` contains the packages list.
+    Jekyll latest version is 4.4.1, but the current version used in Github pages is 
+</details>
 
 ### Building & Local Serving
 ```sh
