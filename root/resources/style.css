@@ -11,6 +11,10 @@ body {
     font-family: 'Tajawal', sans-serif;
 }
 
+debug-only {
+    display: none;
+}
+
 .hero-section {
     background: linear-gradient(135deg, var(--theme-color) 0%, var(--theme-color-dark) 100%);
     padding: 6rem 0;

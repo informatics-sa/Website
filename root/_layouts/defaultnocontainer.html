@@ -44,7 +44,7 @@ layout: base
                 <li class="nav-item"><a class="nav-link {% if page.id == 'olympiads' %} active {% endif %}" href="/en/olympiads">Olympiads</a></li>
                 <!-- <li class="nav-item"><a class="nav-link {% if page.id == 'calendar' %} active {% endif %}" href="/en/calendar">Calendar</a></li> -->
                 <li class="nav-item"><a class="nav-link {% if page.id == 'halloffame' %} active {% endif %}" href="/en/hall-of-fame">Hall of fame</a></li>
-                <li class="nav-item dropdown d-none debug-only">
+                <li class="nav-item dropdown debug-only">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Exams</a>
                     <ul class="dropdown-menu">
                         {% for i in (min_tst_year..max_tst_year) %}

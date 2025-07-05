@@ -49,7 +49,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     
     {% if page.usemathjax %}
-
     <script>
     MathJax = {
         tex: {
@@ -58,10 +57,11 @@
     };
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-
     {% endif %}
 
-    
+    {% if page.usechartjs %}
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.min.js"></script>
+    {% endif %}
 </head>
 <body class="d-flex flex-column h-100">
     {{ content }}
