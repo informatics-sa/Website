@@ -18,14 +18,24 @@ layout: default
                 {% if page.lang == "en" %}
                     <li class="list-group-item">Start: {{ page.start_date }}</li>
                     <li class="list-group-item">End: {{ page.end_date }}</li>
-                    <li class="list-group-item">Host: {{ page.country_enname }}</li>
+                    <li class="list-group-item">
+                        Host: {{ page.country_enname }}
+                        {% if page[year][idx].online %}
+                        <span class="badge bg-secondary">Online 🌐</span>
+                        {% endif %}
+                    </li>
                     {% if page.website %}
                     <li class="list-group-item">Website: <a href="{{ page.website }}">{{ page.website }}</a></li>
                     {% endif %}
                 {% else %}
                     <li class="list-group-item">البداية: {{ page.start_date }}</li>
                     <li class="list-group-item">النهاية: {{ page.end_date }}</li>
-                    <li class="list-group-item">الاستضافة: {{ page.country_arname }}</li>
+                    <li class="list-group-item">
+                        الاستضافة: {{ page.country_arname }}
+                        {% if page[year][idx].online %}
+                        <span class="badge bg-secondary">عن بعد 🌐</span>
+                        {% endif %}
+                    </li>
                     {% if page.website %}
                     <li class="list-group-item">الموقع: <a href="{{ page.website }}">{{ page.website }}</a></li>
                     {% endif %}
