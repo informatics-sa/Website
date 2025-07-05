@@ -49,6 +49,16 @@ layout: default
                         {% else %}
                             {{ page[year][idx].country_enname }}
                         {% endif %}
+                        
+                        {% if page[year][idx].online %}
+                        <span class="badge bg-secondary">
+                            {% if page.lang == 'ar' %}
+                            عن بعد 🌐
+                            {% else %}
+                            Online 🌐
+                            {% endif %}
+                        </span>
+                        {% endif %}
                     </td>
                     <td>{{ page[year][idx].awards }}</td>
                 </tr>
