@@ -42,7 +42,7 @@
         }
     },
     {
-        "name": "apio", "year": 2025, "start": "2025/5/17", "end": "2025/5/18", "country": "online",
+        "name": "apio", "year": 2025, "start": "2025/5/17", "end": "2025/5/18", "country": "uz", "online": true,
         "website": "https://apio2025.uz/",
         "participants": {
             "455": null,
@@ -55,7 +55,7 @@
         }
     },
     {
-        "name": "naoi", "year": 2025, "start": "2025/4/19", "end": "2025/4/19", "country": "dz",
+        "name": "naoi", "year": 2025, "start": "2025/4/19", "end": "2025/4/19", "country": "dz", "online": true,
         "website": "https://naoi2025.algerianoi.com/",
         "participants": {
             "455": "gold",
@@ -99,7 +99,7 @@
         }
     },
     {
-        "name": "apio", "year": 2024, "start": "2024/5/18", "end": "2024/5/19", "country": "online",
+        "name": "apio", "year": 2024, "start": "2024/5/18", "end": "2024/5/19", "country": "cn", "online": true,
         "website": "https://apio2024.org/",
         "participants": {
             "201": "silver",
@@ -114,7 +114,7 @@
         }
     },
     {
-        "name": "jboi", "year": 2023, "start": "2023/11/25", "end": "2023/11/28", "country": "online",
+        "name": "jboi", "year": 2023, "start": "2023/11/25", "end": "2023/11/28", "country": "mk", "online": true,
         "website": "https://jboi2023.cs.org.mk",
         "participants": {
             "407": "bronze",
@@ -156,7 +156,7 @@
         }
     },
     {
-        "name": "apio", "year": 2023, "start": "2023/5/20", "end": "2023/5/20", "country": "online",
+        "name": "apio", "year": 2023, "start": "2023/5/20", "end": "2023/5/20", "country": "cn", "online": true,
         "website": null,
         "participants": {
             "201": null,
@@ -200,7 +200,7 @@
         }
     },
     {
-        "name": "ioi", "year": 2021, "start": "2021/6/19", "end": "2021/6/25", "country": "online",
+        "name": "ioi", "year": 2021, "start": "2021/6/19", "end": "2021/6/25", "country": "sg", "online": true,
         "website": "https://ioi2021.sg/",
         "participants": {
             "106": "bronze",
@@ -210,7 +210,7 @@
         }
     },
     {
-        "name": "apio", "year": 2021, "start": "2021/5/26", "end": "2021/5/26", "country": "online",
+        "name": "apio", "year": 2021, "start": "2021/5/26", "end": "2021/5/26", "country": "sg", "online": true,
         "website":"https://apio2021.toki.id/",
         "participants": {
             "106": "bronze",
@@ -222,7 +222,7 @@
         }
     },
     {
-        "name": "apio", "year": 2020, "start": "2020/8/15", "end": "2020/8/16", "country": "online",
+        "name": "apio", "year": 2020, "start": "2020/8/15", "end": "2020/8/16", "country": "id", "online": true,
         "website": "https://apio2020.toki.id/",
         "participants": {
             "106": "bronze",
@@ -236,7 +236,7 @@
         }
     },
     {
-        "name": "ioi", "year": 2020, "start": "2020/6/19", "end": "2020/6/25", "country": "online",
+        "name": "ioi", "year": 2020, "start": "2020/6/19", "end": "2020/6/25", "country": "sg", "online": true,
         "website": "https://ioi2020.sg/",
         "participants": {
             "106": null,
