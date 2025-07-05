@@ -25,7 +25,7 @@ Here is a **TODO list**:
 - [`_data/` folder](https://github.com/informatics-sa/Website/tree/main/root/_data)
 - Any other strings in `_layouts` folder
 
-**TODO**: move any `{% if page.lang == ... %}` in all layouts and use `_data` strings like `data[page.lang].string_name`
+**TODO**: move any `if page.lang == ...` in all layouts and use `_data` strings like `data[page.lang].string_name`
 
 ## Future projects
 You might check the [original TODO list](https://github.com/informatics-sa/Website/blob/main/TODO.md), but it's up to your laziness if you will do them.
