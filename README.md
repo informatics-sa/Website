@@ -36,7 +36,6 @@ The main goal is to have at any time **at least 3 active maintainers**.
 
 ### Current maintainers:
 
-- Muaath Alqarni
 - Ali Alsalman
 - Sultan Alaiban
 - Omar Muharib
