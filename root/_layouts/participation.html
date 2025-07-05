@@ -20,7 +20,7 @@ layout: default
                     <li class="list-group-item">End: {{ page.end_date }}</li>
                     <li class="list-group-item">
                         Host: {{ page.country_enname }}
-                        {% if page[year][idx].online %}
+                        {% if page.online %}
                         <span class="badge bg-secondary">Online 🌐</span>
                         {% endif %}
                     </li>
@@ -32,7 +32,7 @@ layout: default
                     <li class="list-group-item">النهاية: {{ page.end_date }}</li>
                     <li class="list-group-item">
                         الاستضافة: {{ page.country_arname }}
-                        {% if page[year][idx].online %}
+                        {% if page.online %}
                         <span class="badge bg-secondary">عن بعد 🌐</span>
                         {% endif %}
                     </li>
