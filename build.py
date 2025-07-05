@@ -273,7 +273,8 @@ def build_participations():
             'country_arname': participation['country_arname'],
             'country_enname': participation['country_enname'],
             'participants': participation['ar_participants'],
-            'website': participation['website']
+            'website': participation['website'],
+            'online': participation['online']
         })
         write_file(f'en/participations/{filename}.html', {
             'layout': 'participation',
@@ -286,7 +287,8 @@ def build_participations():
             'country_arname': participation['country_arname'],
             'country_enname': participation['country_enname'],
             'participants': participation['en_participants'],
-            'website': participation['website']
+            'website': participation['website'],
+            'online': participation['online']
         })
 
 def build_participations_index():
