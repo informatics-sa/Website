@@ -11,6 +11,7 @@ def get_countries():
 
 def get_exams():
     exams = load_json('exams')
+    # TODO: Check for duplicate exam IDs
     return exams
 
 def get_members():
