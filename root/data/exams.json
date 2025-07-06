@@ -1,11 +1,11 @@
 {
     "intensive_2b_tst_5_2025": {
-        "id": "intensive_2a_tst_3_2025",
-        "name": "Intensive 2A TST 3",
+        "id": "intensive_2b_tst_5_2025",
+        "name": "Intensive 2B TST 5",
         "enname": "TST 5",
         "arname": "TST 5",
-        "date": "2025/5/26",
-        "url": "https://arena.petlja.org/en/competition/2025-05-26-tst-upsolve",
+        "date": "2025/6/23",
+        "url": "https://arena.petlja.org/en/competition/2025-06-23-tst-5-upsolve",
         "participants": {
             "501": [100, 31, 21, 66],
             "455": [35, 39, 39, 100],
@@ -46,11 +46,11 @@
     },
     "intensive_2b_tst_4_2025": {
         "id": "intensive_2b_tst_4_2025",
-        "name": "Intensive 2A TST 3",
+        "name": "Intensive 2A TST 4",
         "enname": "TST 4",
         "arname": "TST 4",
-        "date": "2025/5/26",
-        "url": "https://arena.petlja.org/en/competition/2025-05-26-tst-upsolve",
+        "date": "2025/6/18",
+        "url": "https://arena.petlja.org/en/competition/tst-upsolve-4-25",
         "participants": {
             "213": [63, 15, 50, 100],
             "304": [0, 15, 50, 100],
