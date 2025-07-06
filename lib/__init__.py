@@ -20,8 +20,10 @@ def get_members():
         members[str(person['iid'])] = person
         members[str(person['iid'])]['participations'] = []
         members[str(person['iid'])]['exams'] = []
-        members[str(person['iid'])]['codeforces'] = None
-        members[str(person['iid'])]['graduation'] = None
+        if 'codeforces' not in members[str(person['iid'])]:
+            members[str(person['iid'])]['codeforces'] = None
+        if 'graduation' not in members[str(person['iid'])]:
+            members[str(person['iid'])]['graduation'] = None
 
     for participation in load_json('participations'):
         for member_id in participation['participants']:
