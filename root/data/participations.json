@@ -25,9 +25,9 @@
         "name": "ioi", "year": 2025, "start": "2025/7/27", "end": "2025/8/3", "country": "bo",
         "website": "https://ioi2025.bo/",
         "participants": {
-            "501": null,
-            "455": null,
-            "304": null,
+            "501": "bronze",
+            "455": "hm",
+            "304": "hm",
             "404": null
         }
     },
