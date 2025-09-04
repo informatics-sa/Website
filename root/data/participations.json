@@ -15,10 +15,10 @@
         "name": "ejoi", "year": 2025, "start": "2025/8/29", "end": "2025/9/4", "country": "bg",
         "website": "https://2025.ejoi.org",
         "participants": {
-            "508": null,
+            "508": "bronze",
             "602": null,
             "510": null,
-            "604": null
+            "604": "hm"
         }
     },
     {
