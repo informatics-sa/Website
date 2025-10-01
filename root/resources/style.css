@@ -7,8 +7,14 @@
     --theme-color-dark: #115740;
 }
 
+@font-face {
+    font-family: 'Twemoji';
+    src: url('/resources/twemoji.ttf') format('ttf');
+    font-display: swap;
+}
+
 body {
-    font-family: font-family: 'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-family: 'Twemoji', 'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !important;
 }
 
 debug-only {
