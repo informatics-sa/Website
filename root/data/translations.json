@@ -5,10 +5,29 @@
         "images": "مكتبة الصور",
         "contact": "تواصل",
         "olympiads": "الأولمبيادات",
+        "members": "الأعضاء",
         "members_list": "قائمة الأعضاء",
+        "exams": "الاختبارات",
+
         "website_name": "فريق المعلوماتية السعودي",
         "website_description": "موقع فيه المشاركات والأعضاء والصور وكل البيانات المتعلقة بالفريق",
-        "team_selection_tests": "اختبارات ترشيح الفريق"
+        "team_selection_tests": "اختبارات ترشيح الفريق",
+
+
+        "last_update": "آخر تحديث",
+        "site_name": "فريق المعلوماتية السعودي",
+        "logo": "شعار",
+
+        "cancel": "إلغاء",
+        "save": "حفظ",    
+
+        "view_settings": "عرض الإعدادات",
+        "show_averages": "أظهر المتوسط لكل عمود",
+        "show_distincts": "أظهر عدد الأرقام بدون تكرار لكل عمود",
+        "show_maximums": "أظهر القيمة القصوى لكل عمود",
+        "show_medians": "أظهر الوسيط لكل عمود",
+        "show_stddevs": "أظهر الانحراف المعياري لكل عمود"
+
     },
     "en": {
         "participations": "Participations",
@@ -16,9 +35,26 @@
         "images": "Images library",
         "contact": "Contact",
         "olympiads": "Olympiads",
+        "members": "Members",
         "members_list": "Members list",
+        "exams": "Exams",
+
         "website_name": "Saudi Informatics Team",
         "website_description": "Website contains participations, members, images, and all related data",
-        "team_selection_tests": "Team selection tests"
+        "team_selection_tests": "Team selection tests",
+
+        "last_update": "Last update",
+        "site_name": "Saudi Informatics Team",
+        "logo": "Logo",
+
+        "cancel": "Cancel",
+        "save": "Save",
+
+        "view_settings": "View settings",
+        "show_averages": "Show averages per column",
+        "show_distincts": "Show distinct scores count per column",
+        "show_maximums": "Show maximum per column",
+        "show_medians": "Show medians per column",
+        "show_stddevs": "Show standard deviations per column"
     }
 }

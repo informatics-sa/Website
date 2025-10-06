@@ -7,7 +7,7 @@
 - [x] Remember last used language
 - [x] Adding per exam score in TST view
 - [x] Adding a page for exams
-- [ ] Allow multilanguages from settings and adopting translations from JSON files (20% done)
+- [ ] Allow multilanguages from settings and adopting translations from JSON files (60% done)
 - [ ] Add all past members tab in members index
 - [ ] Adding statistics for each person performance on exams (shown only if you add a cookie)
 

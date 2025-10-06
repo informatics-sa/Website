@@ -4,6 +4,11 @@ ROOT_DIR = './root'
 LANGS = ['ar', 'en']
 BLOCKED_FLAGS = ['se']
 
+def load_json(filename):
+    with open(f'{ROOT_DIR}/data/{filename}.json', 'r', encoding='utf-8') as f:
+        return json.load(f)
+
+translations = load_json('translations')
 
 def award_emoji(award, dashing_none=False):
     if award == 'gold':
@@ -21,7 +26,7 @@ def default_person(id: str):
         'id': id,
         'participations': [],
         'arname': id,
-        'enname': id.replace('_', ' '), # TODO: split undersc
+        'enname': id.replace('_', ' ').title(), # TODO: split undersc
         'level': -4,
         'graduation': None,
         'codeforces': None
@@ -58,10 +63,6 @@ def format_yml(data: dict, indent_level: int = 0) -> str:
 
     return res
 
-def load_json(filename):
-    with open(f'{ROOT_DIR}/data/{filename}.json', 'r', encoding='utf-8') as f:
-        return json.load(f)
-
 def write_text(filename: str, txt: str):
     os.makedirs(os.path.dirname(filename), exist_ok=True)
     with open(filename, 'w', encoding='utf-8') as f:
@@ -75,16 +76,21 @@ def write_file(filename: str, data: dict):
         f.write(format_yml(data))
         f.write("---\n")
 
-def write_page(lang: str, filename: str, data: dict):
-    if lang not in LANGS:
-        print(f"Invalid language '{lang}' for page: {filename}")
-        exit(1)
-    data['lang'] = lang
-    
-    if lang == LANGS[0]:
-        write_file('./' + filename, data)
-    else:
-        write_file(lang + '/' + filename, data)
+def write_page(filename: str, data: dict):
+    for lang in LANGS:
+        data['lang'] = lang
+        remove = []
+        for key in data:
+            if isinstance(key, str) and key[0] == '$':
+                remove.append(key)
+                
+        for r in remove:
+            data[r[1:]] = translations[lang][data[r]]
+            del data[r]
+        if lang == LANGS[0]:
+            write_file(f'./{filename}.html', data)
+        else:
+            write_file(f'{lang}/{filename}.html', data)
 
 def test_utils(log: bool = True):
     assert flag_emoji('sa') == '🇸🇦'

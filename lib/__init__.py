@@ -1,6 +1,5 @@
 from .utils import *
 
-
 def get_countries():
     countries = {}
     for country in load_json('countries'):
@@ -57,7 +56,7 @@ def get_olympiads():
     for participation in load_json('participations'):
         olympiads[participation['name']]['participations'] += 1
         for award in participation['participants'].values():
-            if award != None:
+            if award is not None:
                olympiads[participation['name']][award] += 1
                 
     return olympiads
