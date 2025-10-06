@@ -13,6 +13,8 @@ root/*
 !root/_layouts
 !root/_layouts/*
 
+!root/files
+!root/files/*
 !root/_data
 root/_data/*
 !root/_data/ar.yml
