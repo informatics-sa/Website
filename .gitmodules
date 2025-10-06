@@ -1,3 +1,4 @@
 [submodule "root/_layouts"]
 	path = root/_layouts
 	url = https://github.com/informatics-sa/layouts.git
+	branch = main
