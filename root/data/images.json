@@ -1,5 +1,14 @@
 [
     {
+        "src": "boi_2025.jpeg",
+        "artitle": "الفائزين في BOI 2025",
+        "entitle": "Winners of BOI 2025",
+        "ardescription": "المنتخب بعد تحقيق نتائج تاريخية في أولمبياد البلقان",
+        "endescription": "The team after getting historical results in Balkan Olympiad",
+        "date": "2025/9/30",
+        "proposed_by": 311
+    },
+    {
         "src": "intensive_1_2025_group_photo.jpg",
         "artitle": "صورة جماعية لشباب المستقبل",
         "entitle": "Group photo for future youth",
@@ -14,7 +23,7 @@
         "ardescription": "فاز الطالبان أحمد الهاشم وأديب الشهري بميداليتين برونزية في مصر.",
         "entitle": "IOI 2024 medalists",
         "endescription": "Ahmad Alhashim and Adeeb Alshehri were awarded 2 bronze medals in Egypt.",
-        "date": "2024/9/06"
+        "date": "2024/9/6"
     },
     {
         "src": "ioi_2023.jpeg",

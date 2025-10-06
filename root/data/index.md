@@ -47,8 +47,9 @@ An array of olympiads SIT participated in, each olympiad has the following:
 - `country`: String, the 2-letters country code of the host country of the olympiad.
 - `start`: Date, The start day of the olympiad
 - `end`: Date, the end day of the olympiad
-- `participants`: Dictionary of `<member ID>: <award name>`
-    - `<award name>`: (`gold`/`silver`/`bronze`/`hounarablemention`) (null in case of no award)
+- `participants`: Dictionary of `<member_id>: <award_name>` of the participants __in SAU order__.
+    - `<award name>`: (`gold`/`silver`/`bronze`/`hm`) (null in case of no award)
+- `scores`: Dictionary of `<member_id>: <scores_array>` **(optiona;)**
 - `website`: URL, Olympiad website of that specific year **(nullable)**
 - `online`: Boolean, indicates if Saudi participated online or not, default is False **(optional)**
 
