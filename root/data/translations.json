@@ -26,8 +26,11 @@
         "show_distincts": "أظهر عدد الأرقام بدون تكرار لكل عمود",
         "show_maximums": "أظهر القيمة القصوى لكل عمود",
         "show_medians": "أظهر الوسيط لكل عمود",
-        "show_stddevs": "أظهر الانحراف المعياري لكل عمود"
+        "show_stddevs": "أظهر الانحراف المعياري لكل عمود",
 
+        "view_exams_record": "عرض سجل الاختبارات",
+        "sum": "مجموع",
+        "date": "التاريح"
     },
     "en": {
         "participations": "Participations",
@@ -55,6 +58,10 @@
         "show_distincts": "Show distinct scores count per column",
         "show_maximums": "Show maximum per column",
         "show_medians": "Show medians per column",
-        "show_stddevs": "Show standard deviations per column"
+        "show_stddevs": "Show standard deviations per column",
+
+        "view_exams_record": "View exams record",
+        "sum": "Sum",
+        "date": "Date"
     }
 }
