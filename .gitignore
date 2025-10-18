@@ -2,7 +2,8 @@
 .jekyll-cache
 __pycache__
 _site
-flake.nix
+vendor/bundle/
+.bundle/
 
 # build artifacts
 root/*
@@ -23,3 +24,8 @@ root/*
 !root/resources/*
 !root/404.html
 !root/debug.html
+
+# OS / Editor Specific
+.DS_Store
+flake.nix
+Thumbs.db
