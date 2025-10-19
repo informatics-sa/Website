@@ -18,7 +18,7 @@ body {
 }
 
 .debug-only {
-    display: none;
+    display: none !important;
 }
 
 .hero-section {

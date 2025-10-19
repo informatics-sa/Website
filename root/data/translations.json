@@ -29,8 +29,21 @@
         "show_stddevs": "أظهر الانحراف المعياري لكل عمود",
 
         "view_exams_record": "عرض سجل الاختبارات",
-        "sum": "مجموع",
-        "date": "التاريح"
+        "sum": "المجموع",
+        "date": "التاريخ",
+
+        "name": "الاسم",
+        "rank": "الترتيب",
+        "award": "الجائزة",
+
+        "start": "البداية",
+        "end": "النهاية",
+        "host_country": "الدولة المستضيفة",
+        "website": "الموقع",
+        "online": "عن بعد",
+
+        "graduation": "سنة التخرج",
+        "codeforces": "كودفورسيس"
     },
     "en": {
         "participations": "Participations",
@@ -62,6 +75,19 @@
 
         "view_exams_record": "View exams record",
         "sum": "Sum",
-        "date": "Date"
+        "date": "Date",
+
+        "name": "Name",
+        "rank": "Rank",
+        "award": "Award",
+
+        "start": "Start",
+        "end": "End",
+        "host_country": "Host Country",
+        "website": "Website",
+        "online": "Online",
+
+        "graduation": "Graduation year",
+        "codeforces": "Codeforces"
     }
 }

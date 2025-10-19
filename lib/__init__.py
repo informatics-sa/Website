@@ -57,10 +57,10 @@ def get_olympiads():
         olympiads[olympiad['id']]['silver'] = 0
         olympiads[olympiad['id']]['bronze'] = 0
         olympiads[olympiad['id']]['hm'] = 0
-        olympiads[olympiad['id']]['participations'] = 0
+        olympiads[olympiad['id']]['participations'] = []
 
     for participation in load_json('participations'):
-        olympiads[participation['name']]['participations'] += 1
+        olympiads[participation['name']]['participations'].append(participation)
         for award in participation['participants'].values():
             if award is not None:
                olympiads[participation['name']][award] += 1
@@ -83,8 +83,8 @@ def get_participations():
         enparts = []
         awards = ''
         for mem_id, award in participation['participants'].items():
-            parts.append({'id': mem_id, 'name': members[mem_id]['arname'], 'award': award_emoji(award, dashing_none=True)})
-            enparts.append({'id': mem_id, 'name': members[mem_id]['enname'], 'award': award_emoji(award, dashing_none=True)})
+            parts.append({'id': mem_id, 'name': members[mem_id]['arname'], 'award': award})
+            enparts.append({'id': mem_id, 'name': members[mem_id]['enname'], 'award': award})
             awards += award_emoji(award)
         participation['awards'] = awards
         participation['ar_participants'] = parts

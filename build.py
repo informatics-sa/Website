@@ -147,7 +147,7 @@ def build_home():
         stats['silver'] += olympiad['silver']
         stats['bronze'] += olympiad['bronze']
         stats['hm'] += olympiad['hm']
-        stats['participations'] += olympiad['participations']
+        stats['participations'] += len(olympiad['participations'])
 
     write_page('index', {
         '$title': 'website_name',
@@ -221,7 +221,6 @@ def build_olympiads():
 
 def build_participations():
     for participation in participations:
-        filename = f"{participation['name']}_{participation['year']}"
         write_file(f'olympiads/{participation["name"]}/{participation["year"]}.html', {
             'layout': 'participation',
             'lang': 'ar',
@@ -233,6 +232,7 @@ def build_participations():
             'country_arname': participation['country_arname'],
             'country_enname': participation['country_enname'],
             'participants': participation['ar_participants'],
+            'scores': participation['scores'],
             'website': participation['website'],
             'online': participation['online'] if 'online' in participation else False
         })
@@ -247,6 +247,7 @@ def build_participations():
             'country_arname': participation['country_arname'],
             'country_enname': participation['country_enname'],
             'participants': participation['en_participants'],
+            'scores': participation['scores'],
             'website': participation['website'],
             'online': participation['online'] if 'online' in participation else False
         })

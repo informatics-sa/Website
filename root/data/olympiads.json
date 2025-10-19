@@ -6,6 +6,7 @@
         "ardescription": "مسابقة يشارك فيها أكثر من 90 دولة حول العالم",
         "endescription": "More than 90 countries around the world participates in this Olympiad",
         "participants_count": 4,
+        "problems_count": 6,
         "official": true
     },
     {
@@ -15,6 +16,7 @@
         "ardescription": "",
         "endescription": "",
         "participants_count": 60,
+        "problems_count": 3,
         "official": true
     },
     {
@@ -24,6 +26,7 @@
         "ardescription": "",
         "endescription": "",
         "participants_count": 4,
+        "problems_count": 8,
         "official": false
     },
     {
@@ -33,6 +36,7 @@
         "ardescription": "",
         "endescription": "",
         "participants_count": 6,
+        "problems_count": 6,
         "official": false
     },
     {
@@ -42,15 +46,17 @@
         "ardescription": "",
         "endescription": "",
         "participants_count": 4,
+        "problems_count": 6,
         "official": false
     },
     {
-        "id": "naoi", "website": "https://naoi2025.algerianoi.com/",
+        "id": "naoi", "website": "https://naoi2025.algerianoi.com",
         "arname": "أولمبياد شمال أفريقيا للمعلوماتية",
         "enname": "North African Olympiad in Informatics",
         "ardescription": "أولمبياد بدأ سنة 2025 تشارك فيه: مصر، ليبيا، تونس، الجزائر، والمغرب",
         "endescription": "Started at 2025, where Egypt, Libya, Tunisia, Algeria, and Morocco participate in",
         "participants_count": 6,
+        "problems_count": 4,
         "official": false
     },
     {
@@ -60,6 +66,7 @@
         "ardescription": "",
         "endescription": "",
         "participants_count": 4,
+        "problems_count": 6,
         "official": false
     }
 ]

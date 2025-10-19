@@ -89,7 +89,7 @@
     },
     {
         "name": "naoi", "year": 2025, "start": "2025/4/19", "end": "2025/4/19", "country": "dz", "online": true,
-        "website": "https://naoi2025.algerianoi.com/",
+        "website": "https://naoi2025.algerianoi.com",
         "participants": {
             "304": "silver",
             "501": "silver",
