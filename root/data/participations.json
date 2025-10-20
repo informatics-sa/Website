@@ -109,7 +109,7 @@
     },
     {
         "name": "boi", "year": 2024, "start": "2024/9/20", "end": "2024/9/26", "country": "mk",
-        "website": "https://boi2024.cs.org.mk/",
+        "website": "https://boi2024.cs.org.mk",
         "participants": {
             "455": null,
             "304": "bronze",
@@ -129,7 +129,7 @@
     },
     {
         "name": "ioi", "year": 2024, "start": "2024/9/1", "end": "2024/9/8", "country": "eg",
-        "website": "https://ioi2024.eg/",
+        "website": "https://ioi2024.eg",
         "participants": {
             "201": "bronze",
             "353": "bronze",
@@ -145,7 +145,7 @@
     },
     {
         "name": "egoi", "year": 2024, "start": "2024/7/21", "end": "2024/7/27", "country": "nl",
-        "website": "https://egoi2024.nl/",
+        "website": "https://egoi2024.nl",
         "participants": {
             "213": null,
             "461": null,
@@ -161,7 +161,7 @@
     },
     {
         "name": "apio", "year": 2024, "start": "2024/5/18", "end": "2024/5/19", "country": "cn", "online": true,
-        "website": "https://apio2024.org/",
+        "website": "https://apio2024.org",
         "participants": {
             "201": "silver",
             "353": null,
@@ -325,7 +325,7 @@
     },
     {
         "name": "ioi", "year": 2021, "start": "2021/6/19", "end": "2021/6/25", "country": "sg", "online": true,
-        "website": "https://ioi2021.sg/",
+        "website": "https://ioi2021.sg",
         "participants": {
             "106": "bronze",
             "111": null,
@@ -341,7 +341,7 @@
     },
     {
         "name": "apio", "year": 2021, "start": "2021/5/26", "end": "2021/5/26", "country": "sg", "online": true,
-        "website":"https://apio2021.toki.id/",
+        "website":"https://apio2021.toki.id",
         "participants": {
             "106": "bronze",
             "102": null,
@@ -361,7 +361,7 @@
     },
     {
         "name": "apio", "year": 2020, "start": "2020/8/15", "end": "2020/8/16", "country": "id", "online": true,
-        "website": "https://apio2020.toki.id/",
+        "website": "https://apio2020.toki.id",
         "participants": {
             "106": "bronze",
             "171": "bronze",
@@ -385,7 +385,7 @@
     },
     {
         "name": "ioi", "year": 2020, "start": "2020/6/19", "end": "2020/6/25", "country": "sg", "online": true,
-        "website": "https://ioi2020.sg/",
+        "website": "https://ioi2020.sg",
         "participants": {
             "106": null,
             "171": null,
