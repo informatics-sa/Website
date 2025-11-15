@@ -21,7 +21,7 @@ function getCookie(name) {
 
 // Load settings from cookies
 const COOKIE_NAME = 'exam_stats_settings';
-const SETTING_IDS = ['show_maximums', 'show_stddevs', 'show_medians', 'show_averages', 'show_distincts'];
+const SETTING_IDS = ['show_distincts', 'show_averages', 'show_medians', 'show_maximums', 'show_stddevs'];
 
 function load_settings() {
     const settingsJson = getCookie(COOKIE_NAME);

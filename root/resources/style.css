@@ -106,6 +106,10 @@ footer {
     margin-bottom: 1rem;
 }
 
+.stat-row > td {
+    text-align: center;
+}
+
 /*
 .btn-success {
     background-color: var(--bs-success) /* #1A8754 /;

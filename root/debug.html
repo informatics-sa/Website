@@ -1,16 +1,18 @@
 ---
+title: 'Debug'
 lang: en
 layout: default
 ---
+<h1>Info</h1>
 <ul>
-    <li>Commit ID: <code>{{ site.data.build.commit_id }}</code></li>
-    <li>Commits count: <code>{{ site.data.build.commit_index }}</code></li>
-    <li>Jekyll version: <code>{{ site.data.build.jekyll_version }}</code></li>
     <li>Build time: <code>{{ site.data.build.last_update }}</code></li>
+    <li>Commit ID: <code>{{ site.data.build.commit_id }}</code> (<code>{{ site.data.build.commit_id | slice: 0, 6 }}</code>)</li>
     {% if site.github %}
     <li>Github Jekyll version: <code>{{ site.github.versions.jekyll }}</code></li>
     <li>Github Ruby version: <code>{{ site.github.versions.ruby }}</code></li>
     <li>Github GHPages version: <code>{{ site.github.versions.github-pages }}</code></li>
-    <li>Build revision: <code>{{ site.github.build_revision }}</code></li>
+    {% else %}
+    <li>Commits count: <code>{{ site.data.build.commit_index }}</code></li>
+    <li>Jekyll version: <code>{{ site.data.build.jekyll_version }}</code></li>
     {% endif %}
 </ul>

@@ -39,7 +39,7 @@ For any file in `_data` folder in jeykll, you can access it by `site.data.FILE_N
 Here is an example:
 {% raw %}
 ```jekyll
-{% if page.lang != site.data.build.primary_lang %}{{ page.lang }}/{% endif %}/olympaids/boi/2024
+{% if page.lang != site.data.build.primary_lang %}/{{ page.lang }}/{% endif %}/olympaids/boi/2024
 ```
 {% endraw %}
 

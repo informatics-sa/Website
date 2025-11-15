@@ -197,7 +197,7 @@
         "id": "juri_aljohani",
         "arname": "جوري الجهني",
         "enname": "Juri Aljohani",
-        "graduation": 2026,
+        "graduation": 2023,
         "codeforces": "MonstrousKookie",
         "level": -1,
         "female": true
@@ -320,7 +320,7 @@
         "id": "leen_qanash",
         "arname": "لين قنش",
         "enname": "Leen Qanash",
-        "graduation": null,
+        "graduation": 2023,
         "codeforces": "RealSnake",
         "level": -1,
         "female": true
@@ -330,7 +330,7 @@
         "id": "uzouf_baagil",
         "arname": "عزوف باعقيل",
         "enname": "Uzouf Baagil",
-        "graduation": null,
+        "graduation": 2023,
         "codeforces": "Uzouf",
         "level": -1,
         "female": true
@@ -340,7 +340,7 @@
         "id": "jana_alzahrani",
         "arname": "جنا الزهراني",
         "enname": "Jana Alzahrani",
-        "graduation": null,
+        "graduation": 2022,
         "codeforces": null,
         "level": -1,
         "female": true
