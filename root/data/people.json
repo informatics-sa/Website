@@ -6,7 +6,7 @@
         "enname": "Muaath Alqarni",
         "graduation": 2025,
         "codeforces": "Muaath_5",
-        "level": 3,
+        "level": -1,
         "email": "muaath@sainformatics.org"
     },
     {
@@ -43,7 +43,7 @@
         "enname": "Emad Alharbi",
         "graduation": 2025,
         "codeforces": "Emad234",
-        "level": 3
+        "level": -1
     },
     {
         "iid": 106,
@@ -106,7 +106,7 @@
         "enname": "Saad Alarifi",
         "graduation": 2027,
         "codeforces": "Erering",
-        "level": 3
+        "level": 4
     },
     {
         "iid": 455,
@@ -115,7 +115,7 @@
         "enname": "Sultan Alaiban",
         "graduation": 2026,
         "codeforces": "Sul_A.",
-        "level": 3,
+        "level": 4,
         "email": "sultan@sainformatics.org"
     },
     {
@@ -125,7 +125,7 @@
         "enname": "Mohammad Bashkail",
         "graduation": 2027,
         "codeforces": "mohammadyay",
-        "level": 2
+        "level": 3
     },
     {
         "iid": 501,
@@ -134,7 +134,7 @@
         "enname": "Mohammed Alasmari",
         "graduation": 2026,
         "codeforces": "m5588ohammed",
-        "level": 3
+        "level": 4
     },
     {
         "iid": 213,
@@ -143,7 +143,7 @@
         "enname": "Rifal Alhazmi",
         "graduation": 2025,
         "codeforces": "rifal",
-        "level": 3,
+        "level": -1,
         "female": true
     },
     {
@@ -171,7 +171,7 @@
         "enname": "Abdulrahman Alghamdi",
         "graduation": 2026,
         "codeforces": "ibsha",
-        "level": 2
+        "level": 3
     },
     {
         "iid": 453,
@@ -180,7 +180,7 @@
         "enname": "Abdullah Alodaibi",
         "graduation": 2027,
         "codeforces": "Abdullah_Alodaibi",
-        "level": 2
+        "level": 3
     },
     {
         "iid": 461,
@@ -292,7 +292,7 @@
         "enname": "Ali Alsalman",
         "graduation": 2026,
         "codeforces": "AliMark71",
-        "level": 2,
+        "level": 3,
         "email": "ali@sainformatics.org"
     },
     {
@@ -352,7 +352,7 @@
         "enname": "Almonther Alghamdi",
         "graduation": 2027,
         "codeforces": "Almonther",
-        "level": 2
+        "level": 4
     },
     {
         "iid": 511,
@@ -361,7 +361,7 @@
         "enname": "Ziyad Alharbi",
         "graduation": 2027,
         "codeforces": "ziyad_alharbi09",
-        "level": 2
+        "level": 3
     },
     {
         "iid": 505,
@@ -379,7 +379,7 @@
         "enname": "Sami Basubrain",
         "graduation": 2026,
         "codeforces": "SamiBasubrain",
-        "level": 2
+        "level": 3
     },
     {
         "iid": 506,
@@ -415,7 +415,7 @@
         "enname": "Hisham Alshehri",
         "graduation": 2027,
         "codeforces": "HishamAlshehri1",
-        "level": 2
+        "level": 4
     },
     {
         "iid": 471,
@@ -424,7 +424,7 @@
         "enname": "Raed Tayyib",
         "graduation": 2026,
         "codeforces": "otesunki",
-        "level": 2
+        "level": 3
     },
     {
         "iid": 510,
@@ -433,7 +433,7 @@
         "enname": "Eyad Alkhalifa",
         "graduation": 2028,
         "codeforces": "Eyadooz1",
-        "level": 2
+        "level": 3
     }, 
     {
         "iid": 514,
@@ -451,7 +451,7 @@
         "enname": "Fares Alraddadi",
         "graduation": 2028,
         "codeforces": "Fares_alraddadi",
-        "level": 2
+        "level": 3
     },
     {
         "iid": 512,
@@ -469,7 +469,7 @@
         "enname": "Roaa Alakhdhar",
         "graduation": 2026,
         "codeforces": "em4ma2",
-        "level": 2,
+        "level": 3,
         "female": true
     },
     {
@@ -518,7 +518,7 @@
         "enname": "Mirza Al Qassim",
         "graduation": 2026,
         "codeforces": "Mirza_Al_Qassim",
-        "level": 3
+        "level": 4
     },
     {
         "iid": 456,
@@ -545,7 +545,7 @@
         "enname": "Khalid Alabdullatif",
         "graduation": 2026,
         "codeforces": "khalid_alabdullatif",
-        "level": 3
+        "level": 4
     },
     {
         "iid": 601,
@@ -554,7 +554,7 @@
         "enname": "Omar Almuharib",
         "graduation": 2027,
         "codeforces": "omar1312",
-        "level": 1,
+        "level": -2,
         "email": "omar@sainformatics.org"
     },
     {
@@ -564,7 +564,7 @@
         "enname": "Hashim Basuni",
         "graduation": 2028,
         "codeforces": "Hashim_Bas",
-        "level": 1
+        "level": 2
     },
     {
         "iid": 613,
@@ -573,7 +573,7 @@
         "enname": "Fadak Al Marzooq",
         "graduation": 2029,
         "codeforces": "Fadak-14",
-        "level": 1,
+        "level": -2,
         "female": true
     },
     {
@@ -583,7 +583,7 @@
         "enname": "Alreem Almutawa",
         "graduation": 2028,
         "codeforces": "Al_reem_Al_mutawa",
-        "level": 1,
+        "level": 2,
         "female": true
     },
     {
@@ -593,7 +593,7 @@
         "enname": "Dhia Alnufaili",
         "graduation": 2026,
         "codeforces": "diyah2000d",
-        "level": 1
+        "level": 2
     },
     {
         "iid": 604,
@@ -602,7 +602,7 @@
         "enname": "Ahmad Alhussain",
         "graduation": 2028,
         "codeforces": "AhmadAlhussain",
-        "level": 1
+        "level": 2
     },
     {
         "iid": 611,
@@ -611,7 +611,7 @@
         "enname": "Mohammed Albattat",
         "graduation": 2028,
         "codeforces": "moha1111",
-        "level": 1
+        "level": 2
     },
     {
         "iid": 610,
@@ -620,7 +620,7 @@
         "enname": "Abdulrahman Wahdain",
         "graduation": 2027,
         "codeforces": "amawahdain",
-        "level": 1
+        "level": 2
     },
     {
         "iid": 615,
@@ -629,7 +629,7 @@
         "enname": "Ayat Alkhalifah",
         "graduation": 2029,
         "codeforces": "ayat.alkhalifah",
-        "level": 1,
+        "level": 2,
         "female": true
     },
     {
@@ -639,7 +639,7 @@
         "enname": "Layth Alzahrani",
         "graduation": 2027,
         "codeforces": "l.alzahrani04",
-        "level": 1
+        "level": 2
     },
     {
         "iid": 605,
@@ -648,7 +648,7 @@
         "enname": "Mohammad Aladaili",
         "graduation": 2029,
         "codeforces": "Mohammad_Aladaili",
-        "level": 1
+        "level": 2
     },
     {
         "iid": 603,
@@ -667,7 +667,7 @@
         "enname": "Altayeb Alakhdhari",
         "graduation": 2027,
         "codeforces": "altayeb_alakhdhari",
-        "level": 1
+        "level": 2
     },
     {
         "iid": 609,
@@ -676,7 +676,7 @@
         "enname": "Ahmad Alturki",
         "graduation": 2028,
         "codeforces": "A_turki",
-        "level": 1
+        "level": 2
     },
     {
         "iid": 616,
@@ -685,7 +685,7 @@
         "enname": "Hassan Sultan",
         "graduation": 2028,
         "codeforces": "hmms127",
-        "level": 1
+        "level": 2
     },
     {
         "iid": 606,
