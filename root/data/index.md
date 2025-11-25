@@ -86,23 +86,23 @@ A dictionary of exam IDs, where every exam has:
 - `participants`: Dictionary of student ID and an array of floats which is score per task
 
 ## [`/data/tsts.json`](/data/tsts.json)
-A dictionary of year and olympiad IDs, and every olympiad ID contains a set of exams, and set of execluded students, for example:
+A dictionary of year and olympiad IDs, and every olympiad ID contains a set of exams, and set of excluded students, for example:
 ```json
 {
     "2025": {
-        "_general_execluded": ["sultan_alaiban"],
+        "_general_excluded": ["sultan_alaiban"],
         "ioi": {
             "exams": ["exam1", "exam2"],
             "min_birthdate": "2009/6/30",
             "female_only": false,
-            "execluded": ["muaath_alqarni", "ali_alsalman"]
+            "excluded": ["muaath_alqarni", "ali_alsalman"]
         }
     }
 }
 ```
 
 Additional rules (Optional):
-- `execluded`: Array, of strings student ID
+- `excluded`: Array, of strings student ID
 - `min_graduation`: Integer, minimum graduation year to be eligable
 - `female_only`: Boolean, true if the competition is female only
 - `min_birthdate`: Date, the minimum birthdate for eligibility **(future)**

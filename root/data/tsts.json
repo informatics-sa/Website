@@ -19,7 +19,7 @@
         },
         "boi": {
             "exams": ["intensive_1b_tst_1_2024", "apio_2024", "intensive_2a_tst_2_2024", "intensive_2b_tst_3_2024"],
-            "execluded": ["213"],
+            "excluded": ["213"],
             "min_graduation": 2025
         },
         "egoi": {
@@ -28,7 +28,7 @@
         }
     },
     "2025": {
-        "_general_execluded": ["201", "606", "505", "454", "509", "504", "514", "456", "512", "506", "460", "458", "461", "459", "603"],
+        "_general_excluded": ["201", "606", "505", "454", "509", "504", "514", "456", "512", "506", "460", "458", "461", "459", "603"],
         "ioi": {
             "exams": ["intensive_1b_tst_1_2025", "intensive_1b_tst_2_2025", "apio_2025", "intensive_2a_tst_3_2025"]
         },
@@ -37,19 +37,19 @@
         },
         "boi": {
             "exams": ["apio_2025", "intensive_2a_tst_3_2025", "intensive_2b_tst_4_2025", "intensive_2b_tst_5_2025"],
-            "execluded": ["601"],
+            "excluded": ["601"],
             "min_graduation": 2026
         },
         "jboi": {
             "exams": ["apio_2025", "intensive_2a_tst_3_2025", "intensive_2b_tst_4_2025", "intensive_2b_tst_5_2025"],
             "min_graduation": 2027,
-            "execluded": ["503", "404", "502", "511", "ahmad_alhussain_604", "401", "453", "601", "610", "612", "614"],
+            "excluded": ["503", "404", "502", "511", "ahmad_alhussain_604", "401", "453", "601", "610", "612", "614"],
             "min_birthdate": "2010/1/1"
         },
         "ejoi": {
             "exams": ["apio_2025", "intensive_2a_tst_3_2025", "intensive_2b_tst_4_2025", "intensive_2b_tst_5_2025"],
             "min_graduation": 2027,
-            "execluded": ["503", "404", "502", "511", "ahmad_alhussain_604", "401", "453", "601", "610", "612", "614"],
+            "excluded": ["503", "404", "502", "511", "ahmad_alhussain_604", "401", "453", "601", "610", "612", "614"],
             "min_birthdate": "2010/1/1"
         },
         "egoi": {
