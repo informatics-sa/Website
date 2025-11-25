@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from lib import *
 from lib.utils import * # target to remove this.
 import datetime
