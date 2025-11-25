@@ -37,6 +37,7 @@
         },
         "boi": {
             "exams": ["apio_2025", "intensive_2a_tst_3_2025", "intensive_2b_tst_4_2025", "intensive_2b_tst_5_2025"],
+            "execluded": ["601"],
             "min_graduation": 2026
         },
         "jboi": {
