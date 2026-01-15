@@ -1,13 +1,12 @@
 ---
 layout: default
-title: Student Comparison
-lang: en
-permalink: /en/compare
+title: مقارنة طلاب
+lang: ar
 ---
 
 <style>
 .compare-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 20px auto;
     padding: 20px;
 }
@@ -115,43 +114,40 @@ permalink: /en/compare
     cursor: not-allowed;
 }
 
-.compare-btn {
-    padding: 12px 30px;
-    background-color: #2196F3;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 18px;
-    margin-top: 20px;
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    align-items: start;
 }
 
-.compare-btn:hover {
-    background-color: #0b7dda;
-}
-
-.compare-btn:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
+@media (max-width: 968px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+    }
 }
 
 .weights-section {
     background: white;
-    padding: 20px;
+    padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-bottom: 30px;
+}
+
+.weights-section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
 .weights-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
+    font-size: 13px;
 }
 
 .weights-table th,
 .weights-table td {
-    padding: 10px;
+    padding: 6px 8px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
@@ -159,13 +155,15 @@ permalink: /en/compare
 .weights-table th {
     background-color: #f5f5f5;
     font-weight: bold;
+    font-size: 12px;
 }
 
 .weight-input {
-    width: 80px;
-    padding: 5px;
+    width: 50px;
+    padding: 3px 5px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    font-size: 12px;
 }
 
 .results-section {
@@ -173,13 +171,12 @@ permalink: /en/compare
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-bottom: 30px;
 }
 
 .scores-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
+    margin-bottom: 30px;
 }
 
 .scores-table th,
@@ -201,8 +198,8 @@ permalink: /en/compare
 }
 
 .chart-container {
-    margin-top: 30px;
     height: 500px;
+    margin-top: 20px;
 }
 
 .error-message {
@@ -225,100 +222,188 @@ permalink: /en/compare
 </style>
 
 <div class="compare-container">
+    {% if page.lang == "ar" %}
+    <h1>مقارنة الطلاب</h1>
+    
+    <div class="student-input-section">
+        <h2>اختر الطلاب (2-5)</h2>
+        <div class="student-inputs" id="studentInputs"></div>
+        <button class="add-student-btn" id="addStudentBtn" onclick="addStudentInput()">+ إضافة طالب</button>
+        <div id="errorMessage" class="error-message hidden"></div>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="weights-section">
+            <h2>أوزان الجوائز</h2>
+            <p style="font-size: 12px; margin-bottom: 10px;">تُحدّث النتائج تلقائياً</p>
+            <table class="weights-table" id="weightsTable">
+                <thead>
+                    <tr>
+                        <th>الأولمبياد</th>
+                        <th>ذهبي</th>
+                        <th>فضي</th>
+                        <th>برونزي</th>
+                        <th>تقدير</th>
+                        <th>مشاركة</th>
+                    </tr>
+                </thead>
+                <tbody id="weightsTableBody"></tbody>
+            </table>
+        </div>
+
+        <div class="results-section">
+            <div id="scoresSection" class="hidden">
+                <h2>النتائج التراكمية</h2>
+                <table class="scores-table" id="scoresTable">
+                    <thead>
+                        <tr>
+                            <th>الطالب</th>
+                            <th>النتيجة التراكمية</th>
+                        </tr>
+                    </thead>
+                    <tbody id="scoresTableBody"></tbody>
+                </table>
+            </div>
+
+            <div id="chartSection" class="hidden">
+                <h2>الأداء عبر الوقت</h2>
+                <div class="chart-container">
+                    <canvas id="performanceChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% else %}
     <h1>Student Comparison</h1>
     
     <div class="student-input-section">
         <h2>Select Students (2-5)</h2>
-        <div class="student-inputs" id="studentInputs">
-            <!-- Student inputs will be added here dynamically -->
-        </div>
+        <div class="student-inputs" id="studentInputs"></div>
         <button class="add-student-btn" id="addStudentBtn" onclick="addStudentInput()">+ Add Student</button>
-        <button class="compare-btn" id="compareBtn" onclick="compareStudents()">Compare Students</button>
         <div id="errorMessage" class="error-message hidden"></div>
     </div>
 
-    <div class="weights-section">
-        <h2>Award Weights</h2>
-        <p>Adjust the weight for each award type. Changes will automatically update the cumulative scores.</p>
-        <table class="weights-table">
-            <thead>
-                <tr>
-                    <th>Award Type</th>
-                    <th>Weight</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Gold Medal</td>
-                    <td><input type="number" class="weight-input" id="weightGold" value="100" min="0" onchange="updateScores()"></td>
-                </tr>
-                <tr>
-                    <td>Silver Medal</td>
-                    <td><input type="number" class="weight-input" id="weightSilver" value="50" min="0" onchange="updateScores()"></td>
-                </tr>
-                <tr>
-                    <td>Bronze Medal</td>
-                    <td><input type="number" class="weight-input" id="weightBronze" value="25" min="0" onchange="updateScores()"></td>
-                </tr>
-                <tr>
-                    <td>Honorable Mention</td>
-                    <td><input type="number" class="weight-input" id="weightHM" value="10" min="0" onchange="updateScores()"></td>
-                </tr>
-                <tr>
-                    <td>Participation</td>
-                    <td><input type="number" class="weight-input" id="weightParticipation" value="5" min="0" onchange="updateScores()"></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <div class="content-wrapper">
+        <div class="weights-section">
+            <h2>Award Weights</h2>
+            <p style="font-size: 12px; margin-bottom: 10px;">Auto-updates on change</p>
+            <table class="weights-table" id="weightsTable">
+                <thead>
+                    <tr>
+                        <th>Olympiad</th>
+                        <th>Gold</th>
+                        <th>Silver</th>
+                        <th>Bronze</th>
+                        <th>HM</th>
+                        <th>Part.</th>
+                    </tr>
+                </thead>
+                <tbody id="weightsTableBody"></tbody>
+            </table>
+        </div>
 
-    <div id="resultsSection" class="results-section hidden">
-        <h2>Cumulative Scores</h2>
-        <table class="scores-table" id="scoresTable">
-            <thead>
-                <tr>
-                    <th>Student</th>
-                    <th>Cumulative Score</th>
-                </tr>
-            </thead>
-            <tbody id="scoresTableBody">
-                <!-- Results will be populated here -->
-            </tbody>
-        </table>
+        <div class="results-section">
+            <div id="scoresSection" class="hidden">
+                <h2>Cumulative Scores</h2>
+                <table class="scores-table" id="scoresTable">
+                    <thead>
+                        <tr>
+                            <th>Student</th>
+                            <th>Cumulative Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="scoresTableBody"></tbody>
+                </table>
+            </div>
 
-        <h2>Performance Over Time</h2>
-        <div class="chart-container">
-            <canvas id="performanceChart"></canvas>
+            <div id="chartSection" class="hidden">
+                <h2>Performance Over Time</h2>
+                <div class="chart-container">
+                    <canvas id="performanceChart"></canvas>
+                </div>
+            </div>
         </div>
     </div>
+    {% endif %}
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script>
+const IS_ARABIC = {{ page.lang == "ar" | jsonify }};
 const STUDENT_COLORS = ['#f44336', '#4CAF50', '#2196F3', '#FFC107', '#9C27B0'];
 let allPeople = [];
 let allExams = {};
+let allOlympiads = {};
+let allParticipations = [];
 let selectedStudents = [];
 let chart = null;
+
+const translations = {
+    en: {
+        maxStudents: 'Maximum 5 students can be compared.',
+        minStudents: 'At least 2 students are required for comparison.',
+        loadError: 'Failed to load data. Please refresh the page.',
+        comparisonError: 'Failed to load comparison data.',
+        selectMin: 'Please select at least 2 students.',
+        enterName: 'Enter student name...'
+    },
+    ar: {
+        maxStudents: 'يمكن مقارنة 5 طلاب كحد أقصى.',
+        minStudents: 'مطلوب طالبان على الأقل للمقارنة.',
+        loadError: 'فشل تحميل البيانات. يرجى تحديث الصفحة.',
+        comparisonError: 'فشل تحميل بيانات المقارنة.',
+        selectMin: 'يرجى اختيار طالبين على الأقل.',
+        enterName: 'أدخل اسم الطالب...'
+    }
+};
+
+const t = translations[IS_ARABIC ? 'ar' : 'en'];
 
 // Load data on page load
 async function loadData() {
     try {
-        const [peopleResponse, examsResponse] = await Promise.all([
+        const [peopleResponse, examsResponse, olympiadsResponse, participationsResponse] = await Promise.all([
             fetch('/data/people.json'),
-            fetch('/data/exams.json')
+            fetch('/data/exams.json'),
+            fetch('/data/olympiads.json'),
+            fetch('/data/participations.json')
         ]);
         
         allPeople = await peopleResponse.json();
         allExams = await examsResponse.json();
+        allOlympiads = await olympiadsResponse.json();
+        allParticipations = await participationsResponse.json();
+        
+        // Build weights table
+        buildWeightsTable();
         
         // Initialize with 2 student inputs
         addStudentInput();
         addStudentInput();
     } catch (error) {
-        showError('Failed to load data. Please refresh the page.');
+        showError(t.loadError);
         console.error('Error loading data:', error);
     }
+}
+
+function buildWeightsTable() {
+    const tbody = document.getElementById('weightsTableBody');
+    
+    allOlympiads.forEach(olympiad => {
+        const row = document.createElement('tr');
+        const displayName = IS_ARABIC ? olympiad.arname : olympiad.enname;
+        
+        row.innerHTML = `
+            <td style="font-size: 11px;">${displayName}</td>
+            <td><input type="number" class="weight-input" data-olympiad="${olympiad.id}" data-award="gold" value="100" min="0" onchange="compareStudents()"></td>
+            <td><input type="number" class="weight-input" data-olympiad="${olympiad.id}" data-award="silver" value="50" min="0" onchange="compareStudents()"></td>
+            <td><input type="number" class="weight-input" data-olympiad="${olympiad.id}" data-award="bronze" value="25" min="0" onchange="compareStudents()"></td>
+            <td><input type="number" class="weight-input" data-olympiad="${olympiad.id}" data-award="hm" value="10" min="0" onchange="compareStudents()"></td>
+            <td><input type="number" class="weight-input" data-olympiad="${olympiad.id}" data-award="participation" value="5" min="0" onchange="compareStudents()"></td>
+        `;
+        
+        tbody.appendChild(row);
+    });
 }
 
 function addStudentInput() {
@@ -326,7 +411,7 @@ function addStudentInput() {
     const currentCount = container.children.length;
     
     if (currentCount >= 5) {
-        showError('Maximum 5 students can be compared.');
+        showError(t.maxStudents);
         return;
     }
     
@@ -341,21 +426,19 @@ function addStudentInput() {
             <input type="text" 
                    class="student-input" 
                    id="studentInput${index}" 
-                   placeholder="Enter student name..."
+                   placeholder="${t.enterName}"
                    data-index="${index}"
                    autocomplete="off"
                    oninput="handleStudentInput(${index})"
                    onfocus="handleStudentInput(${index})">
             <div class="autocomplete-dropdown hidden" id="dropdown${index}"></div>
         </div>
-        ${currentCount >= 2 ? `<button class="remove-btn" onclick="removeStudentInput(${index})">Remove</button>` : ''}
+        ${currentCount >= 2 ? `<button class="remove-btn" onclick="removeStudentInput(${index})">×</button>` : ''}
     `;
     
     container.appendChild(row);
     
-    // Update add button state
     document.getElementById('addStudentBtn').disabled = currentCount + 1 >= 5;
-    updateCompareButtonState();
 }
 
 function removeStudentInput(index) {
@@ -363,13 +446,12 @@ function removeStudentInput(index) {
     const rows = container.querySelectorAll('.student-input-row');
     
     if (rows.length <= 2) {
-        showError('At least 2 students are required for comparison.');
+        showError(t.minStudents);
         return;
     }
     
     rows[index].remove();
     
-    // Re-index remaining inputs
     const remainingRows = container.querySelectorAll('.student-input-row');
     remainingRows.forEach((row, newIndex) => {
         const input = row.querySelector('.student-input');
@@ -390,7 +472,7 @@ function removeStudentInput(index) {
     });
     
     document.getElementById('addStudentBtn').disabled = false;
-    updateCompareButtonState();
+    compareStudents();
 }
 
 function handleStudentInput(index) {
@@ -430,18 +512,9 @@ function selectStudent(index, iid, name) {
     input.dataset.iid = iid;
     dropdown.classList.add('hidden');
     
-    updateCompareButtonState();
+    compareStudents();
 }
 
-function updateCompareButtonState() {
-    const container = document.getElementById('studentInputs');
-    const inputs = container.querySelectorAll('.student-input');
-    const validInputs = Array.from(inputs).filter(input => input.dataset.iid);
-    
-    document.getElementById('compareBtn').disabled = validInputs.length < 2;
-}
-
-// Close dropdowns when clicking outside
 document.addEventListener('click', function(e) {
     if (!e.target.classList.contains('student-input')) {
         document.querySelectorAll('.autocomplete-dropdown').forEach(dropdown => {
@@ -472,60 +545,63 @@ async function compareStudents() {
     }
     
     if (selectedStudents.length < 2) {
-        showError('Please select at least 2 students.');
+        document.getElementById('scoresSection').classList.add('hidden');
+        document.getElementById('chartSection').classList.add('hidden');
         return;
     }
     
     try {
-        // Load participations data
-        const participationsResponse = await fetch('/data/participations.json');
-        const participations = await participationsResponse.json();
+        updateScores();
+        createPerformanceChart();
         
-        // Calculate scores and prepare chart data
-        await updateScores(participations);
-        await createPerformanceChart(participations);
-        
-        document.getElementById('resultsSection').classList.remove('hidden');
+        document.getElementById('scoresSection').classList.remove('hidden');
+        document.getElementById('chartSection').classList.remove('hidden');
     } catch (error) {
-        showError('Failed to load comparison data.');
+        showError(t.comparisonError);
         console.error('Error comparing students:', error);
     }
 }
 
-async function updateScores(participations = null) {
+function getWeights() {
+    const weights = {};
+    const inputs = document.querySelectorAll('.weight-input');
+    
+    inputs.forEach(input => {
+        const olympiad = input.dataset.olympiad;
+        const award = input.dataset.award;
+        const value = parseFloat(input.value) || 0;
+        
+        if (!weights[olympiad]) {
+            weights[olympiad] = {};
+        }
+        weights[olympiad][award] = value;
+    });
+    
+    return weights;
+}
+
+function updateScores() {
     if (selectedStudents.length === 0) return;
     
-    if (!participations) {
-        try {
-            const response = await fetch('/data/participations.json');
-            participations = await response.json();
-        } catch (error) {
-            console.error('Error loading participations:', error);
-            return;
-        }
-    }
-    
-    const weights = {
-        gold: parseFloat(document.getElementById('weightGold').value) || 0,
-        silver: parseFloat(document.getElementById('weightSilver').value) || 0,
-        bronze: parseFloat(document.getElementById('weightBronze').value) || 0,
-        hm: parseFloat(document.getElementById('weightHM').value) || 0,
-        participation: parseFloat(document.getElementById('weightParticipation').value) || 0
-    };
+    const weights = getWeights();
     
     const scores = selectedStudents.map((student, index) => {
         let totalScore = 0;
         
-        participations.forEach(participation => {
+        allParticipations.forEach(participation => {
             const studentId = student.iid.toString();
+            const olympiadId = participation.id;
+            
             if (participation.participants && participation.participants[studentId]) {
                 const award = participation.participants[studentId];
                 
-                if (award === 'gold') totalScore += weights.gold;
-                else if (award === 'silver') totalScore += weights.silver;
-                else if (award === 'bronze') totalScore += weights.bronze;
-                else if (award === 'hm') totalScore += weights.hm;
-                else if (award === null) totalScore += weights.participation;
+                if (weights[olympiadId]) {
+                    if (award === 'gold') totalScore += weights[olympiadId].gold || 0;
+                    else if (award === 'silver') totalScore += weights[olympiadId].silver || 0;
+                    else if (award === 'bronze') totalScore += weights[olympiadId].bronze || 0;
+                    else if (award === 'hm') totalScore += weights[olympiadId].hm || 0;
+                    else if (award === null) totalScore += weights[olympiadId].participation || 0;
+                }
             }
         });
         
@@ -536,10 +612,8 @@ async function updateScores(participations = null) {
         };
     });
     
-    // Sort by score descending
     scores.sort((a, b) => b.score - a.score);
     
-    // Update table
     const tbody = document.getElementById('scoresTableBody');
     tbody.innerHTML = scores.map(s => `
         <tr>
@@ -554,8 +628,7 @@ async function updateScores(participations = null) {
     `).join('');
 }
 
-async function createPerformanceChart(participations) {
-    // Collect all exam performances for selected students
+function createPerformanceChart() {
     const studentPerformances = selectedStudents.map((student, index) => {
         const performances = [];
         
@@ -563,23 +636,27 @@ async function createPerformanceChart(participations) {
             const studentId = student.iid.toString();
             
             if (exam.participants && exam.participants[studentId]) {
-                const scores = exam.participants[studentId];
-                const totalScore = scores.reduce((sum, score) => sum + score, 0);
+                const studentScores = exam.participants[studentId];
+                const studentTotal = studentScores.reduce((sum, score) => sum + score, 0);
                 
-                // Calculate total participants
-                const totalParticipants = Object.keys(exam.participants).length;
+                // Calculate all participant totals
+                const allTotals = Object.entries(exam.participants).map(([id, scores]) => ({
+                    id: id,
+                    total: scores.reduce((sum, score) => sum + score, 0)
+                }));
                 
-                // Calculate student's rank
-                const allScores = Object.values(exam.participants).map(s => 
-                    s.reduce((sum, score) => sum + score, 0)
-                ).sort((a, b) => b - a);
+                // Sort by total score descending
+                allTotals.sort((a, b) => b.total - a.total);
                 
-                const rank = allScores.indexOf(totalScore) + 1;
+                // Find student's rank (1-indexed)
+                const rank = allTotals.findIndex(p => p.id === studentId) + 1;
+                const totalParticipants = allTotals.length;
                 
-                // Calculate percentile (lower is better, so we invert it)
+                // Calculate percentile (inverted so higher is better)
                 const percentile = ((totalParticipants - rank + 1) / totalParticipants) * 100;
                 
                 performances.push({
+                    examId: examId,
                     examName: exam.name,
                     date: new Date(exam.date.replace(/\//g, '-')),
                     dateStr: exam.date,
@@ -590,7 +667,6 @@ async function createPerformanceChart(participations) {
             }
         });
         
-        // Sort by date
         performances.sort((a, b) => a.date - b.date);
         
         return {
@@ -600,21 +676,25 @@ async function createPerformanceChart(participations) {
         };
     });
     
-    // Prepare chart data
-    const allDates = new Set();
+    // Get all unique exam IDs that at least one student participated in
+    const allExamIds = new Set();
     studentPerformances.forEach(sp => {
-        sp.performances.forEach(p => allDates.add(p.dateStr));
+        sp.performances.forEach(p => allExamIds.add(p.examId));
     });
     
-    const sortedDates = Array.from(allDates).sort((a, b) => {
-        const dateA = new Date(a.replace(/\//g, '-'));
-        const dateB = new Date(b.replace(/\//g, '-'));
-        return dateA - dateB;
-    });
+    // Sort exams by date
+    const sortedExams = Array.from(allExamIds)
+        .map(examId => ({
+            id: examId,
+            name: allExams[examId].name,
+            date: new Date(allExams[examId].date.replace(/\//g, '-')),
+            dateStr: allExams[examId].date
+        }))
+        .sort((a, b) => a.date - b.date);
     
     const datasets = studentPerformances.map(sp => {
-        const data = sortedDates.map(date => {
-            const perf = sp.performances.find(p => p.dateStr === date);
+        const data = sortedExams.map(exam => {
+            const perf = sp.performances.find(p => p.examId === exam.id);
             return perf ? perf.percentile : null;
         });
         
@@ -624,21 +704,18 @@ async function createPerformanceChart(participations) {
             borderColor: sp.color,
             backgroundColor: sp.color,
             tension: 0.3,
-            spanGaps: true
+            spanGaps: false,
+            pointRadius: 5,
+            pointHoverRadius: 7
         };
     });
     
-    const labels = sortedDates.map(date => {
-        const examName = Object.values(allExams).find(e => e.date === date)?.name || '';
-        return `${examName}\n${date}`;
-    });
+    const labels = sortedExams.map(exam => exam.dateStr);
     
-    // Destroy existing chart if any
     if (chart) {
         chart.destroy();
     }
     
-    // Create new chart
     const ctx = document.getElementById('performanceChart').getContext('2d');
     chart = new Chart(ctx, {
         type: 'line',
@@ -651,9 +728,7 @@ async function createPerformanceChart(participations) {
             maintainAspectRatio: false,
             plugins: {
                 title: {
-                    display: true,
-                    text: 'Student Performance Percentiles Over Time',
-                    font: { size: 16 }
+                    display: false
                 },
                 legend: {
                     display: true,
@@ -661,10 +736,18 @@ async function createPerformanceChart(participations) {
                 },
                 tooltip: {
                     callbacks: {
+                        title: function(context) {
+                            const examIndex = context[0].dataIndex;
+                            return sortedExams[examIndex].name;
+                        },
                         label: function(context) {
-                            const studentPerf = studentPerformances[context.datasetIndex];
-                            const perf = studentPerf.performances[context.dataIndex];
-                            if (!perf) return '';
+                            const studentIndex = context.datasetIndex;
+                            const examIndex = context.dataIndex;
+                            const sp = studentPerformances[studentIndex];
+                            const exam = sortedExams[examIndex];
+                            const perf = sp.performances.find(p => p.examId === exam.id);
+                            
+                            if (!perf) return context.dataset.label + ': No participation';
                             
                             return [
                                 `${context.dataset.label}`,
@@ -679,15 +762,20 @@ async function createPerformanceChart(participations) {
                 y: {
                     beginAtZero: true,
                     max: 100,
+                    ticks: {
+                        callback: function(value) {
+                            return value + '%';
+                        }
+                    },
                     title: {
                         display: true,
-                        text: 'Percentile (%)'
+                        text: IS_ARABIC ? 'المئوية (%)' : 'Percentile (%)'
                     }
                 },
                 x: {
                     title: {
                         display: true,
-                        text: 'Exam (Name / Date)'
+                        text: IS_ARABIC ? 'التاريخ' : 'Date'
                     }
                 }
             }
@@ -695,6 +783,5 @@ async function createPerformanceChart(participations) {
     });
 }
 
-// Initialize on page load
 loadData();
 </script>
