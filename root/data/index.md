@@ -42,7 +42,7 @@ An array of people, each person has the following:
 
 ## [`/data/participations.json`](/data/participations.json)
 An array of olympiads SIT participated in, each olympiad has the following:
-- `id`: String, An id of an olympiad that exists in `olympiads.json`
+- `name`: String, An id of an olympiad that exists in `olympiads.json`
 - `year`: Integer, year
 - `country`: String, the 2-letters country code of the host country of the olympiad.
 - `start`: Date, The start day of the olympiad

@@ -478,5 +478,11 @@ def main():
     build_exams()
     print("Built exams")
 
+    write_page('compare', {
+        '$title': 'compare_students',
+        'layout': 'compare'
+    })
+    print("Built compare page")
+
 if __name__ == '__main__':
     main()

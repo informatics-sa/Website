@@ -24,6 +24,8 @@ root/*
 !root/resources/*
 !root/404.html
 !root/debug.html
+!root/compare.html
+!root/en/compare.html
 
 # OS / Editor Specific
 .DS_Store

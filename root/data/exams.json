@@ -973,6 +973,7 @@
         "name": "TST 3",
         "arname": "TST 3",
         "enname": "TST 3",
+        "date": "2022/6/1",
         "problems": ["spring", "rook", "principal"],
         "participants": {
             "201": [50, 100, 33],
@@ -1028,6 +1029,7 @@
         "name": "TST 2",
         "arname": "TST 2",
         "enname": "TST 2",
+        "date": "2022/1/2",
         "problems": ["ministry", "meerkats", "pearl_party"],
         "participants": {
             "201": [30, 100, 0],
@@ -1055,6 +1057,7 @@
         "name": "TST 1",
         "arname": "TST 1",
         "enname": "TST 1",
+        "date": "2022/1/1",
         "problems": ["piano", "hair", "airplanes"],
         "participants": {
             "201": [100, 0, 49],

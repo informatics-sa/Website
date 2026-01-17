@@ -43,7 +43,9 @@
         "online": "عن بعد",
 
         "graduation": "سنة التخرج",
-        "codeforces": "كودفورسيس"
+        "codeforces": "كودفورسيس",
+
+        "compare_students": "مقارنة الطلاب"
     },
     "en": {
         "participations": "Participations",
@@ -88,6 +90,8 @@
         "online": "Online",
 
         "graduation": "Graduation year",
-        "codeforces": "Codeforces"
+        "codeforces": "Codeforces",
+
+        "compare_students": "Compare students"
     }
 }
