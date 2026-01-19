@@ -45,7 +45,8 @@
         "graduation": "سنة التخرج",
         "codeforces": "كودفورسيس",
 
-        "compare_students": "مقارنة الطلاب"
+        "compare_students": "مقارنة الطلاب",
+        "stats": "إحصائيات"
     },
     "en": {
         "participations": "Participations",
@@ -92,6 +93,7 @@
         "graduation": "Graduation year",
         "codeforces": "Codeforces",
 
-        "compare_students": "Compare students"
+        "compare_students": "Compare students",
+        "stats": "Statistics"
     }
 }

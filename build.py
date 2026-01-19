@@ -484,5 +484,12 @@ def main():
     })
     print("Built compare page")
 
+    write_page('stats', {
+        '$title': 'stats',
+        'layout': 'stats'
+    })
+    print("Built statistics page")
+
+
 if __name__ == '__main__':
     main()
