@@ -9,7 +9,11 @@
 - [x] Adding a page for exams
 - [ ] Allow multilanguages from settings and adopting translations from JSON files (60% done)
 - [ ] Add all past members tab in members index
-- [ ] Adding statistics for each person performance on exams (shown only if you add a cookie)
+- [ ] Adding statistics for each person performance on exams
+- [ ] Adding AI models for predictions
+- [x] Adding comparison page
+- [x] Adding statistics page
+- [ ] Adding advanced analysis to comparison, like count of zeros/hundereds
 
 ## Organization
 - [x] Linking it with Google Search Console
@@ -19,7 +23,7 @@
 - [ ] Aiming for 100k views per year
 - [ ] Monetizing it by adding Ads
 - [ ] Managing permissions in Github organization
-- [ ] Documenting how to work
+- [x] Documenting how to work
 - [ ] Organizing insider data
 - [ ] Rechecking licensing
 - [ ] A clear list of organization
@@ -36,8 +40,7 @@
 ## Data
 - [x] Add `tsts.json`, and a page for displaying it
 - [x] Add `exams.json`, and a page for displaying it
-- [ ] Add `news.json` and page for it, and displayed in home page
-- [ ] Add `camps.json`, and a page for viewing the upcoming camps
-     
+- [ ] Add 2021 TSTs
+
 ## Additional goals
-- An identical website for Saudi Math Team, and Saudi Physics Team in the future
+- An identical website for Saudi Math Team, and Saudi Physics Team in the future (80% done)
