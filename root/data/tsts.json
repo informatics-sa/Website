@@ -56,5 +56,15 @@
             "exams": ["intensive_1b_tst_1_2025", "intensive_1b_tst_2_2025"],
             "female_only": true
         }
-    }       
+    },
+    "2026": {
+        "ejoi": {
+            "exams": ["winter_exam_1_2026", "winter_exam_2_2026"],
+            "min_graduation": 2028
+        },
+        "egoi": {
+            "exams": ["winter_exam_1_2026"],
+            "female_only": true
+        },
+    }
 }
