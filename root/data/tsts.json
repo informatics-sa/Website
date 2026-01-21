@@ -65,6 +65,6 @@
         "egoi": {
             "exams": ["winter_exam_1_2026"],
             "female_only": true
-        },
+        }
     }
 }
