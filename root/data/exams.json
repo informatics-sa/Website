@@ -29,7 +29,8 @@
             "612": [66, 20, 0, 0],
             "615": [14, 20, 0, 0],
             "616": [36, 20, 0, 0]
-        }
+        },
+        "problems": ["fireworks", "kokobird2", "camels_in_space", "dial-a-graph"]
     },
     "winter_exam_1_2026": {
         "id": "winter_exam_1_2026",
@@ -80,7 +81,8 @@
             "720": [43, 0, 0, 0],
             "721": [30, 0, 0, 10],
             "725": [16, 0, 0, 0]
-        }
+        },
+        "problems": ["football", "golden_stance_warriors", "balls_removal", "abdulaziz"]
     },
     "elite_exam_2_2025": {
         "id": "elite_exam_2_2025",
