@@ -234,7 +234,7 @@ def build_participations():
             'country_arname': participation['country_arname'],
             'country_enname': participation['country_enname'],
             'participants': participation['ar_participants'],
-            'scores': participation['scores'],
+            'scores': participation.get('scores', None),
             'website': participation['website'],
             'online': participation['online'] if 'online' in participation else False
         })
@@ -249,7 +249,7 @@ def build_participations():
             'country_arname': participation['country_arname'],
             'country_enname': participation['country_enname'],
             'participants': participation['en_participants'],
-            'scores': participation['scores'],
+            'scores': participation.get('scores', None),
             'website': participation['website'],
             'online': participation['online'] if 'online' in participation else False
         })
