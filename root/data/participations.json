@@ -1,5 +1,15 @@
 [
     {
+        "name": "egoi", "year": 2025, "start": "2026/5/12", "end": "2026/5/18", "country": "it",
+        "website": "https://egoi2026.it",
+        "participants": {
+            "608": null,
+            "615": null,
+            "516": null,
+            "710": null
+        }
+    },
+    {
         "name": "boi", "year": 2025, "start": "2025/9/25", "end": "2025/10/1", "country": "it",
         "website": "https://boi2025.anpc.it",
         "participants": {
