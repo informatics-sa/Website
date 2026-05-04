@@ -324,9 +324,9 @@ def build_tst_index():
                         # arname[uid] = uid
                         # enname[uid] = uid
                     if uid not in lists:
-                        lists[uid] = [0]*(len(tst[oly]['exams'])+1)
-                    lists[uid][0] += sum(res)
-                    lists[uid][exam_index] = sum(res)
+                        lists[uid] = {'grades': [0]*(len(tst[oly]['exams'])+1)}
+                    lists[uid]['grades'][0] += sum(res)
+                    lists[uid]['grades'][exam_index] = sum(res)
 
             if 'female_only' in tst[oly] and tst[oly]['female_only'] == True:
                 to_be_removed = []
@@ -359,7 +359,17 @@ def build_tst_index():
                 for uid in tst['_general_execluded']:
                     if uid in lists:
                         del lists[uid]
-            lists = dict(sorted(lists.items(), key=lambda person: (-person[1][0])))
+            lists = dict(sorted(lists.items(), key=lambda person: (-person[1]['grades'][0])))
+            
+            max_team_size = olympiads[oly]['participants_count']
+            top = list(lists)[0:max_team_size]
+            for team_member in top:
+                lists[team_member]['background_color'] = '82f482'
+
+            if max_team_size < len(lists) and lists[top[max_team_size - 1]]['grades'][0] == lists[list(lists)[max_team_size]]['grades'][0]:
+                for uid in lists.keys():
+                    if lists[uid]['grades'][0] == lists[top[max_team_size - 1]]['grades'][0]:
+                        lists[uid]['background_color'] = 'fff717'
 
             tsts[oly]['lists'] = lists
         
