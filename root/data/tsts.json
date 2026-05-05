@@ -63,7 +63,8 @@
         },
         "ejoi": {
             "exams": ["winter_exam_1_2026", "winter_exam_2_2026"],
-            "min_graduation": 2028
+            "min_graduation": 2028,
+            "min_birthdate": "2011/1/1"
         },
         "egoi": {
             "exams": ["winter_exam_1_2026"],
