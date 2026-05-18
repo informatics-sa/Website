@@ -4,6 +4,10 @@ ROOT_DIR = './root'
 LANGS = ['ar', 'en']
 BLOCKED_FLAGS = ['se']
 
+def load_secret_json(filename):
+    with open(f'./lib/Database/{filename}.json', 'r', encoding='utf-8') as f:
+        return json.load(f)
+
 def load_json(filename):
     with open(f'{ROOT_DIR}/data/{filename}.json', 'r', encoding='utf-8') as f:
         return json.load(f)

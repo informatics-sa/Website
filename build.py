@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from lib import *
+from lib.secret import *
 from lib.utils import * # target to remove this.
 import datetime
 import math
@@ -353,6 +354,16 @@ def build_tst_index():
                         continue
                     if members[uid]['graduation'] == None or members[uid]['graduation'] < tst[oly]['min_graduation']:
                         to_be_removed.append(uid)
+                for uid in to_be_removed:
+                    del lists[uid]
+
+            if 'min_birthdate' in tst[oly]:
+                eligibility_date = datetime.date.fromisoformat(tst[oly]['min_birthdate'])
+                to_be_removed = []
+                for uid in lists:
+                    if is_older(uid, eligibility_date):
+                        to_be_removed.append(uid)
+
                 for uid in to_be_removed:
                     del lists[uid]
 

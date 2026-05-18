@@ -119,7 +119,7 @@ Additional rules (Optional):
 - `excluded`: Array, of strings student ID
 - `min_graduation`: Integer, minimum graduation year to be eligable
 - `female_only`: Boolean, true if the competition is female only
-- `min_birthdate`: Date, the minimum birthdate for eligibility **(future)**
+- `min_birthdate`: Date, the minimum birthdate for eligibility
 
 
 # Constant files
