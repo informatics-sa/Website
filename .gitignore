@@ -4,6 +4,7 @@ __pycache__
 _site
 vendor/bundle/
 .bundle/
+lib/Database/
 
 # build artifacts
 root/*
