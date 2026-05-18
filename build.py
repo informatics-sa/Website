@@ -3,6 +3,7 @@
 from lib import *
 from lib.utils import * # target to remove this.
 import datetime
+import math
 
 
 countries = get_countries()
@@ -301,6 +302,7 @@ def build_tst_index():
 
             tsts[oly] = {
                 'exams': tst[oly]['exams'],
+                'weighted': type(tst[oly]['exams']) is dict,
                 'participants_count': olympiads[oly]['participants_count'],
                 'lists': None,
             }
@@ -325,8 +327,11 @@ def build_tst_index():
                         # enname[uid] = uid
                     if uid not in lists:
                         lists[uid] = {'grades': [0]*(len(tst[oly]['exams'])+1)}
-                    lists[uid]['grades'][0] += sum(res)
+                    weight = tsts[oly]['exams'][eid] if tsts[oly]['weighted'] else 1.0
+                    lists[uid]['grades'][0] += weight * sum(res)
                     lists[uid]['grades'][exam_index] = sum(res)
+                    if lists[uid]['grades'][0] == math.floor(lists[uid]['grades'][0]):
+                        lists[uid]['grades'][0] = int(lists[uid]['grades'][0])
 
             if 'female_only' in tst[oly] and tst[oly]['female_only'] == True:
                 to_be_removed = []
@@ -372,7 +377,9 @@ def build_tst_index():
                         lists[uid]['background_color'] = 'fff717'
 
             tsts[oly]['lists'] = lists
-        
+            if tsts[oly]['weighted']:
+                tsts[oly]['exams'] = list(map(lambda x: {x[0]: x[1]}, tsts[oly]['exams'].items()))
+
         write_file(f'./tst/{year}.html', {
             'lang': 'ar',
             'layout': 'tst',
