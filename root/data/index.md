@@ -17,7 +17,7 @@ Always check the files for examples of the formatting.
 - Array: JSON array `[...]`
 - Dictionary/Object: JSON object `{...}`
 #### Custom defined
-- Date: String, gregorian date in format `YYYY/M/D`
+- Date: String, gregorian date in[ ](https://xkcd.com/1179/)[ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
 - URL: String, starts with prefix `https://` and without suffix `/`
 - Email: String, an email
 
@@ -93,7 +93,7 @@ A dictionary of year and olympiad IDs, and every olympiad ID contains a set of e
         "_general_excluded": ["sultan_alaiban"],
         "ioi": {
             "exams": ["exam1", "exam2"],
-            "min_birthdate": "2009/6/30",
+            "min_birthdate": "2009-06-30",
             "female_only": false,
             "excluded": ["muaath_alqarni", "ali_alsalman"]
         }

@@ -4,7 +4,7 @@
         "name": "Intensive 1 Exam 1",
         "arname": "Exam 1",
         "enname": "Exam 1",
-        "date": "2026/05/03",
+        "date": "2026-05-03",
         "url": "https://arena.petlja.org/en/competition/2026-05-03-exam-upsolve",
         "participants": {
             "401": [100, 0, 0, 90],
@@ -51,7 +51,7 @@
         "name": "Winter Exam 2",
         "arname": "Exam 2",
         "enname": "Exam 2",
-        "date": "2026/01/21",
+        "date": "2026-01-21",
         "url": "https://arena.petlja.org/en/competition/2026-01-20-exam-uplosve",
         "participants": {
             "401": [100, 55, 0, 0],
@@ -84,7 +84,7 @@
         "name": "Winter Exam 1",
         "arname": "Exam 1",
         "enname": "Exam 1",
-        "date": "2026/01/17",
+        "date": "2026-01-17",
         "url": "https://arena.petlja.org/en/competition/2026-01-17-exam-upsolve",
         "participants": {
             "401": [100, 0, 0, 0],
@@ -136,7 +136,7 @@
         "name": "Elite Exam 2",
         "enname": "Exam 2",
         "arname": "Exam 2",
-        "date": "2025/11/25",
+        "date": "2025-11-25",
         "url": "https://arena.petlja.org/en/competition/2025-11-25-exam-upsolve",
         "participants": {
             "307": [100, 100, 33, 51],
@@ -176,7 +176,7 @@
         "name": "Elite Exam 1",
         "enname": "Exam 1",
         "arname": "Exam 1",
-        "date": "2025/11/20",
+        "date": "2025-11-20",
         "url": "https://arena.petlja.org/en/competition/2025-11-20-exam-upsolve",
         "participants": {
             "307": [18, 0, 8, 100],
@@ -216,7 +216,7 @@
         "name": "Intensive 2B TST 5",
         "enname": "TST 5",
         "arname": "TST 5",
-        "date": "2025/6/23",
+        "date": "2025-06-23",
         "url": "https://arena.petlja.org/en/competition/2025-06-23-tst-5-upsolve",
         "participants": {
             "501": [100, 100, 100, 100],
@@ -260,7 +260,7 @@
         "name": "Intensive 2A TST 4",
         "enname": "TST 4",
         "arname": "TST 4",
-        "date": "2025/6/18",
+        "date": "2025-06-18",
         "url": "https://arena.petlja.org/en/competition/tst-upsolve-4-25",
         "participants": {
             "213": [63, 15, 50, 100],
@@ -305,7 +305,7 @@
         "name": "Intensive 2A TST 3",
         "enname": "TST 3",
         "arname": "TST 3",
-        "date": "2025/5/26",
+        "date": "2025-05-26",
         "url": "https://arena.petlja.org/en/competition/2025-05-26-tst-upsolve",
         "participants": {
             "201": [0, 0, 0, 0],
@@ -351,7 +351,7 @@
         "name": "APIO 2025",
         "enname": "APIO 2025",
         "arname": "APIO 2025",
-        "date": "2025/5/18",
+        "date": "2025-05-18",
         "url": "https://oj.uz/problems/source/apio2025",
         "participants": {
             "201": [0, 0, 0],
@@ -411,7 +411,7 @@
         "name": "Intensive 1B TST 2",
         "enname": "TST 2",
         "arname": "TST 2",
-        "date": "2025/2/26",
+        "date": "2025-02-26",
         "url": "https://arena.petlja.org/en/competition/2025-02-26-tst-upsolve",
         "participants": {
             "201": [100, 100, 100, 34],
@@ -471,7 +471,7 @@
         "name": "Intensive 1B TST 1",
         "enname": "TST 1",
         "arname": "TST 1",
-        "date": "2025/2/23",
+        "date": "2025-02-23",
         "url": "https://arena.petlja.org/sr-Latn-RS/competition/2025-02-23-tst-upsolve",
         "participants": {
             "201": [100, 100, 29, 100],
@@ -531,7 +531,7 @@
         "name": "Intensive 1A Exam 2",
         "enname": "Exam 4",
         "arname": "Exam 4",
-        "date": "2025/2/06",
+        "date": "2025-02-06",
         "url": "https://arena.petlja.org/sr-Latn-RS/competition/2025-02-06-exam-upsolve",
         "participants": {
             "213": [100, 100, 33, 6],
@@ -574,7 +574,7 @@
         "name": "Intensive 1A Exam 1",
         "enname": "Exam 3",
         "arname": "Exam 3",
-        "date": "2025/1/30",
+        "date": "2025-01-30",
         "url": "https://arena.petlja.org/sr-Latn-RS/competition/2025-01-30-exam-upsolve",
         "participants": {
             "213": [100, 40, 16, 50],
@@ -617,7 +617,7 @@
         "name": "Elite Exam 2",
         "enname": "Exam 2",
         "arname": "Exam 2",
-        "date": "2024/11/17",
+        "date": "2024-11-17",
         "url": "https://arena.petlja.org/sr-Latn-RS/competition/2024-11-17-exam-upsolve",
         "participants": {
             "304": [66, 100, 60, 100],
@@ -657,7 +657,7 @@
         "name": "Elite Exam 1",
         "enname": "Exam 1",
         "arname": "Exam 1",
-        "date": "2024/11/12",
+        "date": "2024-11-12",
         "url": "https://arena.petlja.org/sr-Latn-RS/competition/2024-11-12-exam-upsolve",
         "participants": {
             "304": [100, 100, 100, 100],
@@ -697,7 +697,7 @@
         "name": "Intensive 2B TST 3",
         "enname": "TST 3",
         "arname": "TST 3",
-        "date": "2024/6/08",
+        "date": "2024-06-08",
         "url": "https://arena.petlja.org/competition/2024-06-08-tst-3-upsolve",
         "participants": {
             "356": [100, 100, 15, 43],
@@ -751,7 +751,7 @@
         "name": "Intensive 2A TST 2",
         "enname": "TST 2",
         "arname": "TST 2",
-        "date": "2024/5/27",
+        "date": "2024-05-27",
         "url": "https://arena.petlja.org/sr-Latn-RS/competition/2024-05-27-tst2-upsolve",
         "participants": {
             "201": [100, 100, 29, 35],
@@ -805,7 +805,7 @@
         "name": "APIO 2024",
         "enname": "APIO 2024",
         "arname": "APIO 2024",
-        "date": "2024/5/18",
+        "date": "2024-05-18",
         "url": "https://oj.uz/problems/source/652",
         "participants": {
             "201": [100, 10, 100],
@@ -859,7 +859,7 @@
         "name": "Intensive 1B TST 1",
         "enname": "TST 1",
         "arname": "TST 1",
-        "date": "2024/3/05",
+        "date": "2024-03-05",
         "url": "https://arena.petlja.org/competition/2024-03-05-l3-l4-upsolve",
         "participants": {
             "201": [100, 20, 42],
@@ -913,7 +913,7 @@
         "name": "TST 5",
         "arname": "TST 5",
         "enname": "TST 5",
-        "date": "2023/6/20",
+        "date": "2023-06-20",
         "problems": ["colorful_graph", "xor_table", "lighthouse"],
         "participants": {
             "201": [100, 0, 0],
@@ -943,7 +943,7 @@
         "name": "TST 4",
         "arname": "TST 4",
         "enname": "TST 4",
-        "date": "2023/6/19",
+        "date": "2023-06-19",
         "problems": ["number_factory", "shawarmas", "eurosong"],
         "participants": {
             "201": [100, 100, 41],
@@ -973,7 +973,7 @@
         "name": "TST 3",
         "arname": "TST 3",
         "enname": "TST 3",
-        "date": "2023/5/30",
+        "date": "2023-05-30",
         "problems": ["camel_trails", "meetings", "surgery"],
         "participants": {
             "201": [39, 32, 30],
@@ -1006,7 +1006,7 @@
         "name": "APIO 2023",
         "arname": "APIO 2023",
         "enname": "APIO 2023",
-        "date": "2023/5/21",
+        "date": "2023-05-21",
         "problems": ["cyberland", "sequence", "abc"],
         "participants": {
             "201": [97, 47, 0],
@@ -1039,7 +1039,7 @@
         "name": "TST 2",
         "arname": "TST 2",
         "enname": "TST 2",
-        "date": "2023/3/8",
+        "date": "2023-03-08",
         "problems": ["becoming_tourist", "annoying_questions", "ants_butter"],
         "participants": {
             "201": [100, 64, 77],
@@ -1072,7 +1072,7 @@
         "name": "TST 1",
         "arname": "TST 1",
         "enname": "TST 1",
-        "date": "2023/2/16",
+        "date": "2023-02-16",
         "problems": ["moving_metals", "displeased_dean", "needed_needles"],
         "participants": {
             "201": [44.122, 71, 90],
@@ -1105,7 +1105,7 @@
         "name": "TST 3",
         "arname": "TST 3",
         "enname": "TST 3",
-        "date": "2022/6/1",
+        "date": "2022-06-01",
         "problems": ["spring", "rook", "principal"],
         "participants": {
             "201": [50, 100, 33],
@@ -1133,7 +1133,7 @@
         "name": "APIO 2022",
         "arname": "APIO 2022",
         "enname": "APIO 2022",
-        "date": "2022/5/30",
+        "date": "2022-05-30",
         "problems": ["mars", "game", "permutation"],
         "participants": {
             "201": [14, 60, 91],
@@ -1161,7 +1161,7 @@
         "name": "TST 2",
         "arname": "TST 2",
         "enname": "TST 2",
-        "date": "2022/1/2",
+        "date": "2022-01-02",
         "problems": ["ministry", "meerkats", "pearl_party"],
         "participants": {
             "201": [30, 100, 0],
@@ -1189,7 +1189,7 @@
         "name": "TST 1",
         "arname": "TST 1",
         "enname": "TST 1",
-        "date": "2022/1/1",
+        "date": "2022-01-01",
         "problems": ["piano", "hair", "airplanes"],
         "participants": {
             "201": [100, 0, 49],
