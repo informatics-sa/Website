@@ -100,6 +100,20 @@ A dictionary of year and olympiad IDs, and every olympiad ID contains a set of e
     }
 }
 ```
+additionally, if the TSTs for a certain olympiad is weighted, you can use a dictionary of exam ID to weight instead of an array in the `exams` field. for example:
+```json
+{
+    "2026": {
+        "ioi": {
+            "exams": {
+                "exam1": 0.2,
+                "exam2": 0.4,
+                "exam3": 0.4
+            }
+        }
+    }
+}
+```
 
 Additional rules (Optional):
 - `excluded`: Array, of strings student ID
