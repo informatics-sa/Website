@@ -24,7 +24,7 @@
         "name": "apio", "year": 2026, "start": "2026-05-09", "end": "2026-05-10", "country": "tw", "online": true,
         "website": "https://www.apio2026.ntnu.tw",
         "participants": {
-            "455": null,
+            "455": "bronze",
             "453": null,
             "451": null,
             "502": null,
