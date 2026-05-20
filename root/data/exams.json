@@ -44,7 +44,8 @@
             "720": [4, 0, 0],
             "721": [4, 0, 0],
             "725": [0, 0, 0]
-        }
+        },
+        "problems": ["bike", "navigation", "party"]
     },
     "intensive_1_exam_1_2026": {
         "id": "intensive_1_exam_1_2026",
