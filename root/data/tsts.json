@@ -59,7 +59,7 @@
     },
     "2026": {
         "ioi": {
-            "exams": ["intensive_1_exam_1_2026", "apio_2026"]
+            "exams": ["intensive_1_exam_1_2026", "apio_2026", "intensive_1_exam_2_2026"]
         },
         "ejoi": {
             "exams": ["winter_exam_1_2026", "winter_exam_2_2026"],
