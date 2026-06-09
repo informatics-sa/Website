@@ -61,6 +61,10 @@
         "ioi": {
             "exams": ["intensive_1_exam_1_2026", "apio_2026", "intensive_1_exam_2_2026"]
         },
+        "boi": {
+            "exams": ["intensive_1_exam_2_2026"],
+            "min_graduation": 2027
+        },
         "ejoi": {
             "exams": ["winter_exam_1_2026", "winter_exam_2_2026"],
             "min_graduation": 2028,
