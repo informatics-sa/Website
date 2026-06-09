@@ -480,6 +480,7 @@ def main():
     print("Built home")
 
     build_images()
+    prepare_secret_images()
     print("Built images")
 
     build_members()
