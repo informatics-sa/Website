@@ -58,8 +58,9 @@
         }
     },
     "2026": {
+        "_general_excluded": ["702"],
         "ioi": {
-            "exams": ["intensive_1_exam_1_2026", "apio_2026", "intensive_1_exam_2_2026", "intensive_2_exam_1_2026"]
+            "exams": ["intensive_1_exam_1_2026", "apio_2026", "intensive_1_exam_2_2026", "intensive_2_exam_1_2026"],
         },
         "boi": {
             "exams": ["intensive_1_exam_2_2026", "intensive_2_exam_1_2026"],
