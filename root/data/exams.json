@@ -2,8 +2,8 @@
     "intensive_2_exam_1_2026": {
         "id": "intensive_2_exam_1_2026",
         "name": "Intensive 1 Exam 2",
-        "arname": "Exam 2",
-        "enname": "Exam 2",
+        "arname": "TST 4",
+        "enname": "TST 4",
         "date": "2026-06-10",
         "problems": ["cockroaches", "company", "slimes", "terrain"],
         "participants": {
@@ -48,8 +48,8 @@
     "intensive_1_exam_2_2026": {
         "id": "intensive_1_exam_2_2026",
         "name": "Intensive 1 Exam 2",
-        "arname": "Exam 2",
-        "enname": "Exam 2",
+        "arname": "TST 3",
+        "enname": "TST 3",
         "date": "2026-05-20",
         "url": "https://arena.petlja.org/en/competition/2026-05-20-exam-upsolve",
         "participants": {
@@ -142,8 +142,8 @@
     "intensive_1_exam_1_2026": {
         "id": "intensive_1_exam_1_2026",
         "name": "Intensive 1 Exam 1",
-        "arname": "Exam 1",
-        "enname": "Exam 1",
+        "arname": "TST 1",
+        "enname": "TST 1",
         "date": "2026-05-03",
         "url": "https://arena.petlja.org/en/competition/2026-05-03-exam-upsolve",
         "participants": {
