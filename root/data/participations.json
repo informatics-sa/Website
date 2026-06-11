@@ -2,7 +2,12 @@
     {
         "name": "ioi", "year": 2026, "start": "2026-08-09", "end": "2026-08-16", "country": "uz",
         "website": "https://ioi2026.uz",
-        "participants": {}
+        "participants": {
+            "455": null,
+            "501": null,
+            "404": null,
+            "612": null
+        }
     },
     {
         "name": "egoi", "year": 2026, "start": "2026-05-12", "end": "2026-05-18", "country": "it",
