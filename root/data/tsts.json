@@ -69,7 +69,7 @@
         "jboi": {
             "exams": ["intensive_1_exam_2_2026", "intensive_2_exam_1_2026", "intensive_2_exam_2_2026"],
             "min_birthdate": "2011-01-01"
-        }
+        },
         "egoi": {
             "exams": ["winter_exam_1_2026"],
             "female_only": true
