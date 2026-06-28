@@ -6,6 +6,7 @@
         "enname": "TST 6",
         "date": "2026-06-28",
         "problems": ["lawn_mower", "heavy_boxes", "blog_rating", "fifa_survey"],
+        "url": "https://arena.petlja.org/sr-Latn-RS/competition/2026-06-28-exam-upsolve",
         "participants": {
             "401": [100, 66, 100, 25],
             "404": [100, 66, 100, 67],
@@ -50,6 +51,7 @@
         "enname": "TST 5",
         "date": "2026-06-17",
         "problems": ["tunnels", "meen_saal", "nahr_jabali", "hariq_ghabat"],
+        "url": "https://arena.petlja.org/sr-Latn-RS/competition/2026-06-17-exam-upsolve",
         "participants": {
             "401": [0, 60, 100, 100],
             "404": [0, 100, 62, 100],
@@ -95,6 +97,7 @@
         "enname": "TST 4",
         "date": "2026-06-10",
         "problems": ["cockroaches", "company", "slimes", "terrain"],
+        "url": "https://tst.sainformatics.org/"
         "participants": {
             "455": [100, 58, 100, 50],
             "501": [100, 58, 100, 0],
