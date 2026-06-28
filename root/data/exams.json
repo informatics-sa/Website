@@ -97,7 +97,7 @@
         "enname": "TST 4",
         "date": "2026-06-10",
         "problems": ["cockroaches", "company", "slimes", "terrain"],
-        "url": "https://tst.sainformatics.org/"
+        "url": "https://tst.sainformatics.org/",
         "participants": {
             "455": [100, 58, 100, 50],
             "501": [100, 58, 100, 0],
