@@ -1,13 +1,27 @@
 [
     {
-        "name": "boi", "year": 2026, "start": "2026-09-14", "end": "2026-09-20", "country": "al",
+        "name": "jboi", "year": 2026, "start": "2026-09-22", "end": "2026-09-28", "country": "ba",
         "website": null,
-        "participants": {}
+        "participants": {
+            "404": null,
+            "602": null,
+            "604": null,
+            "611": null,
+            "510": null,
+            "608": null
+        }
     },
     {
-        "name": "jboi", "year": 2026, "start": "2026-09-14", "end": "2026-09-20", "country": "ba",
+        "name": "boi", "year": 2026, "start": "2026-09-14", "end": "2026-09-20", "country": "al",
         "website": null,
-        "participants": {}
+        "participants": {
+            "404": null,
+            "508": null,
+            "503": null,
+            "401": null,
+            "453": null,
+            "602": null
+        }
     },
     {
         "name": "ioi", "year": 2026, "start": "2026-08-09", "end": "2026-08-16", "country": "uz",
