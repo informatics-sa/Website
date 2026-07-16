@@ -1,8 +1,37 @@
 [
     {
+        "name": "jboi", "year": 2026, "start": "2026-09-22", "end": "2026-09-28", "country": "ba",
+        "website": null,
+        "participants": {
+            "508": null,
+            "602": null,
+            "604": null,
+            "611": null,
+            "510": null,
+            "608": null
+        }
+    },
+    {
+        "name": "boi", "year": 2026, "start": "2026-09-14", "end": "2026-09-20", "country": "al",
+        "website": null,
+        "participants": {
+            "404": null,
+            "508": null,
+            "503": null,
+            "401": null,
+            "453": null,
+            "602": null
+        }
+    },
+    {
         "name": "ioi", "year": 2026, "start": "2026-08-09", "end": "2026-08-16", "country": "uz",
         "website": "https://ioi2026.uz",
-        "participants": {}
+        "participants": {
+            "455": null,
+            "501": null,
+            "404": null,
+            "612": null
+        }
     },
     {
         "name": "egoi", "year": 2026, "start": "2026-05-12", "end": "2026-05-18", "country": "it",
