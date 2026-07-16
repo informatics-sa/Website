@@ -8,14 +8,13 @@
         "members": "الأعضاء",
         "members_list": "قائمة الأعضاء",
         "exams": "الاختبارات",
+        "team_selection_tests": "اختبارات ترشيح الفريق",
 
         "website_name": "فريق المعلوماتية السعودي",
         "website_description": "موقع فيه المشاركات والأعضاء والصور وكل البيانات المتعلقة بالفريق",
-        "team_selection_tests": "اختبارات ترشيح الفريق",
-
+        "team_desc": "نمثل المملكة العربية السعودية في أولمبياد المعلوماتية الدولي ونعمل على تطوير مهارات البرمجة التنافسية",
 
         "last_update": "آخر تحديث",
-        "site_name": "فريق المعلوماتية السعودي",
         "logo": "شعار",
 
         "cancel": "إلغاء",
@@ -57,13 +56,13 @@
         "members": "Members",
         "members_list": "Members list",
         "exams": "Exams",
+        "team_selection_tests": "Team selection tests",
 
         "website_name": "Saudi Informatics Team",
         "website_description": "Website contains participations, members, images, and all related data",
-        "team_selection_tests": "Team selection tests",
+        "team_desc": "We represent Saudi Arabia in International Olympiad in Informatics (IOI), and work to develop competitive programming skills",
 
         "last_update": "Last update",
-        "site_name": "Saudi Informatics Team",
         "logo": "Logo",
 
         "cancel": "Cancel",

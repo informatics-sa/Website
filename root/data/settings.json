@@ -1,0 +1,11 @@
+{
+    "version": "1.0.0",
+    "logo": "soi.png",
+    "icon": "soi.png",
+    "home_image": "naser_md_thinking.jpg",
+    "old_id_system": false,
+    "codeforces": true,
+    "enable_exams_page": true,
+    "enable_members_index": true,
+    "enable_image_library": true
+}

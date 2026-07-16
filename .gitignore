@@ -1,3 +1,4 @@
+# Cache
 .ruby-version
 .jekyll-cache
 __pycache__
@@ -6,27 +7,17 @@ vendor/bundle/
 .bundle/
 lib/Database/
 
-# build artifacts
+# Build artifacts
 root/*
-
-!root/_config.yml
-!root/_includes
-!root/_includes/*
-!root/_layouts
-!root/_layouts/*
-
-!root/files
-!root/files/*
+lib
 !root/img
-!root/img/*
 !root/data
-!root/data/*
-!root/resources
-!root/resources/*
-!root/404.html
-!root/debug.html
-!root/compare.html
-!root/en/compare.html
+!root/files
+build.py
+helper.py
+Gemfile
+Gemfile.lock
+
 
 # OS / Editor Specific
 .DS_Store

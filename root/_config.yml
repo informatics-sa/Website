@@ -1,7 +1,0 @@
-title: ""
-csv_reader:
-    headers: false
-    encoding: utf-8
-theme_color: "#1A8754"
-plugins:
-  - jekyll-seo-tag
